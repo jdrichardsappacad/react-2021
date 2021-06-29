@@ -2,7 +2,7 @@
 
 In this practice you will create a Functional Component and add JSX.
 
-## Set up
+## Phase 0: Set up
 
 Download the [starter][jsx-starter] file for this practice.
 
@@ -10,7 +10,7 @@ Open the practice in VSCode and run `npm install` in the terminal.
 
 Run `npm start` to make sure your project is set up correctly.
 
-## Create a Functional Component
+## Phase 1: Create a Functional Component
 
 Create a file `Showcase.js` in the `src/components` folder.
 Inside that file you will create a functional component `Showcase` with contents similar to the code below:
@@ -24,18 +24,18 @@ function Showcase() {
   );
 }
 
-export default Showv dase;
+export default Showcase;
 ```
 
 Remember your JSX will always be create in the `return` because it returns a single element.
 
-## Nest Showcase Component inside your App Component
+### Nest Showcase Component inside your App Component
 
 Inside your `App.js` import the `Showcase` component using [ES6 imports][es6-imports]. Replace the `h1` with a `div` element and add the `Showcase` component as a child.
 
 Check your browser. It should now read `Showcase Component`
 
-## Add JavaScript to Your JSX
+## Phase 2: Add JavaScript to Your JSX
 
 You've already seen that you can add HTML-like syntax to your JSX.
 Now let's add JavaScript.
@@ -59,7 +59,7 @@ The error that you see indicates that you cannot use a complete object literal i
 
 Now create an `h2` tag that says something like, **Bulbasaur's type is Grass and one of their moves is Vine Whip** Use the variables that you have created to create this JSX.
 
-## Add an Image to your JSX
+## Phase 3: Add an Image to your JSX
 
 Take a look inside the images folder. Notice that there is an image for Bulbasaur. If you would like, you can add a different image to this folder for your character.
 
@@ -67,7 +67,7 @@ Next inside your `Showcase` component, import your image using [ES6 imports][es6
 
 Now place an `img` tag between your `h1` and `h2` tags and assign the image variable to the `src` attribute. Add an `alt` attribute and assign the character name to the `alt` attribute.
 
-## Add CSS to your JSX
+## Phase 4: Add CSS to your JSX
 
 There are multiple ways to add CSS to your JSX. For now, let's begin with inline CSS.
 
@@ -78,6 +78,8 @@ Inside your style object React expects key/value pairs. Any CSS selector that is
 Wrap a `span` tag around the two separate pokeCharacteristics.
 Inside the first span make the background color black and the text white.
 Inside the second span make the background color green and the text yellow using hex.
+
+## Phase 5: Add a Background Image Using External CSS
 
 Let's add a background image to our page by using external CSS
 Create a file called `App.css`
@@ -108,6 +110,18 @@ Finally, use inline or external CSS to resize your image.
 - Move all CSS in `Showcase.js` to it's own external file and assign classes to the elements.
 - Center all elements on page using [Flexbox][flexbox]
 - Using inline styles evenly distribute the height and width of the image and turn it into a circle.
+
+## What You Have Learned
+
+Congratulations! You have successfully learned the basics of adding JSX to a React Functional Component. This includes:
+
+- creating a Functional Component
+- nesting one component inside of another
+- adding HTML-like elements to JSX
+- add JavaScript expressions to JSX
+- importing and adding an image
+- using inline CSS inside your JSX
+- using External CSS and importing the file using a relative path
 
 [jsx-starter]: http://www.starter.com
 [js-expression]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions
