@@ -12,8 +12,9 @@ Run `npm start` to make sure your project is set up correctly.
 
 ## Phase 1: Create a Functional Component
 
-Create a file `Showcase.js` in the `src/components` folder.
-Inside that file you will create a functional component `Showcase` with contents similar to the code below:
+Create a file `Showcase.js` in the `src/components` folder.  Inside that file
+you will create a functional component `Showcase` with contents similar to the
+code below:
 
 ```js
 function Showcase() {
@@ -27,57 +28,78 @@ function Showcase() {
 export default Showcase;
 ```
 
-Remember your JSX will always be create in the `return` because it returns a single element.
+Remember your JSX will always be create in the `return` because it returns a
+single element.
 
 ### Nest Showcase Component inside your App Component
 
-Inside your `App.js` import the `Showcase` component using [ES6 imports][es6-imports]. Replace the `h1` with a `div` element and add the `Showcase` component as a child.
+Inside your `App.js` import the `Showcase` component using [ES6
+imports][es6-imports]. Replace the `h1` with a `div` element and add the
+`Showcase` component as a child.
 
 Check your browser. It should now read `Showcase Component`
 
 ## Phase 2: Add JavaScript to Your JSX
 
-You've already seen that you can add HTML-like syntax to your JSX.
-Now let's add JavaScript.
-Curly braces `{}` inside JSX indicate to React that JavaScript will be evaluated. You can add any [JS expression][js-expression] to your JSX.
+You've already seen that you can add HTML-like syntax to your JSX.  Now let's
+add JavaScript.  Curly braces `{}` inside JSX indicate to React that JavaScript
+will be evaluated. You can add any [JS expression][js-expression] to your JSX.
 
 Above the return in your function you are allowed to use Vanilla JS.
 
-Add a variable called `favPokemon` and assign it the name of your favorite character or if you don't have one, `Bulbasaur`.
+Add a variable called `favPokemon` and assign it the name of your favorite
+character or if you don't have one, `Bulbasaur`.
 
-Inside the `h1` tag before the word `Showcase` add the variable in curly braces along with an `'s` after the curly braces.
+Inside the `h1` tag before the word `Showcase` add the variable in curly braces
+along with an `'s` after the curly braces.
 
 Notice how you are now adding both HTML and JS in the same code.
 
-Now create an object literal `pokeCharacterstics` with a `type` and a `move` key.
-Add values to both keys. (If you don't have any values you can use `Grass` for type and `Vine Whip` for move.)
+Now create an object literal `pokeCharacterstics` with a `type` and a `move`
+key.  Add values to both keys. (If you don't have any values you can use `Grass`
+for type and `Vine Whip` for move.)
 
-Now place that object inside your return statement below the `h1` tag. (Remember your curly braces.)
+Now place that object inside your return statement below the `h1` tag. (Remember
+your curly braces.)
 
-Take a look in your browser.
-The error that you see indicates that you cannot use a complete object literal inside your JSX. You must key into the object.
+Take a look in your browser.  The error that you see indicates that you cannot
+use a complete object literal inside your JSX. You must key into the object.
 
-Now create an `h2` tag that says something like, **Bulbasaur's type is Grass and one of their moves is Vine Whip** Use the variables that you have created to create this JSX.
+Now create an `h2` tag that says something like, **Bulbasaur's type is Grass and
+one of their moves is Vine Whip** Use the variables that you have created to
+create this JSX.
 
 ## Phase 3: Add an Image to your JSX
 
-Take a look inside the images folder. Notice that there is an image for Bulbasaur. If you would like, you can add a different image to this folder for your character.
+Take a look inside the images folder. Notice that there is an image for
+Bulbasaur. If you would like, you can add a different image to this folder for
+your character.
 
-Next inside your `Showcase` component, import your image using [ES6 imports][es6-imports] by giving your image a variable name and assigning it to the relative path from the file you are in to the image.
+Next inside your `Showcase` component, import your image using [ES6
+imports][es6-imports] by giving your image a variable name and assigning it to
+the relative path from the file you are in to the image.
 
-Now place an `img` tag between your `h1` and `h2` tags and assign the image variable to the `src` attribute. Add an `alt` attribute and assign the character name to the `alt` attribute.
+Now place an `img` tag between your `h1` and `h2` tags and assign the image
+variable to the `src` attribute. Add an `alt` attribute and assign the character
+name to the `alt` attribute.
 
 ## Phase 4: Add CSS to your JSX
 
-There are multiple ways to add CSS to your JSX. For now, let's begin with inline CSS.
+There are multiple ways to add CSS to your JSX. For now, let's begin with inline
+CSS.
 
-When using inline CSS inside your HTML-like elements, React expects a `style` attribute that is assigned to an object. In order to execute that syntax you must use `{{}}` and place your inline styles inside.
+When using inline CSS inside your HTML-like elements, React expects a `style`
+attribute that is assigned to an object. In order to execute that syntax you
+must use `{{}}` and place your inline styles inside.
 
-Inside your style object React expects key/value pairs. Any CSS selector that is normally kebab-case should be converted into camelCase. (e.g `padding-right` should be `paddingRight`). Also, each value in your key/value pairs should be represented in quotes as a string.
+Inside your style object React expects key/value pairs. Any CSS selector that is
+normally kebab-case should be converted into camelCase. (e.g `padding-right`
+should be `paddingRight`). Also, each value in your key/value pairs should be
+represented in quotes as a string.
 
-Wrap a `span` tag around the two separate pokeCharacteristics.
-Inside the first span make the background color black and the text white.
-Inside the second span make the background color green and the text yellow using hex.
+Wrap a `span` tag around the two separate pokeCharacteristics.  Inside the first
+span make the background color black and the text white.  Inside the second span
+make the background color green and the text yellow using hex.
 
 ## Phase 5: Add a Background Image Using External CSS
 
@@ -97,23 +119,29 @@ In your background selector add these values
 }
 ```
 
-Inside your `App.js` file, import the relative path of the css file. Do not assign it a variable name.
+Inside your `App.js` file, import the relative path of the css file. Do not
+assign it a variable name.
 
-Now add the background class to your wrapper div in `App.js`. Remember, in JSX class attributes are represented by using the word `className`.
+Now add the background class to your wrapper div in `App.js`. Remember, in JSX
+class attributes are represented by using the word `className`.
 
-Take a look inside your browser. You should now have a orange-ish background added to your view.
+Take a look inside your browser. You should now have a orange-ish background
+added to your view.
 
 Finally, use inline or external CSS to resize your image.
 
 ### Bonus
 
-- Move all CSS in `Showcase.js` to it's own external file and assign classes to the elements.
+- Move all CSS in `Showcase.js` to it's own external file and assign classes to
+    the elements.
 - Center all elements on page using [Flexbox][flexbox]
-- Using inline styles evenly distribute the height and width of the image and turn it into a circle.
+- Using inline styles evenly distribute the height and width of the image and
+    turn it into a circle.
 
 ## What You Have Learned
 
-Congratulations! You have successfully learned the basics of adding JSX to a React Functional Component. This includes:
+Congratulations! You have successfully learned the basics of adding JSX to a
+React Functional Component. This includes:
 
 - creating a Functional Component
 - nesting one component inside of another
