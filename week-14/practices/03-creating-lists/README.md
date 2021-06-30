@@ -47,10 +47,23 @@ name of the move.
 Look at your React DevTools in the browser and see what kind of errors or
 warnings you are receiving.
 
-AWhen mapping through an array, always remember that React expects a unique
+When mapping through an array, always remember that React expects a unique
 key for each item that is rendered. If your item has a unique `id` that is
 usually the best choice for the key. This optimizes React to run its
 diffing algorithm and return a quicker result through [indexing][keys-and-lists]
+
+Add a key with the id to the `li` that you returned in your map function.
+Check your browser again and notice that the warning is now gone.
+
+## Phase 2: Adding a List Item Component
+
+While having a list item in our component renders the information,
+sometimes you want to design the element that is returned. Create a
+component called `PokeMoveCard` in the `src` folder.
+
+Import the `PokeMoveCard.css` into the file
+
+The component should only return an `li` with the text Pokemove Card.
 
 [lists-starter]: ./starter
 [keys-and-lists]: https://reactjs.org/docs/lists-and-keys.html
