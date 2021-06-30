@@ -45,7 +45,8 @@ You've already seen that you can add HTML-like syntax to your JSX. Now, let's
 add JavaScript. Curly braces `{}` inside JSX indicate to React that JavaScript
 will be evaluated. You can add any [JS expression][js-expression] to your JSX.
 
-In your function, you are allowed to use Vanilla JS above the return.
+Inside your functional component, you are allowed to use Vanilla JS above the
+`return`.
 
 Add a variable called `favPokemon` and assign it the name of your favorite
 Pokemon or if you don't have one, `Bulbasaur`.
@@ -98,8 +99,8 @@ should be `paddingRight`). Also, each value in your key/value pairs should be
 represented in quotes as a string.
 
 Wrap a `span` tag around the two separate pokeCharacteristics. Inside the first
-span make the background color black and the text white. Inside the second span
-make the background color green and the text yellow using hex.
+span make the background color green and the text white. Inside the second span
+make the background color white and the text green using hex colors.
 
 ## Phase 5: Add a Background Image Using External CSS
 
