@@ -122,4 +122,18 @@ ReactDOM.render(
 );
 ```
 
+At this point, the application will build, but you will still see an error in
+your browser's DevTools console complaining about the missing `logo192.png`
+file. Open up `public/manifest.json` and remove the `icons` property and its
+associated array. Also, change the short name to "React Template" and the name
+to "Create React App Template". Once you save this `manifest.json` file, the
+error in your browser will go away. The updated manifest file should look like
+this.
+
+```json
+{
+
+}
+```
+
 [robots.txt]: https://en.wikipedia.org/wiki/Robots_exclusion_standard
