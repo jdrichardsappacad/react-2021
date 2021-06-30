@@ -1,7 +1,7 @@
 # Practice: Functional Components and Creating Lists
 
-Knowing how to build lists is crucial in React. 
-They are used in almost every facet of UI in most apps. 
+Knowing how to build lists is crucial in React.
+They are used in almost every facet of UI in most apps.
 In this practice you will learn how to create lists in your functional components.
 
 ## Phase 0: Set up
@@ -14,9 +14,43 @@ Run `npm start` to make sure your project is set up correctly.
 
 ## Phase 1
 
-Create a component and `.js` file called `MovesList`.
-We are going to list out all of the potential moves of this particular Pokemon.
-Testing this formatting again.
+Create a component and `.js` file called `Pokemoves`. It should return a
+`div` and an `h1` that says Pokemoves.
 
+To begin, take a look at the `data.js` folder that is also located in the `src`
+folder. It has an array of objects describing each move.
+We are going to import that data and use it to create a list for our
+application.
+
+With named exports we must always use curly braces and the correct variable
+name. Import the moves array from `data.js`
+
+You are going to list out all of the potential moves of this particular Pokemon.
+
+Create an unordered list beneath the `h1` tag.
+Inside the unordered list, you will map through the `moves` array that you
+imported.
+
+Each item that you map should return a list item with the id number and the
+name of the move.
+
+```js
+<ul>
+  {moves.map((item) => (
+    <li>
+      {item.id}. {item.move}
+    </li>
+  ))}
+</ul>
+```
+
+Look at your React DevTools in the browser and see what kind of errors or
+warnings you are receiving.
+
+AWhen mapping through an array, always remember that React expects a unique
+key for each item that is rendered. If your item has a unique `id` that is
+usually the best choice for the key. This optimizes React to run its
+diffing algorithm and return a quicker result through [indexing][keys-and-lists]
 
 [lists-starter]: ./starter
+[keys-and-lists]: https://reactjs.org/docs/lists-and-keys.html
