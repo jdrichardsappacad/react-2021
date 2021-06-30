@@ -1,6 +1,8 @@
 # Practice: Functional Components and Creating Lists
 
-Knowing how to build lists is crucial in React. They are used in almost every facet of UI in most apps. In this practice you will learn how to create lists in your functional components.
+Knowing how to build lists is crucial in React. 
+They are used in almost every facet of UI in most apps. 
+In this practice you will learn how to create lists in your functional components.
 
 ## Phase 0: Set up
 
