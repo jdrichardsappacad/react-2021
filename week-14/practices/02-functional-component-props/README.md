@@ -90,7 +90,8 @@ Remember, an event listener in React is camel cased (_onClick instead of onclick
 
 Notice that when the button is clicked, it triggers the `handleClick` function in the parent component.
 
-Congratulations! In this practice you have learned:
+**Congratulations!**
+In this practice you have learned:
 
 1. Passing values as props from parent to child.
 2. Checking props using React DevTools.
