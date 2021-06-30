@@ -1,12 +1,13 @@
 # Practice: Functional Components and Passing Props
 
-In this practice you will create a functional component and pass props from a parent component to a child component.
+In this practice you will create a functional component and pass props from a
+parent component to a child component.
 
 ## Phase 0: Set up
 
 Download the [starter][props-starter] file for this practice.
 
-Open the practice in VSCode and run `npm install` in the terminal.
+Open the starter in VSCode and run `npm install` in the terminal.
 
 Run `npm start` to make sure your project is set up correctly.
 
@@ -16,8 +17,8 @@ Create a functional component called `BaseStats` in your `src` folder. It should
 have a `div` with a class of `base-stats` and an `h1` with BaseStats as the
 child. Import the `BaseStates.css` file into your component.
 
-Next, add the `BaseStats` component to your `App.js` component.  It should be
-placed below the `Showcase` component.  Test it in the Browser.
+Next, add the `BaseStats` component to your `App.js` component. It should be
+placed below the `Showcase` component. Test it in the Browser.
 
 ## Phase 2: Create an Object and pass props
 
@@ -45,8 +46,8 @@ object.
 
 ## Phase 3: Use props object in the child component
 
-Now you are ready to use your props object.  Create a table beneath your `h1`
-tag.  It should have four table rows, each with two table data tags.  The first
+Now you are ready to use your props object. Create a table beneath your `h1`
+tag. It should have four table rows, each with two table data tags. The first
 table data tag of each table row should contain, in order:
 
 1. Hit Points
@@ -56,7 +57,7 @@ table data tag of each table row should contain, in order:
    (do not include the numbers)
 
 The second table data tag of each row should contain the prop value that is
-associated with the name represented in the first table data tag.  (e.g Hit
+associated with the name represented in the first table data tag. (e.g Hit
 Points | 45)
 
 Test your app in the browser.
@@ -92,7 +93,7 @@ Now, pass the `handleClick` function as a prop called `clicker` to the
 In your `BaseStats` component, destructure the `clicker` prop in your function
 component argument.
 
-Next, above your table, create a button with the text Check special stats.  Give
+Next, above your table, create a button with the text Check special stats. Give
 it a class of `sp-stats` Pass an `onClick` event listener to the `button`
 element and assign it the clicker function prop.
 
