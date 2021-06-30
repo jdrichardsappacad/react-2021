@@ -20,10 +20,14 @@ install React's dependencies for you. Since we've passed the name
 `react-template` to the command, it will have made a `react-template` directory
 in your working directory and bootstrapped the React app in there.
 
-In your terminal, `cd` into the `react-template` directory. Then, you can run
-`npm start` to run your React app in a development environment. Ignoring the
-`node_modules` directory with all the installed dependencies, the current file
-structure in the `react-template` folder looks like this:
+In your terminal, `cd` into the `react-template` directory. If you ran this
+command inside a pre-existing git repository, then there will not be a `.git`
+folder in this new directory. If you did not run the `npx` command in a git
+repository, then the new directory will have a `.git` folder in place for you.
+Then, you can run `npm start` to run your React app in a development
+environment. Ignoring the `node_modules` directory with all the installed
+dependencies, the current file structure in the `react-template` folder looks
+like this:
 
 ```plaintext
 react-template
@@ -132,8 +136,45 @@ this.
 
 ```json
 {
-
+    "short_name": "React Template",
+    "name": "Create React App Template",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
 }
 ```
 
+The title of the web page still reads "React App". To change that, open up the
+`public/index.html` file and update the `title` element to read "React
+Template".
+
+The `src/index.css` file is where all the site-wide (not component-specific) CSS
+style rules should be defined. Remove all the default styling in the
+`src/index.css` file and add this comment:
+
+```css
+/* TODO Add site wide styles */
+```
+
+**Add and commit your files.** This is the baseline application. From here on
+out, you can modify files with impunity!
+
+To use this React template project, you can use this baseline, or you can use
+[App Academy's Create React App template] by running the following command:
+
+```sh
+npx create-react-app <project-folder-name> --template @appacademy/react-v17
+```
+
+Replace `<project-folder-name>` with the name of the project folder you want to
+create with the template.
+
+## What you've learned
+
+Congratulations! You have successfully bootstrapped a React app with the
+`create-react-app` CLI tool and removed some extra files to make the template
+easier to use.
+
 [robots.txt]: https://en.wikipedia.org/wiki/Robots_exclusion_standard
+[App Academy's Create React App template]: https://www.npmjs.com/package/@appacademy/cra-template-react-v17
