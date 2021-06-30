@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className='background'>
+    <div className='main-wrapper background'>
       <Showcase />
     </div>
   );
