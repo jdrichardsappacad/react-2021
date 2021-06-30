@@ -61,7 +61,7 @@ Points | 45)
 
 Test your app in the browser.
 
-## Phase 4 Destructure your Props
+## Phase 4: Destructure your Props
 
 To make your code more concise and practice the DRY principal, destructure your
 props variables in the argument for the `BaseState` functional component.
@@ -69,7 +69,7 @@ props variables in the argument for the `BaseState` functional component.
 Refactor your JSX to reflect these variables. You should only call the variables
 hp, attack, defense, and speed in your JSX.
 
-## Phase 5 Pass a Function as a Component
+## Phase 5: Pass a Function as a Component
 
 There are times where you may want to pass a function as a prop. This does not
 mean that you change the prop in the functional component. Instead, you will
