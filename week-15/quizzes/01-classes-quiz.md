@@ -35,7 +35,8 @@ This quiz tests you on your understanding of Class Components in React.
     <answer>It runs after each render.</answer>
     <answer>It doesn't run after the first render however it does run after each subsequent render.</answer>
     <answer>It runs once the component unmounts.</answer>
-    <explanation>The componentDidMount method runs once after the component mounts and renders for the first time. It's comparable to a useEffect with an empty dependency array.</explanation>
+    <explanation>The componentDidMount method runs once after the component mounts and renders for the first time. It's comparable to a useEffect with
+    an empty dependency array.</explanation>
   </question>
 </quiz>
 
