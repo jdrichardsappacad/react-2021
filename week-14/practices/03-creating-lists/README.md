@@ -12,7 +12,7 @@ Open the practice in VSCode and run `npm install` in the terminal.
 
 Run `npm start` to make sure your project is set up correctly.
 
-## Phase 1
+## Phase 1: Create Pokemoves component
 
 Create a component and `.js` file called `Pokemoves`. It should return a
 `div` and an `h1` that says Pokemoves.
