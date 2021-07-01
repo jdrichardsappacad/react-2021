@@ -66,19 +66,51 @@ Import the `PokeMoveCard.css` into the file.
 
 The component should only return an `li` with the text `Pokemove Card`.
 Now, import the `PokeMoveCard` component in your `Pokemoves` component and
-replace the `li` inside the `ul` element with the PokeMoveCard.
+replace the `li` inside the `ul` element with the PokeMoveCard component.
 You now need to place the key inside the PokeMove card instead of the li
-element. You can also now pass all of the props returned by the single item
+element.
+
+```js
+<PokeMoveCard key={item.id}>
+```
+
+Take a look in your Browser and you will see Pokemove Card written for the
+number of items in your moves array.
+
+You can now pass all of the props returned by the single item
 by using the spread operator and the item variable name.
 
 ```js
 <PokeMoveCard key={item.id} {...item}>
 ```
 
-These props will be available to your PokeMoveCard component when you bring
-them in as an argument to the component. Try this and take a look at your
-ReactDevTools to see if the props are available by clicking on each
-PokeMoveCard and looking at the props. Remember to destructure your props.
+This says, send all of the values in this item as props to the
+Pokemove component.
+
+Next, in your `PokeMoveCard` component, destructure the props into your
+component. Now, go to your React DevTools and click on each PokeMoveCard
+component to see the props available to each rendered component.
+
+Add the values, like below, to the PokeMove component. Remember to give
+the li a class of `poke-move-card`.
+
+```js
+return (
+  <li className='poke-move-card'>
+    <h3>Move {id}</h3>
+    <h4 style={{ padding: 10 }}>{move.toUpperCase()}</h4>
+    <p>Type: {type}</p>
+    <p>Level: {level}</p>
+  </li>
+);
+```
+
+Congratulations! In this practice you have learned:
+
+1. Creating an unordered list in React using .map
+2. Adding a key prop to the returned item in your list
+3. Passing props using the spread operator
+4. Returning a component instead of an li element in your .map function
 
 [lists-starter]: ./starter
 [keys-and-lists]: https://reactjs.org/docs/lists-and-keys.html
