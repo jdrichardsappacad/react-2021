@@ -19,13 +19,13 @@ To start, in your `src` directory, create a new directory called `context`. In t
 `context` directory, create a file called `HoroscopeContext.js`. This is where
 all your horoscope context will be placed.
 
-At the top of this file, bring in `createContext` from `react` and create your
+At the top of this file, import `createContext` from `react` and create your
 context called `HoroscopeContext`. Make sure to `export` it.
 
-Next, create a new component called `HoroscopeProvider`, that will take `props`.
-For your return statement, use your `HoroscopeContext` provider component
-and wrap it around your `props.children`. Once complete, also export the
-component.
+Next, create a new component called `HoroscopeProvider`, take in `props` as its
+parameter.For your return statement, use your `HoroscopeContext` provider
+component and wrap it around your `props.children`. Once complete, also export
+the component.
 
 Now it's time to navigate to your `src/index.js`. This is where we will use our
 `HoroscopeProvider` component, so import the component at the top of your file.
