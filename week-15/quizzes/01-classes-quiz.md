@@ -6,7 +6,7 @@ This quiz tests you on your understanding of Class Components in React.
 
 <quiz>
   <question>
-    <p>Is a contructor function and super method required when building a class component in React?</p>
+    <p>Is a constructor function and super method required when building a class component in React?</p>
     <answer correct>No</answer>
     <answer>Yes</answer>
     <explanation>If you are not creating state or binding a method, the constructor function and super method are not required.</explanation>
@@ -46,7 +46,7 @@ This quiz tests you on your understanding of Class Components in React.
     use them.</p>
     <answer correct>False</answer>
     <answer>True</answer>
-    <explanation>Props are accessible without having to bring them into a 
+    <explanation>Props are accessible without having to bring them into a
     class component like we do with function components.</explanation>
   </question>
 </quiz>
