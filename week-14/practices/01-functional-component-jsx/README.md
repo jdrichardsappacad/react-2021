@@ -10,6 +10,8 @@ Open the practice in VSCode and run `npm install` in the terminal.
 
 Run `npm start` to make sure your project is set up correctly.
 
+You should see `App Component` in your browser if it is running correctly.
+
 ## Phase 1: Create a Functional Component
 
 Create a file `Showcase.js` in the `src/components` folder. Inside that file
@@ -132,11 +134,13 @@ Finally, use inline or external CSS to resize your image.
 
 ### Bonus
 
-- Move all CSS in `Showcase.js` to it's own external file and assign classes to
-    the elements.
+- Move all CSS in `Showcase.js` to it's own external file called `Showcase.css`
+  and assign classes to the elements.
+- Remember to import the file into your `Showcase.js` file and use classes
+  where there was inline code
 - Center all elements on page using [Flexbox][flexbox]
 - Using inline styles evenly distribute the height and width of the image and
-    turn it into a circle.
+  turn it into a circle.
 
 ## What You Have Learned
 
@@ -151,7 +155,7 @@ React Functional Component. This includes:
 - Using inline CSS inside your JSX
 - Using External CSS and importing the file using a relative path
 
-[jsx-starter]: http://www.starter.com
+[jsx-starter]: ./starter
 [js-expression]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions
 [es6-imports]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 [flexbox]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
