@@ -35,8 +35,8 @@ single element.
 
 ### Nest Showcase Component inside your App Component
 
-Inside your `App.js` import the `Showcase` component using [ES6
-imports][es6-imports]. Replace the `h1` with a `div` element and add the
+Inside your `App.js` import the `Showcase` component using
+[ES6imports][es6-imports]. Replace the `h1` with a `div` element and add the
 `Showcase` component as a child.
 
 Check your browser. It should now read `Showcase Component`
@@ -44,8 +44,9 @@ Check your browser. It should now read `Showcase Component`
 ## Phase 2: Add JavaScript to Your JSX
 
 You've already seen that you can add HTML-like syntax to your JSX. Now, let's
-add JavaScript. Curly braces `{}` inside JSX indicate to React that JavaScript
-will be evaluated. You can add any [JS expression][js-expression] to your JSX.
+add JavaScript. Curly braces `{}` inside JSX lets React know that JavaScript
+will be evaluated, allowing you to add any [JS expression][js-expression] to
+your JSX.
 
 Inside your functional component, you are allowed to use Vanilla JS above the
 `return`.
@@ -58,17 +59,18 @@ along with an `'s` after the curly braces.
 
 Notice how you are now adding both HTML and JS in the same code.
 
-Now create an object literal `pokeCharacterstics` with a `type` and a `move`
-key. Add values to both keys. (If you don't have any values you can use `Grass`
-for type and `Vine Whip` for move.)
+Now create an object literal called `pokeCharacterstics` with a `type` and
+a `move` key. Add values to both keys. (If you don't have any values you can
+use `Grass` for type and `Vine Whip` for move.)
 
 Now, place that object inside your return statement below the `h1` tag.
 (Remember your curly braces.)
 
 Take a look in your browser. The error that you see indicates that you cannot
-use a complete object literal inside your JSX. You must key into the object.
+use a complete object literal inside your JSX. You must key into the object, so
+go ahead and delete that line of code.
 
-Now create an `h2` tag that says something like, **Bulbasaur's type is Grass and
+Instead create an `h2` tag that says something like, **Bulbasaur's type is Grass and
 one of their moves is Vine Whip** Use the variables that you have created to
 create this JSX.
 
@@ -78,13 +80,13 @@ Take a look inside the images folder. Notice that there is an image for
 Bulbasaur. If you would like, you can add a different image to this folder for
 your character.
 
-Next, inside your `Showcase` component, import your image using [ES6
-imports][es6-imports] by giving your image a variable name and assigning it to
-the relative path from the file you are in to the image.
+Next, inside your `Showcase` component, import your image using
+[ES6 imports][es6-imports] by giving your image a variable name and assigning
+it to the relative path from the file you are in to the image.
 
 Now place an `img` tag between your `h1` and `h2` tags and assign the image
-variable to the `src` attribute. Add an `alt` attribute and assign the character
-name to the `alt` attribute.
+variable to the `src` attribute. Add an `alt` attribute and assign the
+character's name to the `alt` attribute.
 
 ## Phase 4: Add CSS to your JSX
 
@@ -106,7 +108,7 @@ make the background color white and the text green using hex colors.
 
 ## Phase 5: Add a Background Image Using External CSS
 
-Let's add a background image to our page by using external CSS Create a file
+Let's add a background image to our page by using external CSS. Create a file
 called `App.css` Inside the `App.css` file, add a class with the name
 `background` Remember, in this file we use regular CSS. In your background
 selector add these values
