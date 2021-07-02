@@ -36,7 +36,7 @@ single element.
 ### Nest Showcase Component inside your App Component
 
 Inside your `App.js` import the `Showcase` component using
-[ES6imports][es6-imports]. Replace the `h1` with a `div` element and add the
+[ES6 imports][es6-imports]. Replace the `h1` with a `div` element and add the
 `Showcase` component as a child.
 
 Check your browser. It should now read `Showcase Component`
