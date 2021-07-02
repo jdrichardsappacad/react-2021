@@ -12,10 +12,6 @@ Open the starter in VSCode and run `npm install` in the terminal.
 
 Run `npm start` to make sure your project is set up correctly.
 
-## Overview
-
-For this phase, we will be working with the `Navbar` component to have our
-context value dynamically change with each `onClick` of the `span` element.
 
 ## Phase 1: Create context
 
@@ -37,12 +33,76 @@ Now it's time to navigate to your `src/index.js`. This is where we will use our
 In your `Root` component, wrap your `App` component with the `HoroscopeProvider`
 you just imported.
 
-If all wemt well, you should be able to see your `HoroscopeContext.Provider` in your
-browser. In order to see that, head over to your browser and open devTools.
-(Remember to `npm start` so your server is running!) In devTools, navigate to
-your `Components` tab from [React Developer Tools](react-devtools). As you take
-a look at your component tree, `HoroscopeContext.Provider` should be at the top
-level.
+If all went well, you should be able to see your `HoroscopeProvider` in your
+browser's DevTools. In order to see that, head over to your browser and open
+DevTools. (Remember to `npm start` so your server is running!) In DevTools,
+navigate to your `Components` tab from [React Developer Tools](react-devtools).
+
+As you take a look at your component tree, `HoroscopeProvider` should be
+at the top-level followed by your `Context.Provider`.
+
+
+## Phase 2: Update Context.Provider
+
+If you took a look at your console tab in DevTools and saw a warning message
+from React about a missing value prop, we most definitely did not pass one into
+our HoroscopeContext provider, so let's do that!
+
+Back to our `HoroscopeProvider` component (`src/context/HoroscopeContext.js`),
+create a state for our `currentSign` and have the default value be any
+horoscope sign you want. If you don't know which one, `"Leo"` is a good one,
+it's only 3 characters long. (Did you remember to import `useState`?)
+
+Once you have created your `currentSign` state, pass `currentSign` and
+`setCurrentSign` as the value in our `HoroscopeContext.Provider'.It should look
+something like this:
+
+```javascript
+<HoroscopeContext.Provider value={{currentSign, setCurrentSign}}>
+```
+
+Now take a look at your Component tab in DevTools again! If you click on your
+`Context.Provider `component, you should see your value, under props section,
+equal to our `currentSign` and `setCurrentSign`.
+
+
+## Phase 3: Use Context in Navbar Component
+
+In Phase 1 and 2, we have created our context and had our provider wrap our
+entire App. The final step we need to take is *consume* our context.
+
+In your `Navbar` component (`src/components/Navbar.js`), import `useContext` and
+`HoroscopeContext`. Inside your `Navbar` component, destructure your
+`setCurrentSign`, which comes from invoking `useContext` and passing in your
+`HoroscopeContext` as an argument.
+
+Keep in mind, when we use the `useContext` hook and pass the context in,
+the value we get back will be the object we passed in our value prop from the
+context provider. In our case, the object will look like below, which is why we
+can destructure:
+
+```javascript
+{
+  currentSign: "Leo",
+  setCurrentSign: *function*
+}
+```
+
+With the `setCurrentSign` function, everytime there is an `onClick` for the
+`<span>` element, we will `setCurrentSign` to the `sign`, so go ahead and
+implement that.
+
+To confirm you have done this correctly, head back over to your browser and make
+sure your devTools => Component tab is open. Select your Navbar component and
+pay attention to your `hooks` section where your context is. As you click on
+each span, your `currentSign` should also update accordingly to the sign you
+have clicked on.
+
+
+**Congratulations!**
+
+You have successfully used your context provider to dynamically change your
+value.
 
 
 
