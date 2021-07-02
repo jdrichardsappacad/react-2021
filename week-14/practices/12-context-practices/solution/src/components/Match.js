@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useHoroscrope } from "../context/HoroscopeContext";
+import { useHoroscope } from "../context/HoroscopeContext";
+
 const Match = () => {
   const [match, setMatch] = useState(false);
-  const {sign} = useHoroscrope();
-
-
+  const {sign} = useHoroscope();
 
   return (
     <>

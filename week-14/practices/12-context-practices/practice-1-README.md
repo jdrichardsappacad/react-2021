@@ -46,7 +46,7 @@ at the top-level followed by your `Context.Provider`.
 
 If you took a look at your console tab in DevTools and saw a warning message
 from React about a missing value prop, we most definitely did not pass one into
-our HoroscopeContext provider, so let's do that!
+our `HoroscopeContext` provider, so let's do that!
 
 Back to our `HoroscopeProvider` component (`src/context/HoroscopeContext.js`),
 create a state for our `currentSign` and have the default value be any
@@ -54,7 +54,7 @@ horoscope sign you want. If you don't know which one, `"Leo"` is a good one,
 it's only 3 characters long. (Did you remember to import `useState`?)
 
 Once you have created your `currentSign` state, pass `currentSign` and
-`setCurrentSign` as the value in our `HoroscopeContext.Provider'.It should look
+`setCurrentSign` as the value in our `HoroscopeContext.Provider`. It should look
 something like this:
 
 ```javascript
@@ -62,7 +62,7 @@ something like this:
 ```
 
 Now take a look at your Component tab in DevTools again! If you click on your
-`Context.Provider `component, you should see your value, under props section,
+`Context.Provider` component, you should see your value, under props section,
 equal to our `currentSign` and `setCurrentSign`.
 
 
@@ -88,7 +88,7 @@ can destructure:
 }
 ```
 
-With the `setCurrentSign` function, everytime there is an `onClick` for the
+With the `setCurrentSign` function, every time there is an `onClick` for the
 `<span>` element, we will `setCurrentSign` to the `sign`, so go ahead and
 implement that.
 

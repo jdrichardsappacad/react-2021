@@ -1,9 +1,8 @@
-import { useHoroscrope } from "../context/HoroscopeContext";
+import { useHoroscope } from "../context/HoroscopeContext";
 import Match from "./Match";
 
 const Detail = () => {
-  const {sign} = useHoroscrope();
-
+  const {sign} = useHoroscope();
 
   return (
     <div className="details">
