@@ -110,8 +110,8 @@ make the background color white and the text green using hex colors.
 ## Phase 5: Add a Background Image Using External CSS
 
 Let's add a background image to our page by using external CSS. Create a file
-called `App.css` Inside the `App.css` file, add a class with the name
-`background` Remember, in this file we use regular CSS. In your background
+called `App.css`. Inside the `App.css` file, add a class with the name
+`background`. Remember, in this file we use regular CSS. In your background
 selector add these values
 
 ```css
