@@ -42,8 +42,9 @@ Check your browser. It should now read `Showcase Component`
 ## Phase 2: Add JavaScript to Your JSX
 
 You've already seen that you can add HTML-like syntax to your JSX. Now, let's
-add JavaScript. Curly braces `{}` inside JSX indicate to React that JavaScript
-will be evaluated. You can add any [JS expression][js-expression] to your JSX.
+add JavaScript. Curly braces `{}` inside JSX lets React know that JavaScript
+will be evaluated, allowing you to add any [JS expression][js-expression] to
+your JSX.
 
 Inside your functional component, you are allowed to use Vanilla JS above the
 `return`.
