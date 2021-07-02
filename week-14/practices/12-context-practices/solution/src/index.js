@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import { HoroscopeProvider } from './context/HoroscopeContext';
 
-// Practice 1
 const Root = () => {
   return (
     <HoroscopeProvider>

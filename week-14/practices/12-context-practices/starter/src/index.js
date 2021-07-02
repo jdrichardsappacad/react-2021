@@ -11,7 +11,7 @@ const Root = () =>{
 
 ReactDOM.render(
   <React.StrictMode>
-    <Rppt />
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );
