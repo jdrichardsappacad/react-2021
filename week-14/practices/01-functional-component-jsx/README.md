@@ -49,8 +49,8 @@ add JavaScript. Curly braces `{}` inside JSX lets React know that JavaScript
 will be evaluated, allowing you to add any [JS expression][js-expression] to
 your JSX.
 
-Inside your functional component, you are allowed to use Vanilla JS above the
-`return`.
+In `Showcase.js`, inside your functional component, you are allowed to use
+Vanilla JS above the `return`.
 
 Add a variable called `favPokemon` and assign it the name of your favorite
 Pokemon or if you don't have one, `Bulbasaur`.
