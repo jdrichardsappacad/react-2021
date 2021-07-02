@@ -14,9 +14,10 @@ You should see `App Component` in your browser if it is running correctly.
 
 ## Phase 1: Create a Functional Component
 
-Create a file `Showcase.js` in the `src/components` folder. Inside that file
-you will create a functional component `Showcase` with contents similar to the
-code below:
+First, create a folder in the `src` directory named `components`. Then, create a
+file `Showcase.js` in the `src/components` folder. Inside that file you will
+create a functional component `Showcase` with contents similar to the code
+below:
 
 ```js
 function Showcase() {
@@ -48,8 +49,8 @@ add JavaScript. Curly braces `{}` inside JSX lets React know that JavaScript
 will be evaluated, allowing you to add any [JS expression][js-expression] to
 your JSX.
 
-Inside your functional component, you are allowed to use Vanilla JS above the
-`return`.
+In `Showcase.js`, inside your functional component, you are allowed to use
+Vanilla JS above the `return`.
 
 Add a variable called `favPokemon` and assign it the name of your favorite
 Pokemon or if you don't have one, `Bulbasaur`.
@@ -109,8 +110,8 @@ make the background color white and the text green using hex colors.
 ## Phase 5: Add a Background Image Using External CSS
 
 Let's add a background image to our page by using external CSS. Create a file
-called `App.css` Inside the `App.css` file, add a class with the name
-`background` Remember, in this file we use regular CSS. In your background
+called `App.css`. Inside the `App.css` file, add a class with the name
+`background`. Remember, in this file we use regular CSS. In your background
 selector add these values
 
 ```css
