@@ -35,11 +35,11 @@ This quiz is meant to check your understanding of thunks.
 <quiz>
   <question>
     <p>How can you add middleware to your Redux store?</p>
-    <answer correct>With `redux`'s built-in `applyMiddleware` function</answer>
-    <answer>With `redux`'s built-in `addMiddleware` function</answer>
-    <answer>With `react`'s built-in `useMiddleware` hook</answer>
-    <answer>With `react-redux`'s built-in `addMiddleware` function</answer>
-    <explanation>The `redux` package comes with an `applyMiddleware` function
+    <answer correct>With Redux's built-in `applyMiddleware` function</answer>
+    <answer>With Redux's built-in `addMiddleware` function</answer>
+    <answer>With React's built-in `useMiddleware` hook</answer>
+    <answer>With React-Redux's built-in `addMiddleware` function</answer>
+    <explanation>The Redux package comes with an `applyMiddleware` function
     that helps you add middleware to your Redux store.</explanation>
   </question>
 </quiz>
@@ -64,7 +64,7 @@ This quiz is meant to check your understanding of thunks.
   <question>
     <p>How can you `dispatch` a thunk?</p>
     <answer correct>By using the `dispatch` from the `useDispatch` hook from the
-    `react-redux` package</answer>
+    React-Redux package</answer>
     <answer>By bringing in the Redux store and using the `dispatch` method
     that's available on there</answer>
     <answer>By calling `useDispatch` and passing in our thunk</answer>
