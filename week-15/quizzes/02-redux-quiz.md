@@ -57,7 +57,7 @@ This quiz is designed to test you on Redux.
     <answer>In Redux, an action is the dispatching of some object.</answer>
     <answer>In Redux, an action is the function you call to cause a change to
     your Redux state.</answer>
-    <answer>In Redux, an action is string that you assign to an object's `type`
+    <answer>In Redux, an action is a string that you assign to an object's `type`
     project.</answer>
     <explanation>An action in Redux is a Plain Old JavaScript Object with, at
     the very least, a `type` property.</explanation>
