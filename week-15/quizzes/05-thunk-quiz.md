@@ -8,7 +8,7 @@ This quiz is meant to check your understanding of thunks.
   <question>
     <p>What is a thunk?</p>
     <answer correct>A thunk is a function that gets returned by another
-    function, the thunk action creator.</answer>
+    function, also known as the thunk action creator.</answer>
     <answer>A thunk is a special kind of object that gets dispatched whenever
     you want to handle asynchronous events.</answer>
     <answer>A thunk is the function that returns a function.</answer>
