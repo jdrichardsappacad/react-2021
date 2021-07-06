@@ -40,7 +40,7 @@ This quiz is designed to test you on Redux.
     time.</answer>
     <answer>State is anything created by `useState` and the store is anything
     created with `useStore`.</answer>
-    <answer>React will create state for your, but you have to create the store
+    <answer>React will create state for you, but you have to create the store
     yourself.</answer>
     <answer>Redux prefers that you use the store over the state.</answer>
     <explanation>By definition, the state is all the information in an
@@ -58,7 +58,7 @@ This quiz is designed to test you on Redux.
     <answer>In Redux, an action is the function you call to cause a change to
     your Redux state.</answer>
     <answer>In Redux, an action is a string that you assign to an object's `type`
-    project.</answer>
+    object.</answer>
     <explanation>An action in Redux is a Plain Old JavaScript Object with, at
     the very least, a `type` property.</explanation>
   </question>
