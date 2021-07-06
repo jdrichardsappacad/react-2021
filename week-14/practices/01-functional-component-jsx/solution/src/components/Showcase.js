@@ -1,4 +1,4 @@
-import bulbasaur from './images/bulbasaur.jpg';
+import bulbasaur from '../images/bulbasaur.jpg';
 // import './Showcase.css';
 
 const Showcase = () => {

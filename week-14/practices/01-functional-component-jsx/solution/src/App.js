@@ -1,4 +1,4 @@
-import Showcase from './Showcase';
+import Showcase from './components/Showcase';
 import './App.css';
 
 function App() {
