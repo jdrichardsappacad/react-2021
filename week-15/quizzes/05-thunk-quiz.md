@@ -80,7 +80,7 @@ This quiz is meant to check your understanding of thunks.
   <question>
     <p>What is the purpose of using thunks?</p>
     <answer correct>Thunks allow one to have asynchronous events in Redux's data
-    flow while keeping action creators be the only source of every change to our
+    flow while keeping action creators as the only source of every change to our
     application state.</answer>
     <answer>Thunks allow the store to have asynchronous function calls in the
     reducer.</answer>
