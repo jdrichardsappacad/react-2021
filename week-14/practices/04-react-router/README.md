@@ -69,27 +69,29 @@ You have now given router access to your entire application!
 
 ## Phase 2: Route Matching
 
-We now have the ability to create Routes that will mount our components.
+We now have the ability to create Routes that will mount our components when
+the correct path is chosen.
 
 Inside your `App.js`, import Route from the `react-router-dom` package.
-Next, inside the JSX returned `div` but at the bottom, create a route
-for Home by using the Route component and nesting the Home component inside.
+Next, inside the JSX return `div` but at the bottom, create a route
+for the Home component by using the Route component and nesting the Home
+component inside of it.
 
-Comment out all of the components that are listed in the JSX. We will
+Remove all of the components that are listed in the JSX. We will
 render these components using routes.
 
 The Route component takes an attribute called `path`. Using opening and closing
-tags, define your first Route component with a `/` for the path. Inside
-the tags place your Home Component.
+tags, define your first Route component with a `/` for the path. Nest your Home
+Component Inside the opening and closing tags.
 
 Now check your browser. You should only see the Home component being
 rendered at this point.
 
 Next, do the same for the Stocks and Movies components.
 
-Take a look in your browser. In your address bar, after the forward slash,
-add a `/stocks` to the address bar and notice what you see. Now do the
-same for `/movies`. Notice that the Home component is always mounted?
+Take a look in your browser. In your address bar, after the `localhost:3000`,
+add a `/stocks` to the address bar and notice what you see. Now, replace
+`/stocks` with `/movies`. Notice that the Home component is always mounted?
 This is not the functionality we want.
 
 Instead use the `exact` attribute inside the Route for the Home Component.
@@ -104,11 +106,11 @@ Below the other Route components, add another Route Component with no path.
 Inside the opening and closing tags, add an `<h1>` tag that says,
 `Page Not Found`
 
-Now test it in the browser by changing the addresses in your url.
+Now test it in the browser by changing the portion of the address in your url
+after `localhost:3000` to `/movies` or `/stocks`.
 
 Notice that 'Page Not Found' is always there no matter which Component is
-being mounted?
-We cannot use exact in this instance because it has no path.
+being mounted? We cannot use exact in this instance because it has no path.
 
 Instead, import the `Switch` component from `react-router-dom`.
 Now wrap all of your Route components in the `Switch` component.
