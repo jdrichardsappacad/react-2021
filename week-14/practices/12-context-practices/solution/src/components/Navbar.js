@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { HoroscopeContext } from 'react';
+import horoscopesObj from '../data/horoscopes';
 
 const Navbar = () => {
   const {setCurrentSign} = useContext(HoroscopeContext)

@@ -1,9 +1,12 @@
-# Practice: Context Provider with Dynamic Value Practice
+# Practice: Context Consumer Sets Dynamic Value Practice
 
 In this practice, you will:
 
-* Set up a Context Provider and Consumer Walkthrough to set the value of a
-context and read it in a component
+* Create another component that will dynamically set the value of the context
+(but not read the value). The other component should have the value update
+automatically.
+
+* Show that other components that don't "consume the context" don't re-render.
 
 ## Phase 0: Setup
 
@@ -12,6 +15,7 @@ Download the [starter][context-starter] file for this practice.
 Open the starter in VSCode and run `npm install` in the terminal.
 
 Run `npm start` to make sure your project is set up correctly.
+
 
 ## Phase 1: Create context
 
@@ -41,6 +45,7 @@ navigate to your `Components` tab from [React Developer Tools](react-devtools).
 As you take a look at your component tree, `HoroscopeProvider` should be
 at the top-level followed by your `Context.Provider`.
 
+
 ## Phase 2: Update Context.Provider
 
 If you took a look at your console tab in DevTools and saw a warning message
@@ -64,14 +69,15 @@ Now take a look at your Component tab in DevTools again! If you click on your
 `Context.Provider` component, you should see your value, under props section,
 equal to our `currentSign` and `setCurrentSign`.
 
-## Phase 3: Use Context in Detail Component
+
+## Phase 3: Use Context in Navbar Component
 
 In Phase 1 and 2, we have created our context and had our provider wrap our
 entire App. The final step we need to take is *consume* our context.
 
-In your `Detail` component (`src/components/Detail.js`), import `useContext` and
-`HoroscopeContext`. Inside your `Detail` component, destructure your
-`currentSign`, which comes from invoking `useContext` and passing in your
+In your `Navbar` component (`src/components/Navbar.js`), import `useContext` and
+`HoroscopeContext`. Inside your `Navbar` component, destructure your
+`setCurrentSign`, which comes from invoking `useContext` and passing in your
 `HoroscopeContext` as an argument.
 
 Keep in mind, when we use the `useContext` hook and pass the context in,
@@ -85,6 +91,23 @@ can destructure:
   setCurrentSign: *function*
 }
 ```
+
+With the `setCurrentSign` function, every time there is an `onClick` for the
+`<span>` element, we will `setCurrentSign` to the `sign`, so go ahead and
+implement that.
+
+To confirm you have done this correctly, head back over to your browser and make
+sure your devTools => Component tab is open. Select your Navbar component and
+pay attention to your `hooks` section where your context is. As you click on
+each span, your `currentSign` should also update accordingly to the sign you
+have clicked on.
+
+
+**Congratulations!**
+
+You have successfully used your context provider to dynamically change your
+value.
+
 
 
 [context-starter]: ./starter
