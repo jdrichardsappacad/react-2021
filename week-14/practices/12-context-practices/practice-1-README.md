@@ -1,51 +1,58 @@
 # Practice: Context Provider with Dynamic Value Practice
 
+In our previous practice, we have created our context and consumed it in our
+`Detail` component. Let's now make this a more dynamic and show you how context
+can be used!
+
 In this practice, you will:
 
-* Set up a Context Provider and Consumer Walkthrough to set the value of a
-context and read it in a component
+* Set up a Context Provider to set the value of a context and read it in a
+component when your context value changes.
 
-## Phase 0: Setup
+## Phase 1: Refactor the `Context.Provider`
 
-Download the [starter][context-starter] file for this practice.
+If you rememeber in our first practice, we had our `HoroscopeContext.Provider`
+wrap around our `App` component in `src/index.js`. While this process is
+acceptable, it's not common practice. What you often see is a provider component
+that wraps your application instead. Let's create one so you can see what that
+means.
 
-Open the starter in VSCode and run `npm install` in the terminal.
-
-Run `npm start` to make sure your project is set up correctly.
-
-## Phase 1: Create context
-
-To start, in your `src` directory, create a new directory called `context`. In this
-`context` directory, create a file called `HoroscopeContext.js`. This is where
-all your horoscope context will be placed.
-
-At the top of this file, import `createContext` from `react` and create your
-context called `HoroscopeContext`. Make sure to `export` it.
-
-Next, create a new component called `HoroscopeProvider`, take in `props` as its
-parameter.For your return statement, use your `HoroscopeContext` provider
-component and wrap it around your `props.children`. Once complete, also export
-the component.
+In your `HoroscopeContext.js` file, create a new component called
+`HoroscopeProvider`, that take in `props` as its parameter. For your return
+statement, use your `HoroscopeContext` provider component and wrap it around
+your `props.children`. Once complete, make sure to export the component.
 
 Now it's time to navigate to your `src/index.js`. This is where we will use our
 `HoroscopeProvider` component, so import the component at the top of your file.
 
-In your `Root` component, wrap your `App` component with the `HoroscopeProvider`
-you just imported.
+In your `Root` component, instead of the `HoroscopeContext.Provider` component,
+wrap your `App` component with the `HoroscopeProvider` you just imported.
 
-If all went well, you should be able to see your `HoroscopeProvider` in your
-browser's DevTools. In order to see that, head over to your browser and open
-DevTools. (Remember to `npm start` so your server is running!) In DevTools,
-navigate to your `Components` tab from [React Developer Tools](react-devtools).
+If all went well, your browser should still look the same. However, if you look
+at your component tree, you should be able to see your `HoroscopeProvider` in
+your browser's DevTools with `Context.Provider` nested inside, and `App` inside
+`Context.Provider`. If you don't remember how to get there, head over to your
+browser and open DevTools. (Remember to `npm start` so your server is running!)
+In DevTools, navigate to your `Components` tab from
+[React Developer Tools](react-devtools).
 
-As you take a look at your component tree, `HoroscopeProvider` should be
-at the top-level followed by your `Context.Provider`.
+This is what you should see:
 
-## Phase 2: Update Context.Provider
+```
+Root
+  \
+  HoroscopeProvider
+    \
+    Context.Provider
+      \
+      App
+```
+
+## Phase 2: Update Context Value
 
 If you took a look at your console tab in DevTools and saw a warning message
 from React about a missing value prop, we most definitely did not pass one into
-our `HoroscopeContext` provider, so let's do that!
+our `HoroscopeContext` provider this time, so let's do that!
 
 Back to our `HoroscopeProvider` component (`src/context/HoroscopeContext.js`),
 create a state for our `currentSign` and have the default value be any
