@@ -90,7 +90,64 @@ this:
 Next, in your Stocks.js file, create a variable called loggedIn and assign it to
 false.
 
-Add an `if` statement that redirects to the `/not-logged-in`url if`loggedIn`
-is false.
+Add an `if` statement that redirects to the `/not-logged-in` url when the
+`loggedIn` variable is false.
+
+Test it in your Browser by clicking on the Stocks link. It should redirect you
+to the Not Logged in route.
+
+Now, in Stocks.js, set the `loggedIn` variable to true and click on the Stocks
+Link. You should be able to view the Stocks component.
+
+## History API & useHistory Hook for Navigation
+
+You will use the useHistory hook to navigate after some transaction has taken
+place. In your Stocks component, you want to navigate back to the Home Page
+after you click a button.
+
+First, under the `h1` tag in your JSX, create a button with an `onClick` event
+listener that looks like this:
+
+```js
+<button onClick={handleClick}>Home</button>`
+```
+
+Event listeners differ in React in that the event listener is camel cased and
+will always be assigned to a function.
+
+Here you have set the `onClick` to take the function handleClick but you have
+not written it yet.
+
+Above your return, create a function called `handleClick`.
+It should alert the user with a message and then navigate home.
+
+```js
+const handleClick = () => {
+  window.alert('Sending info to the DB!');
+};
+```
+
+Test in the browser.
+
+Now, you want to redirect after you click the ok button in the alert box.
+
+import the `useHistory` hook from `react-router-dom`
+
+In your component, evoke the useHistory hook and assign it to a new variable
+called `history`
+
+After the `window.alert` in the handleClick function, use the push method to
+navigate the user to the Home component.
+
+Test in the browser.
+
+Congratulations! You have completed the Navigation portion of the practice. Here is a list of what you reinforced:
+
+1. Using the Link component to navigate to another address
+2. Using the NavLink extra capability to set the `active` class in CSS
+3. Using the NavLink attributes to further personalize the active links.
+4. Using the Redirect component to prevent behavior
+5. Using the History API and the useHistory hook to navigate the user to another
+   location after they have handled some other functionality.
 
 [starter]: ./starter
