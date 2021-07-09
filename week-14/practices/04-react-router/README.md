@@ -100,7 +100,7 @@ the exact path matches.
 
 Now, test again in the browser. Notice the difference?
 
-## Phase 3 Adding A Switch Component
+## Phase 3: Adding A Switch Component
 
 Below the other Route components, add another Route Component with no path.
 Inside the opening and closing tags, add an `<h1>` tag that says,
