@@ -73,12 +73,13 @@ We now have the ability to create Routes that will mount our components when
 the correct path is chosen.
 
 Inside your `App.js`, import Route from the `react-router-dom` package.
-Next, inside the JSX return `div` but at the bottom, create a route
-for the Home component by using the Route component and nesting the Home
-component inside of it.
 
 Remove all of the components that are listed in the JSX. We will
 render these components using routes.
+
+Next, inside the JSX return `div`, then, at the bottom, create a route
+for the Home component by using the Route component and nesting the Home
+component inside of it.
 
 The Route component takes an attribute called `path`. Using opening and closing
 tags, define your first Route component with a `/` for the path. Nest your Home
