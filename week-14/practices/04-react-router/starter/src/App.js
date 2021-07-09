@@ -1,6 +1,5 @@
 import Home from './components/Home';
 import Stocks from './components/Stocks';
-import MovieDetails from './components/MovieDetails';
 import Movies from './components/Movies';
 
 function App() {
@@ -10,7 +9,6 @@ function App() {
       <Home />
       <Stocks />
       <Movies />
-      <MovieDetails />
     </div>
   );
 }
