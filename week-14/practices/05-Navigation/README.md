@@ -131,13 +131,13 @@ Test in the browser.
 
 Now, you want to redirect after you click the ok button in the alert box.
 
-import the `useHistory` hook from `react-router-dom`
+Import the `useHistory` hook from `react-router-dom`
 
-In your component, evoke the useHistory hook and assign it to a new variable
+In your component, invoke the useHistory hook and assign it to a new variable
 called `history`
 
-After the `window.alert` in the handleClick function, use the push method to
-navigate the user to the Home component.
+After the `window.alert` in the handleClick function, use the `push` method on
+the history object to navigate the user to the Home component.
 
 Test in the browser.
 
@@ -145,7 +145,8 @@ Congratulations! You have completed the Navigation portion of the practice. Here
 is a list of the techniques you used:
 
 1. Navigating to another address with the Link component
-2. Using the NavLink extra capability to set the `active` class in CSS
+2. Using the NavLink component's added capability to set the `active` class in
+   CSS
 3. Personalizing the active links with specialized NavLink attributes.
 4. Navigating the user to another location using Redirect
 5. Using the History API and the useHistory hook to navigate the user to another
