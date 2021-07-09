@@ -9,6 +9,7 @@ body {
 /* Link & NavLink create an anchor tag on the DOM so you must style anchor tag */
 a {
   text-decoration: none;
+  color: purple;
 }
 
 ul {
