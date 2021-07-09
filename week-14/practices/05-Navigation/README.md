@@ -118,8 +118,8 @@ will always be assigned to a function.
 Here you have set the `onClick` to take the function handleClick but you have
 not written it yet.
 
-Above your return, create a function called `handleClick`.
-It should alert the user with a message and then navigate home.
+Above your return, create a function called `handleClick`. It should alert the
+user with a message and then navigate home.
 
 ```js
 const handleClick = () => {
