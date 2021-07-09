@@ -71,15 +71,23 @@ pass `HoroscopeContext` in as your argument, assign this to a variable.
 
 Make sure you have your server running with `npm start`. Navigate to your
 browser's DevTools and click on your `Component` tab, which comes from google
-extention[React Developer Tools][react-devtools]. You should be able to see your
-component tree, most importantly, your `Context.Provider`.
+extention [React Developer Tools][react-devtools]. You should be able to see
+your component tree, most importantly, your `Context.Provider`.
 
 If you click on your `Context.Provider`, you should see your `value` under the
 `prop` section. That is what your global state looks like.
 
 If you click on your `Detail` component, you should see a `hooks` section, where
 your context is located. This is where your `Detail` component is *consuming*
-the context. 
+the context.
+
+**Congratulations!**
+
+You have done the following:
+
+1. Created context with `createContext`
+2. Used your `Context.Provider` and wrapped your entire application with it.
+3. Consumed the context in your `Detail` component.
 
 
 [context-starter]: ./starter
