@@ -141,12 +141,13 @@ navigate the user to the Home component.
 
 Test in the browser.
 
-Congratulations! You have completed the Navigation portion of the practice. Here is a list of what you reinforced:
+Congratulations! You have completed the Navigation portion of the practice. Here
+is a list of the techniques you used:
 
-1. Using the Link component to navigate to another address
+1. Navigating to another address with the Link component
 2. Using the NavLink extra capability to set the `active` class in CSS
-3. Using the NavLink attributes to further personalize the active links.
-4. Using the Redirect component to prevent behavior
+3. Personalizing the active links with specialized NavLink attributes.
+4. Navigating the user to another location using Redirect
 5. Using the History API and the useHistory hook to navigate the user to another
    location after they have handled some other functionality.
 
