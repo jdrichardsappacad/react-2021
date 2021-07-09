@@ -5,12 +5,13 @@ using `Link` and `NavLink`.
 
 ## Phase 0: Setup
 
-Download the [starter][starter]. `cd` into the folder and run the `npm install`command in your terminal.
+Download the [starter][starter]. `cd` into the folder and run the `npm install`
+command in your terminal.
 
 Next run `npm start` and check your browser to see if your code is running
 properly.
 
-Check your browser. You should only see an `h1` saying App Components.
+Test again. You should only see an `h1` saying App Components.
 
 Now take a look at the code. In your `App.js` you will see the already created
 routes for each component. You now want to create clickable Links for each of
@@ -24,8 +25,7 @@ use this component instead of the `<a>` element to which you are accustomed.
 Beneath the `h1` create a `nav` element with 2 classes: `comp` and `nav`. Inside
 the `nav` element add an unordered list element then a list-item element inside
 the unordered list element. Now use your Link component to create a clickable
-like to the path for Home. The child text inside the Link component should say
-Home.
+link to the Home path. The child text inside the Link component should say Home.
 
 In your Browser you should now see a Navbar with the Home link.
 
@@ -78,8 +78,8 @@ Sometimes you only want to allow access to a component when a user is logged in.
 Otherwise, you want to navigate the user in another direction. Using the
 Redirect component can help you do this.
 
-In your App.js just above the Page Not Found route. Add a router that looks like
-this:
+In your App.js just above the 'Page Not Found' route. Add a route that looks
+like this:
 
 ```js
 <Route path='/not-logged-in'>
@@ -101,8 +101,8 @@ Link. You should be able to view the Stocks component.
 
 ## History API & useHistory Hook for Navigation
 
-You will use the useHistory hook to navigate after some transaction has taken
-place. In your Stocks component, you want to navigate back to the Home Page
+You will use the `useHistory` hook to navigate after some transaction has taken
+place. In your Stocks component, you goal is to navigate back to the Home Page
 after you click a button.
 
 First, under the `h1` tag in your JSX, create a button with an `onClick` event
