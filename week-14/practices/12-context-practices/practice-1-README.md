@@ -52,11 +52,12 @@ Root
 
 If you took a look at your console tab in DevTools and saw a warning message
 from React about a missing value prop, we most definitely did not pass one into
-our `HoroscopeContext` provider this time, so let's do that!
+our `HoroscopeContext` provider this time, so let's do that with some state!
 
 Back to our `HoroscopeProvider` component (`src/context/HoroscopeContext.js`),
 create a state for our `currentSign` and have the default value be any
-horoscope sign you want. If you don't know which one, `"Leo"` is a good one,
+horoscope sign you want. Make sure it starts with a capital letter, this will be
+important later on. If you don't know which one, `"Leo"` is a good one,
 it's only 3 characters long. (Did you remember to import `useState`?)
 
 Once you have created your `currentSign` state, pass `currentSign` and
@@ -74,12 +75,13 @@ equal to our `currentSign` and `setCurrentSign`.
 ## Phase 3: Use Context in Detail Component
 
 In Phase 1 and 2, we have created our context and had our provider wrap our
-entire App. The final step we need to take is *consume* our context.
+entire App. The final step we need to take is *consume* our context and display
+the `currentSign`'s details.
 
-In your `Detail` component (`src/components/Detail.js`), import `useContext` and
-`HoroscopeContext`. Inside your `Detail` component, destructure your
-`currentSign`, which comes from invoking `useContext` and passing in your
-`HoroscopeContext` as an argument.
+In your `Detail` component (`src/components/Detail.js`), we should have already
+imported `useContext` and `HoroscopeContext`. Inside your `Detail` component,
+destructure your `currentSign`, which comes from invoking `useContext` and
+passing in your `HoroscopeContext` as an argument.
 
 Keep in mind, when we use the `useContext` hook and pass the context in,
 the value we get back will be the object we passed in our value prop from the
@@ -92,7 +94,58 @@ can destructure:
   setCurrentSign: *function*
 }
 ```
+Now that we have our `currentSign`, we will need to grab some details about this
+sign. We have already created data for you to use, which is located in
+`src/data/horoscopes.js`. Take a second to familiarize how the data is setup,
+including how it's being exported.
+
+At the top of your `Detail.js` file, import the `horoscopeObj`. Next, inside
+the `Detail` component, create a new variable called `sign` and have it equal to
+the sign's object by keying into the `horoscopeObj`, using your `currentSign`
+state. Take a look at your `horoscopeObj` data again to help you see what we
+need.
+
+Below is the object we're trying to access if our `currentSign` is "Leo".
+
+```javascript
+ {
+    "name": "Leo",
+    "date": "Jul 23 - Aug 22",
+    "element":"Fire",
+    "traits": "Proud, Bold, Ambitious",
+    "backgroundImg":"https://www.horoscope.com/images-US/signs/profile-leo.png",
+    "match": "Libra"
+  }
+```
+
+Once you have successfully grabbed the object, update your `<img>` src, `<h1>`,
+`<h2>`, and `<h4>` elements with the according information of your `sign`
+object.
 
 
-[context-starter]: ./starter
+If all was done correctly, when you refresh your browser, your `Detail`
+component should display all of your `currentSign`'s information.
+
+Head back to your `HoroscopeContext.js` and update your default state to another
+sign! Does your `Detail` component also update?
+
+**HOORAY!**
+
+You have successfully created a dynamic value in your context provider and
+consumed that context to display your `currentSign`'s information.
+
+What we have done are:
+
+1. Created a `HoroscopeProvider` that holds our `Context.Provider` and
+refactored our `src/index.js` file to wrap our entire `App` with the
+`HoroscopeProvider`.
+2. Created a state of the `currentSign` with `useState` so we can dynamically
+change our default value and passed it into our `HoroscopeContext.Provider`
+value prop.
+3. Consumed the context in our `Detail` component so we could grab the
+`currentSign`'s details using our `horoscopeObj` data.
+4. Manually updated our `currentSign`'s default value and have that change the
+information in our `Detail` component as well.
+
+
 [react-devtools]: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
