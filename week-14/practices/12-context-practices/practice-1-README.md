@@ -1,8 +1,8 @@
 # Practice: Context Provider with Dynamic Value Practice
 
 In our previous practice, we have created our context and consumed it in our
-`Detail` component. Let's now make this a more dynamic and show you how context
-can be used!
+`Detail` component. Let's now make our value more dynamic and show you how
+context can be used!
 
 In this practice, you will:
 
@@ -18,7 +18,7 @@ that wraps your application instead. Let's create one so you can see what that
 means.
 
 In your `HoroscopeContext.js` file, create a new component called
-`HoroscopeProvider`, that take in `props` as its parameter. For your return
+`HoroscopeProvider`, that takes in `props` as its parameter. For your return
 statement, use your `HoroscopeContext` provider component and wrap it around
 your `props.children`. Once complete, make sure to export the component.
 
@@ -32,8 +32,8 @@ If all went well, your browser should still look the same. However, if you look
 at your component tree, you should be able to see your `HoroscopeProvider` in
 your browser's DevTools with `Context.Provider` nested inside, and `App` inside
 `Context.Provider`. If you don't remember how to get there, head over to your
-browser and open DevTools. (Remember to `npm start` so your server is running!)
-In DevTools, navigate to your `Components` tab from
+browser and open the DevTools. (Remember to `npm start` so your server is
+running!) In DevTools, navigate to your `Components` tab from
 [React Developer Tools](react-devtools).
 
 This is what you should see:
@@ -75,8 +75,8 @@ equal to our `currentSign` and `setCurrentSign`.
 ## Phase 3: Use Context in Detail Component
 
 In Phase 1 and 2, we have created our context and had our provider wrap our
-entire App. The final step we need to take is *consume* our context and display
-the `currentSign`'s details.
+entire App. The final step we need to take is to *consume* our context and
+display the `currentSign`'s details.
 
 In your `Detail` component (`src/components/Detail.js`), we should have already
 imported `useContext` and `HoroscopeContext`. Inside your `Detail` component,
@@ -96,11 +96,11 @@ can destructure:
 ```
 Now that we have our `currentSign`, we will need to grab some details about this
 sign. We have already created data for you to use, which is located in
-`src/data/horoscopes.js`. Take a second to familiarize how the data is setup,
+`src/data/horoscopes.js`. Take a second to familiarize how the data is set up,
 including how it's being exported.
 
 At the top of your `Detail.js` file, import the `horoscopeObj`. Next, inside
-the `Detail` component, create a new variable called `sign` and have it equal to
+the `Detail` component, create a new variable called `sign` and set it equal to
 the sign's object by keying into the `horoscopeObj`, using your `currentSign`
 state. Take a look at your `horoscopeObj` data again to help you see what we
 need.
@@ -134,7 +134,7 @@ sign! Does your `Detail` component also update?
 You have successfully created a dynamic value in your context provider and
 consumed that context to display your `currentSign`'s information.
 
-What we have done are:
+What we have done is:
 
 1. Created a `HoroscopeProvider` that holds our `Context.Provider` and
 refactored our `src/index.js` file to wrap our entire `App` with the

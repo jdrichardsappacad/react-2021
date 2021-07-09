@@ -11,7 +11,7 @@ Download the [starter][context-starter] file for this practice.
 
 Open the starter in VSCode and run `npm install` in the terminal.
 
-Run `npm start` to make sure your project is has not run into any errors.
+Run `npm start` to make sure your project has not run into any errors.
 
 ## Phase 1: Create Context
 
@@ -22,7 +22,7 @@ where all your horoscope context will be placed.
 At the top of this file, import `createContext` from `react` and create your
 context called `HoroscopeContext`. You will not need a default value, so leave
 it empty. If you're lost, don't forget to checkout
-[documentation][create-context]. Make sure to `export` it.
+[documentation][create-context]. Make sure to `export` your `HoroscopeContext`.
 
 Awesome! We have created our context, now let's use our provider.
 
@@ -39,7 +39,7 @@ Let's make sure things are going smoothly, so make sure your server is running
 (`npm start` at the root of your starter, which is the same level as your
 `package.json`).
 
-We will now navigate to your browser and open DevTools. If you look at your
+We will now navigate to your browser and open the DevTools. If you look at your
 console, you should see a warning message from React that says your
 `Context.Provider` is missing a `value` prop. This means that we have
 successfully created our context provider, but now we must deal with this
@@ -63,16 +63,17 @@ other sign.) We're expecting the object to look like below:
 If you refresh your browser, the warning message should disappear now.
 
 Now it is time to consume the context, so navigate to your `Details` component.
-At the top, import `useContext` from `react` and `HoroscopeContext` from the
-`context` directory. Inside your `Detail` component, invoke `useContext` and
-pass `HoroscopeContext` in as your argument, assign this to a variable.
+At the top, import useContext from react. Next, import HoroscopeContext from
+context/HoroscopeContext.js. Inside your `Detail` component, create a variable
+and have it equal to `useContext` invoked with `HoroscopeContext` passed in as
+your argument.
 
 ### It's time to test!
 
 Make sure you have your server running with `npm start`. Navigate to your
-browser's DevTools and click on your `Component` tab, which comes from google
-extention [React Developer Tools][react-devtools]. You should be able to see
-your component tree, most importantly, your `Context.Provider`.
+browser's DevTools and click on your `Component` tab, which comes from Google
+extension [React Developer Tools][react-devtools]. You should be able to see
+your component tree and most importantly, your `Context.Provider`.
 
 If you click on your `Context.Provider`, you should see your `value` under the
 `prop` section. That is what your global state looks like.
