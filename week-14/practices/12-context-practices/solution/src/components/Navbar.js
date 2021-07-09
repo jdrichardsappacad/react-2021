@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { HoroscopeContext } from 'react';
+import { HoroscopeContext } from '../context/HoroscopeContext';
 import horoscopesObj from '../data/horoscopes';
 
 const Navbar = () => {
