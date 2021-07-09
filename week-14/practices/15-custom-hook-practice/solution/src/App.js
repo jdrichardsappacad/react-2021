@@ -1,6 +1,8 @@
+import Form from './components/Form';
+
 const App = () => {
   return (
-    <p>Hello from App</p>
+    <Form />
   );
 };
 
