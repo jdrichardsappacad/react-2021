@@ -11,7 +11,8 @@ command in your terminal.
 Next run `npm start` and check your browser to see if your code is running
 properly.
 
-Test again. You should only see an `h1` saying App Components.
+Test again. You should only see an `h1` saying App Component as well as the Home
+Component.
 
 Now take a look at the code. In your `App.js` you will see the already created
 routes for each component. You now want to create clickable Links for each of
