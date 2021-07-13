@@ -21,14 +21,11 @@ li {
   padding: 10px;
 }
 
-img {
-  height: 300px;
-  width: 200px;
+h1 {
+  padding: 10px;
 }
 
 .main {
-  width: 700px;
-  margin: 20px auto;
   border: 3px solid black;
 }
 
@@ -39,17 +36,6 @@ img {
 
 .nav {
   border: 2px solid red;
-}
-
-h1 {
-  /* padding: 5px; */
-}
-
-h2 {
-  text-align: center;
-}
-h3 {
-  text-align: center;
 }
 
 /* Border Colors */
@@ -69,11 +55,4 @@ h3 {
 
 .active {
   color: red;
-}
-
-.details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }

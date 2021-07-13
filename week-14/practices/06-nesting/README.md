@@ -1,6 +1,6 @@
 # Practice: Nesting
 
-In this practice we will 
+In this practice we will
 
 ## Phase 0: Setup
 
@@ -10,4 +10,4 @@ command in your terminal.
 Next run `npm start` and check your browser to see if your code is running
 properly.
 
-Check your browser.
+In your browser you should see
