@@ -1,7 +1,6 @@
 # Practice: Nesting
 
-In this practice you will learn how to create navigation for your Route
-paths using `Link` and `NavLink`.
+In this practice we will 
 
 ## Phase 0: Setup
 
