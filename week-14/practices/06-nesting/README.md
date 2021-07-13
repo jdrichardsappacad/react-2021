@@ -22,7 +22,7 @@ be able to reach each individual movie using dynamic nested routing.
 In your `App.js`, import the movies array that is located in the
 `/data/movieData.js` directory. There is a Route that mounts the Movies
 component. Send the movies data as props with the name `movies`. Then in your
-`Movies.js` component add the movies props as an argument to your component.
+`Movies.js` component add the movies prop as an argument to your component.
 
 Now you want to list out the movie titles. Create a nav element underneath the
 `h1` tag. Inside the `nav`, map through the movie props creating a `NavLink` for
