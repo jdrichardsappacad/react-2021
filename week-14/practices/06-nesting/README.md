@@ -24,7 +24,40 @@ In your `App.js`, import the movies array that is located in the
 component. Send the movies data as props with the name `movies`. Then in your
 `Movies.js` component add the movies prop as an argument to your component.
 
-Now you want to list out the movie titles. Create a nav element underneath the
-`h1` tag. Inside the `nav`, map through the movie props creating a `NavLink` for
-each movie with a url of `/movies` and the id of the movie. The link should have
-the title of the movie as the text.
+In your `Movies.js`, at the bottom of the JSX, create a nested
+route that renders the `MovieDetails` component. The route takes a path of
+`/movies/:movieId`. The `/:movieId` represents a variable for the parameter that
+you will be sending in the URL. In this case it will be the id of the movie that
+the user clicks on.
+
+Next, create a nav element underneath the `h1` tag. Inside the `nav`, map
+through the movie props creating a `NavLink` for each movie with a url of
+`/movies` and the actual id of the movie. The clickable text for the link should
+be the title of the movie.
+
+Did you remember your imports?
+
+Each time you click a link you should now see the MovieDetails Component with
+the `h1` text `MovieDetails Component` in the Browser beneath the NavBar.
+
+## Phase 2: Dynamic Route
+
+Instead of hard coding the mapped movie title route and path, you should now
+make it dynamic. Import `useRouteMatch` from `react-router-dom`.
+
+Destructure the available url and path from the useRouteMatch function.
+
+```js
+const { path, url } = useRouteMatch();
+```
+
+Now in your NavLink, replace `/movies` with `${url}`. This will dynamically grab
+the current url in the address bar. ( That is the portion that comes after your
+localhost:3000 )
+
+In your Route, change the `/movies` portion in your path to `${path}`.
+
+When you click the links in the browser you should have the same behavior as
+before, however you are now dynamically using your nested route.
+
+Phase 3: Rendering Your Movie Details
