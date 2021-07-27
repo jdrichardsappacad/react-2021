@@ -53,8 +53,8 @@ Instead of hard coding the mapped movie title route and path in your `Movies.js`
 component, you should now make it dynamic. Import the
 [`useRouteMatch`][use-route-match] hook from `react-router-dom`.
 
-At
-the top of the Movies function, destructure the available url and path from an invoked useRouteMatch function .
+At the top of the Movies function, destructure the available url and path from
+an invoked useRouteMatch function .
 
 ```js
 const { path, url } = useRouteMatch();
