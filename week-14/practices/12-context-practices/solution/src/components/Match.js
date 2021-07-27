@@ -5,6 +5,8 @@ const Match = () => {
   const [match, setMatch] = useState(false);
   const {sign} = useHoroscope();
 
+  console.log('Match component');
+
   return (
     <>
       <button onClick={() => setMatch(!match)}>
