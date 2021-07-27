@@ -6,6 +6,8 @@ const Navbar = () => {
   const {setCurrentSign} = useContext(HoroscopeContext)
   const horoscopes = Object.keys(horoscopesObj);
 
+  console.log('Navbar component');
+
   return (
     <nav>
       {horoscopes.map(sign => (
