@@ -20,20 +20,26 @@ be able to reach each individual movie using dynamic nested routing.
 ## Phase 1: Movies Component
 
 In your `App.js`, import the movies array that is located in the
-`/data/movieData.js` directory. There is a Route that mounts the Movies
-component. Send the movies data as props with the name `movies`. Then in your
-`Movies.js` component add the movies prop as an argument to your component.
+`/data/movieData.js` directory. There is a Route in your `App.js` that mounts
+the Movies component. Send the movies data as props with the name `movies` to
+the Movies component. Then in your `Movies.js` component add props as
+an argument to your component.
 
-In your `Movies.js`, at the bottom of the JSX, create a nested
-route that renders the `MovieDetails` component. The route takes a path of
-`/movies/:movieId`. The `/:movieId` represents a variable for the parameter that
-you will be sending in the URL. In this case it will be the id of the movie that
-the user clicks on.
+Go to your React DevTools and click on the Movies component. (ignore all of the
+`.Provider` and `.Consumer` stuff for today.) In your movies component you
+should now see the array of movies that you passed as props.
+
+In your `Movies.js`, at the bottom of the JSX, create a route that renders the
+`MovieDetails` component. The route should have a path of `/movies/:movieId`.
+The `/:movieId` represents a variable for the `parameter` that you will be
+sending in the URL. In this case it will be the id of the movie that the user
+clicks on.
 
 Next, create a nav element underneath the `h1` tag. Inside the `nav`, map
 through the movie props creating a `NavLink` for each movie with a url of
-`/movies` and the actual id of the movie. The clickable text for the link should
-be the title of the movie.
+`/movies` and the actual id of the movie. Use the id that you receive from each
+movie object as the `movieId`. The clickable text for the link should be the
+title of the movie.
 
 Did you remember your imports?
 
@@ -61,3 +67,31 @@ When you click the links in the browser you should have the same behavior as
 before, however you are now dynamically using your nested route.
 
 Phase 3: Rendering Your Movie Details
+
+It's now time to add the movie details for each component.
+
+In your `Movie.js` component, pass your movies props to the MovieDetails
+component inside your Route as `movies`. Add the props to the `MovieDetails.js`
+component and check your React DevTools as you did before.
+
+Now you will use your first hook, the [useParams][use-params] hook. This hook
+will allow you to capture the movie id from the url.
+
+Inside the MovieDetails function create a destructured `id` variable and assign
+it to an invoked useParams. `useParams()` `console.log` the id variable and take
+a look in your browser console to see if that number changes when you click on a
+different movie.
+
+You currently have the id of the movie you want and you have the list of movies
+as props.
+
+Create a variable called `movieChoice`. Use the `.find` method to compare the
+two id's. This will select the one movie object you are looking for. (_Hint_:
+Make sure you use `===` and make sure both id's are the same datatype.)
+
+Next, in your JSX, create an `h1` element with the `title` of the movie, and a
+`p` element with the description of the movie. Check your data for the proper
+key/value choices.
+
+[starter]: ./starter
+[use-params]: https://reactrouter.com/web/api/Hooks/useparams
