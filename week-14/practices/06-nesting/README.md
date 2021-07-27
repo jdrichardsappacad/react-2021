@@ -44,14 +44,17 @@ title of the movie.
 Did you remember your imports?
 
 Each time you click a link you should now see the MovieDetails Component with
-the `h1` text `MovieDetails Component` in the Browser beneath the NavBar.
+the `h1` text `MovieDetails Component` in the Browser beneath the NavBar. You
+should also see the movie id change in the url address bar.
 
 ## Phase 2: Dynamic Route
 
-Instead of hard coding the mapped movie title route and path, you should now
-make it dynamic. Import `useRouteMatch` from `react-router-dom`.
+Instead of hard coding the mapped movie title route and path in your `Movies.js`
+component, you should now make it dynamic. Import the
+[`useRouteMatch`][use-route-match] hook from `react-router-dom`.
 
-Destructure the available url and path from the useRouteMatch function.
+At
+the top of the Movies function, destructure the available url and path from an invoked useRouteMatch function .
 
 ```js
 const { path, url } = useRouteMatch();
@@ -93,5 +96,9 @@ Next, in your JSX, create an `h1` element with the `title` of the movie, and a
 `p` element with the description of the movie. Check your data for the proper
 key/value choices.
 
+Congratulations! You have completed the Dynamic Routing portion of the practice.
+Here is a list of the techniques you used:
+
 [starter]: ./starter
 [use-params]: https://reactrouter.com/web/api/Hooks/useparams
+[use-route-match]: https://reactrouter.com/web/api/Hooks/useroutematch
