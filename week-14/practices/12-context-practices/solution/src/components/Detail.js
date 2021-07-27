@@ -4,6 +4,8 @@ import Match from "./Match";
 const Detail = () => {
   const {sign} = useHoroscope();
 
+  console.log("Detail component");
+
   return (
     <div className="details">
       <img alt="horoscope name" src={sign.backgroundImg}></img>
