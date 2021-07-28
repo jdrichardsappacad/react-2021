@@ -95,7 +95,7 @@ Test this button in your browser.
 
 Create a decrement button using the same technique.
 
-Phase 4: Optional Callback Function
+## Phase 4: Optional Callback Function
 
 You are now going to use the optional callback function included as an argument
 to the updater function, in this case the setCount function, in order to ensure
@@ -106,13 +106,14 @@ replace it with `(prevCount)=>prevCount+1`. Do the same for the Decrement
 button. While you will not see a difference here, you are now ensuring that your
 changes that are based on a previous state are updated correctly.
 
-Phase 5: Bonus
+## Phase 5: Bonus
+
 Remove one of the buttons that change the theme and use on button only to switch
 the theme from light to dark.
 
 Congratulations! You have learned your first basic hook, useState.
 
-What you have learned:
+## What you have learned
 
 1. Creating state using the useState hook
 2. Updating state using the returned updater function
