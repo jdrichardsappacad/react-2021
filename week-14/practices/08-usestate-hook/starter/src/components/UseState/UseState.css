@@ -1,0 +1,24 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font-size: 1.2em;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.light {
+  background-color: rgb(210, 247, 189);
+  color: black;
+  height: 100vh;
+}
+
+.dark {
+  background-color: rgb(88, 8, 84);
+  color: white;
+  height: 100vh;
+}
