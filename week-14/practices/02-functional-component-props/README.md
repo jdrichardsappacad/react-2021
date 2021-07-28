@@ -97,8 +97,7 @@ Next, above your table, create a button with the text Check special stats. Give
 it a class of `sp-stats` Pass an `onClick` event listener to the `button`
 element and assign it the clicker function prop.
 
-Remember, an event listener in React is camel cased (_onClick instead of
-onclick_) and it takes a function as it's assignment.
+Remember, an event listener in React is camel cased (_` onClick`` instead of  `onclick`_) and it takes a function as it's assignment.
 
 Notice that when the button is clicked, it triggers the `handleClick` function
 in the parent component.
