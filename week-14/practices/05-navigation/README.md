@@ -70,8 +70,10 @@ each NavLink. In the browser, your active link should now, also, have a border
 around it.
 
 Next, inside your NavLinks you are going to use the `activeStyle` attribute. It
-will work in the way that inline styling works for css. Add `activeStyle={{ fontWeight: 'bold' }}` to each NavLink. When you go to the browser, you should
-notice that each active link now has both a border and a bold font.
+will work in the way that inline styling works for css. Add
+`activeStyle={{ fontWeight: 'bold' }}` to each NavLink. When you go to the
+browser, you should notice that each active link now has both a border and a
+bold font.
 
 ## Phase 5: Redirect
 
