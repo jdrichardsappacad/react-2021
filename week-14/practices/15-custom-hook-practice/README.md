@@ -40,4 +40,48 @@ const [name, setName, nameErrors] = useTextInput({ validations: textInputValidat
 
 ## Phase 2: Write the Custom Hook
 
+Because this custom hook will encapsulate some of the properties of a `useState`
+hook, import the `useState` hook from the `react` package at the top of the
+`src/hooks/textInput.js` file. In the `useTextInput` function, pass in a
+parameter of an object literal with keys of `validations` and `defaultValue` and
+set them equal to an empty array literal and an empty string literal,
+respectively.
+
+The function definition should look like:
+
+```js
+export const useTextInput = ({ validations = [], defaultValue = '' }) => {
+
+};
+```
+
+In the body of the hook, invoke the `useState` hook and pass it the
+`defaultValue` variable as the only argument, then, set it equal to a
+destructured array with the values `value` and `setValue`. You can name those
+like you would with any other `useState` call, `value` and `setValue` are meant
+to be generic so that this hook is reusable for multiple text input fields.
+
+Paste in the three lines with the array methods from the `Form` component and
+modify them to use the `value` variable instead of the `name` variable from
+earlier. Change the `nameErrors` variable to be `errors` instead to make it
+generic as well.
+
+After the array methods `return` an array with `value`, `setValue`, and `errors`
+in that order, so that it matches what we expected in the `Form` component.
+
+Test out the form in the browser. Does the same functionality exist?
+
+You can also move the function that is being used in the `onChange` event
+handler in the `Form` component into the custom hook, and instead of returning
+the `setValue` setter function that comes directly from the `useState` call, you
+could return an event handler version to further encapsulate the logic within
+the hook.
+
+## Wrapping Up
+
+In this exercise, you learned how to
+
+* Move logic away from a component and into a custom hook
+* Use other hooks in a custom hook
+
 [starter]: ./starter
