@@ -7,7 +7,7 @@ button {
   border-radius: 5px;
 }
 
-.container {
+.state {
   display: flex;
   flex-direction: column;
   justify-content: center;

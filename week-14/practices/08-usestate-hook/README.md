@@ -48,7 +48,7 @@ component. Notice under hooks -> State you will see the string `light`. This is
 the default value you have now stored in state.
 
 You are now going to add this light theme to your JSX. Inside the `div` element,
-add a `className` and give it the value `theme`. Remember your curly braces.
+add a `className` and give it the value `theme`. Remember your curly braces for JavaScript.
 
 When you look at your browser you should see the light theme color as your
 background.
@@ -106,12 +106,16 @@ replace it with `(prevCount)=>prevCount+1`. Do the same for the Decrement
 button. While you will not see a difference here, you are now ensuring that your
 changes that are based on a previous state are updated correctly.
 
-## Phase 5: Bonus
+## Phase 5: Bonus A
 
 Remove one of the buttons that change the theme and use on button only to switch
 the theme from light to dark.
 
 Congratulations! You have learned your first basic hook, useState.
+
+## Phase 6: Bonus B
+
+Add the container class from `UseState.css` to your wrapping div along with the `theme` variable.
 
 ## What you have learned
 
