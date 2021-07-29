@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useTextInput = ({ validations = [], defaultValue = '' } = {}) => {
+export const useTextInput = ({ validations = [], defaultValue = '' }) => {
   const [value, setValue] = useState(defaultValue);
   const updateValue = (event) => setValue(event.target.value);
   const errors = (() => {
@@ -10,7 +10,7 @@ export const useTextInput = ({ validations = [], defaultValue = '' } = {}) => {
   return [value, updateValue, errors];
 };
 
-// export const useTextInput = ({ validations = [], defaultValue = '' } = {}) => {
+// export const useTextInput = ({ validations = [], defaultValue = '' }) => {
 //   const [value, setValue] = useState(defaultValue);
 //   const updateValue = (event) => setValue(event.target.value);
 //   const validatorResults = validations.map((validator) => validator(value));
