@@ -5,6 +5,7 @@ const Form = () => {
   const [name, setName] = useState('');
   const validatorResults = textInputValidators.map((validator) => validator(name));
   const failedValidators = validatorResults.filter((validationObj) => !validationObj.pass);
+  const nameErrors = failedValidators.map((validationObj) => validationObj.msg);
 
   return (
     <>
