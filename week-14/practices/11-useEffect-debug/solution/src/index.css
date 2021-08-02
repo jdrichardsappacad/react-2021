@@ -107,10 +107,6 @@ p {
   margin: auto 0;
 }
 
-/* .backColor {
-  transition: background-color 2s, transform 2s;
-} */
-
 @media screen and (max-width: 1000px) {
   .container {
     flex-direction: column;
