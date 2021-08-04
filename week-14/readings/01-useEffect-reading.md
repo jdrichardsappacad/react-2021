@@ -196,3 +196,84 @@ rendered or red-rendered
 is logged.
 
 ### Running functionality in useEffect based on condition
+
+Sometimes you may only want the functionality of your useEffect to run when a
+condition is met. You cannot stop a useEffect from running if the state or prop
+for that useEffect is in the dependency array. But you can block certain
+code from executing by using an `if` conditional to check the state or prop for
+a specific value.
+
+In your second useEffect, beneath the `console.log`, create an if conditional
+that checks to see if `toggleTwo` is true. If it is true, log `toggleTwo slice of state is true so this code runs`. Your useEffect should look like this now:
+
+```js
+useEffect(() => {
+  console.log('UseEffect1 Ran');
+  if (toggleTwo)
+    console.log('toggleTwo slice of state is true so this code runs');
+}, [toggleTwo]);
+```
+
+You will only see this second console log in the console when the `toggleTwo`
+slice of state is true. Test in your Browser using the Dev Tools Console.
+
+### UseEffect's Optional Cleanup Function
+
+The useEffect hook has an optional cleanup function that is often used to
+cleanup some behavior when a component unMounts, or when some business, such as
+a function needs to be stopped in order to create a new function.
+
+Note that the useEffect cleanup function will not run after the first render,
+but it will run after the second render, just BEFORE the useEffect function
+runs.
+
+Order after render:
+
+1. Component re-renders
+2. useEffect cleanup function runs cleaning out previous value
+3. useEffect function body runs
+
+Create a count slice of state with an initial value of 0.
+
+`const [count, setCount] = useState(100)`
+
+Beneath the `setToggleTwo` button, create a button for that count and use the
+`onClick` event listener to decrement the count.
+
+Create a third useEffect that listens for the count slice of state.
+
+In the body of the callback function, add a `setInterval` function that looks
+like the one below:
+
+```js
+useEffect(() => {
+  setInterval(() => {
+    console.log(`UseEffect3 with interval number ${count} is running`);
+  }, 1000);
+}, [count]);
+```
+
+Open your Console again in the Browser Dev Tools. Click on the increment button
+and notice what happens. You will see that, each time the count button is
+clicked, the setInterval function is called in the useEffect with a new value.
+However, the old setInterval function has not been cleaned out. This is causing
+a memory leak. You should see all of the previous `setInterval`s running along
+with the new one that has been created.
+
+In order to fix this problem you should use the cleanup function. First, assign
+the setInterval function to a variable called `myInterval`.
+
+Then below the `myInterval` variable, use the cleanup function as written below:
+
+```js
+return () => {
+  return () => {
+    console.log(
+      `UseEffect3 cleanup ran.\nsetInterval number ${count} is being cleaned out}`
+    );
+    clearInterval(interval);
+  };
+};
+```
+
+Now you should notice that only one setInterval will run at any given time.
