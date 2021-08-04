@@ -58,22 +58,10 @@ export default App;
 
 ### UseEffect With No Dependency Array
 
-`useEffect` runs after the first render and every subsequent re-render.
+With no dependency array, `useEffect` runs after the first render and every
+subsequent re-render.
 
-In your `Main` Component file, at the top, import the useEffect hook from React.
-
-```js
-import { useEffect } from 'react';
-```
-
-Next, place a `useEffect` function, passing just the first argument function
-inside your `Main` component.
-
-The function should log `'UseEffect1 Ran'`.
-
-Also, just inside the wrapper `div` element in your return, log `rendered or re-rendered`.
-
-So far, your component should resemble the one below.
+Place the code below in your `Main` Component file.
 
 ```js
 import { useEffect } from 'react';
@@ -92,6 +80,8 @@ const Main = () => {
 };
 export default Main;
 ```
+
+Notice that the useEffect has been called with just one argument, the callback function.
 
 `npm start` your project, open your Dev Tools and choose the `Console`
 
@@ -130,3 +120,29 @@ Each time you click the `ToggleOne` button you should see an additional
 rendered or red-rendered
 UseEffect1 Ran
 ```
+
+### UseEffect with an Empty Dependency Array
+
+UseEffect with an empty dependency array will run only one time, directly after
+the first render.
+
+Add an empty dependency array as a second argument to your `useEffect`.
+
+Go to your Browser's Dev Tools Console and test again. On the first render you
+will again see:
+
+```md
+rendered or red-rendered
+UseEffect1 Ran
+```
+
+However, click the `ToggleOne` button repeatedly. Every click updates the state,
+which triggers a subsequent re-render. However, because of the dependency array
+as the second argument to the useEffect, the useEffect never runs again. You
+will instead only see:
+
+```md
+rendered or red-rendered
+```
+
+followed by a number incrementing next to that log for each click.
