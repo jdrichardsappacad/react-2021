@@ -146,3 +146,53 @@ rendered or red-rendered
 ```
 
 followed by a number incrementing next to that log for each click.
+
+### Adding state to the UseEffect Dependency Array
+
+The useEffect dependency array can be used to listen for changes in either state
+or props.
+
+In your `Main` component, add a new slice of state that returns a destructured
+`toggleTwo` and `setToggleTwo` variable. The initial value should be set to
+false. It should look identical to the `toggleOne` slice of state except for the
+naming.
+
+`const [toggleTwo, setToggleTwo] = useState('')`
+
+In your JSX below the ToggleOne button, add a ToggleTwo button. It should also
+be identical to the previous button except for the name.
+
+Add another useEffect beneath the first one that looks like the useEffect below:
+
+```js
+useEffect(() => {
+  console.log('UseEffect2 Ran');
+}, [toggleTwo]);
+```
+
+Here is the new order. When the page renders, you will see
+
+```md
+rendered or red-rendered
+UseEffect1 Ran
+UseEffect2 Ran
+```
+
+Now, when you click on the `ToggleTwo` button it will trigger an order of
+events:
+
+1. You click on the `ToggleTwo` button.
+2. The `toggleTwo` state will be updated
+3. The Main Component will re-render
+4. The `useEffect` function that has `toggleTwo` in the dependency array will
+   run again.
+
+Notice if you click the `toggleOne` button the only thing that happens is
+
+```md
+rendered or red-rendered
+```
+
+is logged.
+
+### Running functionality in useEffect based on condition
