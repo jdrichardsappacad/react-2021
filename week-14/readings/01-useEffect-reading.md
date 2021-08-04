@@ -276,4 +276,5 @@ return () => {
 };
 ```
 
-Now you should notice that only one setInterval will run at any given time.
+Test in your Browser. Now you should notice that only one setInterval will run
+at any given time.
