@@ -13,7 +13,7 @@ const User = (props) => {
       </p>
       <p>{`${location.city}, ${location.state}`}</p>
       <p>{email}</p>
-      <button onClick={() => history.push('/')}>Logout</button>
+      <button onClick={() => history.pus('/')}>Logout</button>
     </div>
   );
 };
