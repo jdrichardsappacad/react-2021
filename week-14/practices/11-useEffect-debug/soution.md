@@ -20,4 +20,4 @@
 
 ## User
 
-- wrote `history.pus('/')`
+- typo `history.pus('/')`
