@@ -3,9 +3,9 @@ import { useHistory } from 'react-router-dom';
 const Unmounted = () => {
   const history = useHistory();
   return (
-    <div class='unmounted'>
+    <div className='unmounted'>
       <h1>Welcome</h1>
-      <button onClick={() => history.push('/')}>Login</button>
+      <button onClick={() => history.push('/mount')}>Login</button>
     </div>
   );
 };
