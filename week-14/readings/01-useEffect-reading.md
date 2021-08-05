@@ -267,12 +267,10 @@ Then below the `myInterval` variable, use the cleanup function as written below:
 
 ```js
 return () => {
-  return () => {
-    console.log(
-      `UseEffect3 cleanup ran.\nsetInterval number ${count} is being cleaned out}`
-    );
-    clearInterval(interval);
-  };
+  console.log(
+    `UseEffect3 cleanup ran.\nsetInterval number ${count} is being cleaned out`
+  );
+  clearInterval(interval);
 };
 ```
 
