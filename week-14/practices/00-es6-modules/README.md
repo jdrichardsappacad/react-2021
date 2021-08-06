@@ -31,7 +31,7 @@ Open up `modules/create-paragraph-content.js` for this next step. Notice that
 `createParagraphContent` is already being exported from this file as the default
 export. Back in `main.js`, import the `createParagraphContent` function as
 `createParagraph` to match the name that was used in the `main` function.
-Refresh the page to see
+Refresh the page to see the updated page and next error.
 
 This next error requires you to import the `createLoremIpsumParagraphContent`
 function from the `modules/create-paragraph-content.js` file. Going back to the
