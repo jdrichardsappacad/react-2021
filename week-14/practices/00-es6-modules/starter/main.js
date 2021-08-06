@@ -1,6 +1,6 @@
 // Import the createHeading function
-import createHeading from './modules/create-heading.js';
-import createParagraph from './modules/create-paragraph-content.js';
+// Import the createParagraphContent function as createParagraph
+// Import the createLoremIpsumParagraphContent function
 
 function connectToRoot(node) {
   const rootNode = document.getElementById('root');
