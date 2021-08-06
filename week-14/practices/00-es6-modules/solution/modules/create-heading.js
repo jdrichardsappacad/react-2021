@@ -1,3 +1,4 @@
+// Export this function as the default export of this file
 export default function createHeading(text, type=1) {
   const headingType = `h${type}`;
   const heading = document.createElement(headingType);
@@ -5,5 +6,3 @@ export default function createHeading(text, type=1) {
 
   return heading;
 }
-
-// Add export statements somwhere
