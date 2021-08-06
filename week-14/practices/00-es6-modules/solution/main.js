@@ -1,3 +1,5 @@
+import createHeading from './modules/create-heading.js';
+import createParagraph, { createLoremIpsumParagraphContent } from './modules/create-paragraph-content.js';
 // Add import statements
 
 function connectToRoot(node) {
@@ -5,3 +7,16 @@ function connectToRoot(node) {
 
   if (node) rootNode.appendChild(node);
 }
+
+function main() {
+  const heading = createHeading("Hi! I'm a heading");
+  const paragraph = createParagraph("Hi! I'm a paragraph");
+  const loremIpsum = createLoremIpsumParagraphContent();
+
+  const arrayOfNodes = [heading, paragraph, loremIpsum];
+  for (const node of arrayOfNodes) {
+    connectToRoot(node);
+  }
+}
+
+main();
