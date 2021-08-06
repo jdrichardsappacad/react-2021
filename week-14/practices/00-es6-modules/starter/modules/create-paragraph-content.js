@@ -13,5 +13,4 @@ function createLoremIpsumParagraphContent() {
   return createParagraphContent(loremIpsum);
 }
 
-// Add export default
 export default createParagraphContent;
