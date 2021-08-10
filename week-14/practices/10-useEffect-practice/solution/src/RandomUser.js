@@ -4,7 +4,7 @@ import User from './User';
 
 const colors = ['#0c9bbd', 'red', 'orange', 'green'];
 
-const RandomUserTwo = () => {
+const RandomUser = () => {
   const [num, setNum] = useState(0);
   const [searchChange, setSearchChange] = useState('');
   const [searchWord, setSearchWord] = useState(
@@ -69,4 +69,4 @@ const RandomUserTwo = () => {
   );
 };
 
-export default RandomUserTwo;
+export default RandomUser;
