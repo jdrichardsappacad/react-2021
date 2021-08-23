@@ -59,7 +59,7 @@ validation messages if the `validationErrors` array has a `length` greater than
     <div>
       The following errors were found:
       <ul>
-        {validationErrors.map((error) => (
+        {validationErrors.map(error => (
           <li key={error}>{error}</li>
         ))}
       </ul>
@@ -93,7 +93,7 @@ function ContactUs(props) {
     return validationErrors;
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     const errors = validate();
 
@@ -104,7 +104,7 @@ function ContactUs(props) {
       email,
       phone,
       comments,
-      submittedOn: new Date()
+      submittedOn: new Date(),
     };
 
     console.log(contactUsInformation);
@@ -122,7 +122,7 @@ function ContactUs(props) {
         <div>
           The following errors were found:
           <ul>
-            {validationErrors.map((error) => (
+            {validationErrors.map(error => (
               <li key={error}>{error}</li>
             ))}
           </ul>
@@ -134,7 +134,7 @@ function ContactUs(props) {
           <input
             id='name'
             type='text'
-            onChange={(e) => setName(e.target.value)}
+            onChange={e => setName(e.target.value)}
             value={name}
           />
         </div>
@@ -143,7 +143,7 @@ function ContactUs(props) {
           <input
             id='email'
             type='text'
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
             value={email}
           />
         </div>
@@ -152,18 +152,18 @@ function ContactUs(props) {
           <input
             id='phone'
             type='text'
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={e => setPhone(e.target.value)}
             value={phone}
           />
           <select
             name='phoneType'
-            onChange={(e) => setPhoneType(e.target.value)}
+            onChange={e => setPhoneType(e.target.value)}
             value={phoneType}
           >
             <option value='' disabled>
               Select a phone type...
             </option>
-            {props.phoneTypes.map((phoneType) => (
+            {props.phoneTypes.map(phoneType => (
               <option key={phoneType}>{phoneType}</option>
             ))}
           </select>
@@ -173,7 +173,7 @@ function ContactUs(props) {
           <textarea
             id='comments'
             name='comments'
-            onChange={(e) => setComments(e.target.value)}
+            onChange={e => setComments(e.target.value)}
             value={comments}
           />
         </div>
@@ -184,7 +184,7 @@ function ContactUs(props) {
 }
 
 ContactUs.defaultProps = {
-  phoneTypes: ['Home', 'Work', 'Mobile']
+  phoneTypes: ['Home', 'Work', 'Mobile'],
 };
 
 export default ContactUs;
@@ -258,7 +258,7 @@ The following errors were found:
 ### Client-side vs server-side validation
 
 As a reminder, client-side validation like the validations in the `ContactUs` function component,
-are optional to implement; **server-side validation is not optional.
+are optional to implement; **server-side validation is not optional**.
 This is because client-side validations can be disabled or manipulated by savvy users.
 Sometimes the "best" approach is to skip implementing validations on the client-side and rely completely
 on the server-side validation. Using this approach, you'd simply call the API when the form is submitted and
