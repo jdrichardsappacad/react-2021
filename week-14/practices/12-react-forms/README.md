@@ -154,12 +154,9 @@ the component state in sync:
   value={name}
 />
 ```
-
-Remember that when an event is raised, the associated event handler method is
-called and passed an instance of `event` object type. A reference to the element
-that raised the event is available through the `event` object's `target`
-property. Using the reference to the form field element, you can retrieve the
-current value as the `value` property on the `target` object.
+Remember that when an event is raised, the associated event handler method is called and passed an instance of the event object.
+A reference to the element that raised the event is available through the event object's target property.
+Using the reference to the form field element, you can retrieve the current value as the value property on the target object.
 
 Use the same approach to add an `onChange` event handler to the "Email" and
 "Phone" form fields gives you this:
