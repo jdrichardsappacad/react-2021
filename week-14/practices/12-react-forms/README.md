@@ -255,16 +255,15 @@ const onSubmit = (e) => {
 
   // For now, just log the contact us information to the console
   // though ideally, we'd persist this information to a database
-  // using a REST API.
+  // using a RESTful API.
   console.log(contactUsInformation);
 };
 ```
 
-Notice that an additional property, `submittedOn`, is being added to the
-`contactUsInformation` object literal to indicate the date/time that the
-information was submitted. Ideally, the `contactUsInformation` object would be
-persist to a database using a REST API, but for now, you'll just log the object
-to the console.
+Notice that a additional property, submittedOn, is being added to the contactUsInformation object literal to
+indicate the date/time that the information was submitted. Ideally, the contactUsInformation object would be
+persisted to a database using a RESTful API, but for now, you'll just log the object to the console.
+
 
 Now that the form submission has been processed, reset the `name`, `email`, and
 `phone` values to empty strings:
