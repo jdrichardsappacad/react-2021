@@ -204,7 +204,7 @@ The following errors were found:
 Overall, this approach to validating the form is relatively simple. You _could_
 validate the data as it changes so that the user would receive feedback sooner
 (i.e. not having to wait to submit the form to see the validation error
-messages). Sometimes it's helpful to receive feedback in real time, but
+messages). Sometimes it's helpful to receive feedback in real-time, but
 sometimes it can be annoying to users. Consider each situation and use an
 approach that feels appropriate for your users.
 
