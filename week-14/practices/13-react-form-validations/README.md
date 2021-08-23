@@ -257,12 +257,12 @@ The following errors were found:
 
 ### Client-side vs server-side validation
 
-As a reminder, client-side validation like the validations in the ContactUs function component,
-are optional to implement; server-side validation is not optional.
+As a reminder, client-side validation like the validations in the `ContactUs` function component,
+are optional to implement; **server-side validation is not optional.
 This is because client-side validations can be disabled or manipulated by savvy users.
 Sometimes the "best" approach is to skip implementing validations on the client-side and rely completely
 on the server-side validation. Using this approach, you'd simply call the API when the form is submitted and
-if the request returns a 400 BAD REQUEST response,
+if the request returns a `400 BAD REQUEST` response,
 you'd display the validation error messages returned from the server.
 If you do decide to implement client-side validations, do it with the end goal of improving your application's
 overall user experience, not as your only means of validating user-provided data.

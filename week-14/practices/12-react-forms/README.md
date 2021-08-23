@@ -154,9 +154,12 @@ the component state in sync:
   value={name}
 />
 ```
-Remember that when an event is raised, the associated event handler method is called and passed an instance of the event object.
-A reference to the element that raised the event is available through the event object's target property.
-Using the reference to the form field element, you can retrieve the current value as the value property on the target object.
+Remember that when an event is raised, the associated event handler method is called
+and passed an instance of the `event` object. A reference to the element that raised the event
+is available through the `event` object's `target` property.
+Using the reference to the form field element, you can retrieve the current value as the `value`
+property on the target object.
+
 
 Use the same approach to add an `onChange` event handler to the "Email" and
 "Phone" form fields gives you this:
@@ -260,8 +263,8 @@ const onSubmit = (e) => {
 };
 ```
 
-Notice that a additional property, submittedOn, is being added to the contactUsInformation object literal to
-indicate the date/time that the information was submitted. Ideally, the contactUsInformation object would be
+Notice that a additional property, `submittedOn`, is being added to the `contactUsInformation` object literal to
+indicate the date/time that the information was submitted. Ideally, the `contactUsInformation` object would be
 persisted to a database using a RESTful API, but for now, you'll just log the object to the console.
 
 
