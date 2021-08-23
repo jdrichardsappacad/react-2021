@@ -284,7 +284,7 @@ const onSubmit = (e) => {
 
   // For now, just log the contact us information to the console
   // though ideally, we'd persist this information to a database
-  // using a REST API.
+  // using a RESTful API.
   console.log(contactUsInformation);
 
   // Reset the form state.
@@ -359,11 +359,11 @@ function ContactUs() {
 
 export default ContactUs;
 ```
+If you run your application again and view the form in the browser,
+you can fill out each form field and click "Submit" to submit the form.
+Notice that the page doesn't reload, and if you look in the developer tool's console,
+you'll see an object containing your contact us information!
 
-If you run your application again and view the form in the browser, you can fill
-out each form field and click "Submit" to submit the form. Notice that the page
-doesn't reload! And if you look in the developer tool's console, you'll see an
-object containing your contact us information.
 
 ### Controlled components
 
