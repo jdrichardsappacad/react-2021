@@ -37,6 +37,15 @@ the different roles and responsibilities. For example, there could be a server
 for sending web pages to the front-end client. That server could request data
 from a server storing data in a database.
 
+## Usage with React and Redux
+
+For the upcoming solo project, you'll create a full-stack application that
+utilizes React and Redux in the front-end and Express in the back-end. In this
+case the Express back-end server will be used to store and send data in
+a database through API routes, and eventually, send files to the client when
+your application is in production and being served from Heroku or another
+application platform.
+
 ## What you've learned
 
 You learned that
