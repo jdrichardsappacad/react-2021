@@ -21,7 +21,8 @@ This quiz tests you on your understanding of servers.
 
 <quiz>
   <question multiple>
-    <p>Which of the following make up a full-stack application?</p>
+    <p>Which of the following are necessary to make a full-stack
+    application?</p>
     <answer correct>A front-end client</answer>
     <answer correct>A back-end server</answer>
     <answer>A middleware function</answer>
