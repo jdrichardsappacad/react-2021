@@ -154,12 +154,12 @@ the component state in sync:
   value={name}
 />
 ```
+Remember that when an event is raised, the associated event handler method is called
+and passed an instance of the `event` object. A reference to the element that raised the event
+is available through the `event` object's `target` property.
+Using the reference to the form field element, you can retrieve the current value as the `value`
+property on the target object.
 
-Remember that when an event is raised, the associated event handler method is
-called and passed an instance of `event` object type. A reference to the element
-that raised the event is available through the `event` object's `target`
-property. Using the reference to the form field element, you can retrieve the
-current value as the `value` property on the `target` object.
 
 Use the same approach to add an `onChange` event handler to the "Email" and
 "Phone" form fields gives you this:
@@ -258,16 +258,15 @@ const onSubmit = (e) => {
 
   // For now, just log the contact us information to the console
   // though ideally, we'd persist this information to a database
-  // using a REST API.
+  // using a RESTful API.
   console.log(contactUsInformation);
 };
 ```
 
-Notice that an additional property, `submittedOn`, is being added to the
-`contactUsInformation` object literal to indicate the date/time that the
-information was submitted. Ideally, the `contactUsInformation` object would be
-persist to a database using a REST API, but for now, you'll just log the object
-to the console.
+Notice that a additional property, `submittedOn`, is being added to the `contactUsInformation` object literal to
+indicate the date/time that the information was submitted. Ideally, the `contactUsInformation` object would be
+persisted to a database using a RESTful API, but for now, you'll just log the object to the console.
+
 
 Now that the form submission has been processed, reset the `name`, `email`, and
 `phone` values to empty strings:
@@ -288,7 +287,7 @@ const onSubmit = (e) => {
 
   // For now, just log the contact us information to the console
   // though ideally, we'd persist this information to a database
-  // using a REST API.
+  // using a RESTful API.
   console.log(contactUsInformation);
 
   // Reset the form state.
@@ -363,11 +362,11 @@ function ContactUs() {
 
 export default ContactUs;
 ```
+If you run your application again and view the form in the browser,
+you can fill out each form field and click "Submit" to submit the form.
+Notice that the page doesn't reload, and if you look in the developer tool's console,
+you'll see an object containing your contact us information!
 
-If you run your application again and view the form in the browser, you can fill
-out each form field and click "Submit" to submit the form. Notice that the page
-doesn't reload! And if you look in the developer tool's console, you'll see an
-object containing your contact us information.
 
 ### Controlled components
 
