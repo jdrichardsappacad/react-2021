@@ -8,10 +8,16 @@ export const addArticle = (newArticle) => ({
   newArticle,
 });
 
+//!!START SILENT
 export const getArticles = (articles) => {
+//!!END
+//!!ADD
+// export const getArticles = () => {
+//!!END_ADD
   return { type: GET_ARTICLES, articles };
 };
 
+//!!START SILENT
 export const fetchArticles = () => async (dispatch) => {
   const response = await fetch('/api/articles');
   const articles = await response.json();
@@ -31,6 +37,7 @@ export const writeArticle = (payload) => async (dispatch) => {
     return article;
   }
 };
+//!!END
 
 const initialState = { entries: [], isLoading: true };
 

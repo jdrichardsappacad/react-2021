@@ -1,8 +1,18 @@
 import { useState } from "react";
+//!!START SILENT
 // import { nanoid } from "nanoid";
+//!!END
+//!!ADD
+// import { nanoid } from "nanoid";
+//!!END_ADD
 import { useDispatch } from "react-redux";
 
+//!!START SILENT
 import { writeArticle } from "../../store/articleReducer";
+//!!END
+//!!ADD
+// import { addArticle } from '../../store/articleReducer';
+//!!END_ADD
 import "./ArticleInput.css";
 
 const ArticleInput = () => {
@@ -21,12 +31,20 @@ const ArticleInput = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newArticle = {
+      //!!ADD
+      // id: nanoid(),
+      //!!END_ADD
       title,
       body,
       imageUrl,
     };
 
+    //!!START SILENT
     const article = await dispatch(writeArticle(newArticle));
+    //!!END
+    //!!ADD
+    // dispatch(addArticle(newArticle));
+    //!!END_ADD
     if (article) {
       reset();
     }
