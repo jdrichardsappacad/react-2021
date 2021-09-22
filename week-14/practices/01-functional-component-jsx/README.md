@@ -110,9 +110,9 @@ make the background color white and the text green using hex colors.
 ## Phase 5: Add a Background Image Using External CSS
 
 Let's add a background image to our page by using external CSS. Create a file
-called `App.css`. Inside the `App.css` file, add a class with the name
-`background`. Remember, in this file we use regular CSS. In your background
-selector add these values
+called `App.css` in your `src` folder. Inside the `App.css` file, add a class
+with the name `background`. Remember, in this file we use regular CSS. In your
+background selector add these values
 
 ```css
 .background {
@@ -148,7 +148,9 @@ Finally, use inline or external CSS to resize your image.
 ## What You Have Learned
 
 Congratulations! You have successfully learned the basics of adding JSX to a
-React Functional Component. This includes:
+React Functional Component.
+
+What you have learned:
 
 - Creating a Functional Component
 - Nesting one component inside of another
