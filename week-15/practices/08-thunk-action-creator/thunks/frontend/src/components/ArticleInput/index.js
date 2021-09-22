@@ -45,9 +45,14 @@ const ArticleInput = () => {
     //!!ADD
     // dispatch(addArticle(newArticle));
     //!!END_ADD
+    //!!START SILENT
     if (article) {
       reset();
     }
+    //!!END
+    //!!ADD
+    // reset();
+    //!!END_ADD
   };
 
   return (

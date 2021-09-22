@@ -1,5 +1,7 @@
+//!!ADD
 // import articles from '../data/data.json';
 
+//!!END_ADD
 const GET_ARTICLES = 'articles/getArticles';
 const ADD_ARTICLE = 'articles/addArticle';
 
@@ -16,8 +18,8 @@ export const getArticles = (articles) => {
 //!!END_ADD
   return { type: GET_ARTICLES, articles };
 };
-
 //!!START SILENT
+
 export const fetchArticles = () => async (dispatch) => {
   const response = await fetch('/api/articles');
   const articles = await response.json();

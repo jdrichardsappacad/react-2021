@@ -1,5 +1,7 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+//!!START SILENT
 import thunk from 'redux-thunk';
+//!!END
 
 import articleReducer from './articleReducer';
 import fruitReducer from './fruitReducer';
