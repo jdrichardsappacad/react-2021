@@ -60,7 +60,7 @@ function App() {
           <Movies movies={movies} />
          {/*!!END */}
          {/*!!ADD */}
-         {/*<Movies />*/}
+         {/* <Movies /> */}
          {/*!!END_ADD */}
         </Route>
         <Route path='/not-logged-in'>
