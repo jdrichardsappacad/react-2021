@@ -1,5 +1,7 @@
+//!!START SILENT
 import { Route, NavLink, Switch } from 'react-router-dom';
-
+//!!END
+import {Route,Switch} from 'react-router-dom'
 import Home from './components/Home';
 import Stocks from './components/Stocks';
 import Movies from './components/Movies';

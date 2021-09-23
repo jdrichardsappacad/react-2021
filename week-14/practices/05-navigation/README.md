@@ -102,7 +102,7 @@ to the Not Logged in route.
 Now, in Stocks.js, set the `loggedIn` variable to true and click on the Stocks
 Link. You should be able to view the Stocks component.
 
-## History API & useHistory Hook for Navigation
+## Phase 6: History API & useHistory Hook for Navigation
 
 You will use the `useHistory` hook to navigate after some transaction has taken
 place. In your Stocks component, you goal is to navigate back to the Home Page
