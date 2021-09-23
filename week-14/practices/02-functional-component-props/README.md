@@ -93,8 +93,8 @@ Now, pass the `handleClick` function as a prop called `clicker` to the
 In your `BaseStats` component, destructure the `clicker` prop in your function
 component argument.
 
-Next, above your table, create a button with the text Check special stats. Give
-it a class of `sp-stats` Pass an `onClick` event listener to the `button`
+Next, above your table, create a button with the text `Check Special Stats`.
+Give it a class of `sp-stats`. Pass an `onClick` event listener to the `button`
 element and assign it the clicker function prop.
 
 Remember, an event listener in React is camel cased (_`onClick` instead of `onclick`_) and it takes a function as it's assignment.
