@@ -58,10 +58,10 @@ function App() {
         <Route path='/movies'>
          {/*!!START SILENT */}
           <Movies movies={movies} />
-        {/*!!END */}
-        {/*!!ADD */}
-        {/*<Movies />*/}
-        {/*!!END_ADD */}
+         {/*!!END */}
+         {/*!!ADD */}
+         {/*<Movies />*/}
+         {/*!!END_ADD */}
         </Route>
         <Route path='/not-logged-in'>
           <h1> You Must Be Logged In to Enter.</h1>
