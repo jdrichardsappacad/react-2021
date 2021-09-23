@@ -4,8 +4,9 @@ import Home from './components/Home';
 import Stocks from './components/Stocks';
 import Movies from './components/Movies';
 
+//!!START SILENT
 import { movies } from './data/movieData';
-
+//!!END
 function App() {
   return (
     <div className='main'>
@@ -55,7 +56,12 @@ function App() {
           <Stocks />
         </Route>
         <Route path='/movies'>
+         {/*!!START SILENT */}
           <Movies movies={movies} />
+         {/*!!END */}
+         {/*!!ADD */}
+         {/*<Movies />*/}
+         {/*!!END_ADD */}
         </Route>
         <Route path='/not-logged-in'>
           <h1> You Must Be Logged In to Enter.</h1>

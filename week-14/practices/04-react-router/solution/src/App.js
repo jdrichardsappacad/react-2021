@@ -1,5 +1,6 @@
+//!!START SILENT
 import { Route, Switch, NavLink } from 'react-router-dom';
-
+//!!END
 import Home from './components/Home';
 import Stocks from './components/Stocks';
 import Movies from './components/Movies';
@@ -8,7 +9,10 @@ function App() {
   return (
     <div className='main'>
       <h1>App Component</h1>
-
+      <Home />
+      <Stocks />
+      <Movies />
+    {/*!!START SILENT */}
       <nav className='comp nav'>
         <ul>
           <li>
@@ -62,6 +66,7 @@ function App() {
           <h1>Page Not Found</h1>
         </Route>
       </Switch>
+      {/*!!END */}
     </div>
   );
 }
