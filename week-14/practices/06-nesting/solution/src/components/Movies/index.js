@@ -1,10 +1,13 @@
+//!!START SILENT 
 import { NavLink, useRouteMatch, Switch, Route } from 'react-router-dom';
 import MovieDetails from '../MovieDetails';
+
 function Movies(props) {
   const { path, url } = useRouteMatch();
+
   return (
     <div className='comp orange'>
-      <h1>Movies Component</h1>
+      <h1>Movies Component</h1> 
       <nav>
         {props.movies.map((movie) => (
           <span key={movie.id}>
@@ -20,5 +23,17 @@ function Movies(props) {
     </div>
   );
 }
+//!!END 
+
+function Movies() {
+  return (
+    <div className="comp orange">
+      <h1>Movies Component</h1>
+    </div>
+  );
+}
+
+export default Movies;
+
 
 export default Movies;
