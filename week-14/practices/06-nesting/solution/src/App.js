@@ -56,10 +56,10 @@ function App() {
           <Stocks />
         </Route>
         <Route path='/movies'>
-        <Movies />
          {/*!!START SILENT */}
           <Movies movies={movies} />
         {/*!!END */}
+        <Movies />
         </Route>
         <Route path='/not-logged-in'>
           <h1> You Must Be Logged In to Enter.</h1>
