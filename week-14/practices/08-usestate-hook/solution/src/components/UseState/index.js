@@ -1,5 +1,8 @@
+//!!START SILENT
+//!!END 
 import { useState } from 'react';
 import './UseState.css';
+
 
 const UseState = () => {
   const [theme, setTheme] = useState('light');
@@ -21,4 +24,16 @@ const UseState = () => {
     </div>
   );
 };
+
+//!!END 
+//!!ADD
+//const UseState = () => {
+  //return (
+    //<div>
+      //<h1>UseState Component</h1>
+    //</div>
+  //);
+//};
+//!!END_ADD
 export default UseState;
+
