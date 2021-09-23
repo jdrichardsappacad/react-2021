@@ -1,8 +1,9 @@
 # Thunk Action Creators
 
-It's time to write thunk action creators.
+In this practice, you will write thunk action creators to use with Redux later
+on.
 
-## Set up
+## Phase 0: Set up
 
 Download the starter at the bottom of this page.
 
@@ -21,7 +22,7 @@ In a different terminal, `cd` into the __frontend__ directory of the starter.
 1. Run `npm install` in the __frontend__ directory.
 2. Run `npm start` in the __frontend__ directory to start the server.
 
-## Instructions
+## Phase 1: Thunk Action Creators
 
 Action creators are functions that return, or create, an action, which is just
 a regular JavaScript object. Thunk action creators are functions that return
