@@ -1,7 +1,9 @@
 //!!START SILENT
 import { Route, Switch, NavLink } from 'react-router-dom';
 //!!END
+//!!ADD
 import { Route, Switch } from 'react-router-dom';
+//!!END_ADD
 import Home from './components/Home';
 import Stocks from './components/Stocks';
 import Movies from './components/Movies';

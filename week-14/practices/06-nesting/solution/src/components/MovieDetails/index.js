@@ -17,14 +17,15 @@ function MovieDetails(props) {
   );
 }
 //!!END 
-
-function MovieDetails() {
-  return (
-    <div className="comp purple">
-      <h1>MovieDetails Component</h1>
-    </div>
-  );
-}
+//!!ADD
+//function MovieDetails() {
+  //return (
+    //<div className="comp purple">
+      //<h1>MovieDetails Component</h1>
+    //</div>
+  //);
+//}
+//!!END_ADD
 
 export default MovieDetails;
 
