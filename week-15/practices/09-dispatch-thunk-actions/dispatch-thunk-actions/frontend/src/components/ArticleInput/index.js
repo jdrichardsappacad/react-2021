@@ -28,7 +28,12 @@ const ArticleInput = () => {
     setBody("");
   };
 
+  //!!START SILENT
   const handleSubmit = async (e) => {
+  //!!END
+  //!!ADD
+  // const handleSubmit = (e) => {
+  //!!END_ADD
     e.preventDefault();
     const newArticle = {
       //!!ADD
