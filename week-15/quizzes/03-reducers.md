@@ -31,8 +31,8 @@ This quiz is to test you on what reducers are and how to use them.
     <answer>Dispatch</answer>
     <answer correct>Action</answer>
     <explanation>
-      The reducer function receives the current state and an action, updates the
-      state appropriately based on the action.type. 
+      The reducer function receives the current state and an action, then 
+      updates the state appropriately based on the `action.type`. 
     </explanation>
   </question>
 </quiz>
@@ -54,7 +54,7 @@ This quiz is to test you on what reducers are and how to use them.
   <question>
     <p>
       In an application with muliple reducers, what does the `state` parameter 
-      of a single reducer coorespond to? 
+      of a single reducer correspond to? 
     </p>
     <answer>The entire application state</answer>
     <answer>A new state object to populate</answer>
@@ -67,7 +67,10 @@ This quiz is to test you on what reducers are and how to use them.
       independent _slices_ of state. Because each reducer only handles a single 
       slice of state, its `state` parameter corresponds only to the part of 
       the state that it manages and it only responds to actions that concern 
-      that slice of state.
+      that slice of state.It is possible for actions from another slice of state 
+      to hit another reducer if the `action.type` matches a case in that 
+      reducer. Because of this, it is best practice to make descriptive 
+      `action.type` strings that could only match one reducer case.
     </explanation>
   </question>
 </quiz>
