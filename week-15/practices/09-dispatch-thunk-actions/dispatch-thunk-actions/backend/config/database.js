@@ -1,9 +1,14 @@
-const path = require('path');
+const {
+  db: { username, password, database, host },
+} = require("./");
 
 module.exports = {
   development: {
-    dialect: 'sqlite',
+    username,
+    password,
+    database,
+    host,
+    dialect: 'postgres',
     seederStorage: 'sequelize',
-    storage: path.resolve(__dirname, '..', 'db', 'database.sqlite'),
   },
 };
