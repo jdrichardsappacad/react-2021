@@ -1,0 +1,54 @@
+# Practice: Dispatch Thunk Actions
+
+In this practice, you will dispatch the thunks returned from the thunk action
+creators you wrote in the previous practice.
+
+## Phase 0: Set Up
+
+Download the starter at the bottom of this page.
+
+If your database is already set up from the previous practice, you'll only need
+to make the __.env__ file in the __backend__ directory, run `npm install`, and
+then run `npm start`. Otherwise, follow these instructions to get set up:
+
+1. Create a __.env__ file in the __backend__ directory based off the existing
+   __.env.example__ file given.
+2. Create a database user using the `psql` interface that matches the username
+   and password you gave in the __.env__ file with `CREATEDB` privileges.
+3. Run `npm install` in the __backend__ directory to install dependencies.
+4. Run `npx dotenv sequelize db:create` to create the database.
+5. Run `npx dotenv sequelize db:migrate` to apply the migrations.
+6. Run `npx dotenv sequelize db:seed:all` to apply the seeders.
+7. Run `npm start` to start the backend server..
+
+In a different terminal, `cd` into the __frontend__ directory of the starter.
+
+1. Run `npm install` in the __frontend__ directory.
+2. Run `npm start` in the __frontend__ directory to start the server.
+
+## Phase 1: Dispatching Thunk Actions
+
+In the previous practice, you wrote thunk action creators, functions that
+returned a thunk action, and in this practice you will `dispatch` those thunk
+actions.
+
+In the __frontend/src/components/ArticleList/index.js__ file, you will update
+the component from `dispatch`-ing the action returned by the regular action
+creator to `dispatch`-ing the thunk action returned from the thunk action
+creator. Change the `import` statement near the top of the file to import the
+thunk action creator. Update the `dispatch` call inside the `useEffect` hook to
+`dispatch` the returned thunk action from the `fetchArticles` thunk action
+creator.
+
+To `dispatch` your thunk actions, you will use the same `dispatch` made
+available in your application through the `useDispatch` hook the same way you
+`dispatch`-ed the actions returned from your action creators.
+
+Now it's your turn! Update the `ArticleInput` component found in the
+__frontend/src/component/ArticleInput/index.js__ file to use the `writeArticle`
+thunk action creator when the user submits the form to create a new article.
+
+## What you've learned
+
+You just learned how to `dispatch` thunk actions from within your React
+components.
