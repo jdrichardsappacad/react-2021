@@ -15,7 +15,7 @@ This quiz is to test you on what reducers are and how to use them.
     <answer>Dispatch an `action`</answer>
     <explanation>
       The Redux store has a reducer function for updating the current state and 
-      returning that new state. 
+      returning an updated version of the state. 
     </explanation>
   </question>
 </quiz>
