@@ -18,9 +18,9 @@
     "express-async-handler": "^1.1.4",
     "helmet": "^4.6.0",
     "morgan": "^1.10.0",
-    "pg": "^8.7.1",
     "sequelize": "^6.6.5",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "dotenv-cli": "^4.0.0",
