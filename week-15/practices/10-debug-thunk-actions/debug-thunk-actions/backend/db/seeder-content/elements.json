@@ -1,0 +1,10 @@
+[
+    {
+        "name": "<html>",
+        "description": "The <html> HTML element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element."
+    },
+    {
+        "name": "<base>",
+        "description": "The <base> HTML element specifies the base URL to use for all relative URLs in a document. There can be only one <base> element in a document."
+    }
+]
