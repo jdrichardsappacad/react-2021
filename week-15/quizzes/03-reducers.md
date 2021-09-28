@@ -67,10 +67,9 @@ This quiz is to test you on what reducers are and how to use them.
       independent _slices_ of state. Because each reducer only handles a single 
       slice of state, its `state` parameter corresponds only to the part of 
       the state that it manages and it only responds to actions that concern 
-      that slice of state.It is possible for actions from another slice of state 
-      to hit another reducer if the `action.type` matches a case in that 
-      reducer. Because of this, it is best practice to make descriptive 
-      `action.type` strings that could only match one reducer case.
+      that slice of state. Note: It is possible for actions from another slice 
+      of state to hit another reducer if the `action.type` matches a case in 
+      that reducer. 
     </explanation>
   </question>
 </quiz>
