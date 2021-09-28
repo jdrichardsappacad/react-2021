@@ -11,15 +11,9 @@ If your database is already set up from the previous practice, you'll only need
 to make the __.env__ file in the __backend__ directory, run `npm install`, and
 then run `npm start`. Otherwise, follow these instructions to get set up:
 
-1. Create a __.env__ file in the __backend__ directory based off the existing
-   __.env.example__ file given.
-2. Create a database user using the `psql` interface that matches the username
-   and password you gave in the __.env__ file with `CREATEDB` privileges.
-3. Run `npm install` in the __backend__ directory to install dependencies.
-4. Run `npx dotenv sequelize db:create` to create the database.
-5. Run `npx dotenv sequelize db:migrate` to apply the migrations.
-6. Run `npx dotenv sequelize db:seed:all` to apply the seeders.
-7. Run `npm start` to start the backend server..
+1. Run `npm install` in the __backend__ directory to install dependencies.
+2. Run `npm run db:setup` to set up the database.
+3. Run `npm start` to start the backend server.
 
 In a different terminal, `cd` into the __frontend__ directory of the starter.
 
