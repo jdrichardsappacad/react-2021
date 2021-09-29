@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon -r dotenv/config ./bin/www",
+    "start": "nodemon ./bin/www",
     "db:setup": "sequelize db:migrate && sequelize db:seed:all"
   },
   "dependencies": {
