@@ -8,10 +8,13 @@ import { loadArticles } from '../../store/articleReducer';
 const ArticleList = () => {
   const dispatch = useDispatch();
 
-  const articles = useSelector((state) => state.articleState.entries);
+  const articles = useSelector((state) => state.article.entries);
 
   useEffect(() => {
+    //!!START
     dispatch(loadArticles());
+    //!!END
+    dispatch(loadArticles);
   }, [dispatch]);
 
   return (

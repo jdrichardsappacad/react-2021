@@ -11,10 +11,24 @@ export const loadArticles = () => {
   };
 };
 
+//!!START
 export const addArticle = (article) => {
   return {
     type: ADD_ARTICLE,
     article
+  };
+};
+//!!END
+//!!ADD
+export const addArticle = () => {
+  return {
+    type: ADD_ARTICLE
+  };
+};
+//!!END_ADD
+export const addArticle = () => {
+  return {
+    type: ADD_ARTICLE
   };
 };
 
@@ -23,7 +37,7 @@ const initialState = { entries: [], isLoading: true };
 const articleReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_ARTICLES:
-      return { ...state, entries: [...action.articles] };
+      return { ...state, entries: [...state.articles] };
 
     case ADD_ARTICLE:
       return { ...state, entries: [...state.entries, action.article] };
