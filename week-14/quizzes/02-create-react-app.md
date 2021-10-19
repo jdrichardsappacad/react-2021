@@ -109,7 +109,7 @@ This quiz is to test you on how you make your own React app.
       export/import, it will look like `export default bubblebop` && `import
       bubblebop from './...'`. If it's not a default export, we will use this
       format - `export const bubblebop = {greeting: "hi"}` && `import
-      {bubblebop} from './...'` .
+      {bubblebop} from '../..'` .
     </explanation>
   </question>
 </quiz>
