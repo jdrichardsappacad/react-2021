@@ -46,7 +46,7 @@ This quiz is meant to check your understanding of thunks.
 
 <quiz>
   <question>
-    <p>What does the thunk middleware pass to a thunk when it calls a thunk?</p>
+    <p>What does the thunk middleware pass to a thunk?</p>
     <answer correct>The thunk middleware will pass the `dispatch` and `getState`
     store methods to the thunk.</answer>
     <answer>The thunk middleware will pass the `store` object to the
