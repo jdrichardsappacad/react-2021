@@ -24,7 +24,7 @@ This quiz is designed to test you on Redux.
     <answer correct>State is read-only</answer>
     <answer correct>Changes to the store are only made with pure functions</answer>
     <answer>Redux must use a two-way data flow</answer>
-    <explanation>The three principles of Redux are the 1. Single Source of
+    <explanation>The three principles of Redux are: 1. Single Source of
     Truth, 2. State is read-only, and 3. Changes to the store are only made with
     pure functions</explanation>
   </question>
