@@ -1,6 +1,6 @@
 # Reducers Quiz
 
-This quiz is to test you on what reducers are and how to use them.
+This quiz is to test your knowledge of reducers and how to use them.
 
 ## The questions
 
@@ -14,15 +14,14 @@ This quiz is to test you on what reducers are and how to use them.
     <answer>Make a new `state` object</answer>
     <answer>Dispatch an `action`</answer>
     <explanation>
-      The Redux store has a reducer function for updating the current state and
-      returning an updated version of the state.
+      The Redux store uses a pure reducer function to update state in the store.
     </explanation>
   </question>
 </quiz>
 <quiz>
   <question multiple>
     <p>
-      A reducer accepts which of the following parameters?
+      A reducer accepts which of the following parameters? Choose all that apply.
     </p>
     <answer>Initial `state`</answer>
     <answer>Payload</answer>
@@ -53,12 +52,12 @@ This quiz is to test you on what reducers are and how to use them.
 <quiz>
   <question>
     <p>
-      In an application with muliple reducers, what does the `state` parameter
+      In an application with multiple reducers, what does the `state` parameter
       of a single reducer correspond to?
     </p>
     <answer>The entire application state</answer>
-    <answer>A new state object to populate</answer>
-    <answer correct>The single slice of state that specific reducer manages
+    <answer>A new state object</answer>
+    <answer correct>A single slice of state
     </answer>
     <answer>There is no state parameter when utilizing multiple reducers
     </answer>
@@ -67,9 +66,8 @@ This quiz is to test you on what reducers are and how to use them.
       independent _slices_ of state. Because each reducer only handles a single
       slice of state, its `state` parameter corresponds only to the part of
       the state that it manages and it only responds to actions that concern
-      that slice of state. Note: It is possible for actions from another slice
-      of state to hit another reducer if the `action.type` matches a case in
-      that reducer.
+      that slice of state. Note: If multiple reducer functions include the same
+      `CASE`, each reducer will update that function's slice of state.
     </explanation>
   </question>
 </quiz>
@@ -84,11 +82,11 @@ This quiz is to test you on what reducers are and how to use them.
     <answer correct>Use the `combineReducers` method to create a single reducer
     and pass that as an argument to `createStore`</answer>
     <explanation>
-    `createStore` only takes one `reducer` argument, so you must combine your
-    reducers back into a single reducer to pass to the store. To do this you'll
-    use the `combineReducers` method from the `redux` package and pass it an
-    object that maps state keys to the reducers that handle those slices of
-    state.
+  `createStore` only accepts one `reducer` argument. You must combine
+  reducers into a single reducer, using the `combineReducers` method and pass it
+  to the store. This method accepts an object of key/value pairs with the key
+  representing the name of the slice of state and the value assigned to the
+  specific reducer function.
     </explanation>
   </question>
 </quiz>

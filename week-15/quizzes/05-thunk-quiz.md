@@ -7,13 +7,12 @@ This quiz is meant to check your understanding of thunks.
 <quiz>
   <question>
     <p>What is a thunk?</p>
-    <answer correct>A thunk is a function that gets returned by another
-    function, also known as the thunk action creator.</answer>
-    <answer>A thunk is a special kind of object that gets dispatched whenever
+    <answer correct>A thunk is a function that is returned by another
+    function, also known as a thunk action creator.</answer>
+    <answer>A thunk is a special object that is dispatched whenever
     you want to handle asynchronous events.</answer>
-    <answer>A thunk is the function that returns a function.</answer>
-    <answer>A thunk is a function that you have to use in Redux to make changes
-    to your state.</answer>
+    <answer>A thunk is a function that returns a function.</answer>
+    <answer>A thunk is a function that is required to make direct changes to your state.</answer>
     <explanation>A thunk is just a function that gets returned by a thunk action
     creator function.</explanation>
   </question>
@@ -21,8 +20,7 @@ This quiz is meant to check your understanding of thunks.
 
 <quiz>
   <question>
-    <p>What package can you use to make sure your Redux store can work with
-    thunks?</p>
+    <p>Which `npm package` is used to allow thunks to work in a Redux environment?</p>
     <answer correct>`redux-thunk`</answer>
     <answer>`thunk`</answer>
     <answer>`thunky`</answer>
@@ -34,7 +32,7 @@ This quiz is meant to check your understanding of thunks.
 
 <quiz>
   <question>
-    <p>How can you add middleware to your Redux store?</p>
+    <p>How do you add middleware to your Redux store?</p>
     <answer correct>With Redux's built-in `applyMiddleware` function</answer>
     <answer>With Redux's built-in `addMiddleware` function</answer>
     <answer>With React's built-in `useMiddleware` hook</answer>
@@ -46,17 +44,18 @@ This quiz is meant to check your understanding of thunks.
 
 <quiz>
   <question>
-    <p>What does the thunk middleware pass to a thunk?</p>
-    <answer correct>The thunk middleware will pass the `dispatch` and `getState`
+    <p>What methods does the thunk middleware pass to a thunk?</p>
+    <answer correct>The thunk middleware passes the `dispatch` and `getState`
     store methods to the thunk.</answer>
-    <answer>The thunk middleware will pass the `store` object to the
+    <answer>The thunk middleware passes the `store` object to the
     thunk.</answer>
-    <answer>The thunk middleware will pass the `subscribe` method to the thunk
-    to let it control re-renders.</answer>
-    <answer>The thunk middleware will pass the `createThunk` method to the
+    <answer>The thunk middleware passes the `subscribe` method to the thunk
+    to enabling it to control re-renders.</answer>
+    <answer>The thunk middleware passes the `createThunk` method to the
     thunk.</answer>
-    <explanation>The thunk middleware will pass the `dispatch` and `getState`
-    store methods to the thunk.</explanation>
+    <explanation>The thunk middleware passes the `dispatch` and `getState`
+  store methods to the thunk. While `getState` is rarely used, `dispatch` will
+  be used to dispatch an action creator after receiving a response from the server.</explanation>
   </question>
 </quiz>
 

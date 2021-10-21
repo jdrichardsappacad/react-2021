@@ -12,32 +12,32 @@ This quiz is designed to test you on Redux.
     <answer>An extension of Flux</answer>
     <answer>An extension of React</answer>
     <answer>React's main method of state management</answer>
-    <explanation>Redux is a JavaScript framework Dan Abramov designed to manage
-    the state in a web application to make it easier to debug web apps.</explanation>
+    <explanation>Redux is a JavaScript framework, designed by Dan Abramov,
+    that manages global state in a web application.</explanation>
   </question>
 </quiz>
 
 <quiz>
   <question multiple>
-    <p>What are the three principles of Redux?</p>
+    <p>Which of these answers represent principles of Redux? Choose all that apply</p>
     <answer correct>Redux is the single source of truth</answer>
     <answer correct>State is read-only</answer>
-    <answer correct>Changes to the store are only made with pure functions</answer>
-    <answer>Redux must use a two-way data flow</answer>
+    <answer correct>Changes to the store are made, only, using pure functions</answer>
+    <answer>Redux uses a two-way data flow</answer>
     <explanation>The three principles of Redux are: 1. Single Source of
-    Truth, 2. State is read-only, and 3. Changes to the store are only made with
-    pure functions</explanation>
+    Truth, 2. State is read-only, and 3. Changes to the store are made, only
+    using pure functions</explanation>
   </question>
 </quiz>
 
 <quiz>
   <question>
-    <p>What is the difference between the application state and the
+    <p>What is the difference between an application's state and the
     application's store?</p>
-    <answer correct>The state of an application means all the information by
-    that application at a particular point in time. The application's store is
-    the single JavaScript object that houses your state at a particular point in
-    time.</answer>
+    <answer correct>The state of an application represents all the information
+    in an application at a specific point in time. The application's store
+    is the single JavaScript object that houses your state at a particular point
+    in time.</answer>
     <answer>State is anything created by `useState` and the store is anything
     created with `useStore`.</answer>
     <answer>React will create state for you, but you have to create the store
@@ -52,13 +52,11 @@ This quiz is designed to test you on Redux.
 <quiz>
   <question>
     <p>What is an action in Redux?</p>
-    <answer correct>In Redux, an action is an object with, at the very least, a
-    `type` property.</answer>
+    <answer correct>In Redux, an action is an object with a required `type` property.</answer>
     <answer>In Redux, an action is the dispatching of some object.</answer>
     <answer>In Redux, an action is the function you call to cause a change to
     your Redux state.</answer>
-    <answer>In Redux, an action is a string that you assign to an object's `type`
-    object.</answer>
+    <answer>In Redux, an action is a string that you assign to an object's `type` object.</answer>
     <explanation>An action in Redux is a Plain Old JavaScript Object with, at
     the very least, a `type` property.</explanation>
   </question>
@@ -81,14 +79,14 @@ This quiz is designed to test you on Redux.
 <quiz>
   <question>
     <p>Why can the Redux DevTools "time travel"?</p>
-    <answer correct>Because Redux reducers are pure functions, the same inputs
+    <answer correct>Redux reducers are pure functions, the same inputs
     into a reducer will cause the same outputs, so you can cancel actions and
     recalculate the state as if that action had never been dispatched.</answer>
     <answer>Redux will compute every possible version of the state and store it
     in the DevTools so that "time travel" is possible.</answer>
     <answer>Redux DevTools does not actually provide "time travel"
     functionality.</answer>
-    <answer>Because Redux can make use of middleware functions, a developer can
+    <answer>Redux can make use of middleware functions, a developer can
     install a middleware to make the Redux DevTools possible of "time travel".</answer>
     <explanation>Redux makes use of the fact that its reducers are pure
     functions, which means that the same inputs will result in the same outputs
