@@ -10,8 +10,6 @@ This quiz tests you on your understanding of servers.
     <answer correct>A server's purpose is to send data to a client</answer>
     <answer>A server's purpose is to serve data</answer>
     <answer>A server's purpose is to create new web applications</answer>
-    <answer>A server's purpose is to determine what data needs to be sent in
-    a response to a client</answer>
     <explanation>A server's purpose is to send data to a client. Depending on
     the request from the client, a server will determine what needs to be done
     and send the appropriate data back to the client in the form of
