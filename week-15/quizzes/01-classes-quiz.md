@@ -30,7 +30,8 @@ This quiz tests you on your understanding of Class Components in React.
     <answer>this.setState(this.state.count = this.state.count + 1)</answer>
     <explanation>When updating state that relies on previous state, you should
     use the second form of setState that accepts a function instead of an
-    object.</explanation>
+    object. This is because setState calls are batched and are not synchronous,
+    so a callback is necessary in order to correctly access the previous state.</explanation>
   </question>
 </quiz>
 
@@ -52,8 +53,8 @@ This quiz tests you on your understanding of Class Components in React.
 
 <quiz>
   <question>
-    <p>You must bring in props as an argument in class components in order to
-    use them.</p>
+  <p> True or False: You must bring in props as an argument in class components
+    in order to use them.</p>
     <answer correct>False</answer>
     <answer>True</answer>
     <explanation>Props are accessible without having to bring them into a
