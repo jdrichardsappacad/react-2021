@@ -1,13 +1,13 @@
 # Class Component Quiz
 
-This quiz tests you on your understanding of Class Components in React.
+This quiz tests your understanding of Class Components in React.
 
 ## The questions
 
 <quiz>
   <question>
-    <p>Is a constructor function and super method required when building a class
-    component in React?</p>
+  <p>Are a constructor function and a super method required when building a
+  class component in React?</p>
     <answer correct>No</answer>
     <answer>Yes</answer>
     <explanation>If you are not creating state or binding a method, the
@@ -17,11 +17,11 @@ This quiz tests you on your understanding of Class Components in React.
 
 <quiz>
   <question>
-    <p>If you have state that looks like this
+    <p>Given state that looks like this:
     ```
-    this.state = {count:0, message: ""}
+    this.state = { count: 0, message: ""}
     ```
-    and you want to increment the count state by one, how would you do that?
+    How would you increment the count by 1?
     </p>
     <answer correct> this.setState((prevState) => ({count: prevState.count +
     1}))</answer>
@@ -30,15 +30,14 @@ This quiz tests you on your understanding of Class Components in React.
     <answer>this.setState(this.state.count = this.state.count + 1)</answer>
     <explanation>When updating state that relies on previous state, you should
     use the second form of setState that accepts a function instead of an
-    object. This is because setState calls are batched and are not synchronous,
-    so a callback is necessary in order to correctly access the previous state.</explanation>
+    object. This is because setState calls are batched and are not synchronous.
+    A callback is necessary in order to correctly access the previous state.</explanation>
   </question>
 </quiz>
 
 <quiz>
   <question>
-    <p>When does the componentDidMount lifecycle method run and how many times
-    does it run?</p>
+    <p>When and how many times does the componentDidMount lifecycle method run?</p>
     <answer correct>It runs once after the initial render of the
     component.</answer>
     <answer>It runs after each render.</answer>
@@ -53,28 +52,25 @@ This quiz tests you on your understanding of Class Components in React.
 
 <quiz>
   <question>
-  <p> True or False: You must bring in props as an argument in class components
-    in order to use them.</p>
+  <p> True or False: When implementing class components, you must bring in props as an argument in order to use them.</p>
     <answer correct>False</answer>
     <answer>True</answer>
-    <explanation>Props are accessible without having to bring them into a
-    class component like we do with function components.</explanation>
+    <explanation>Props are accessible without having to add them to the constructor function of a class component. Functional components require props as an argument.</explanation>
   </question>
 </quiz>
 
 <quiz>
   <question multiple>
-    <p>What do we need in order to create a class component with state in
-    React?</p>
-    <answer correct>We need to import Component from the react package and
-    create a subclass extending this class</answer>
-    <answer correct>We need to call the render method</answer>
-    <answer correct>We need to use the constructor and super methods if we want
-    to have state in this component</answer>
-    <answer>We need to bring in props</answer>
+    <p>What is needed to create a class component with state> Choose all that apply:</p>
+    <answer correct>You need to import Component from the react package and
+    create a subclass extending the Component class</answer>
+    <answer correct>>You need to call the render method</answer>
+  <answer correct>>You need to use the constructor and super methods in order to
+  have an initial state in the component.</answer>
+    <answer>You need to add props to the constructor function.</answer>
     <explanation>In order to create a class component with state, you need to
-    import Component from react and create a subclass extending the Component
-    Class. You also must call the render method with a return that is using JSX.
+    import Component from React and create a subclass extending the Component
+    Class. You also must call the render method with a return that uses JSX.
     If you want to create state you must use the constructor and super methods
     in order to gain the functionality of the Component class. Props are already
     inherited, that is built in.</explanation>
