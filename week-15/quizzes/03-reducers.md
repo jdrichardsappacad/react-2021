@@ -9,74 +9,70 @@ This quiz is to test you on what reducers are and how to use them.
     <p>
       The purpose of a reducer function is to:
     </p>
-    <answer>Reduce the `state` object to a single value</answer>
-    <answer correct>Update `state`</answer>
-    <answer>Make a new `state` object</answer>
-    <answer>Dispatch an `action`</answer>
+    <answer>reduce the `state` object to a single value</answer>
+    <answer correct>update `state`</answer>
+    <answer>make a new `state` object</answer>
+    <answer>dispatch an `action`</answer>
     <explanation>
-      The Redux store has a reducer function for updating the current state and
-      returning an updated version of the state.
+    The reducer function is located inside the store and is responsible for updating the application state.
     </explanation>
   </question>
 </quiz>
 <quiz>
   <question multiple>
     <p>
-      A reducer accepts which of the following parameters?
+      A reducer accepts which of the following parameters? (Select all that apply)
     </p>
-    <answer>Initial `state`</answer>
-    <answer>Payload</answer>
-    <answer correct>Current `state`</answer>
-    <answer>Previous `state`</answer>
-    <answer>Dispatch</answer>
-    <answer correct>Action</answer>
+    <answer>props</answer>
+    <answer>payload</answer>
+    <answer correct>state</answer>
+    <answer>select</answer>
+    <answer>dispatch</answer>
+    <answer correct>action</answer>
     <explanation>
-      The reducer function receives the current state and an action, then
-      updates the state appropriately based on the `action.type`.
+      The reducer function accepts the current state and an action as parameters.
     </explanation>
   </question>
 </quiz>
 <quiz>
   <question>
     <p>
-      True or False: A reducer should mutate the current `state` and return the same object.
+      True or False: The proper way to update state is to mutate the object and 
+      return that same object.
     </p>
     <answer correct> False </answer>
     <answer> True </answer>
     <explanation>
-      False, a Redux reducer is a pure function so you must never mutate its
-      arguments (i.e. `state` and `action`). Your reducer must return a new
-      object if the `state` changes.
+      False, a reducer is a `pure` function and should return a new
+      object if the `state` changes. When updating an object or nested object,
+      the values of the previous state should be copied in using a shallow copy.
     </explanation>
   </question>
 </quiz>
 <quiz>
   <question>
     <p>
-      In an application with muliple reducers, what does the `state` parameter
-      of a single reducer correspond to?
+      In an application with multiple reducer functions, what does the `state`
+      parameter of a single reducer function correspond to?
     </p>
     <answer>The entire application state</answer>
-    <answer>A new state object to populate</answer>
-    <answer correct>The single slice of state that specific reducer manages
+    <answer>A new state object</answer>
+    <answer correct>The current state for that particular `slice` of state.
     </answer>
     <answer>There is no state parameter when utilizing multiple reducers
     </answer>
     <explanation>
-      A reducer can be split up into multiple reducers handling separate,
-      independent _slices_ of state. Because each reducer only handles a single
-      slice of state, its `state` parameter corresponds only to the part of
-      the state that it manages and it only responds to actions that concern
-      that slice of state. Note: It is possible for actions from another slice
-      of state to hit another reducer if the `action.type` matches a case in
-      that reducer.
+      A reducer can be split up into multiple reducer functions handling
+      separate, independent _slices_ of state. Because each reducer only handles
+      a single slice of state, its `state` parameter corresponds only to the 
+      part of the state that it manages.
     </explanation>
   </question>
 </quiz>
 <quiz>
   <question>
     <p>
-      How do you properly pass multiple reducers to the `createStore` method?
+      How do you properly pass multiple reducer functions to the `createStore` method?
     </p>
     <answer>Pass each reducer as an argument to `createStore`</answer>
     <answer>Pass an array of reducers as an argument to `createStore`</answer>
@@ -84,11 +80,9 @@ This quiz is to test you on what reducers are and how to use them.
     <answer correct>Use the `combineReducers` method to create a single reducer
     and pass that as an argument to `createStore`</answer>
     <explanation>
-    `createStore` only takes one `reducer` argument, so you must combine your
-    reducers back into a single reducer to pass to the store. To do this you'll
-    use the `combineReducers` method from the `redux` package and pass it an
-    object that maps state keys to the reducers that handle those slices of
-    state.
+     `createStore` takes one `reducer` argument. Using `combineReducers`, 
+     reducer functions can be added using key/value pairs to combine into one 
+     larger reducer function.
     </explanation>
   </question>
 </quiz>
