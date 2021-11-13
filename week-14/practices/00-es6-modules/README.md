@@ -3,13 +3,13 @@
 In this practice, you will create import and export statements following the ES6
 JavaScript module syntax.
 
-## Phase 0: Setup
+## Setup
 
-* Run `npm install` to install dependencies
-* Run `npm start` to start the server
-* Navigate to `http://localhost:5000` in your browser
+- Run `npm install` to install dependencies
+- Run `npm start` to start the server
+- Navigate to `http://localhost:5000` in your browser
 
-## Phase 1: Imports
+## Imports
 
 You will notice that in the browser, there's only a blank page, and in the
 browser console, you will see an `Uncaught ReferenceError`. The error should
@@ -51,5 +51,5 @@ the `modules/create-paragraph-content.js` file.
 
 In this exercise, you:
 
-* Imported both default and named exports
-* Exported with both default and named export syntax
+- Imported both default and named exports
+- Exported with both default and named export syntax
