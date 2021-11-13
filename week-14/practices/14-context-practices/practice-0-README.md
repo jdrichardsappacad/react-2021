@@ -2,10 +2,10 @@
 
 In this practice, you will:
 
-* Set up a Context Provider and Consumer Walkthrough to set the value of a
-context and read it in a component
+- Set up a Context Provider and Consumer Walkthrough to set the value of a
+  context and read it in a component
 
-## Phase 0: Setup
+## Setup
 
 Download the [starter][context-starter] file for this practice.
 
@@ -13,7 +13,7 @@ Open the starter in VSCode and run `npm install` in the terminal.
 
 Run `npm start` to make sure your project has not run into any errors.
 
-## Phase 1: Create Context
+## Create Context
 
 To start, in your `src` directory, create a new directory called `context`. In
 this `context` directory, create a file called `HoroscopeContext.js`. This is
@@ -26,7 +26,7 @@ it empty. If you're lost, don't forget to checkout
 
 Awesome! We have created our context, now let's use our provider.
 
-## Phase 2: Create Context Provider
+## Create Context Provider
 
 In your `src/index.js` file, import `HoroscopeContext` from our `context`
 directory.
@@ -45,7 +45,7 @@ console, you should see a warning message from React that says your
 successfully created our context provider, but now we must deal with this
 warning message.
 
-## Phase 3: Consume the Context
+## Consume the Context
 
 As you have seen in your DevTools, React is warning us that we need to have a
 `value` prop in our `Context.Provider`. This `value` prop is what holds all
@@ -79,7 +79,7 @@ If you click on your `Context.Provider`, you should see your `value` under the
 `prop` section. That is what your global state looks like.
 
 If you click on your `Detail` component, you should see a `hooks` section, where
-your context is located. This is where your `Detail` component is *consuming*
+your context is located. This is where your `Detail` component is _consuming_
 the context.
 
 **Congratulations!**
@@ -89,7 +89,6 @@ You have done the following:
 1. Created context with `createContext`
 2. Used your `Context.Provider` and wrapped your entire application with it.
 3. Consumed the context in your `Detail` component.
-
 
 [context-starter]: ./starter
 [create-context]: https://reactjs.org/docs/context.html#reactcreatecontext
