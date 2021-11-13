@@ -1,10 +1,10 @@
-import { useContext } from 'react';
-import { HoroscopeContext } from '../context/HoroscopeContext';
-import horoscopeObj from '../data/horoscopes';
+import { useHoroscope } from '../context/HoroscopeContext';
+import Match from './Match';
 
 const Detail = () => {
-  const { currentSign, setCurrentSign } = useContext(HoroscopeContext);
-  const sign = horoscopeObj[currentSign];
+  const { sign } = useHoroscope();
+
+  console.log('Detail component');
 
   return (
     <div className='details'>
@@ -12,6 +12,7 @@ const Detail = () => {
       <h2>{sign.name}</h2>
       <h4>Element: {sign.element}</h4>
       <h4>Traits: {sign.traits}</h4>
+      <Match />
     </div>
   );
 };
