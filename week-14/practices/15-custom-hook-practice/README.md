@@ -2,12 +2,12 @@
 
 In this practice you will learn how to create a custom hook in React.
 
-## Phase 0: Setup
+## Setup
 
 Clone the [starter], `cd` into the project directory, install dependencies with
 `npm install`, and start the server with `npm start`.
 
-### Phase 0b: Project Breakdown
+### Project Breakdown
 
 Hooks are just functions in React that start with "use" and can only be used in
 Functional Components. In the starter, notice that in the `src` directory,
@@ -16,7 +16,7 @@ you will find a `validations.js` file that exports on validator. In the `hooks`
 directory, you'll find the `textInput.js` file which is exporting a
 `useTextInput` custom hook. That's what we'll be writing in this exercise.
 
-## Phase 1: Update Form Component
+## Update Form Component
 
 First, you will update the `Form` component to use the custom hook that is being
 exported from `src/hooks/textInput.js`. In `src/components/Form.js`, you will
@@ -35,10 +35,12 @@ order. Pass the custom hook an argument of an empty object literal with a key of
 the top of the file.
 
 ```js
-const [name, setName, nameErrors] = useTextInput({ validations: textInputValidators });
+const [name, setName, nameErrors] = useTextInput({
+  validations: textInputValidators,
+});
 ```
 
-## Phase 2: Write the Custom Hook
+## Write the Custom Hook
 
 Because this custom hook will encapsulate some of the properties of a `useState`
 hook, import the `useState` hook from the `react` package at the top of the
@@ -50,9 +52,7 @@ respectively.
 The function definition should look like:
 
 ```js
-export const useTextInput = ({ validations = [], defaultValue = '' }) => {
-
-};
+export const useTextInput = ({ validations = [], defaultValue = '' }) => {};
 ```
 
 In the body of the hook, invoke the `useState` hook and pass it the
@@ -81,7 +81,7 @@ the hook.
 
 In this exercise, you learned how to
 
-* Move logic away from a component and into a custom hook
-* Use other hooks in a custom hook
+- Move logic away from a component and into a custom hook
+- Use other hooks in a custom hook
 
 [starter]: ./starter
