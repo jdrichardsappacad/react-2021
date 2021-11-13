@@ -5,7 +5,7 @@ They are used in almost every facet of UI in your applications.
 In this practice you will learn how to create lists in your functional
 components.
 
-## Phase 0: Set up
+## Set up
 
 Download the [starter][lists-starter] file for this practice.
 
@@ -13,7 +13,7 @@ Open the practice in VSCode and run `npm install` in the terminal.
 
 Run `npm start` to make sure your project is set up correctly.
 
-## Phase 1: Create Pokemoves component
+## Create Pokemoves component
 
 Create a component and `.js` file called `Pokemoves`. It should return a
 `div` and an `h1` that says Pokemoves.
@@ -37,7 +37,7 @@ name of the move.
 
 ```js
 <ul>
-  {moves.map((item) => (
+  {moves.map(item => (
     <li>
       {item.id}. {item.move}
     </li>
@@ -57,7 +57,7 @@ returned element. This optimizes React and returns a quicker result through
 Add a key with `item.id` to the `li` element.
 Check your browser again and notice that the warning is now gone.
 
-## Phase 2: Adding a List Item Component
+## Adding a List Item Component
 
 While having a list item in our component renders the information, sometimes you
 want to design the element that is returned. It is better to create a new
