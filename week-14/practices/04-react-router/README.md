@@ -14,7 +14,7 @@ When you click on the titles you will then be able to see the
 For this first practice, you will learn how to setup a Router and create routes
 that will allow us to later navigate to different components.
 
-## Phase 0: Setup
+## Setup
 
 Download the [starter][starter]. `cd` into the folder and run the `npm install`
 command in your terminal.
@@ -41,7 +41,7 @@ By using this architecture, you will be able to import this component by
 using the relative path to the folder. Create React App automatically
 looks for an `index.js` when only a directory is specified as the import.
 
-## Phase 1: Router Setup
+## Router Setup
 
 We now need to set up our Router to give us access to all of React Router's
 features. For this practice we will be using `BrowserRouter` as our Router.
@@ -67,7 +67,7 @@ Now replace the `<App />` inside your ReactDOM call with the Root component.
 
 You have now given router access to your entire application!
 
-## Phase 2: Route Matching
+## Route Matching
 
 We now have the ability to create Routes that will mount our components when
 the correct path is chosen.
@@ -101,7 +101,7 @@ the exact path matches.
 
 Now, test again in the browser. Notice the difference?
 
-## Phase 3: Adding A Switch Component
+## Adding A Switch Component
 
 Below the other Route components, add another Route Component with no path.
 Inside the opening and closing tags, add an `<h1>` tag that says,
