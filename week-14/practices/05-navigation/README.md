@@ -3,7 +3,7 @@
 In this practice you will learn how to create navigation for your Route paths
 using `Link` and `NavLink`.
 
-## Phase 0: Setup
+## Setup
 
 Download the [starter][starter]. `cd` into the folder and run the `npm install`
 command in your terminal.
@@ -18,7 +18,7 @@ Now take a look at the code. In your `App.js` you will see the already created
 routes for each component. You now want to create clickable Links for each of
 those routes.
 
-## Phase 1: Link Navigation
+## Navigation
 
 In your App.js file, import the Link component from `react-router-dom`. You will
 use this component instead of the `<a>` element to which you are accustomed.
@@ -30,7 +30,7 @@ link to the Home path. The child text inside the Link component should say Home.
 
 In your Browser you should now see a Navbar with the Home link.
 
-## Phase 2: Compare Link and Anchor
+### Compare Link and Anchor
 
 In order to really know why you are using the `Link` Component, you should add
 an anchor tag to your code and view the difference.
@@ -44,7 +44,7 @@ refreshes. Reopen the tree in the Elements tab. This time, click on the Home
 link and notice that only the component that has been mounted changes and there
 is no refresh of the page.
 
-## Phase 3: NavLink
+### NavLink
 
 As you remember, NavLink is the Link component with extra functionality. We want
 to add the other links to our `App.js`. However, we also want to see a
@@ -61,7 +61,7 @@ Take a look in the Browser. Notice that the active link is now red? In your
 `index.css` you have an `.active` defined. NavLink automatically sees this and
 applies it to the active link. Click each item and notice how it changes.
 
-## Phase 4: ActiveClassName and ActiveStyle
+### ActiveClassName and ActiveStyle
 
 Now you are going to change the class that is called on the active link using
 the `activeClassName` attribute. Take a look in the `index.css` and notice that
@@ -75,7 +75,7 @@ will work in the way that inline styling works for css. Add
 browser, you should notice that each active link now has both a border and a
 bold font.
 
-## Phase 5: Redirect
+### Redirect
 
 Sometimes you only want to allow access to a component when a user is logged in.
 Otherwise, you want to navigate the user in another direction. Using the
@@ -102,7 +102,7 @@ to the Not Logged in route.
 Now, in Stocks.js, set the `loggedIn` variable to true and click on the Stocks
 Link. You should be able to view the Stocks component.
 
-## Phase 6: History API & useHistory Hook for Navigation
+### History API & useHistory Hook for Navigation
 
 You will use the `useHistory` hook to navigate after some transaction has taken
 place. In your Stocks component, you goal is to navigate back to the Home Page
