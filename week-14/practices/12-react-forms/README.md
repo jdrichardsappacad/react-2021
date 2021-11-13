@@ -10,7 +10,7 @@ When you finish this article, you should be able to:
 - Create a React function component containing a simple form
 - Define controlled inputs with the `useState` hook for different form inputs
 
-## Phase 0: Setup
+## Setup
 
 If you want to follow along, create a React application using `create-react-app`
 with the `@appacademy/react-v17` template:
@@ -19,7 +19,7 @@ with the `@appacademy/react-v17` template:
 npx create-react-app contact-us-form --template @appacademy/react-v17 --use-npm
 ```
 
-## Phase 1: Creating a simple form
+## Creating a simple form
 
 To learn how to create an HTML form in React, you'll create a `ContactUs`
 function component that'll contain a simple "Contact Us" form. The form will
@@ -87,7 +87,7 @@ the browser. You can even fill out the form, but currently the component doesn't
 know what the form input values are. To keep track of each of the input values,
 you will need to initialize and maintain component state.
 
-### Phase 2: Adding state to the component
+### Adding state to the component
 
 To add state to the `ContactUs` component, import `useState` from React.
 Initialize three state variables, `name`, `email`, and `phone` as empty strings.

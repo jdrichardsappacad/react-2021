@@ -34,8 +34,6 @@ export default Showcase;
 Remember, your JSX will always be created in the `return` because it returns a
 single element.
 
-### Nest Showcase Component inside your App Component
-
 Inside your `App.js` import the `Showcase` component using
 [ES6 imports][es6-imports]. Replace the `h1` with a `div` element and add the
 `Showcase` component as a child.
@@ -89,7 +87,7 @@ Now place an `img` tag between your `h1` and `h2` tags and assign the image
 variable to the `src` attribute. Add an `alt` attribute and assign the
 character's name to the `alt` attribute.
 
-## Add CSS to your JSX
+## Add Inline CSS to your JSX
 
 There are multiple ways to add CSS to your JSX. For now, let's begin with inline
 CSS.

@@ -1,4 +1,4 @@
-# useEffect debug
+# useEffect Debug
 
 In this exercise you will use the [randomuser.me api][randomuser-api].
 
