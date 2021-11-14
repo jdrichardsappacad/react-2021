@@ -10,16 +10,16 @@ When you finish this article, you should be able to:
 - Create a React function component containing a simple form
 - Define controlled inputs with the `useState` hook for different form inputs
 
-## Phase 0: Setup
+## Setup
 
 If you want to follow along, create a React application using `create-react-app`
-with the `@appacademy/simple` template:
+with the `@appacademy/react-v17` template:
 
 ```bash
-npx create-react-app contact-us-form --template @appacademy/simple --use-npm
+npx create-react-app contact-us-form --template @appacademy/react-v17 --use-npm
 ```
 
-## Phase 1: Creating a simple form
+## Creating a simple form
 
 To learn how to create an HTML form in React, you'll create a `ContactUs`
 function component that'll contain a simple "Contact Us" form. The form will
@@ -87,7 +87,7 @@ the browser. You can even fill out the form, but currently the component doesn't
 know what the form input values are. To keep track of each of the input values,
 you will need to initialize and maintain component state.
 
-### Phase 2: Adding state to the component
+### Adding state to the component
 
 To add state to the `ContactUs` component, import `useState` from React.
 Initialize three state variables, `name`, `email`, and `phone` as empty strings.
@@ -150,16 +150,16 @@ the component state in sync:
 <input
   id='name'
   type='text'
-  onChange={(e) => setName(e.target.value)}
+  onChange={e => setName(e.target.value)}
   value={name}
 />
 ```
+
 Remember that when an event is raised, the associated event handler method is called
 and passed an instance of the `event` object. A reference to the element that raised the event
 is available through the `event` object's `target` property.
 Using the reference to the form field element, you can retrieve the current value as the `value`
 property on the target object.
-
 
 Use the same approach to add an `onChange` event handler to the "Email" and
 "Phone" form fields gives you this:
@@ -182,7 +182,7 @@ function ContactUs() {
           <input
             id='name'
             type='text'
-            onChange={(e) => setName(e.target.value)}
+            onChange={e => setName(e.target.value)}
             value={name}
           />
         </div>
@@ -191,7 +191,7 @@ function ContactUs() {
           <input
             id='email'
             type='text'
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
             value={email}
           />
         </div>
@@ -200,7 +200,7 @@ function ContactUs() {
           <input
             id='phone'
             type='text'
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={e => setPhone(e.target.value)}
             value={phone}
           />
         </div>
@@ -228,7 +228,7 @@ form. Within the `onSubmit` event handler prevent the default behavior so that
 the page doesn't reload:
 
 ```js
-const onSubmit = (e) => {
+const onSubmit = e => {
   // Prevent the default form behavior
   // so the page doesn't reload.
   e.preventDefault();
@@ -243,7 +243,7 @@ Then use the `name`, `email`, and `phone` values from state to create a new
 `contactUsInformation` object literal:
 
 ```js
-const onSubmit = (e) => {
+const onSubmit = e => {
   // Prevent the default form behavior
   // so the page doesn't reload.
   e.preventDefault();
@@ -253,7 +253,7 @@ const onSubmit = (e) => {
     name,
     email,
     phone,
-    submittedOn: new Date()
+    submittedOn: new Date(),
   };
 
   // For now, just log the contact us information to the console
@@ -267,12 +267,11 @@ Notice that a additional property, `submittedOn`, is being added to the `contact
 indicate the date/time that the information was submitted. Ideally, the `contactUsInformation` object would be
 persisted to a database using a RESTful API, but for now, you'll just log the object to the console.
 
-
 Now that the form submission has been processed, reset the `name`, `email`, and
 `phone` values to empty strings:
 
 ```js
-const onSubmit = (e) => {
+const onSubmit = e => {
   // Prevent the default form behavior
   // so the page doesn't reload.
   e.preventDefault();
@@ -282,7 +281,7 @@ const onSubmit = (e) => {
     name,
     email,
     phone,
-    submittedOn: new Date()
+    submittedOn: new Date(),
   };
 
   // For now, just log the contact us information to the console
@@ -308,13 +307,13 @@ function ContactUs() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     const contactUsInformation = {
       name,
       email,
       phone,
-      submittedOn: new Date()
+      submittedOn: new Date(),
     };
 
     console.log(contactUsInformation);
@@ -332,7 +331,7 @@ function ContactUs() {
           <input
             id='name'
             type='text'
-            onChange={(e) => setName(e.target.value)}
+            onChange={e => setName(e.target.value)}
             value={name}
           />
         </div>
@@ -341,7 +340,7 @@ function ContactUs() {
           <input
             id='email'
             type='text'
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
             value={email}
           />
         </div>
@@ -350,7 +349,7 @@ function ContactUs() {
           <input
             id='phone'
             type='text'
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={e => setPhone(e.target.value)}
             value={phone}
           />
         </div>
@@ -362,11 +361,11 @@ function ContactUs() {
 
 export default ContactUs;
 ```
+
 If you run your application again and view the form in the browser,
 you can fill out each form field and click "Submit" to submit the form.
 Notice that the page doesn't reload, and if you look in the developer tool's console,
 you'll see an object containing your contact us information!
-
 
 ### Controlled components
 
@@ -423,7 +422,7 @@ field to the form:
   <textarea
     id='comments'
     name='comments'
-    onChange={(e) => setComments(e.target.value)}
+    onChange={e => setComments(e.target.value)}
     value={comments}
   />
 </div>
@@ -442,14 +441,14 @@ function ContactUs() {
   const [phone, setPhone] = useState('');
   const [comments, setComments] = useState('');
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     const contactUsInformation = {
       name,
       email,
       phone,
       comments,
-      submittedOn: new Date()
+      submittedOn: new Date(),
     };
 
     console.log(contactUsInformation);
@@ -468,7 +467,7 @@ function ContactUs() {
           <input
             id='name'
             type='text'
-            onChange={(e) => setName(e.target.value)}
+            onChange={e => setName(e.target.value)}
             value={name}
           />
         </div>
@@ -477,7 +476,7 @@ function ContactUs() {
           <input
             id='email'
             type='text'
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
             value={email}
           />
         </div>
@@ -486,7 +485,7 @@ function ContactUs() {
           <input
             id='phone'
             type='text'
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={e => setPhone(e.target.value)}
             value={phone}
           />
         </div>
@@ -495,7 +494,7 @@ function ContactUs() {
           <textarea
             id='comments'
             name='comments'
-            onChange={(e) => setComments(e.target.value)}
+            onChange={e => setComments(e.target.value)}
             value={comments}
           />
         </div>
@@ -523,12 +522,12 @@ of phone number they're providing:
     id='phone'
     name='phone'
     type='text'
-    onChange={(e) => setPhone(e.target.value)}
+    onChange={e => setPhone(e.target.value)}
     value={phone}
   />
   <select
     name='phoneType'
-    onChange={(e) => setPhoneType(e.target.value)}
+    onChange={e => setPhoneType(e.target.value)}
     value={phoneType}
   >
     <option value='' disabled>
@@ -548,7 +547,7 @@ the array of phone type option values, define a default value for a prop named
 
 ```js
 ContactUs.defaultProps = {
-  phoneTypes: ['Home', 'Work', 'Mobile']
+  phoneTypes: ['Home', 'Work', 'Mobile'],
 };
 ```
 
@@ -561,18 +560,18 @@ Then render the `<select>` list options using the `props.phoneTypes` array:
     id='phone'
     name='phone'
     type='text'
-    onChange={(e) => setPhone(e.target.value)}
+    onChange={e => setPhone(e.target.value)}
     value={phone}
   />
   <select
     name='phoneType'
-    onChange={(e) => setPhoneType(e.target.value)}
+    onChange={e => setPhoneType(e.target.value)}
     value={phoneType}
   >
     <option value='' disabled>
       Select a phone type...
     </option>
-    {props.phoneTypes.map((phoneType) => (
+    {props.phoneTypes.map(phoneType => (
       <option key={phoneType}>{phoneType}</option>
     ))}
   </select>
@@ -596,14 +595,14 @@ function ContactUs(props) {
   const [comments, setComments] = useState('');
   const [phoneType, setPhoneType] = useState('');
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     const contactUsInformation = {
       name,
       email,
       phone,
       comments,
-      submittedOn: new Date()
+      submittedOn: new Date(),
     };
 
     console.log(contactUsInformation);
@@ -622,7 +621,7 @@ function ContactUs(props) {
           <input
             id='name'
             type='text'
-            onChange={(e) => setName(e.target.value)}
+            onChange={e => setName(e.target.value)}
             value={name}
           />
         </div>
@@ -631,7 +630,7 @@ function ContactUs(props) {
           <input
             id='email'
             type='text'
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
             value={email}
           />
         </div>
@@ -640,18 +639,18 @@ function ContactUs(props) {
           <input
             id='phone'
             type='text'
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={e => setPhone(e.target.value)}
             value={phone}
           />
           <select
             name='phoneType'
-            onChange={(e) => setPhoneType(e.target.value)}
+            onChange={e => setPhoneType(e.target.value)}
             value={phoneType}
           >
             <option value='' disabled>
               Select a phone type...
             </option>
-            {props.phoneTypes.map((phoneType) => (
+            {props.phoneTypes.map(phoneType => (
               <option key={phoneType}>{phoneType}</option>
             ))}
           </select>
@@ -661,7 +660,7 @@ function ContactUs(props) {
           <textarea
             id='comments'
             name='comments'
-            onChange={(e) => setComments(e.target.value)}
+            onChange={e => setComments(e.target.value)}
             value={comments}
           />
         </div>
@@ -672,7 +671,7 @@ function ContactUs(props) {
 }
 
 ContactUs.defaultProps = {
-  phoneTypes: ['Home', 'Work', 'Mobile']
+  phoneTypes: ['Home', 'Work', 'Mobile'],
 };
 
 export default ContactUs;

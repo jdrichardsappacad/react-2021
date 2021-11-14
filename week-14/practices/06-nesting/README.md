@@ -2,10 +2,10 @@
 
 In this practice we will -
 
-  * Dynamically create nested routes
-  * Use React Router params to access path variables
+- Dynamically create nested routes
+- Use React Router params to access path variables
 
-## Phase 0: Setup
+## Setup
 
 Download the [starter][starter], `cd` into the folder and run the `npm install`
 command in your terminal.
@@ -20,7 +20,7 @@ component below them.
 The goal is to list out the titles of the movies and
 be able to reach each individual movie using dynamic nested routing.
 
-## Phase 1: Movies Component
+## Movies Component
 
 In your `App.js`, import the `movies` array that is located in the
 `/data/movieData.js` directory. There is a Route in your `App.js` that mounts
@@ -44,13 +44,13 @@ through the `movies` props and create a `NavLink` for each movie with a url of
 movie object as the `movieId`. The clickable text for the link should be the
 title of the movie.
 
-** Hint, hint - Did you remember your imports?
+\*\* Hint, hint - Did you remember your imports?
 
 Each time you click a link you should now see the MovieDetails Component with
 the `h1` text `MovieDetails Component` in the Browser beneath the NavBar. You
 should also see the movie id change in the url address bar.
 
-## Phase 2: Dynamic Route
+## Dynamic Route
 
 Instead of hard coding the mapped movie title route and path in your `Movies.js`
 component, you should now make it dynamic. Import the
@@ -72,7 +72,7 @@ In your Route, change the `/movies` portion in your path to `${path}`.
 When you click the links in the browser you should have the same behavior as
 before, however you are now dynamically using your nested route.
 
-## Phase 3: Rendering Your Movie Details
+## Rendering Your Movie Details
 
 It's now time to add the movie details for each component.
 
@@ -100,13 +100,14 @@ Next, in your JSX, create an `h1` element with the `title` of the movie, and a
 key/value choices.
 
 ## Congratulations!
+
 You have completed the Dynamic Routing portion of the practice. Here is a list
 of the techniques you used:
 
 1. Created nested routes inside the `Movies` component
 2. Dynamically created routes using `path` and `url` from `useRouteMatch` hook.
 3. Used `useParams` hook in your `MovieDetails` component to grab the `movieId`,
-so you could render the according movie details found in your `movies` array.
+   so you could render the according movie details found in your `movies` array.
 
 [starter]: ./starter
 [use-params]: https://reactrouter.com/web/api/Hooks/useparams

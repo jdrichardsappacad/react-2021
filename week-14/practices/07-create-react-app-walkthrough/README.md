@@ -2,10 +2,10 @@
 
 In this practice, you will:
 
-* Generate a React app using the `create-react-app` CLI tool
-* Modify it into a template that you can use more easily
+- Generate a React app using the `create-react-app` CLI tool
+- Modify it into a template that you can use more easily
 
-## Phase 1: Generate a React app
+## Generate a React app
 
 Open up a terminal and change the directory until you are in the directory where
 you want to create your React app. Then, run the following command:
@@ -52,24 +52,24 @@ react-template
     └── setupTests.js       A file to set up tests
 ```
 
-## Phase 2: Modify the current React app
+## Modify the current React app
 
 Let's now remove all the files that, for the most part, we will not be using.
 
 In the `public` directory, remove the following files:
 
-* `logo192.png`
-* `logo512.png`
-* `robots.txt` (If you'd like to know more about what this file does, [here's a
-    link][robots.txt].)
+- `logo192.png`
+- `logo512.png`
+- `robots.txt` (If you'd like to know more about what this file does, [here's a
+  link][robots.txt].)
 
 In the `src` directory, remove the following files:
 
-* `App.css`
-* `App.test.js`
-* `logo.svg`
-* `reportWebVitals.js`
-* `setupTests.js`
+- `App.css`
+- `App.test.js`
+- `logo.svg`
+- `reportWebVitals.js`
+- `setupTests.js`
 
 Because you deleted those files, the application will no longer build. If
 you haven't started your React app with `npm start` yet, now is a great time to
@@ -89,9 +89,7 @@ App". Your edits should result in a file that has this content.
 ```js
 // ./src/App.js
 function App() {
-  return (
-    <h1>Hello from App</h1>
-  )
+  return <h1>Hello from App</h1>;
 }
 ```
 
@@ -136,12 +134,12 @@ this.
 
 ```json
 {
-    "short_name": "React Template",
-    "name": "Create React App Template",
-    "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
+  "short_name": "React Template",
+  "name": "Create React App Template",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
 ```
 
@@ -177,4 +175,4 @@ Congratulations! You have successfully bootstrapped a React app with the
 easier to use.
 
 [robots.txt]: https://en.wikipedia.org/wiki/Robots_exclusion_standard
-[App Academy's Create React App template]: https://www.npmjs.com/package/@appacademy/cra-template-react-v17
+[app academy's create react app template]: https://www.npmjs.com/package/@appacademy/cra-template-react-v17

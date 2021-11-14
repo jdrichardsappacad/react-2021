@@ -2,7 +2,7 @@
 
 In this practice you will create a Functional Component and add JSX.
 
-## Phase 0: Set up
+## Set up
 
 Download the [starter][jsx-starter] file for this practice.
 
@@ -12,7 +12,7 @@ Run `npm start` to make sure your project is set up correctly.
 
 You should see `App Component` in your browser if it is running correctly.
 
-## Phase 1: Create a Functional Component
+## Create a Functional Component
 
 First, create a folder in the `src` directory named `components`. Then, create a
 file `Showcase.js` in the `src/components` folder. Inside that file you will
@@ -34,15 +34,13 @@ export default Showcase;
 Remember, your JSX will always be created in the `return` because it returns a
 single element.
 
-### Nest Showcase Component inside your App Component
-
 Inside your `App.js` import the `Showcase` component using
 [ES6 imports][es6-imports]. Replace the `h1` with a `div` element and add the
 `Showcase` component as a child.
 
 Check your browser. It should now read `Showcase Component`
 
-## Phase 2: Add JavaScript to Your JSX
+## Add JavaScript to Your JSX
 
 You've already seen that you can add HTML-like syntax to your JSX. Now, let's
 add JavaScript. Curly braces `{}` inside JSX lets React know that JavaScript
@@ -75,7 +73,7 @@ Instead create an `h2` tag that says something like, **Bulbasaur's type is Grass
 one of their moves is Vine Whip** Use the variables that you have created to
 create this JSX.
 
-## Phase 3: Add an Image to your JSX
+## Add an Image to your JSX
 
 Take a look inside the images folder. Notice that there is an image for
 Bulbasaur. If you would like, you can add a different image to this folder for
@@ -89,7 +87,7 @@ Now place an `img` tag between your `h1` and `h2` tags and assign the image
 variable to the `src` attribute. Add an `alt` attribute and assign the
 character's name to the `alt` attribute.
 
-## Phase 4: Add CSS to your JSX
+## Add Inline CSS to your JSX
 
 There are multiple ways to add CSS to your JSX. For now, let's begin with inline
 CSS.
@@ -107,7 +105,7 @@ Wrap a `span` tag around the two separate pokeCharacteristics. Inside the first
 span make the background color green and the text white. Inside the second span
 make the background color white and the text green using hex colors.
 
-## Phase 5: Add a Background Image Using External CSS
+## Add a Background Image Using External CSS
 
 Let's add a background image to our page by using external CSS. Create a file
 called `App.css` in your `src` folder. Inside the `App.css` file, add a class

@@ -3,20 +3,20 @@
 In this practice, you will write thunk action creators to use with Redux later
 on.
 
-## Phase 0: Set up
+## Set up
 
 Download the starter at the bottom of this page.
 
-1. Run `npm install` in the __backend__ directory to install dependencies.
+1. Run `npm install` in the **backend** directory to install dependencies.
 2. Run `npm run db:setup` to setup the database
 3. Run `npm start` to start the backend server..
 
-In a different terminal, `cd` into the __frontend__ directory of the starter.
+In a different terminal, `cd` into the **frontend** directory of the starter.
 
-1. Run `npm install` in the __frontend__ directory.
-2. Run `npm start` in the __frontend__ directory to start the server.
+1. Run `npm install` in the **frontend** directory.
+2. Run `npm start` in the **frontend** directory to start the server.
 
-## Phase 1: Thunk Action Creators
+## Thunk Action Creators
 
 Action creators are functions that return, or create, an action, which is just
 a regular JavaScript object. Thunk action creators are functions that return
@@ -30,8 +30,8 @@ just a function that can take in `dispatch` and `getState`, in that order, most
 of the time, you'll see it like this:
 
 ```javascript
-const thunkActionCreator = () => (dispatch) => {
-    // Thunk logic here
+const thunkActionCreator = () => dispatch => {
+  // Thunk logic here
 };
 ```
 
@@ -39,13 +39,13 @@ This translates to function declaration syntax like so:
 
 ```javascript
 function thunkActionCreator() {
-    return function thunk(dispatch) {
-        // Thunk logic here
-    }
+  return function thunk(dispatch) {
+    // Thunk logic here
+  };
 }
 ```
 
-In the __frontend/src/store/articleReducer.js__ file, write a `fetchArticles`
+In the **frontend/src/store/articleReducer.js** file, write a `fetchArticles`
 thunk action creator that uses the [`Fetch` API][fetch] to request articles at
 the relative path `/api/articles`, and `dispatch` the returned action from the
 `getArticles` action creator. You will want to rewrite the definition of the
@@ -56,17 +56,17 @@ back from the `fetch` call. Go ahead and `export` the function.
 Your thunk action creator might look like this:
 
 ```javascript
-export const fetchArticles = () => async (dispatch) => {
-    const response = await fetch('/api/articles');
-    const articles = await response.json();
-    dispatch(getArticles(articles));
+export const fetchArticles = () => async dispatch => {
+  const response = await fetch('/api/articles');
+  const articles = await response.json();
+  dispatch(getArticles(articles));
 };
 ```
 
 Remember to update the definition of the `getArticles` function.
 
 Now it's your turn! Write a `writeArticle` thunk action creator in the
-__frontend/src/store/articleReducer.js__ file that takes in a `payload`, makes
+**frontend/src/store/articleReducer.js** file that takes in a `payload`, makes
 a `POST` request to `/api/articles`, and calls `dispatch` on the return value of
 `addArticle` passing in the new article from the response.
 

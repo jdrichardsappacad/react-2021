@@ -3,7 +3,7 @@
 In this practice you will create a functional component and pass props from a
 parent component to a child component.
 
-## Phase 0: Set up
+## Set up
 
 Download the [starter][props-starter] file for this practice.
 
@@ -11,7 +11,7 @@ Open the starter in VSCode and run `npm install` in the terminal.
 
 Run `npm start` to make sure your project is set up correctly.
 
-## Phase 1: Create a Functional Component
+## Create a Functional Component
 
 Create a functional component called `BaseStats` in your `src` folder. It should
 have a `div` with a class of `base-stats` and an `h1` with BaseStats as the
@@ -19,8 +19,6 @@ child. Import the `BaseStates.css` file into your component.
 
 Next, add the `BaseStats` component to your `App.js` component. It should be
 placed below the `Showcase` component. Test it in the Browser.
-
-## Phase 2: Create an Object and pass props
 
 Next, you are going to create an object inside your `App.js` called `baseStats`.
 It should look like this:
@@ -32,7 +30,7 @@ const baseStats = {
   defense: 49,
   spAttack: 65,
   spDef: 65,
-  speed: 45
+  speed: 45,
 };
 ```
 
@@ -44,7 +42,7 @@ Go to your browser, go to the Browser DevTools and open your React DevTools.
 Click on the BaseStats component. Under `props` you should see your stats props
 object.
 
-## Phase 3: Use props object in the child component
+## Use props object in the child component
 
 Now you are ready to use your props object. Create a table beneath your `h1`
 tag. It should have four table rows, each with two table data tags. The first
@@ -62,19 +60,17 @@ Points | 45)
 
 Test your app in the browser.
 
-## Phase 4: Destructure your Props
-
 To make your code more concise and practice the DRY principal, destructure your
 props variables in the argument for the `BaseState` functional component.
 
 Refactor your JSX to reflect these variables. You should only call the variables
 hp, attack, defense, and speed in your JSX.
 
-## Phase 5: Pass a Function as a Component
+### Pass a Function as a Prop
 
 There are times where you may want to pass a function as a prop. This does not
 mean that you change the prop in the functional component. Instead, you will
-call the function in the parent prop which may then have some functionality.
+call the function in the parent component which may then have some functionality.
 
 In your `App.js`, beneath your `baseStats` object, create a function called
 `handleClick`
