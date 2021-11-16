@@ -23,7 +23,8 @@ understand what the outcome of this endpoint should be.
 
 In your browser, take the endpoint and place it in the url. Notice the `json`
 data that you receive. This is the data that you must parse to design your
-component. (If your data is jumbled, you can add an extension such as [`JSON Formatter`][json-formatter] to prettify your data. )
+component. (If your data is jumbled, you can add an extension such as [`JSON
+Formatter`][json-formatter] to prettify your data. )
 
 ## Retrieve Data
 
@@ -64,8 +65,9 @@ Each object in this array contains these fields:
 - titleImage
 - title
 
-Can you find it? Can you now log the data so that you only see the array with these objects?
-If so, then update the `serverData` slice of state with this array.
+Can you find it? Can you now log the data so that you only see the array with
+these objects? If so, then update the `serverData` slice of state with this
+array.
 
 ## Display the data
 
