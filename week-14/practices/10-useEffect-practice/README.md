@@ -4,7 +4,7 @@ In this practice you will:
 
 - create a useEffect to change the color of the background based on an interval
 - create a useEffect to save the current [http status code][status-codes] in the
-  browser [`local storage`][local-storage]
+  browser's [`local storage`][local-storage]
 - create a useEffect to show an alert box when the [http status
   code][status-codes] does not exist or when the user does not enter a code into
   the input box.
@@ -32,10 +32,10 @@ exported from `data.js`.
 Currently, the background color is based on using the `colors` array along with
 the number that is in the `colorNum` slice of state.
 
-[`setInterval`][set-interval] is a good example of a side effect. React prefers
-that you place `side effects` inside a [`useEffect`][use-effect] hook.
+[`setInterval`][set-interval] is a good example of a `side effect`. React
+prefers that you place `side effects` inside a [`useEffect`][use-effect] hook.
 
-In order to change the background color, create a `useEffect` that takes an
+In order to change the background color, create a `useEffect` that takes a
 `setInterval` function inside the callback function. This `useEffect` should
 only run once.
 
@@ -76,7 +76,7 @@ retrieve the value of `catStatus`
 Navigate to your browser. Open up the Browser `Dev Tools`. Choose `Application`
 from the top bar. Look for `Local Storage` in the `Storage` section. You should
 see your `localhost` address. `Right Click` on the address and choose `Clear`.
-this will clear out your `Local Storage`. When you reaload the page, you should
+this will clear out your `Local Storage`. When you reload the page, you should
 see a picture of a cat with the status code `418 I'm a teapot`.
 
 Your code should look similar to the code below:
@@ -96,14 +96,14 @@ to set the value of `catStatus` to the `statusChange` slice of state, whenever
 the `statusChange` variable updates.
 
 
-With your `DevTools` still open and your `local storage` clear, reaload the page
+With your `DevTools` still open and your `local storage` clear, reload the page
 and notice that your `local storage` is immediately set with a `catStatus` of
 `418`.
 
 Type something that exists in the input box. Notice that your `local storage` is
 updated each time you click the `Change Status` button. Also notice that, if the
 `status code` does not exist, it shows a `404` for the image. That is how the
-[HTTP Cats][http-cats] is built. 
+[HTTP Cats][http-cats] is built.
 
 If all is working the code you added should look similar to the code below:
 
@@ -129,9 +129,9 @@ input box.
 Create another conditional for when the code does not exist in the api. You will
 use the `codes` array that is imported from `data.js`. This array contains all
 of the codes included in the api. If the code is not included, alert the user
-with a message contains the number of the code and a message. e.g If the status
-input is 5000, the message should say: `Code 5000 might exist, but is not a
-proper Cat Status code`. You should also set the `statusChange` slice of state
+with a message containing the number of the code and a message. e.g If the
+status input is 5000, the message should say: `Code 5000 might exist, but is not
+a proper Cat Status code`. You should also set the `statusChange` slice of state
 to `404` so that when you reload the page you do not break your code.
 
 Now test again in your browser by clicking `Change Status` with an empty input
