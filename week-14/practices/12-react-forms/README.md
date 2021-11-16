@@ -29,7 +29,7 @@ initially contain just three fields:
 - Email - The user's email
 - Phone - The user's phone number
 
-### Defining the `render` method
+### Defining the `ContactUs` form component
 
 To start, add a function component named `ContactUs` and render the HTML form:
 

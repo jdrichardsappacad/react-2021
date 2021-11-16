@@ -208,7 +208,7 @@ messages). Sometimes it's helpful to receive feedback in real-time, but
 sometimes it can be annoying to users. Consider each situation and use an
 approach that feels appropriate for your users.
 
-### Phase 2: Using a validation library
+###
 
 You can also use a validation library like [Validator.js][validator] to add more
 sophisticated form validations.
@@ -254,6 +254,49 @@ The following errors were found:
 
   * Please provide a valid Email
 ```
+
+## Dynamic Validation
+
+In some cases, you may want to update your error messages and validate the
+user's input as the changes occur instead of just doing the validation when the
+user is ready to submit. Since you're looking to set state based on the value of
+another state variable, you'll use a `useEffect` to watch for those changes and
+set the `validationErrors` variable as you need to.
+
+At the top of the file, `import` the `useEffect` hook from the `react` package.
+Add a `useEffect` with an empty dependency array below the definition of the
+`onSubmit` function, and move the `validate` function inside of the
+`useEffect`'s callback function. Then, move the lines in the `onSubmit` that do
+the validation into the `useEffect`. Go ahead and update the dependency array to
+have the necessary variables for the `validate` function.
+
+Here's what the `useEffect` should look like now:
+
+```js
+useEffect(() => {
+  const validate = () => {
+    const validationErrors = [];
+
+    if (!name) validationErrors.push('Please provide a Name');
+
+    if (!email) {
+      validationErrors.push('Please provide an Email');
+    } else if (!isEmail(email)) {
+      validationErrors.push('Please provide a valid Email');
+    }
+
+    return validationErrors;
+  };
+
+  const errors = validate();
+
+  if (errors.length > 0) setValidationErrors(errors);
+}, [name, email]);
+```
+
+Note that you'll want to remove the `return` statement that was originally from
+the `if` statement in the `onSubmit` because the `return` value from
+a `useEffect` should either be `undefined` or a cleanup function.
 
 ### Client-side vs server-side validation
 
