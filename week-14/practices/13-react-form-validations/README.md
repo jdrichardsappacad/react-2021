@@ -255,7 +255,7 @@ The following errors were found:
   * Please provide a valid Email
 ```
 
-## Dyanmic Validation
+## Dynamic Validation
 
 In some cases, you may want to update your error messages and validate the
 user's input as the changes occur instead of just doing the validation when the
@@ -264,7 +264,7 @@ another state variable, you'll use a `useEffect` to watch for those changes and
 set the `validationErrors` variable as you need to.
 
 At the top of the file, `import` the `useEffect` hook from the `react` package.
-Add a `useEffect` with an empty dependency array below the defintion of the
+Add a `useEffect` with an empty dependency array below the definition of the
 `onSubmit` function, and move the `validate` function inside of the
 `useEffect`'s callback function. Then, move the lines in the `onSubmit` that do
 the validation into the `useEffect`. Go ahead and update the dependency array to
