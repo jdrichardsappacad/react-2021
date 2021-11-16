@@ -11,7 +11,7 @@ In this short practice you will use `useEffect` to make an `api` call using the
 
 - Run `npm install` to install dependencies
 - Run `npm start` to start the server
-- Navigate to `http://localhost:3000` in your browser
+- Navigate to `http://localhost:3000` in your browser.
   You should see an `h1` tag saying `No Data To Display`
 
 Before moving forward, take a look at the [fortnite][fortnite] documentation. If
@@ -24,7 +24,7 @@ understand what the outcome of this endpoint should be.
 In your browser, take the endpoint and place it in the url. Notice the `json`
 data that you receive. This is the data that you must parse to design your
 component. (If your data is jumbled, you can add an extension such as [`JSON
-Formatter`][json-formatter] to prettify your data. )
+Formatter`][formatter] to prettify your data.)
 
 ## Retrieve Data
 
@@ -35,7 +35,7 @@ browser's `fetch` api to fetch the `https://fortnite-api.com/v2/news` endpoint.
 After retrieving the data, log the data in the console to see what you received.
 Invoke the `fetchFortnite` function inside the `useEffect` below the definition.
 
-Open your browser console and take a look at the object you reveived.
+Open your browser console and take a look at the object you received.
 
 If you are successful your code looks similar to the code below:
 
@@ -71,18 +71,18 @@ array.
 
 ## Display the data
 
-Comment out the `h1` tag that says `No Data to Display`
+Comment out the `h1` tag that says `No Data to Display`.
 
-Create another `return` below the commented code .
+Create another `return` below the commented code.
 
 For each object in the array, create a `div` with a class of `serverContainer`.
 Use an `h1` tag to display the `title`, an `h2` tag to display the `body` and an
-`image` tag to display the image using the parsed `image` field as the `src` and
+`img` tag to display the image using the parsed `image` field as the `src` and
 the `title` as the `alt` value.
 Don't forget to add a key for each object listed using the `id`.
 
 It takes time to retrieve data that you are receiving from a 3rd party api.
-Above the `return` you've alredy created, add a conditional where, if the
+Above the `return` you've already created, add a conditional where, if the
 `serverData` slice of state is empty, the user only sees an `h1` tag that says:
 `No Data To Display`. Notice that you will catch a quick glimpse of this message
 when reloading the app.
