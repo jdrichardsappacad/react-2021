@@ -29,18 +29,18 @@ This quiz tests you on your understanding of the `useState` hook.
 <quiz>
   <question>
   <p>What argument can `useState` take?</p>
-  <answer correct>Any value to be used as the default value when the state initializes.</answer>
+  <answer correct>Any data type, including a function that will be used as the initial value.</answer>
   <answer>Only objects</answer>
   <answer>Only arrays</answer>
   <answer>Only a primitive data type</answer>
-  <explanation>The argument passed to the `useState` hook is only used when the component gets evaluated for the first time, and it can be any data type; it can be any value that you want to use as the default value.</explanation>
+  <explanation>The argument passed to the `useState` hook is only used when the component gets evaluated for the first time, and it can be any data type; it can be any value that you want to use as the initial value.</explanation>
   </question>
 </quiz>
 
 <quiz>
   <question>
   <p>How can you update the value of a state variable that came from the `useState` hook?</p>
-  <answer correct>By calling the updater function that came with the state variable.</answer>
+  <answer correct>By calling the updater function that is returned from the `useState` hook.</answer>
   <answer>By setting the value of the variable directly</answer>
   <answer>By using the `useUpdate` hook</answer>
   <answer>By using the `setState` method</answer>
