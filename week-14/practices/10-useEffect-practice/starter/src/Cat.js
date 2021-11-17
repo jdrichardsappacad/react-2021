@@ -5,11 +5,20 @@ import { colors, codes } from './data';
 const Cat = () => {
   const history = useHistory();
   const [colorNum, setColorNum] = useState(0);
-  const [statusChange, setStatusChange] = useState('418');
-
+  const [statusChange, setStatusChange] = useState(localStorage.getItem('catStatus') || '418');
   const [status, setStatus] = useState('');
 
- 
+  useEffect(() => {
+    const colorInterval = setInterval(() => {
+      setColorNum(prevNum => (prevNum === 4 ? 0 : prevNum + 1));
+    }, 5000);
+
+    return () => clearInterval(colorInterval);
+  }, [])
+
+useEffect(()=> {
+  localStorage.setItem('catStatus', statusChange);
+}, [statusChange])
 
   const handleSubmit = e => {
     e.preventDefault();
