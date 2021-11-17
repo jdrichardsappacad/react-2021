@@ -16,9 +16,22 @@ const Cat = () => {
     return () => clearInterval(colorInterval);
   }, [])
 
-useEffect(()=> {
-  localStorage.setItem('catStatus', statusChange);
-}, [statusChange])
+
+  useEffect(() => {
+    if (statusChange === '') {
+      alert('Please Enter A Code');
+      setStatusChange('404');
+      return;
+    }
+    if (!codes.includes(Number(statusChange))) {
+      alert(
+        `Code ${statusChange} Might Exist, But It Is Not A Proper Cat Status Code`
+      );
+      setStatusChange(404);
+    }
+  }, [statusChange]);
+
+
 
   const handleSubmit = e => {
     e.preventDefault();
