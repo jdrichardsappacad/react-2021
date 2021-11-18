@@ -81,15 +81,15 @@ Next, inside the JSX below the `h1` element, create a route
 for the Home component by using the Route component and nesting the Home
 component inside of it.
 
-The Route component takes an attribute called `path`. Using opening and closing `Route`
-tags, define your first Route component with a `/` for the path. Nest your Home
-Component inside the opening and closing `Route` tags.
+The Route component takes an attribute called `path`. Using opening and closing 
+`Route` tags, define your first Route component with a `/` for the path. 
+Nest your Home Component inside the opening and closing `Route` tags.
 
 Now check your browser. You should only see the Home component being
 rendered at this point.
 
 Next, do the same for the Stocks and Movies components with the 
-`path`s of /stocks and /movies respectively.
+`path`s of `/stocks` and `/movies` respectively.
 
 Take a look in your browser. In your address bar, after the `localhost:3000`,
 add a `/stocks` to the address bar and notice what you see. Now, replace
