@@ -111,7 +111,7 @@ changes that are based on a previous state are updated correctly.
 
 ## Bonus A
 
-Remove one of the buttons that change the theme and use on button only to switch
+Remove one of the buttons that change the theme and use one button only to switch
 the theme from light to dark.
 
 Congratulations! You have learned your first basic hook, useState.
