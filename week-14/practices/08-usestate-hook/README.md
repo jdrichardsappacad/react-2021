@@ -84,7 +84,7 @@ You now need a slice of state for a count. Create that slice of state using
 `count` and `setCount` and give the state an initial value of the number, `0`.
 
 Check your React Dev Tools to see that you now have a slice of state with the
-initial value of `light`, and a slice of state with the initial value of `0.
+initial value of `light`, and a slice of state with the initial value of `0.`
 
 You should also see a 0 as the count in your browser.
 
@@ -118,7 +118,8 @@ Congratulations! You have learned your first basic hook, useState.
 
 ## Bonus B
 
-Add the container class from `UseState.css` to your wrapping div along with the `theme` variable.
+Add the container class from `UseState.css` to your wrapping div along with the
+`theme` variable.
 
 ## What you have learned
 
