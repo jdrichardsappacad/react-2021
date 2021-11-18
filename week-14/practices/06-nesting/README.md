@@ -17,8 +17,8 @@ In your browser you should see an h1 with text, App Component. You should also
 see a Navbar with four links. When you click on the links they should render the
 component below them.
 
-The goal is to list out the titles of the movies and
-be able to reach each individual movie using dynamic nested routing.
+The goal is to list out the titles of the movies and be able to reach each
+individual movie using dynamic nested routing.
 
 ## Movies Component
 
@@ -109,6 +109,6 @@ of the techniques you used:
 3. Used `useParams` hook in your `MovieDetails` component to grab the `movieId`,
    so you could render the according movie details found in your `movies` array.
 
-[starter]: ./starter
-[use-params]: https://reactrouter.com/web/api/Hooks/useparams
-[use-route-match]: https://reactrouter.com/web/api/Hooks/useroutematch
+[starter]: ./starter [use-params]:
+https://reactrouter.com/web/api/Hooks/useparams [use-route-match]:
+https://reactrouter.com/web/api/Hooks/useroutematch
