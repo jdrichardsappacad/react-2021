@@ -14,8 +14,8 @@ Run `npm start` to make sure your project is set up correctly.
 ## Create a Functional Component
 
 Create a functional component called `BaseStats` in your `src` folder. It should
-have a `div` with a class of `base-stats` and an `h1` with BaseStats as the
-child. Import the `BaseStates.css` file into your component.
+have a `div` with a class of `base-stats` and an `h1` with the text "BaseStats".
+Import the `BaseStates.css` file into your component.
 
 Next, add the `BaseStats` component to your `App.js` component. It should be
 placed below the `Showcase` component. Test it in the Browser.
@@ -61,16 +61,17 @@ Points | 45)
 Test your app in the browser.
 
 To make your code more concise and practice the DRY principal, destructure your
-props variables in the argument for the `BaseState` functional component.
+props variables in the argument for the `BaseState` functional component. 
 
 Refactor your JSX to reflect these variables. You should only call the variables
-hp, attack, defense, and speed in your JSX.
+hp, attack, defense, and speed in your JSX. Remember, you can destructure 
+a nested object.
 
 ### Pass a Function as a Prop
 
-There are times where you may want to pass a function as a prop. This does not
-mean that you change the prop in the functional component. Instead, you will
-call the function in the parent component which may then have some functionality.
+There are times where you may want to pass a function as a prop. By doing this,
+you will be passing a reference to the function in the parent component which
+may then have some functionality.
 
 In your `App.js`, beneath your `baseStats` object, create a function called
 `handleClick`
