@@ -68,9 +68,9 @@ a nested object.
 
 ### Pass a Function as a Prop
 
-There are times where you may want to pass a function as a prop. This does not
-mean that you change the prop in the functional component. Instead, you will
-call the function in the parent component which may then have some functionality.
+There are times where you may want to pass a function as a prop. By doing this,
+you will be passing a reference to the function in the parent component which
+may then have some functionality.
 
 In your `App.js`, beneath your `baseStats` object, create a function called
 `handleClick`
