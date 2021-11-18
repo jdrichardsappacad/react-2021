@@ -35,8 +35,8 @@ Remember, your JSX will always be created in the `return` because it returns a
 single element.
 
 Inside your `App.js` import the `Showcase` component using
-[ES6 imports][es6-imports]. Replace the `h1` with a `div` element and add the
-`Showcase` component as a child.
+[ES6 imports][es6-imports]. Replace the `h1` with the `Showcase` component as a 
+child.
 
 Check your browser. It should now read `Showcase Component`
 
@@ -58,7 +58,7 @@ along with an `'s` after the curly braces.
 
 Notice how you are now adding both HTML and JS in the same code.
 
-Now create an object literal called `pokeCharacterstics` with a `type` and
+Now create an object literal called `pokeCharacteristics` with a `type` and
 a `move` key. Add values to both keys. (If you don't have any values you can
 use `Grass` for type and `Vine Whip` for move.)
 
@@ -69,9 +69,9 @@ Take a look in your browser. The error that you see indicates that you cannot
 use a complete object literal inside your JSX. You must key into the object, so
 go ahead and delete that line of code.
 
-Instead create an `h2` tag that says something like, **Bulbasaur's type is Grass and
-one of their moves is Vine Whip** Use the variables that you have created to
-create this JSX.
+Instead create an `h2` tag that says something like, **Bulbasaur's type is Grass
+and one of their moves is Vine Whip** Key into your object literal to create 
+this JSX.
 
 ## Add an Image to your JSX
 
@@ -101,9 +101,10 @@ normally kebab-case should be converted into camelCase. (e.g `padding-right`
 should be `paddingRight`). Also, each value in your key/value pairs should be
 represented in quotes as a string.
 
-Wrap a `span` tag around the two separate pokeCharacteristics. Inside the first
-span make the background color green and the text white. Inside the second span
-make the background color white and the text green using hex colors.
+Inside your `h1` tag, wrap a `span` tag around the two separate 
+pokeCharacteristics. Inside the first span make the background color green and 
+the text white. Inside the second span make the background color white and the 
+text green using hex colors.
 
 ## Add a Background Image Using External CSS
 
@@ -128,7 +129,7 @@ assign it a variable name.
 Now add the background class to your wrapper div in `App.js`. Remember, in JSX
 class attributes are represented by using the word `className`.
 
-Take a look inside your browser. You should now have a orange-ish background
+Take a look inside your browser. You should now have a green-ish background
 added to your view.
 
 Finally, use inline or external CSS to resize your image.
