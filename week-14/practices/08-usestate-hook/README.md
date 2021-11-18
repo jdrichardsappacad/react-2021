@@ -1,12 +1,14 @@
 # Basic Hooks - useState
 
 In this practice you will learn to use one of the most basic hooks, the
-[useState][use-state] hook. You will use the useState hook to change a
-background theme from light to dark, as well as to increment and decrement a number.
+[useState][use-state] hook. You will use the useState hook to change
+a background theme from light to dark, as well as to increment and decrement
+a number.
 
 ## Setup
 
-Clone the [starter][starter] repo and in your terminal `npm install` and `npm start` your project. You should see `UseState Component` in the browser if all
+Clone the [starter][starter] repo and in your terminal `npm install` and `npm
+start` your project. You should see `UseState Component` in the browser if all
 is working properly.
 
 ## Background Theme
@@ -27,7 +29,7 @@ In order to create state in your component you must first import the useState
 hook from the react package. Place this import above your css import.
 
 ```js
-import {useState} from 'react
+import {useState} from 'react';
 ```
 
 Now, inside your functional component, type `console.log(useState('light'))`
@@ -48,7 +50,8 @@ component. Notice under hooks -> State you will see the string `light`. This is
 the default value you have now stored in state.
 
 You are now going to add this light theme to your JSX. Inside the `div` element,
-add a `className` and give it the value `theme`. Remember your curly braces for JavaScript.
+add a `className` and give it the value `theme`. Remember your curly braces for
+JavaScript.
 
 When you look at your browser you should see the light theme color as your
 background.
@@ -81,7 +84,7 @@ You now need a slice of state for a count. Create that slice of state using
 `count` and `setCount` and give the state an initial value of the number, `0`.
 
 Check your React Dev Tools to see that you now have a slice of state with the
-initial value of `light`, and a slice of state with the initial value of `0.
+initial value of `light`, and a slice of state with the initial value of `0.`
 
 You should also see a 0 as the count in your browser.
 
@@ -108,14 +111,15 @@ changes that are based on a previous state are updated correctly.
 
 ## Bonus A
 
-Remove one of the buttons that change the theme and use on button only to switch
+Remove one of the buttons that change the theme and use one button only to switch
 the theme from light to dark.
 
 Congratulations! You have learned your first basic hook, useState.
 
 ## Bonus B
 
-Add the container class from `UseState.css` to your wrapping div along with the `theme` variable.
+Add the container class from `UseState.css` to your wrapping div along with the
+`theme` variable.
 
 ## What you have learned
 
