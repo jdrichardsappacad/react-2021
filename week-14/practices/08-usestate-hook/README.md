@@ -27,7 +27,7 @@ In order to create state in your component you must first import the useState
 hook from the react package. Place this import above your css import.
 
 ```js
-import {useState} from 'react
+import { useState } from 'react';
 ```
 
 Now, inside your functional component, type `console.log(useState('light'))`
@@ -74,16 +74,14 @@ Repeat the same process for creating the button for `Light`.
 
 ## Add A Count Slice of State using the optional callback function
 
-When you need a slice of state for a different concern you simply add an
-additional slice of state to the component using useState.
+When you need a slice of state for a different concern you simply add it to the
+component using the `useState` hook.
 
-You now need a slice of state for a count. Create that slice of state using
-`count` and `setCount` and give the state an initial value of the number, `0`.
+You now need a slice of state for a count. Use `count` and `setCount` as your
+destructured variables and give the state an initial value of the number, `0`.
 
-Check your React Dev Tools to see that you now have a slice of state with the
-initial value of `light`, and a slice of state with the initial value of `0.
-
-You should also see a 0 as the count in your browser.
+Check your React Dev Tools and notice you now have `theme` state with an initial
+value of `light`, and `count`state with the initial value of `0.
 
 Beneath the Dark button, create an `h1` element and use the count variable as
 the child element.
