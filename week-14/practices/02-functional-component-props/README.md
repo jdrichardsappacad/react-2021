@@ -14,7 +14,8 @@ Run `npm start` to make sure your project is set up correctly.
 ## Create a Functional Component
 
 Create a functional component called `BaseStats` in your `src` folder. It should
-have a `div` with a class of `base-stats` and an `h1` with the text "BaseStats". Import the `BaseStates.css` file into your component.
+have a `div` with a class of `base-stats` and an `h1` with the text "BaseStats".
+Import the `BaseStates.css` file into your component.
 
 Next, add the `BaseStats` component to your `App.js` component. It should be
 placed below the `Showcase` component. Test it in the Browser.
