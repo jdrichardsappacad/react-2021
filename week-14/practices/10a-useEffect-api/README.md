@@ -71,6 +71,8 @@ array.
 
 ## Display the data
 
+Create a slice of state called `serverData` with an updater function called  `setServerData`. There should be no initial value.
+
 Comment out the `h1` tag that says `No Data to Display`.
 
 Create another `return` below the commented code.
