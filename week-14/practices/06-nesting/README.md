@@ -25,7 +25,7 @@ individual movie using dynamic nested routing.
 In your `App.js`, import the `movies` array that is located in the
 `/data/movieData.js` directory. There is a Route in your `App.js` that mounts
 the `Movies` component. Send the `movies` data as props with the name `movies`
-to the `Movies` component. Then in your `Movies.js` component destructure from
+to the `Movies` component. Then in your `Movies` component destructure from
 props as an argument to your component.
 
 Go to your React DevTools and click on the `Movies` component. (ignore all of
@@ -116,6 +116,6 @@ of the techniques you used:
 3. Used `useParams` hook in your `MovieDetails` component to grab the `movieId`,
    so you could render the according movie details found in your `movies` array.
 
-[starter]: ./starter [use-params]:
-https://reactrouter.com/web/api/Hooks/useparams [use-route-match]:
-https://reactrouter.com/web/api/Hooks/useroutematch
+[starter]: ./starter 
+[use-params]: https://reactrouter.com/web/api/Hooks/useparams 
+[use-route-match]: https://reactrouter.com/web/api/Hooks/useroutematch
