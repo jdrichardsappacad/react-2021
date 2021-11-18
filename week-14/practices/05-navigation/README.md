@@ -36,7 +36,7 @@ In order to really know why you are using the `Link` Component, you should add
 an anchor tag to your code and view the difference.
 
 Above your Home `<li>` add an `<li>` with an anchor tag nested inside. The
-`href` should also lead to the Home component and have a child text of Anchor.
+`href` should lead to the movies component ('/movies') and have a child text of Anchor.
 
 Go to your browser and open up your DevTools to the Elements tab. Open your tree
 as far as you can. Now, click on the anchor tag and notice how the whole page
@@ -90,16 +90,17 @@ like this:
 </Route>
 ```
 
-Next, in your Stocks.js file, create a variable called loggedIn and assign it to
+Next, in your /Stocks/index.js file, create a variable called loggedIn and assign it to
 false.
 
 Add an `if` statement that redirects to the `/not-logged-in` url when the
-`loggedIn` variable is false.
+`loggedIn` variable is false using the `Redirect`
+component.
 
 Test it in your Browser by clicking on the Stocks link. It should redirect you
 to the Not Logged in route.
 
-Now, in Stocks.js, set the `loggedIn` variable to true and click on the Stocks
+Now, in /Stocks/index.js, set the `loggedIn` variable to true and click on the Stocks
 Link. You should be able to view the Stocks component.
 
 ### History API & useHistory Hook for Navigation
