@@ -1,12 +1,14 @@
 # Basic Hooks - useState
 
 In this practice you will learn to use one of the most basic hooks, the
-[useState][use-state] hook. You will use the useState hook to change a
-background theme from light to dark, as well as to increment and decrement a number.
+[useState][use-state] hook. You will use the useState hook to change
+a background theme from light to dark, as well as to increment and decrement
+a number.
 
 ## Setup
 
-Clone the [starter][starter] repo and in your terminal `npm install` and `npm start` your project. You should see `UseState Component` in the browser if all
+Clone the [starter][starter] repo and in your terminal `npm install` and `npm
+start` your project. You should see `UseState Component` in the browser if all
 is working properly.
 
 ## Background Theme
@@ -27,7 +29,7 @@ In order to create state in your component you must first import the useState
 hook from the react package. Place this import above your css import.
 
 ```js
-import {useState} from 'react
+import {useState} from 'react';
 ```
 
 Now, inside your functional component, type `console.log(useState('light'))`
@@ -48,7 +50,8 @@ component. Notice under hooks -> State you will see the string `light`. This is
 the default value you have now stored in state.
 
 You are now going to add this light theme to your JSX. Inside the `div` element,
-add a `className` and give it the value `theme`. Remember your curly braces for JavaScript.
+add a `className` and give it the value `theme`. Remember your curly braces for
+JavaScript.
 
 When you look at your browser you should see the light theme color as your
 background.
