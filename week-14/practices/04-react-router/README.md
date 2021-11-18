@@ -77,18 +77,19 @@ Inside your `App.js`, import Route from the `react-router-dom` package.
 Remove all of the components that are listed in the JSX. We will
 render these components using routes.
 
-Next, inside the JSX return `div`, then, at the bottom, create a route
+Next, inside the JSX below the `h1` element, create a route
 for the Home component by using the Route component and nesting the Home
 component inside of it.
 
-The Route component takes an attribute called `path`. Using opening and closing
-tags, define your first Route component with a `/` for the path. Nest your Home
-Component Inside the opening and closing tags.
+The Route component takes an attribute called `path`. Using opening and closing 
+`Route` tags, define your first Route component with a `/` for the path. 
+Nest your Home Component inside the opening and closing `Route` tags.
 
 Now check your browser. You should only see the Home component being
 rendered at this point.
 
-Next, do the same for the Stocks and Movies components.
+Next, do the same for the Stocks and Movies components with the 
+`path`s of `/stocks` and `/movies` respectively.
 
 Take a look in your browser. In your address bar, after the `localhost:3000`,
 add a `/stocks` to the address bar and notice what you see. Now, replace
