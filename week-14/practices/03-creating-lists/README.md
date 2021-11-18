@@ -45,6 +45,9 @@ name of the move.
 </ul>
 ```
 
+Import your `Pokemoves` component into App.js and render it under the
+ `BaseStats` component. 
+
 Look at your Browser DevTools in the console and see what kind of errors or
 warnings you are receiving.
 
