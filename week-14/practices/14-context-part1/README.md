@@ -20,7 +20,7 @@ this `context` directory, create a file called `HoroscopeContext.js`. This is
 where all your horoscope context will be placed.
 
 At the top of this file, import `createContext` from `react` and create your
-context called `HoroscopeContext`. If you're lost, don't forget to checkout
+context called `HoroscopeContext`. If you're lost, don't forget to check out
 [documentation][create-context]. Make sure to `export` your `HoroscopeContext`.
 
 Awesome! We have created our context, now let's use our provider.
