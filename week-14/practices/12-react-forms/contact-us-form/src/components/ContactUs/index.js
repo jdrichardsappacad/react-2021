@@ -1,5 +1,7 @@
 // ./src/components/ContactUs/index.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import isEmail from 'validator/es/lib/isEmail';
+
 
 function ContactUs(props) {
   const [name, setName] = useState('');
@@ -7,9 +9,56 @@ function ContactUs(props) {
   const [phone, setPhone] = useState('');
   const [comments, setComments] = useState('');
   const [phoneType, setPhoneType] = useState('');
+  const [validationErrors, setValidationErrors] = useState([]);
+
+//  const validate = () => {
+//   const validationErrors = [];
+
+//   if (!name) validationErrors.push('Please provide a Name');
+
+//   if (!email) {
+//     validationErrors.push('Please provide an Email');
+//   } else if (!isEmail(email)) {
+//     validationErrors.push('Please provide a valid Email');
+//   }
+
+//   return validationErrors;
+// };
+
+useEffect(() => {
+  const validate = () => {
+    const validationErrors = [];
+
+    if (!name) validationErrors.push('Please provide a Name');
+
+    if (!email) {
+      validationErrors.push('Please provide an Email');
+    } else if (!isEmail(email)) {
+      validationErrors.push('Please provide a valid Email');
+    }
+
+    return validationErrors;
+  };
+
+  const errors = validate();
+
+  if (errors.length > 0) {
+    setValidationErrors(errors);
+  } else {
+    setValidationErrors([]);
+
+  }
+}, [name, email]);
+
+
 
   const onSubmit = e => {
     e.preventDefault();
+    // const errors = validate();
+
+    // if (errors.length > 0) return setValidationErrors(errors);
+    if(validationErrors.length > 0) return
+
     const contactUsInformation = {
       name,
       email,
@@ -23,11 +72,22 @@ function ContactUs(props) {
     setEmail('');
     setPhone('');
     setComments('');
+    setValidationErrors([]);
   };
 
   return (
     <div>
       <h2>Contact Us</h2>
+      {validationErrors.length > 0 && (
+        <div>
+          The following errors were found:
+          <ul>
+            {validationErrors.map(error => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       <form onSubmit={onSubmit}>
         <div>
           <label htmlFor='name'>Name:</label>
