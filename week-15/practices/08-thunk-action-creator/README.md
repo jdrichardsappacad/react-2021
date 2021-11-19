@@ -9,7 +9,7 @@ Download the starter at the bottom of this page.
 
 1. Run `npm install` in the **backend** directory to install dependencies.
 2. Run `npm run db:setup` to setup the database
-3. Run `npm start` to start the backend server..
+3. Run `npm start` to start the backend server.
 
 In a different terminal, `cd` into the **frontend** directory of the starter.
 
