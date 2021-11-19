@@ -1,0 +1,128 @@
+/* TODO Add site wide styles */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300&display=swap');
+
+body {
+  background: rgb(64, 88, 64);
+  color: white;
+  font-family: 'Open Sans', serif;
+}
+
+input {
+  margin-left: 60px;
+  width: 200px;
+  padding: 5px;
+}
+
+h1 {
+  margin: 30px 0 30px 8px;
+}
+
+button {
+  margin-left: 10px;
+  height: 50px;
+  width: 120px;
+  background-color: greenyellow;
+  border-radius: 5px;
+  font-size: 1.1em;
+  color: #333;
+  border: 2px solid #333;
+}
+button:hover {
+  background-color: rgb(189, 240, 112);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 150px;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: greenyellow;
+  background: rgb(5, 63, 23);
+  height: 50px;
+  width: 120px;
+  border: 2px inset greenyellow;
+  border-radius: 5px;
+  font-size: 1.1em;
+  margin: 10px;
+}
+
+.nav-button:hover {
+  width: 122px;
+}
+
+.active-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: greenyellow;
+  background: #333;
+  height: 50px;
+  width: 120px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  margin: 10px;
+}
+
+a {
+  color: greenyellow;
+}
+
+a:visited {
+  color: greenyellow;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.one {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.two {
+  display: flex;
+  flex-direction: row;
+}
+
+.message {
+  position: absolute;
+  padding-left: 260px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.count {
+  font-family: Verdana, sans-serif;
+  margin-left: 10px;
+}
+
+.alert-button{
+  background:red;
+  color:white;
+}
+
+.alert-button:hover{
+  background:white;
+  color:red;
+}
