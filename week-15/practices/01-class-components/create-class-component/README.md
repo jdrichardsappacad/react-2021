@@ -1,6 +1,7 @@
 # Converting Functional Components
 
-In this short practice you will convert a `functional` component into a `class` component.
+In this short practice you will convert a `functional` component into  a `class`
+component.
 
 ## Setup
 
@@ -20,14 +21,17 @@ Create a `class` component called `ClassComponentOne` that extends the imported
 Component sub-class.
 
 ```js
-class ClassComponentOne extends Component {}
+
+  class ClassComponentOne extends Component {}
+
 ```
 
 `Class` components must always have a render method which comes from the
 `Component` subclass.
 
 ```js
-render(){
+
+  render(){
 
 }
 
@@ -68,13 +72,13 @@ Your constructor should resemble the code below:
 
 ```js
 
-    constructor(){
-        super()
-        this.state = {
-            count: 0,
-            message: ''
-        }
+  constructor(){
+    super()
+    this.state = {
+      count: 0,
+      message: ''
     }
+  }
 
 ```
 
@@ -82,10 +86,10 @@ Your constructor should resemble the code below:
 
 The only real difference with setting state in `event handlers` or anywhere in
 your component is the method that is used. Class components use the method
-[`this.setState`][setstate] to update state. **Never use `this.state` method!**
-`this.setState` takes an object that needs only the values you wish to change.
-React merges those updates using a `shallow merge`. Only the key/value pair that
-is updated will change values.
+[`this.setState`][setstate] to update state. **Never set state using the
+`this.state` method!** `this.setState` takes an object that needs only the
+values you wish to change. React merges those updates using a `shallow merge`.
+Only the key/value pair that is updated will change values.
 
 For the `message` input, add an `onChange` event handler. In the handler's
 callback function, use `this.setState({})`. Add the property using the name of
@@ -106,37 +110,41 @@ that it clears the `message` slice of state.
 Your code for event handlers should look simlar to the code below:
 
 ```js
-   <button
-            onClick={() => {
-              this.setState(prevState => ({
-                count: prevState.count - 1,
-              }));
-            }}
-          >
-            Decrement
-          </button>
-          <button
-            onClick={() => {
-              this.setState(prevState => ({
-                count: prevState.count + 1,
-              }));
-            }}
-          >
-            Increment
-          </button>
 
-          <input
-            type='text'
-            value={this.state.message}
-            onChange={e => this.setState({ message: e.target.value })}
-            placeholder='Enter Your Message'
-          />
-          <button onClick={() => this.setState({ message: '' })}>Clear</button>
+  <button
+    onClick={() => {
+      this.setState(prevState => ({
+        count: prevState.count - 1,
+      }));
+    }}
+  >
+    Decrement
+  </button>
+  <button
+    onClick={() => {
+      this.setState(prevState => ({
+        count: prevState.count + 1,
+      }));
+    }}
+  >
+    Increment
+  </button>
+  <input
+    type='text'
+    value={this.state.message}
+    onChange={e => this.setState({ message: e.target.value })}
+    placeholder='Enter Your Message'
+  />
+  <button onClick={() => this.setState({ message: '' })}>Clear</button>
+
 ```
 
 ### Reference State
 
-In order to reference state, you must reference the object called `state` in your class object. Use the keyword `this` to do so and update the `value` for the `message` input as well as the two props that are being passed to `FunctionalComponentTwo`.
+In order to reference state, you must reference the object called `state` in
+your class object. Use the keyword `this` to do so and update the `value` for
+the `message` input as well as the two props that are being passed to
+`FunctionalComponentTwo`.
 
 ## Add A Component Method
 
@@ -146,9 +154,11 @@ your method before the `render` method using a `fat arrow` function. Because fat
 arrow functions have no `this`, the function will `bind` automatically to the
 new `instance`.
 
-Using fat arrow function syntax, create a method called `handleClick`. Invoke an `alert` that says, `Button has been Clicked!`.
+Using fat arrow function syntax, create a method called `handleClick`. Invoke an
+`alert` that says, `Button has been Clicked!`.
 
-Now add an `onClick` event handler to the Alert button and update the state with the `handleClick` method.
+Now add an `onClick` event handler to the Alert button and trigger the alert
+message using the `handleClick` method.
 
 Did you remember to use `this`?
 
@@ -156,20 +166,20 @@ Those code blocks should now look something like this:
 
 ```js
 
-    handleClick = () => {
-        alert('Button has been Clicked!');
-    };
+  handleClick = () => {
+    alert('Button has been Clicked!');
+  };
 
 ```
 
 ```js
 
-   <button
+  <button
+    className='alert-button'ß
     onClick={() => this.handleClick()}
-    style={{ background: 'red', color: 'white' }}
-    >
-        Alert
-    </button>
+  >
+    Alert
+  </button>
 
 ```
 
