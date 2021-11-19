@@ -8,28 +8,9 @@ export const addArticle = (newArticle) => ({
   newArticle,
 });
 
-export const getArticles = (articles) => {
+export const getArticles = () => {
   return { type: GET_ARTICLES, articles };
 };
-
-export const fetchArticles = () => async dispatch => {
-  const response = await fetch('/api/articles');
-  const articles = await response.json();
-  dispatch(getArticles(articles));
-};
-
-export const writeArticle = (payload) => async dispatch => {
-  const response = await fetch('/api/articles', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  })
-  if(response.ok){
-    console.log(response)
-    let newArticle = await response.json()
-    dispatch(addArticle(newArticle))
-  }
-}
 
 const initialState = { entries: [], isLoading: true };
 
