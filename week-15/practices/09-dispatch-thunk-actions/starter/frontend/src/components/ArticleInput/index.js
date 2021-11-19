@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { nanoid } from "nanoid";
 import { useDispatch } from "react-redux";
 
 import { addArticle } from '../../store/articleReducer';
