@@ -21,7 +21,6 @@ const ArticleInput = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newArticle = {
-      id: nanoid(),
       title,
       body,
       imageUrl,
