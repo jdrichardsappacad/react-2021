@@ -11,6 +11,7 @@ router.get('/', asyncHandler(async (_req, res) => {
 
 router.post('/', validateCreate, asyncHandler(async (req, res) => {
   const article = await Article.create(req.body);
+  // article.save()
   res.json(article);
 }));
 
