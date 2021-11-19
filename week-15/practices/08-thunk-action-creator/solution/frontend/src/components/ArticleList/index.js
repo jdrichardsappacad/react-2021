@@ -4,9 +4,6 @@ import { Route, Switch } from "react-router-dom";
 
 import SingleArticle from "../SingleArticle";
 import ArticleDetail from "../ArticleDetail";
-//!ADD
-// import { getArticles } from '../../store/articleReducer';
-//!END_ADD
 
 const ArticleList = () => {
   const dispatch = useDispatch();
@@ -14,9 +11,6 @@ const ArticleList = () => {
   const articles = useSelector((state) => state.articleState.entries);
 
   useEffect(() => {
-    //!ADD
-    // dispatch(getArticles());
-    //!END_ADD
   }, [dispatch]);
 
   return (
