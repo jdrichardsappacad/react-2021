@@ -1,10 +1,12 @@
 // ./src/components/ContactUs/index.js
 import { useState } from 'react';
 
-function ContactUs() {
+function ContactUs(props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [comments, setComments] = useState('');
+  const [phoneType, setPhoneType] = useState('');
 
   const onSubmit = e => {
     e.preventDefault();
@@ -12,6 +14,7 @@ function ContactUs() {
       name,
       email,
       phone,
+      comments,
       submittedOn: new Date(),
     };
 
@@ -19,6 +22,7 @@ function ContactUs() {
     setName('');
     setEmail('');
     setPhone('');
+    setComments('');
   };
 
   return (
@@ -51,11 +55,36 @@ function ContactUs() {
             onChange={e => setPhone(e.target.value)}
             value={phone}
           />
+          <select
+            name='phoneType'
+            onChange={e => setPhoneType(e.target.value)}
+            value={phoneType}
+          >
+            <option value='' disabled>
+              Select a phone type...
+            </option>
+            {props.phoneTypes.map(phoneType => (
+              <option key={phoneType}>{phoneType}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor='comments'>Comments:</label>
+          <textarea
+            id='comments'
+            name='comments'
+            onChange={e => setComments(e.target.value)}
+            value={comments}
+          />
         </div>
         <button>Submit</button>
       </form>
     </div>
   );
 }
+
+ContactUs.defaultProps = {
+  phoneTypes: ['Home', 'Work', 'Mobile'],
+};
 
 export default ContactUs;
