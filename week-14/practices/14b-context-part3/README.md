@@ -45,9 +45,9 @@ the right method.
 If all is working, we can now revert to the `Console` tab in the DevTools.
 Earlier we asked if the `SideCard` component will re-render if it's not
 consuming the context - how many times do we see the console log from the
-`SideCard` component if clicked on the different signs? If your answer is one,
+`SideCard` component if we click on the different signs? If your answer is one,
 then that is correct! We will only see the console log once because it
-will do it's initial render only. Even though our context is constantly changing
+will only run on the initial render. Even though our context is constantly changing
 each time we click on a new sign, the components not consuming the context will
 not re-render. The only re-renders we will see are from the components consuming
 it like the `Navbar` component.
