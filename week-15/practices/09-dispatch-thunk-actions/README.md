@@ -13,6 +13,14 @@ then run `npm start`. Otherwise, follow these instructions to get set up:
 
 1. Create a **.env** file in the **backend** directory based off the existing
    **.env.example** file given.
+
+   - *Hint: If you've forgotten how to generate a random JWT secret, you can use
+   the following command in your terminal:*
+
+   ```
+   openssl rand -base64 32
+   ```
+
 2. Create a database user using the `psql` interface that matches the username
    and password you gave in the **.env** file with `CREATEDB` privileges.
 3. Run `npm install` in the **backend** directory to install dependencies.
@@ -20,6 +28,7 @@ then run `npm start`. Otherwise, follow these instructions to get set up:
 5. Run `npx dotenv sequelize db:migrate` to apply the migrations.
 6. Run `npx dotenv sequelize db:seed:all` to apply the seeders.
 7. Run `npm start` to start the backend server..
+
 
 In a different terminal, `cd` into the **frontend** directory of the starter.
 
