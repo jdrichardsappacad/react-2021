@@ -1,7 +1,7 @@
 import PokeMoves from './Pokemoves';
 import './BaseStats.css';
 
-const BaseStats = ({ clicker, stats: { hp, attack, defense, speed } }) => {
+const BaseStats = (props) => {
   return (
     <div>
       <h1>BaseStats</h1>
@@ -11,23 +11,23 @@ const BaseStats = ({ clicker, stats: { hp, attack, defense, speed } }) => {
           <tbody>
             <tr>
               <td>Hit Points</td>
-              <td>{hp}</td>
+              <td>{props.stats.hp}</td>
             </tr>
             <tr>
               <td>Attack</td>
-              <td>{attack}</td>
+              <td>{props.stats.attack}</td>
             </tr>
             <tr>
               <td>Defense</td>
-              <td>{defense}</td>
+              <td>{props.stats.defense}</td>
             </tr>
             <tr>
               <td>Speed</td>
-              <td>{speed}</td>
+              <td>{props.stats.speed}</td>
             </tr>
           </tbody>
         </table>
-        <button className='sp-stats' onClick={clicker}>
+        <button className='sp-stats' >
           Check Special Stats
         </button>
       </div>

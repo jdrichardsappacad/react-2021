@@ -44,28 +44,44 @@ object.
 
 ## Use props object in the child component
 
-Now you are ready to use your props object. Create a table beneath your `h1`
-tag. It should have four table rows, each with two table data tags. The first
-table data tag of each table row should contain, in order:
+Now you are ready to use your props object. 
 
-1. Hit Points
-2. Attack
-3. Defense
-4. Speed
-   (do not include the numbers)
+Create a table beneath your `h1` tag. It should have four table rows, each with 
+two table data tags. The first table data tag of each table row should contain
+the header for each stat (Hit Points, Attack, Defense, and Speed). 
 
-The second table data tag of each row should contain the prop value that is
-associated with the name represented in the first table data tag. (e.g Hit
-Points | 45)
+The second table data tag of each table row should contain the cooresponding 
+variable you destructured from props. Your code should look something like:
 
-Test your app in the browser.
+```js
+<table>
+  <tbody>
+    <tr>
+      <td>Hit Points</td>
+      <td>{props.stats.hp}</td>
+    </tr>
+    <tr>
+      <td>Attack</td>
+      <td>{props.stats.attack}</td>
+    </tr>
+    <tr>
+      <td>Defense</td>
+      <td>{props.stats.defense}</td>
+    </tr>
+    <tr>
+      <td>Speed</td>
+      <td>{props.stats.speed}</td>
+    </tr>
+  </tbody>
+</table>
+```
 
 To make your code more concise and practice the DRY principal, destructure your
 props variables in the argument for the `BaseState` functional component. 
-
 Refactor your JSX to reflect these variables. You should only call the variables
-hp, attack, defense, and speed in your JSX. Remember, you can destructure 
-a nested object.
+hp, attack, defense, and speed in your JSX. 
+
+** Remember, you can destructure a nested object.
 
 ### Pass a Function as a Prop
 
