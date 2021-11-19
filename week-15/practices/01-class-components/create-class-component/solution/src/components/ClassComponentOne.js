@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import FuncCompTwo from './FunctionalComponentTwo';
+import FunctionalComponentTwo from './FunctionalComponentTwo';
 
 class ClassComponentOne extends Component {
   constructor() {
@@ -18,7 +18,7 @@ class ClassComponentOne extends Component {
   render() {
     return (
       <div className='center'>
-        <h1>Functional Component One</h1>
+        <h1>Class Component One</h1>
         <div className='one '>
           <button
             onClick={() => {
@@ -54,7 +54,7 @@ class ClassComponentOne extends Component {
           </button>
         </div>
 
-        <FuncCompTwo count={this.state.count} message={this.state.message} />
+        <FunctionalComponentTwo count={this.state.count} message={this.state.message} />
       </div>
     );
   }

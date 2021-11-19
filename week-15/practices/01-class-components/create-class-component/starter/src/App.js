@@ -1,4 +1,4 @@
-const { default: FunctionalComponentOne } = require("./components/FunctionalComponentOne");
+import FunctionalComponentOne from './components/FunctionalComponentOne'
 
 function App() {
   return (

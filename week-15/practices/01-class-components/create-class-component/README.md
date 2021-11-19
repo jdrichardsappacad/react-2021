@@ -43,6 +43,8 @@ functional components.
 Copy the whole `return` from the `FunctionalComponentOne` file. Paste it
 inside the `render` method inside `ClassComponentOne`.
 
+Change the `h1` text from `Functional Component One` to `Class Component One`
+
 Remove each `onClick` and `onChange` method from your `JSX`. You will recreate
 them shortly.
 
