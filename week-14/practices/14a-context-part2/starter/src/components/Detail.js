@@ -1,3 +1,6 @@
+import {useContext} from 'react';
+import {HoroscopeContext} from '../context/HoroscopeContext'
+
 const Detail = () => {
   return (
     <div className='details'>
