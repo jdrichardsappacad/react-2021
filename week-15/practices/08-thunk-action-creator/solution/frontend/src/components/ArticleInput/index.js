@@ -1,8 +1,6 @@
-import { useState } from "react";
-import { nanoid } from "nanoid";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-
-import { addArticle } from '../../store/articleReducer';
+import { fetchArticles,writeArticle } from '../../store/articleReducer';
 import "./ArticleInput.css";
 
 const ArticleInput = () => {
@@ -18,16 +16,19 @@ const ArticleInput = () => {
     setBody("");
   };
 
+  useEffect(()=>{
+    dispatch(fetchArticles())
+  }, [dispatch])
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newArticle = {
-      id: nanoid(),
       title,
       body,
       imageUrl,
     };
 
-    dispatch(addArticle(newArticle));
+    dispatch(writeArticle(newArticle));
     reset();
   };
 
