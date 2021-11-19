@@ -14,9 +14,8 @@ You should see `App Component` in your browser if it is running correctly.
 
 ## Create a Functional Component
 
-First, create a folder in the `src` directory named `components`. Then, create a
-file `Showcase.js` in the `src/components` folder. Inside that file you will
-create a functional component `Showcase` with contents similar to the code
+First, create a file `Showcase.js` in the `src` folder. Inside that file you 
+will create a functional component `Showcase` with contents similar to the code
 below:
 
 ```js

@@ -1,5 +1,5 @@
 //!!START SILENT
-import Showcase from './components/Showcase';
+import Showcase from './Showcase';
 import './App.css';
 //!!END
 
