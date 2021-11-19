@@ -10,8 +10,7 @@ const FunctionalKuiper = () => {
 
   useEffect(() => {
     if (guessCount > 4) {
-      setGuess('');
-      setGuessCount(0);
+      myStateSetters(0, kuiperSleep);
       alert(`Sorry you have used your 5 guesses! You lose! Start again!`);
     }
   }, [guessCount]);

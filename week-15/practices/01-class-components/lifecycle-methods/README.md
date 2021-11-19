@@ -14,4 +14,51 @@ Download the Starter from below.
 - Run `npm start` to start the server
 - Navigate to `http://localhost:3000` in your browser
 
-Take a look at the code that you have been given.
+Take a look at the code that you have been given. Review the differences between
+the equivalent `functional` and `class` components. You are going to add
+lifecycle
+methods to `ClassKuiper` and `ClassTitan`.
+
+## componentDidMount and componentWillUnmount
+
+If you look in `ClassTitan` you will notice that there is a `useEffect` that has
+a setTimeout that will end in 7 seconds. Also notice that there is a cleanup
+function so that when the user clicks one of the buttons in the `Navbar` and
+`unmounts` this component, the timer function will be cleaned out, preventing a
+memory leak.
+
+You will need two of the lifecycle methods, `componentDidMount` and
+`componentWillUnmout` to add this functionality in `ClassTitan`.
+
+Create a `componentDidMount` lifecycle method in your `ClassTitan` component
+beneath your `constructor` function. Inside the constructor function, create a
+`setTimeout` function that, after seven seconds, changes the `mood` state to
+`'MAD'` and `display` to `none`. This `setTimeout` function will only run once
+since `componentDidMount` only runs once after the first render.
+
+Next, create a `componentWillUnmout` lifecycle method beneath the
+`componentDidMount`. Inside this method, you should cleanup the setTimeout when
+the `ClassTitan` component is unmounted. **Never set state in this method.**
+
+If you are successful, your code should resemble the code below:
+
+```js
+
+ componentDidMount() {
+    this.setMood = setTimeout(() => {
+      this.setState({ mood: 'MAD', display: 'none' });
+    }, 7000);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.setMood);
+  }
+
+```
+
+## componentDidUpdate
+
+Now navigate to the `ClassKuiper` component. Look at the `FunctionKuiper`
+component. Notice the `useEffect` that listens for the `guessCount` to change.
+You need to create a `componentDidUpdate` that only makes the changes when the
+`guessCount` state is greater than 4.
