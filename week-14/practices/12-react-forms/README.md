@@ -19,7 +19,7 @@ with the `@appacademy/react-v17` template:
 npx create-react-app contact-us-form --template @appacademy/react-v17 --use-npm
 ```
 
-## Creating a simple form
+## Phase 1: Creating a simple form
 
 To learn how to create an HTML form in React, you'll create a `ContactUs`
 functional component that'll contain a simple "Contact Us" form. The form will
@@ -87,7 +87,7 @@ the browser. You can even fill out the form, but currently the component doesn't
 know what the form input values are. To keep track of each of the input values,
 you will need to initialize and maintain component state.
 
-### Adding state to the component
+## Phase 2: Adding state to the component
 
 To add state to the `ContactUs` component, import `useState` from React.
 Initialize three state variables, `name`, `email`, and `phone` as empty strings.
