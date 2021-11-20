@@ -21,11 +21,12 @@ In a different terminal, `cd` into the **frontend** directory of the starter.
 Action creators are functions that create and return an action, which is just
 a regular JavaScript object. Thunk action creators are functions that return
 a thunk action, a function instead of an object. The thunk action, or simply 
-thunk, can accept the `dispatch` and `getState` methods availabe on the store 
+thunk, can accept the `dispatch` and `getState` methods available on the store 
 and can `dispatch` another action after potentially doing some asynchronous 
 logic.
 
-Because a thunk action creator is just a function that returns a thunk (also a function) that takes in `dispatch` and `getState` as parameters, most of the 
+Because a thunk action creator is just a function that returns a thunk (also a 
+function) that takes in `dispatch` and `getState` as parameters, most of the 
 time, you'll see it structured like this:
 
 ```javascript
