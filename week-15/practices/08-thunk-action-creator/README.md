@@ -18,16 +18,16 @@ In a different terminal, `cd` into the **frontend** directory of the starter.
 
 ## Thunk Action Creators
 
-Action creators are functions that return, or create, an action, which is just
+Action creators are functions that create and return an action, which is just
 a regular JavaScript object. Thunk action creators are functions that return
-a thunk action, an action that is a function instead of an object. The thunk
-action, or simply thunk, can accept the `dispatch` and `getState` methods
-availabe on the store and can `dispatch` another action after potentially doing
-some asynchronous logic.
+a thunk action, a function instead of an object. The thunk action, or simply 
+thunk, can accept the `dispatch` and `getState` methods available on the store 
+and can `dispatch` another action after potentially doing some asynchronous 
+logic.
 
-Because a thunk action creator is just a function that returns a thunk, which is
-just a function that can take in `dispatch` and `getState`, in that order, most
-of the time, you'll see it like this:
+Because a thunk action creator is just a function that returns a thunk (also a 
+function) that takes in `dispatch` and `getState` as parameters, most of the 
+time, you'll see it structured like this:
 
 ```javascript
 const thunkActionCreator = () => dispatch => {
@@ -69,6 +69,8 @@ Now it's your turn! Write a `writeArticle` thunk action creator in the
 **frontend/src/store/articleReducer.js** file that takes in a `payload`, makes
 a `POST` request to `/api/articles`, and calls `dispatch` on the return value of
 `addArticle` passing in the new article from the response.
+
+**Hint: Remember to use `.json()` to parse your data before dispatching. 
 
 ## What you've learned
 
