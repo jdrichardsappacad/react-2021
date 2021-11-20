@@ -79,8 +79,8 @@ class Kuiper extends Component {
               : 'kuiper-image '
           }
           alt='kuiper'
-          width='450'
-          height='450'
+          width='350px'
+          height='350px'
           src={this.state.kuiper}
         />
       </div>

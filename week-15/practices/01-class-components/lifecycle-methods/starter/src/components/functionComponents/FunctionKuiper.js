@@ -78,8 +78,8 @@ const FunctionalKuiper = () => {
             kuiper === kuiperHappy ? 'kuiper-image rotate' : 'kuiper-image'
           }
           alt='kuiper'
-          width='450'
-          height='450'
+          width='350px'
+          height='350px'
           src={kuiper}
         />
       </div>
