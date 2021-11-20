@@ -2,9 +2,9 @@
 
 In this short practice you will use 3 basic Lifecycle methods included in React:
 
-- componentDidMount
-- componentDidUpdate
-- componentWillUnmount.
+- `componentDidMount`
+- `componentDidUpdate`
+- `componentWillUnmount`
 
 ## Setup
 
@@ -60,5 +60,19 @@ If you are successful, your code should resemble the code below:
 
 Now navigate to the `ClassKuiper` component. Look at the `FunctionKuiper`
 component. Notice the `useEffect` that listens for the `guessCount` to change.
-You need to create a `componentDidUpdate` that only makes the changes when the
-`guessCount` state is greater than 4.
+
+Create a `componentDidUpdate` method in the `ClassKuiper` component. When the
+`guessCount` state is greater than 4, the `mySetters` function should be invoked
+passing `0` for the `count` state and a `kuiperSleep` variable for the
+`kuiper`state. Also, an `alert` method should be invoked with a message that
+says: `Sorry you have used your 5 guesses! You lose! Start again!`
+
+This `componentDidUpdate` lifecycle method will run after every render. However,
+the functionality will only execute when the conditional criteria is met.
+
+Contratulations! In this short practice you have used 3 basic React
+`Lifecycle Methods` with Class Components:
+
+1. `componentDidMount`
+2. `componentDidUpdate`
+3. `componentWillUnmount`
