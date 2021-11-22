@@ -29,7 +29,7 @@ You will use two lifecycle methods, `componentDidMount` and
 `componentWillUnmount` to add this functionality in `ClassTitan`.
 
 Create a `componentDidMount` lifecycle method in your `ClassTitan` component,
-beneath your `constructor` function. Inside the constructor function, create a
+beneath your `constructor` function. Inside the `componentDidMount`, create a
 `setTimeout` function that, after seven seconds, changes the `mood` state to
 `'MAD'` and `display` to `none`. This setTimeout function will only run once
 because the `componentDidMount` method only runs once, after the initial render.
@@ -67,7 +67,7 @@ state. Also, an `alert` method should be invoked with a message that says:
 
 This `componentDidUpdate` lifecycle method won't run after initial render. But,
 it will run after every re-render. However, the functionality will only execute
-when the conditional, `if'`criteria is met.
+when the conditional, `if`criteria is met.
 
 Congratulations! In this short practice you have used 3 basic React
 `Lifecycle Methods` with Class Components:
