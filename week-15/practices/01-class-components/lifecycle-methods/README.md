@@ -26,7 +26,7 @@ user clicks one of the buttons in the `Navbar` and `unmounts` this component,
 the timer function will be cleaned out, preventing a memory leak.
 
 You will use two lifecycle methods, `componentDidMount` and
-`componentWillUnmout` to add this functionality in `ClassTitan`.
+`componentWillUnmount` to add this functionality in `ClassTitan`.
 
 Create a `componentDidMount` lifecycle method in your `ClassTitan` component,
 beneath your `constructor` function. Inside the constructor function, create a
@@ -34,7 +34,7 @@ beneath your `constructor` function. Inside the constructor function, create a
 `'MAD'` and `display` to `none`. This `setTimeout` function will only run once.
 The `componentDidMount` method only runs once, after the initial render.
 
-Next, create a `componentWillUnmout` lifecycle method beneath the
+Next, create a `componentWillUnmount` lifecycle method beneath the
 `componentDidMount`. Inside this method, you should cleanup the setTimeout when
 the `ClassTitan` component is unmounted. **Never set state in this method.**
 
