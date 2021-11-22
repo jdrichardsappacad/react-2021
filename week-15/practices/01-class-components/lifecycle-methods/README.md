@@ -67,7 +67,7 @@ state. Also, an `alert` method should be invoked with a message that says:
 
 This `componentDidUpdate` lifecycle method won't run after initial render. But,
 it will run after every re-render. However, the functionality will only execute
-when the conditional, `if`criteria is met.
+when the conditional, `if` criteria is met.
 
 Congratulations! In this short practice you have used 3 basic React
 `Lifecycle Methods` with Class Components:
