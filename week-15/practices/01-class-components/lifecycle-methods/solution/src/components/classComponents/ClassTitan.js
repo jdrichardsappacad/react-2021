@@ -23,16 +23,14 @@ class ClassTitan extends Component {
     clearTimeout(this.setMood);
   }
 
-  hungryRender = () => {
-    return this.state.isHungry ? (
-      <h1>If You Don't Feed Titan Soon, He Will Get Mad!</h1>
-    ) : (
-      <h1>Yum! That's better!</h1>
-    );
-  };
+  hungryRender = this.state.isHungry ? (
+    <h1>If You Don't Feed Titan Soon, He Will Get Mad!</h1>
+  ) : (
+    <h1>Yum! That's better!</h1>
+  );
 
-  moodRender = () => {
-    return this.state.mood === 'CHILL' ? (
+  moodRender =
+    this.state.mood === 'CHILL' ? (
       <div className='titan-chill'>
         <img width=' 690' height=' 390' src={titanChill} alt='titan' />
         <div className='button-holder'>
@@ -59,15 +57,14 @@ class ClassTitan extends Component {
         </button>
       </>
     );
-  };
 
   render() {
     return (
       <>
         <div className='titan-container'>
-          this.hungryRender()
+          {this.hungryRender}
           <h2> Current mood: {this.state.mood} </h2>
-          this.moodRender()
+          {this.moodRender}
         </div>
       </>
     );
