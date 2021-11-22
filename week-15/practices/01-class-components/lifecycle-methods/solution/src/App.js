@@ -17,10 +17,10 @@ const App = () => {
           </div>
         </Route>
         <Route path='/titan'>
-          <Titan />
+          <ClassTitan />
         </Route>
         <Route path='/kuiper'>
-          <Kuiper />
+          <ClassKuiper />
         </Route>
       </Switch>
     </div>

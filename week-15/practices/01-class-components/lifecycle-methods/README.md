@@ -67,10 +67,11 @@ passing `0` for the `count` state and a `kuiperSleep` variable for the
 `kuiper`state. Also, an `alert` method should be invoked with a message that
 says: `Sorry you have used your 5 guesses! You lose! Start again!`
 
-This `componentDidUpdate` lifecycle method will run after every render. However,
-the functionality will only execute when the conditional criteria is met.
+This `componentDidUpdate` lifecycle method won't run after initial render. But,
+it will run after every re-render. However, the functionality will only execute
+when the conditional, `if'`criteria is met.
 
-Contratulations! In this short practice you have used 3 basic React
+Congratulations! In this short practice you have used 3 basic React
 `Lifecycle Methods` with Class Components:
 
 1. `componentDidMount`
