@@ -9,7 +9,7 @@ class ClassTitan extends Component {
     this.state = {
       mood: 'CHILL',
       display: 'block',
-      isHungry: true
+      isHungry: true,
     };
   }
 
@@ -23,42 +23,42 @@ class ClassTitan extends Component {
     clearTimeout(this.setMood);
   }
 
-  hungryRender = this.state.isHungry ? (
-    <h1>If You Don't Feed Titan Soon, He Will Get Mad!</h1>
-  ) : (
-    <h1>Yum! That's better!</h1>
-  );
-
-  moodRender =
-    this.state.mood === 'CHILL' ? (
-      <div className='titan-chill'>
-        <img width=' 690' height=' 390' src={titanChill} alt='titan' />
-        <div className='button-holder'>
-          <button
-            style={{ display: this.state.display }}
-            className='mover t-button'
-            onClick={() => this.setState({ mood: 'CHILL' })}
-          >
-            Click to Feed Titan! LOL!
-          </button>
-        </div>
-      </div>
+  render() {
+    const hungryRender = this.state.isHungry ? (
+      <h1>If You Don't Feed Titan Soon, He Will Get Mad!</h1>
     ) : (
-      <>
-        <video width='690px' height='390px' controls autoPlay muted>
-          <source src={titanHungry} type='video/mp4' />
-        </video>
-        <br />
-        <button
-          className='f-button'
-          onClick={() => this.setState({ mood: 'CHILL', isHungry: false })}
-        >
-          Feed Titan
-        </button>
-      </>
+      <h1>Yum! That's better!</h1>
     );
 
-  render() {
+    const moodRender =
+      this.state.mood === 'CHILL' ? (
+        <div className='titan-chill'>
+          <img width=' 690' height=' 390' src={titanChill} alt='titan' />
+          <div className='button-holder'>
+            <button
+              style={{ display: this.state.display }}
+              className='mover t-button'
+              onClick={() => this.setState({ mood: 'CHILL' })}
+            >
+              Click to Feed Titan! LOL!
+            </button>
+          </div>
+        </div>
+      ) : (
+        <>
+          <video width='690px' height='390px' controls autoPlay muted>
+            <source src={titanHungry} type='video/mp4' />
+          </video>
+          <br />
+          <button
+            className='f-button'
+            onClick={() => this.setState({ mood: 'CHILL', isHungry: false })}
+          >
+            Feed Titan
+          </button>
+        </>
+      );
+
     return (
       <>
         <div className='titan-container'>
