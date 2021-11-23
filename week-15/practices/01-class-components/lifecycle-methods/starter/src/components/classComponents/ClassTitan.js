@@ -19,7 +19,7 @@ class Titan extends Component {
     <h1>Yum! That's better!</h1>
   );
 
-  chillRender =
+  moodRender =
     this.state.mood === 'CHILL' ? (
       <div className='titan-chill'>
         <img width=' 690' height=' 390' src={titanChill} alt='titan' />
@@ -54,7 +54,7 @@ class Titan extends Component {
         <div className='titan-container'>
           {this.hungryRender}
           <h2> Current mood: {this.state.mood} </h2>
-          {this.chillRender}
+          {this.moodRender}
         </div>
       </>
     );

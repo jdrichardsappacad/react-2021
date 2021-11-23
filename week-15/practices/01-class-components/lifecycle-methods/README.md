@@ -54,13 +54,17 @@ If you are successful, your code should resemble the code below:
 
 ```
 
+Now that you have your class component setup, let's export them and import them in 
+your `App.js`. Replace the functional components with your new class components. 
+
+
 ## componentDidUpdate
 
 Now navigate to the `ClassKuiper` component. Look at the `FunctionKuiper`
 component. Notice the `useEffect` that listens for the `guessCount` to change.
 
 Create a `componentDidUpdate` method in the `ClassKuiper` component. When the
-`guessCount` state is greater than 4, the `mySetters` function should be invoked
+`guessCount` state is greater than 4, the `myStateSetters` function should be invoked
 passing `0` for the `count` state and a `kuiperSleep` variable for the `kuiper`
 state. Also, an `alert` method should be invoked with a message that says:
 `Sorry you have used your 5 guesses! You lose! Start again!`
