@@ -177,13 +177,16 @@ Those code blocks should now look something like this:
 ```js
 
   <button
-    className='alert-button'ß
+    className='alert-button'
     onClick={() => this.handleClick()}
   >
     Alert
   </button>
 
 ```
+
+Now that you have your class component setup, let's export it and import it in 
+your `App.js`. Replace `FunctionalComponentOne` with your new class component. 
 
 Congratulations! In this short practice you have learned to:
 
