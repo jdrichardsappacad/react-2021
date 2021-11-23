@@ -33,6 +33,7 @@ This quiz tests you on your understanding of `React context`.
   <answer></answer>
   <answer></answer>
   <answer></answer>
+  <explanation></explanation>
   </question>
 </quiz>
 
@@ -43,5 +44,6 @@ This quiz tests you on your understanding of `React context`.
   <answer></answer>
   <answer></answer>
   <answer></answer>
+   <explanation></explanation>
   </question>
 </quiz>
