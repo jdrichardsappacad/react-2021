@@ -6,11 +6,15 @@ providing a single bit of data. To implement form validation, you'll use vanilla
 JS to validate that the "Name" and "Email" form fields have values before
 allowing the form to be submitted.
 
-## Phase 1: Setup Validate Function
+## Setup
 
-To do that, add a function to your component named `validate`. Use conditional
-statements to check if the `name` and `email` state variables are empty.
-If they are empty, add an appropriate validation error message to a
+- codesandbox or clone
+
+## Setup Validate Function
+
+To setup salidation, add a function to your component named `validate`. Use
+conditional statements to check if the `name` and `email` state variables are
+empty. If they are empty, add an appropriate validation error message to a
 `validationErrors` array and return the array from the function:
 
 ```js
@@ -163,9 +167,6 @@ function ContactUs(props) {
             <option value='' disabled>
               Select a phone type...
             </option>
-            {props.phoneTypes.map(phoneType => (
-              <option key={phoneType}>{phoneType}</option>
-            ))}
           </select>
         </div>
         <div>
@@ -182,10 +183,6 @@ function ContactUs(props) {
     </div>
   );
 }
-
-ContactUs.defaultProps = {
-  phoneTypes: ['Home', 'Work', 'Mobile'],
-};
 
 export default ContactUs;
 ```
@@ -207,53 +204,6 @@ validate the data as it changes so that the user would receive feedback sooner
 messages). Sometimes it's helpful to receive feedback in real-time, but
 sometimes it can be annoying to users. Consider each situation and use an
 approach that feels appropriate for your users.
-
-###
-
-You can also use a validation library like [Validator.js][validator] to add more
-sophisticated form validations.
-
-First, install the `validator` npm package:
-
-```sh
-npm install validator
-```
-
-Then import the email validator into the `./src/components/ContactUs/index.js`
-module:
-
-```js
-import isEmail from 'validator/es/lib/isEmail';
-```
-
-Now you can use the `isEmail` validator function to check if the provided
-`email` value is in fact a valid email address:
-
-```js
-const validate = () => {
-  const validationErrors = [];
-
-  if (!name) validationErrors.push('Please provide a Name');
-
-  if (!email) {
-    validationErrors.push('Please provide an Email');
-  } else if (!isEmail(email)) {
-    validationErrors.push('Please provide a valid Email');
-  }
-
-  return validationErrors;
-};
-```
-
-If you run your application again, view the form in the browser, and attempt to
-submit the form with an invalid email address, you'll receive the following
-validation error message:
-
-```plaintext
-The following errors were found:
-
-  * Please provide a valid Email
-```
 
 ## Dynamic Validation
 
@@ -278,13 +228,7 @@ useEffect(() => {
     const validationErrors = [];
 
     if (!name) validationErrors.push('Please provide a Name');
-
-    if (!email) {
-      validationErrors.push('Please provide an Email');
-    } else if (!isEmail(email)) {
-      validationErrors.push('Please provide a valid Email');
-    }
-
+    if (!email) validationErrors.push('Please provide an Email');
     return validationErrors;
   };
 
@@ -293,10 +237,6 @@ useEffect(() => {
   if (errors.length > 0) setValidationErrors(errors);
 }, [name, email]);
 ```
-
-Note that you'll want to remove the `return` statement that was originally from
-the `if` statement in the `onSubmit` because the `return` value from
-a `useEffect` should either be `undefined` or a cleanup function.
 
 ### Client-side vs server-side validation
 
