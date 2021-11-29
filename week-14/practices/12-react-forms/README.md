@@ -65,21 +65,20 @@ So far, there's nothing particularly interesting about this form. The only thing
 that looks different from regular HTML is that the `<label>` element's `for`
 attribute is `htmlFor` in React.
 
-If you're following along, be sure to update your React application's entry
-point to render the `ContactUs` component:
+If you're following along, be sure to update your React application's `App.js` to render the `ContactUs` component:
 
 ```js
-// ./src/index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ContactUs from './ContactUs';
+// ./src/App.js
+import ContactUs from './ContactUs'
 
-ReactDOM.render(
-  <React.StrictMode>
+function App() {
+  return (
     <ContactUs />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  );
+}
+
+export default App;
+
 ```
 
 At this point, you can run your application (`npm start`) and view the form in
