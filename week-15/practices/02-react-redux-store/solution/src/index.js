@@ -7,9 +7,12 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 //!!START
 import configureStore from './store';
-const store = configureStore();
 //!!END
 import './index.css';
+//!!START
+const store = configureStore();
+//!!END
+
 
 ReactDOM.render(
   <React.StrictMode>

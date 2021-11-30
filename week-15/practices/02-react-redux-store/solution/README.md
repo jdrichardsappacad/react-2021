@@ -1,64 +1,110 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-Redux Store Connection
 
-## Available Scripts
+Over the next series of short practices, you are going to learn how to:
 
-In the project directory, you can run:
+1. Connect `React` to the `Redux store`
+2. Create `actions`, `action creators` and `reducers`
+3. Learn to use the `useSelector` hook to watch `state`
+4. Learn to use the `useDispatch` hook and update the `reducer`
 
-### `yarn start`
+In this short practice, you are going to finish creating a `Redux store`, then connect the `store` to `React`.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- codesandbox or repo
 
-### `yarn test`
+## Create Root Reducer
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The [`store`][store] is going to house the `state` tree in your application.
 
-### `yarn build`
+In order to create a store in Redux, you are required to use the `createStore` method and pass it a required `rootReducer` as an argument.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before you begin, take a look at the `fruitReducer.js` that has been created for you. It is a trivial reducer that you ultimately will have no need for in this project. However, this is going to allow you to configure the `store` and connect it to `React`.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Open the `index.js` file in the `store` directory. Read through all of the comments that exist to get a handle on the code.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Import `fruitReducer` from the `fruitReducer.js` file using a relative path.
 
-### `yarn eject`
+Below the imports, create a variable called `rootReducer`. This should be
+assigned to an invoked [`combineReducers`][combine-reducers] method. The
+`combineReducers` method accepts an `object` as an argument. Inside that
+`object` you can add as many reducer functions as you need.
+Inside `combineReducers`, create a key called `fruitState` with a value of `fruitReducer`. That is all you need for now.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Look at the bottom of the file at the `configureStore` function. You will see
+that the `rootReducer` you created will be accepted as the first argument in
+that function, along with the optional `preloadedState`, (which you will pass as
+an argument, but not use in this project), and the `enhancer` argument, which
+you will pass in order to add your `Redux devtools` and `redux-logger` tool.
+Remember, these two tools were composed using a method from `Redux` called
+[`compose`][compose] and the [`applyMiddleware`][applymiddleware] middleware.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you are successful, your `rootReducer` should look like this:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```js
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  const rootReducer = combineReducers({
+    fruitState: fruitReducer,
+  });
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Connect Redux to React
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In the root of your `src` directory, open your `index.js` file. Below your
+import for `ReactDOM`, import the `Provider` component from `react-redux`. Below
+the import for the `App` component, import `configureStore` from the
+`store/index.js` file. Remember, it is a `default export`. Beneath the import
+for the `css`, create a variable called `store` and invoke the `configureStore`
+function that you defined in your `store/index.js`.
 
-### Code Splitting
+Similar to when you connected `React context` by wrapping it around your `App`
+component using a `Provider` component, you are going to do the same with your
+`Redux` [`Provider`][provider] component. Wrap the `Provider` around both the
+`BrowserRouter` and `App` components.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Like the `value` prop for `React context`, the `Provider` component expects a
+`store` prop (it must be called `store`) that will accept a value of that
+invoked `configureStore` you created above.
 
-### Analyzing the Bundle Size
+If you are successful, your code should look like this:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```js
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import { Provider } from 'react-redux';
+  import { BrowserRouter } from 'react-router-dom';
+  import App from './App';
+  import configureStore from './store';
+  import './index.css';
+  const store = configureStore();
+  
 
-### Advanced Configuration
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```
+To see that your store has successfully been connected. Go to the Browser, open
+your `devtools`, choose `Redux`. If you are successful, you should see an image
+similar to the one below.
 
-### Deployment
+![redux-store][redux-store]
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Congratulations! You have successfully:
+- created a `rootReducer` to pass to the `configureStore` method
+- connected `React` to `Redux`
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[combine-reducers]: https://redux.js.org/api/combinereducers
+[compose]: https://redux.js.org/api/compose
+[applymiddleware]: https://redux.js.org/api/applymiddleware
+[provider]:https://react-redux.js.org/api/provider
+[redux-store]:./aws-images/redux-devtools.png
+[store]:https://redux.js.org/api/store
