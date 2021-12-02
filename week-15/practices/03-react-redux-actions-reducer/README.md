@@ -80,6 +80,7 @@ To test if your reducer is working, go to your root `index.js` and:
 2. Add this code beneath your `store` variable
 
 ```js
+
   window.store = store;
   window.loadActions = loadActions;
   
