@@ -72,6 +72,8 @@ In the root `index.js` file of your `store` directory, import the articleReducer
 using the variable name, `articleReducer`. Now, add this reducer to the
 `combineReducers` function giving it a key of `articleState` and a value of `articleReducer`
 
+## Test on the Window
+
 To test if your reducer is working, go to your root `index.js` and:
 
 1. import the `loadActions` `action creator` from the `articleReducer`
