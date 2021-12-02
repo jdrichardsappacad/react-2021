@@ -8,12 +8,11 @@ import articleReducer from './articleReducer';
 /* this is the most important part of this file. you will add your reducers here
 to work with your components. you are creating one big reducer */
 const rootReducer = combineReducers({
-  //GOAL:
-  // connect the articleReducer to the store
+  
+  fruitState: fruitReducer,
   //!!START
   articleState: articleReducer,
   //!!END
-  fruitState: fruitReducer,
 });
 
 let enhancer;
