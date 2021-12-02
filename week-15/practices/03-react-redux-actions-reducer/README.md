@@ -66,7 +66,13 @@ If you are successful with this your added could should be similar to this:
 
 ```
 
-To test if your reducer is working, go to your root `index.js` and
+## Connect the Reducer to Redux
+
+In the root `index.js` file of your `store` directory, import the articleReducer
+using the variable name, `articleReducer`. Now, add this reducer to the
+`combineReducers` function giving it a key of `articleState` and a value of `articleReducer`
+
+To test if your reducer is working, go to your root `index.js` and:
 
 1. import the `loadActions` `action creator` from the `articleReducer`
 2. Add this code beneath your `store` variable
@@ -84,6 +90,8 @@ Then go to the browser. Open up the devtools `Console` tab and use this code:
   store.dispatch(loadArticles());
 
 ```
+
+
 
 If all is working correctly, you should see the `redux-logger` data in the
 console. It will show the `prev state` with an `article.entries` array of `0`,

@@ -92,6 +92,7 @@ If you are successful, your code should look like this:
   );
 
 ```
+
 To see that your store has successfully been connected. Go to the Browser, open
 your `devtools`, choose `Redux`. If you are successful, you should see an image
 similar to the one below.
@@ -99,6 +100,7 @@ similar to the one below.
 ![redux-store][redux-store]
 
 Congratulations! You have successfully:
+
 - created a `rootReducer` to pass to the `configureStore` method
 - connected `React` to `Redux`
 

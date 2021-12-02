@@ -6,10 +6,6 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 to work with your components. you are creating one big reducer */
 
 // create rootReducer here:
-const rootReducer = combineReducers({
-  articleState: articleReducer,
-  fruitState: fruitReducer,
-});
 
 /* enhancer allows you to alter the store and add functionality such as redux
  devtools, logger (similar to morgan) middleware */
