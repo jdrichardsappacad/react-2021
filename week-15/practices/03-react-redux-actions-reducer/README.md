@@ -49,7 +49,8 @@ arguments, `state` and `action`. Inside the `reducer` function, create a
 `type` `case`it should check for is `LOAD_ARTICLES`. If the `action type` is
 `loadArticles`, it should return a new copy of the `state` object and update the
 `entries` array with the `articles` payload from the `loadArticles` action
-creator. Be sure not to `mutate` state.
+creator. Be sure not to `mutate` state. Make the `articleReducer` the `default`
+export for this file.
 
 If you are successful with this your added could should be similar to this:
 
@@ -64,6 +65,8 @@ If you are successful with this your added could should be similar to this:
     }
   };
 
+  export default articleReducer;
+
 ```
 
 ## Connect the Reducer to Redux
@@ -76,7 +79,7 @@ using the variable name, `articleReducer`. Now, add this reducer to the
 
 To test if your reducer is working, go to your root `index.js` and:
 
-1. import the `loadActions` `action creator` from the `articleReducer`
+1. Import the `loadActions` `action creator` from the `articleReducer`
 2. Add this code beneath your `store` variable
 
 ```js
@@ -93,8 +96,6 @@ Then go to the browser. Open up the devtools `Console` tab and use this code:
   store.dispatch(loadArticles());
 
 ```
-
-
 
 If all is working correctly, you should see the `redux-logger` data in the
 console. It will show the `prev state` with an `article.entries` array of `0`,

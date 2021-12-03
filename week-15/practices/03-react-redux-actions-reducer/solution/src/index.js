@@ -5,12 +5,17 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
 import configureStore from './store';
+import {} from './store/articleReducer';
+import './index.css';
+//!!START
+import {loadArticles} from './store/articleReducer'
+//!!END
 const store = configureStore();
 
-window.store = store;
-window.loadActions = loadActions;
-
-import './index.css';
+//!!START
+window.store = store
+window.loadArticles = loadArticles
+//!!END
 
 ReactDOM.render(
   <React.StrictMode>

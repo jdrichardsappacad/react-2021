@@ -7,7 +7,7 @@ const LOAD_ARTICLES = 'article/loadArticles';
 export const loadArticles = () => {
   return {
     type: LOAD_ARTICLES,
-    articles
+    articles,
   };
 };
 
@@ -21,10 +21,6 @@ const articleReducer = (state = initialState, action) => {
       return state;
   }
 };
-//!!END
-//!!ADD
-const articleReducer = (state = [], action) => {
-  return state;
-};
-//!!END_ADD
+
 export default articleReducer;
+//!!END
