@@ -1,4 +1,4 @@
-# Recall finding information based on parameters
+# (Recall) Finding Information Based on Parameters
 
 In this short practice, you will apply the knowledge you have in order to
 complete the `SingleArticle` component.

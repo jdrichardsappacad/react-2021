@@ -54,7 +54,7 @@ Notice in the terminal that you are now seing a Warning, `React Hook useEffect`
 `dependency array`. This is a [warning]:[react-redux-hooks] from ESLint.
 `useEffect` thinks that the `dispatch` function or any function not declared
 inside the function could potentially change. While, this will never happen for
-the `dispatch`, it is still safe to place `dispatch` in the dependency array`.
+the `dispatch`, it is still safe to place `dispatch` in the dependency array.
 The `useEffect` will still only run one time.
 
 
@@ -98,7 +98,7 @@ Route at the bottom of the file. The route will mount the `SingleArticle`
 component and pass the id of that article in the `url` using the optional
 parameter `:id`.
 
-In your `JSX`, delete all of the `li` elements. Map through the `articles array
+In your `JSX`, delete all of the `li` elements. Map through the `articles` array
 and create an `li` element that returns a `NavLink` for each title. Don't forget
 to add a `key` using the `id` from each article. When you click on each link,
 you should see a hard coded article based on the `SingleArticle` component.
