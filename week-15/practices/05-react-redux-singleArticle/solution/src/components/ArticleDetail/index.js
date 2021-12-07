@@ -1,8 +1,10 @@
-const ArticleDetail = () => {
+import { NavLink } from 'react-router-dom';
+
+const ArticleDetail = ({ title, id }) => {
   return (
-    <div>
-      <h1>Article Detail Component</h1>
-    </div>
+    <li>
+      <NavLink to={`/article/${id}`}>{title}</NavLink>
+    </li>
   );
 };
 export default ArticleDetail;

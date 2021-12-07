@@ -1,44 +1,43 @@
-
 //!!START
-import {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {NavLink} from 'react-router-dom'
 //!!END
 import { Route, Switch } from 'react-router-dom';
+//!!START
+import { loadArticles } from '../../store/articleReducer';
+//!!END
+
 import SingleArticle from '../SingleArticle';
 //!!START
-import {loadArticles} from '../../store/articleReducer'
+import ArticleDetail from './ArticleDetail'
 //!!END
 
 const ArticleList = () => {
-
-//!!START
-  const dispatch = useDispatch()
+  //!!START
   const articles = useSelector(state=>state.articleState.entries)
-
-
-  useEffect(() => {
+  //!!END
+  
+  //!!START
+  useEffect(()=>{
     dispatch(loadArticles())
-  }, [dispatch])
+  })
+  //!!END
 
-//!!END
   return (
     <div>
       <h1>ArticleList</h1>
-     
-
-      {/** add hiding syntax for the {articles.map*/}
       <ol>
-         {/**Show <li>s in the beginning
+        {/*!!START */}
+        {articles.map({title, id})=>(
+          <ArticleDetail key={id} id={id} title={title}/>
+        )}
+        {/*!!END */}
+        {/*!!ADD */}
         <li>Gilligans Island. Is it true?</li>
         <li>A Baseball Moment</li>
         <li>Poke Moment</li>
         <li>Cool Cats</li>
         <li>Why Am I At Home</li>
-       */}
-        {articles.map(({title, id}) => (
-          <li key={id}><NavLink to={`/article/${id}`}>{title}</NavLink></li>
-        ))}
+        {/*!!END_ADD */}
       </ol>
 
       <Switch>

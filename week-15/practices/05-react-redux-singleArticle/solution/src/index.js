@@ -1,27 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//!!START
 import { Provider } from 'react-redux';
-//!!END
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-//!!START
+
 import configureStore from './store';
-const store = configureStore();
-//!!END
+import {} from './store/articleReducer';
 import './index.css';
+//!!START
+import {loadArticles} from './store/articleReducer'
+//!!END
+const store = configureStore();
+
+//!!START
+window.store = store
+window.loadArticles = loadArticles
+//!!END
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*!!START */}
     <Provider store={store}>
-      {/*!!END */}
       <BrowserRouter>
         <App />
       </BrowserRouter>
-      {/*!!START */}
     </Provider>
-    {/*!!END */}
   </React.StrictMode>,
   document.getElementById('root')
 );

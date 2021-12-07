@@ -1,36 +1,49 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+
+//!!START
+import {useEffect} from 'react'
+import {useDispatch, useSelector} from 'react-redux'
+import {NavLink} from 'react-router-dom'
+//!!END
 import { Route, Switch } from 'react-router-dom';
 import SingleArticle from '../SingleArticle';
-import ArticleDetail from '../ArticleDetail';
-import { loadArticles } from '../../store/articleReducer';
+//!!START
+import {loadArticles} from '../../store/articleReducer'
+//!!END
 
 const ArticleList = () => {
-  const dispatch = useDispatch();
 
-  const articles = useSelector((state) => state.articleState.entries);
+//!!START
+  const dispatch = useDispatch()
+  const articles = useSelector(state=>state.articleState.entries)
+
 
   useEffect(() => {
-    dispatch(loadArticles());
-  }, [dispatch]);
+    dispatch(loadArticles())
+  }, [dispatch])
 
+//!!END
   return (
     <div>
       <h1>ArticleList</h1>
+     
+
+      {/** add hiding syntax for the {articles.map*/}
       <ol>
-        {articles.map(({ title, id }) => (
-          <ArticleDetail key={id} id={id} title={title} />
+         {/**Show <li>s in the beginning
+        <li>Gilligans Island. Is it true?</li>
+        <li>A Baseball Moment</li>
+        <li>Poke Moment</li>
+        <li>Cool Cats</li>
+        <li>Why Am I At Home</li>
+       */}
+        {articles.map(({title, id}) => (
+          <li key={id}><NavLink to={`/article/${id}`}>{title}</NavLink></li>
         ))}
       </ol>
 
       <Switch>
         <Route path='/article/:id'>
-          {/*!!START */}
-          <SingleArticle articles={articles} />
-          {/*!!END */}
-          {/*!!ADD */}
           <SingleArticle />
-          {/*!!END_ADD */}
         </Route>
       </Switch>
     </div>

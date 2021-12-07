@@ -1,16 +1,19 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import fruitReducer from './fruitReducer';
+//!!START
 import articleReducer from './articleReducer';
-
+//!!END
 /* combineReducers turns all the reducer functions into one big reducer function
  */
 /* this is the most important part of this file. you will add your reducers here
 to work with your components. you are creating one big reducer */
 const rootReducer = combineReducers({
-  
-  fruitState: fruitReducer,
+  //GOAL:
+  // connect the articleReducer to the store
+  //!!START
   articleState: articleReducer,
-
+  //!!END
+  fruitState: fruitReducer
 });
 
 let enhancer;
@@ -43,7 +46,7 @@ the server */
 
 /*this is the variable you will use in your root index.js to give Redux store
 access to the full application */
-const configureStore = preloadedState => {
+const configureStore = (preloadedState) => {
   return createStore(rootReducer, preloadedState, enhancer);
 };
 
