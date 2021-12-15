@@ -31,9 +31,7 @@ Component sub-class.
 
 ```js
 
-  render(){
-
-}
+  render(){}
 
 ```
 
