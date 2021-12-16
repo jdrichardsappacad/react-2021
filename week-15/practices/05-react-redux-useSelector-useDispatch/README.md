@@ -5,8 +5,8 @@ the `Redux store` with data, and `subscribing` to or listening for changes to
 that data in a component.
 
 ## Setup
-codesanbox or repo
 
+codesanbox or repo
 
 ## useDispatch
 
@@ -28,6 +28,7 @@ If you are successful, your code should look similar to this:
 
 ```js
 
+    import {useEffect} from 'react';
     import {useDispatch} from 'react-redux'
     import { Route, Switch } from 'react-router-dom';
 
@@ -57,7 +58,6 @@ inside the function could potentially change. While, this will never happen for
 the `dispatch`, it is still safe to place `dispatch` in the dependency array.
 The `useEffect` will still only run one time.
 
-
 ## useSelector
 
 Now the `ArticleList` needs to subscribe to the `store` and listen changes in
@@ -66,17 +66,17 @@ handles this functionality.
 
 Import `useSelector` from `react-redux`. Below the `useDispatch`, create a
 variable called `articles` and assign it the value of an invoked `useSelector`.
-The `useSelector` takes a callback function as an argument. The first argument
-in argument in the callback function is the entire Redux `state`. Place state as
+The `useSelector` takes a callback function as an argument. The argument in the
+callback function is the entire Redux `state`. Place state as
 the argument of the callback function, then return `console.log('state',
-state)`. Now take a look in the browser devtools' Console. The state flad should
-show the entire state of the `store`. However, you only need the `entries` state
+state)`. Now take a look in the browser devtools' Console. The log should
+show the entire state of the `store`. However, you only need the `entries` key
 from the `articleReducer`. Notice in the console that, in order to key into the
 article state, you must first key into the reducer function. This function was
-named in the `store/index.js` file in the `combineReducers` function. In the
-`useSelector` console, key into the state by adding `articleState`, which is how
-it was named in the `store/index.js` file. Now when you check the devtools
-Console, you should only see the `articleReducer` state. Key into the `entries`
+named `articleState` in the `store/index.js` file in the `combineReducers`
+function. In the `useSelector` console, key into the state by adding
+`articleState`. Now when you check the devtools Console, you should only see
+the `articleReducer` state. Key into the `entries`
 array in the `useSelector`. In the Browser, only the `entries` array should now
 show. Finally, inside the `useSelector`, remove the `console.log('state')` part
 and just return the portion that returns the `entries` array.
@@ -106,6 +106,8 @@ Reference the `path` in the `Route`s below to create the links. However, what is
 important is the url. With each click, the `id` in the url address should
 change.
 
+*Dont forget to import NavLink from react-router-dom!*
+
 If you are successful, your code should look similar to this:
 
 ```js
@@ -122,7 +124,6 @@ Congratulations! You have now learned to:
   `store`.
 - use the `useSelector` hook to `subscribe` to the `store` and listen for
   changes in `state`.
-
 
 [react-redux]: https://react-redux.js.org/introduction/getting-started
 [react-redux-hooks]: https://react-redux.js.org/api/hooks
