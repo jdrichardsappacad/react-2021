@@ -14,7 +14,7 @@ You will start by working in the `store/articleReducer.js` file.
 Since there is no database, import the data that is stored in
 `scr/data/data.json` assigning it to the variable name `articles`. This data
 will be used as the `payload` for the `action creator` you are about to create.
-Define an `action creator` called `loadArticles`. It should have a `type` key
+Define and export an `action creator` called `loadArticles`. It should have a `type` key
 with a `constant variable` value, `LOAD_ARTICLES`. Make sure your
 `LOAD_ARTICLES` `constant` variable definition is assigned a string
 `article/loadArticles`. The `loadArticles` `action creator` should also have a
@@ -27,7 +27,7 @@ import articles from `../data/data.json`
 
 const LOAD_ARTICLES = 'article/loadArticles';
 
-const loadArticles = () => {
+export const loadArticles = () => {
   return {
     type: LOAD_ARTICLES,
     articles,
@@ -62,6 +62,8 @@ If you are successful with this your added could should be similar to this:
     switch (action.type) {
       case LOAD_ARTICLES:
         return { ...state, entries: [...action.articles] };
+      default:
+        return state;
     }
   };
 
@@ -80,6 +82,7 @@ using the variable name, `articleReducer`. Now, add this reducer to the
 To test if your reducer is working, go to your root `index.js` and:
 
 1. Import the `loadActions` `action creator` from the `articleReducer`
+    - *remember that named exports need to be wrapped in { } when importing.*
 2. Add this code beneath your `store` variable
 
 ```js
