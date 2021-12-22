@@ -59,7 +59,7 @@ Root
 ## Update Context Value
 
 If you took a look at your console tab in DevTools and saw a warning message
-from React about a missing value prop, we most definitely did not pass one into
+from React about a missing value prop, you most definitely did not pass one into
 our `HoroscopeContext` provider this time, so let's do that with some state!
 
 Back to our `HoroscopeProvider` component (`src/context/HoroscopeContext.js`),
@@ -73,7 +73,9 @@ Once you have created your `currentSign` state, pass `currentSign` and
 something like this:
 
 ```javascript
-<HoroscopeContext.Provider value={{currentSign, setCurrentSign}}>
+
+  <HoroscopeContext.Provider value={{currentSign, setCurrentSign}}>
+
 ```
 
 Now take a look at your Component tab in DevTools again! If you click on your
@@ -97,10 +99,12 @@ context provider. In our case, the object will look like below, which is why we
 can destructure:
 
 ```javascript
-{
-  currentSign: "Leo",
-  setCurrentSign: function (f)
-}
+
+  {
+    currentSign: "Leo",
+    setCurrentSign: function (f)
+  }
+
 ```
 
 Now that we have our `currentSign`, we will need to grab some details about this
@@ -116,7 +120,8 @@ need.
 
 Below is the object we're trying to access if our `currentSign` is "Leo".
 
-```javascript
+```js
+
  {
     "name": "Leo",
     "date": "Jul 23 - Aug 22",
@@ -125,6 +130,7 @@ Below is the object we're trying to access if our `currentSign` is "Leo".
     "backgroundImg":"https://www.horoscope.com/images-US/signs/profile-leo.png",
     "match": "Libra"
   }
+  
 ```
 
 Once you have successfully grabbed the object, update your `<img>` src, `<h1>`,
