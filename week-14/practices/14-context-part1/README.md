@@ -2,8 +2,8 @@
 
 In this practice, you will:
 
-- Set up a Context Provider and Consumer Walkthrough to set the value of a
-  context and read it in a component
+- Set up a React Context `Provider` and `Consumer` to set the `value` of a
+  context and read it in a component.
 
 ## Setup
 
@@ -23,56 +23,55 @@ At the top of this file, import `createContext` from `react` and create your
 context called `HoroscopeContext`. If you're lost, don't forget to check out
 [documentation][create-context]. Make sure to `export` your `HoroscopeContext`.
 
-Awesome! We have created our context, now let's use our provider.
+Awesome! We have created our context, now let's use our `Provider` component.
 
 ## Create Context Provider
 
 In your `src/index.js` file, import `HoroscopeContext` from our `context`
 directory.
 
-Inside your `Root` functional component, wrap your `<App/>` with the
-`HoroscopeContext.Provider` component. This is how you will allow your entire
-application access to your horoscope context.
+Inside your `Root` functional component, wrap `<App/>` with the
+`HoroscopeContext.Provider` component. This is how you will give horoscope
+context to your entire application.
 
-Let's make sure things are going smoothly, so make sure your server is running
-(`npm start` at the root of your starter, which is the same level as your
-`package.json`).
+Let's make sure things are going smoothly.
 
-We will now navigate to your browser and open the DevTools. If you look at your
-console, you should see a warning message from React that says your
-`Context.Provider` is missing a `value` prop. This means that we have
-successfully created our context provider, but now we must deal with this
-warning message.
+Navigate to your browser and open the DevTools. If you look at your console, you
+should see a warning message from React that says your `Context.Provider` is
+missing a `value` prop. This means that we have successfully created our context
+provider, but now we must deal with this warning message.
 
 ## Consume the Context
 
 As you have seen in your DevTools, React is warning us that we need to have a
-`value` prop in our `Context.Provider`. This `value` prop is what holds all
-of our global state. Our goal is to create that pass a value in the `value` prop
-and consume that context.
+`value` prop in our `Context.Provider`. This `value` prop is what holds all of
+our global state. Our goal is to pass a value in the `value` prop object and
+later consume that context value.
 
 In the `HoroscopeContext.Provider` component, include your `value` prop and set
 it to an object with the key of `sign` and value of `Leo`. (Feel free to use any
-other sign.) We're expecting the object to look like below:
+other sign.) The object should look like below:
 
-```javascript
-{"sign": "Leo"}
+```js
+
+  { sign: "Leo" }
+
 ```
 
 If you refresh your browser, the warning message should disappear now.
 
-Now it is time to consume the context, so navigate to your `Detail` component.
-At the top, import useContext from react. Next, import HoroscopeContext from
-context/HoroscopeContext.js. Inside your `Detail` component, create a variable, `HoroscopeObj`
-and have it equal to `useContext` invoked with `HoroscopeContext` passed in as
-your argument.
+Now it is time to consume the context. Navigate to your `Detail` component. At
+the top, import `useContext` from react. Next, import `HoroscopeContext` from
+`context/HoroscopeContext.js`. Inside your `Detail` component, create a
+variable, `HoroscopeObj` and have it equal to `useContext` invoked with
+`HoroscopeContext` passed in as your argument.
 
 ### It's time to test!
 
-Make sure you have your server running with `npm start`. Navigate to your
-browser's DevTools and click on your `Component` tab, which comes from Google
-extension [React Developer Tools][react-devtools]. You should be able to see
-your component tree and most importantly, your `Context.Provider`.
+Navigate to your browser's DevTools and click on your `Component` tab, which
+comes from Google extension [React Developer Tools][react-devtools]. You should
+be able to see your component tree and most importantly, your
+`Context.Provider`.
 
 If you click on your `Context.Provider`, you should see your `value` under the
 `prop` section. That is what your global state looks like.
