@@ -40,14 +40,16 @@ Open your browser console and take a look at the object you received.
 If you are successful your code looks similar to the code below:
 
 ```js
-useEffect(() => {
-  const fetchFortnite = async () => {
-    const data = await fetch('https://fortnite-api.com/v2/news');
-    const response = await data.json();
-    console.log(response);
-  };
-  fetchFortnite();
-}, []);
+
+  useEffect(() => {
+    const fetchFortnite = async () => {
+      const data = await fetch('https://fortnite-api.com/v2/news');
+      const response = await data.json();
+      console.log(response);
+    };
+    fetchFortnite();
+  }, []);
+
 ```
 
 ## Parse the data
@@ -66,22 +68,21 @@ Each object in this array contains these fields:
 - title
 
 Can you find it? Can you now log the data so that you only see the array with
-these objects? If so, then update the `serverData` slice of state with this
-array.
+these objects? Create a slice of state called `serverData` with an updater
+function called `setServerData`. There should be no initial value. Update the
+`serverData` slice of state with this array.
 
 ## Display the data
-
-Create a slice of state called `serverData` with an updater function called  `setServerData`. There should be no initial value.
 
 Comment out the `h1` tag that says `No Data to Display`.
 
 Create another `return` below the commented code.
 
-For each object in the array, create a `div` with a class of `serverContainer`.
-Use an `h1` tag to display the `title`, an `h2` tag to display the `body` and an
-`img` tag to display the image using the parsed `image` field as the `src` and
-the `title` as the `alt` value.
-Don't forget to add a key for each object listed using the `id`.
+Iterate through the array and return a `div` with a class of `serverContainer`
+for each object. Use an `h1` tag to display the `title`, an `h2` tag to display
+the `body` and an `img` tag to display the image. Use the parsed `image` field
+as the `src` and the `title` as the `alt` value. Don't forget to add a `key` for
+each object listed using the `id`.
 
 It takes time to retrieve data that you are receiving from a 3rd party api.
 Above the `return` you've already created, add a conditional where, if the
@@ -93,29 +94,31 @@ If you were successful in your attempts, the rest
 of your code may look like the code below:
 
 ```js
-useEffect(() => {
-  const fetchFortnite = async () => {
-    const data = await fetch('https://fortnite-api.com/v2/news');
-    const response = await data.json();
-    const parsedData = response.data.br.motds;
-    setServerData(parsedData);
-  };
-  fetchFortnite();
-}, []);
 
-if (!serverData) return <h1>No Data To Display</h1>;
+  useEffect(() => {
+    const fetchFortnite = async () => {
+      const data = await fetch('https://fortnite-api.com/v2/news');
+      const response = await data.json();
+      const parsedData = response.data.br.motds;
+      setServerData(parsedData);
+    };
+    fetchFortnite();
+  }, []);
 
-return (
-  <div>
-    {serverData.map(data => (
-      <div className='serverContainer' key={data.id}>
-        <h1 className='title'>{data.title}</h1>
-        <h2 className='body'>{data.body}</h2>
-        <img className='img' src={data.image} alt={data.title} />
-      </div>
-    ))}
-  </div>
-);
+  if (!serverData) return <h1>No Data To Display</h1>;
+
+  return (
+    <div>
+      {serverData.map(data => (
+        <div className='serverContainer' key={data.id}>
+          <h1 className='title'>{data.title}</h1>
+          <h2 className='body'>{data.body}</h2>
+          <img className='img' src={data.image} alt={data.title} />
+        </div>
+      ))}
+    </div>
+  );
+
 ```
 
 [fortnite]: https://fortnite-api.com

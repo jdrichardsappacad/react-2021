@@ -35,9 +35,11 @@ order. Pass the custom hook an argument of an empty object literal with a key of
 the top of the file.
 
 ```js
-const [name, setName, nameErrors] = useTextInput({
-  validations: textInputValidators,
-});
+
+  const [name, setName, nameErrors] = useTextInput({
+    validations: textInputValidators,
+  });
+
 ```
 
 ## Write the Custom Hook
@@ -52,7 +54,9 @@ respectively.
 The function definition should look like:
 
 ```js
-export const useTextInput = ({ validations = [], defaultValue = '' }) => {};
+
+  export const useTextInput = ({ validations = [], defaultValue = '' }) => {};
+
 ```
 
 In the body of the hook, invoke the `useState` hook and pass it the

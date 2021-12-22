@@ -17,10 +17,10 @@ Create a functional component called `BaseStats` in your `src` folder. It should
 have a `div` with a class of `base-stats` and an `h1` with the text "BaseStats".
 Import the `BaseStates.css` file into your component.
 
-Next, add the `BaseStats` component to your `App.js` component. It should be
+Add the `BaseStats` component to your `App.js` component. It should be
 placed below the `Showcase` component. Test it in the Browser.
 
-Next, you are going to create an object inside your `App.js` called `baseStats`.
+Create an object inside your `App.js` called `baseStats`.
 It should look like this:
 
 ```js
@@ -41,6 +41,8 @@ functional component.
 Go to your browser, go to the Browser DevTools and open your React DevTools.
 Click on the BaseStats component. Under `props` you should see your stats props
 object.
+
+![react-devtools-props][react-devtools-props]
 
 ## Use props object in the child component
 
@@ -76,10 +78,10 @@ variable you destructured from props. Your code should look something like:
 </table>
 ```
 
-To make your code more concise and practice the DRY principal, destructure your
-props variables in the argument for the `BaseState` functional component. 
-Refactor your JSX to reflect these variables. You should only call the variables
-hp, attack, defense, and speed in your JSX. 
+Next goal is to make your code more concise and practice the DRY principal. In
+the argument for the `BaseStats` functional component, destructure the variables
+from the props object. Refactor your JSX to reflect these variables. You should
+only call the variables hp, attack, defense, and speed in your JSX. 
 
 ** Remember, you can destructure a nested object.
 
@@ -126,3 +128,4 @@ In this practice you have learned:
 6. One way of using the onClick EventHandler
 
 [props-starter]: ./starter
+[react-devtools-props]: ./images/react-devtools-props.png

@@ -15,26 +15,31 @@ When you finish this article you should:
 
 ## Setup for following along
 
-If you want to follow along, create a React application using create-react-app with the @appacademy/react-v17 template:
+If you want to follow along, go to `https://codesandbox.io/s/base-starter-f5h7r`
+and fork this template to your sandbox account.
 
-`npx create-react-app useeffect-rendering --template @appacademy/react-v-17`
+You could also create a `create-react-app` application as you did in the
+previous practice.
 
 ## Create a Main.js Component
 
 In your `src` folder, create a file called `Main.js`. Create a functional
-component called Main with an `h1` with text Main Component and give it a default export.
+component called Main with an `h1` with text Main Component and give it a
+default export.
 
 **Main.js**
 
 ```js
-const Main = () => {
-  return (
-    <div>
-      <h1>Main Component</h1>
-    </div>
-  );
-};
-export default Main;
+
+  const Main = () => {
+    return (
+      <div>
+        <h1>Main Component</h1>
+      </div>
+    );
+  };
+  export default Main;
+
 ```
 
 Add the `Main` component to your `App.js` by importing it and replacing
@@ -43,17 +48,19 @@ the `h1` tag with the `Main` component.
 **App.js**
 
 ```js
-import Main from './Main';
 
-function App() {
-  return (
-    <>
-      <Main />
-    </>
-  );
-}
+  import Main from './Main';
 
-export default App;
+  function App() {
+    return (
+      <>
+        <Main />
+      </>
+    );
+  }
+
+  export default App;
+
 ```
 
 ### UseEffect With No Dependency Array
@@ -64,24 +71,27 @@ subsequent re-render.
 Place the code below in your `Main` Component file.
 
 ```js
-import { useEffect } from 'react';
 
-const Main = () => {
-  useEffect(() => {
-    console.log('UseEffect1 Ran');
-  });
+  import { useEffect } from 'react';
 
-  return (
-    <div>
-      {console.log('rendered or re-rendered')}
-      <h1>Main Component</h1>
-    </div>
-  );
-};
-export default Main;
+  const Main = () => {
+    useEffect(() => {
+      console.log('UseEffect1 Ran');
+    });
+
+    return (
+      <div>
+        {console.log('rendered or re-rendered')}
+        <h1>Main Component</h1>
+      </div>
+    );
+  };
+  export default Main;
+
 ```
 
-Notice that the useEffect has been called with just one argument, the callback function.
+Notice that the useEffect has been called with just one argument, the callback
+function.
 
 `npm start` your project, open your Dev Tools and choose the `Console`
 
@@ -89,8 +99,10 @@ Refresh your page and look in the Dev Tools Console.
 You should see:
 
 ```md
-rendered or red-rendered
-UseEffect1 Ran
+
+  rendered or red-rendered
+  UseEffect1 Ran
+
 ```
 
 Now you have seen that the useEffect runs after the first render. But what about
@@ -109,7 +121,9 @@ change the value of the `toggleOne` state to the opposite value. ( i.e. If the
 value is true then it should change to false and vice-versa).
 
 ```js
-<button onClick={() => setToggleOne(!toggleOne)}>ToggleOne</button>
+
+  <button onClick={() => setToggleOne(!toggleOne)}>ToggleOne</button>
+
 ```
 
 Now test again in the Browser Dev Tools' console.
@@ -117,8 +131,10 @@ Now test again in the Browser Dev Tools' console.
 Each time you click the `ToggleOne` button you should see an additional
 
 ```md
-rendered or red-rendered
-UseEffect1 Ran
+
+  rendered or red-rendered
+  UseEffect1 Ran
+
 ```
 
 ### UseEffect with an Empty Dependency Array
@@ -132,8 +148,10 @@ Go to your Browser's Dev Tools Console and test again. On the first render you
 will again see:
 
 ```md
-rendered or red-rendered
-UseEffect1 Ran
+
+  rendered or red-rendered
+  UseEffect1 Ran
+
 ```
 
 However, click the `ToggleOne` button repeatedly. Every click updates the state,
@@ -142,7 +160,9 @@ as the second argument to the useEffect, the useEffect never runs again. You
 will instead only see:
 
 ```md
-rendered or red-rendered
+
+  rendered or red-rendered
+
 ```
 
 followed by a number incrementing next to that log for each click.
@@ -165,17 +185,21 @@ be identical to the previous button except for the name.
 Add another useEffect beneath the first one that looks like the useEffect below:
 
 ```js
-useEffect(() => {
-  console.log('UseEffect2 Ran');
-}, [toggleTwo]);
+
+  useEffect(() => {
+    console.log('UseEffect2 Ran');
+  }, [toggleTwo]);
+
 ```
 
 Here is the new order. When the page renders, you will see
 
 ```md
-rendered or red-rendered
-UseEffect1 Ran
-UseEffect2 Ran
+
+  rendered or red-rendered
+  UseEffect1 Ran
+  UseEffect2 Ran
+
 ```
 
 Now, when you click on the `ToggleTwo` button it will trigger an order of
@@ -190,7 +214,9 @@ events:
 Notice if you click the `toggleOne` button the only thing that happens is
 
 ```md
-rendered or red-rendered
+
+  rendered or red-rendered
+
 ```
 
 is logged.
@@ -207,11 +233,13 @@ In your second useEffect, beneath the `console.log`, create an if conditional
 that checks to see if `toggleTwo` is true. If it is true, log `toggleTwo slice of state is true so this code runs`. Your useEffect should look like this now:
 
 ```js
-useEffect(() => {
-  console.log('UseEffect1 Ran');
-  if (toggleTwo)
-    console.log('toggleTwo slice of state is true so this code runs');
-}, [toggleTwo]);
+
+  useEffect(() => {
+    console.log('UseEffect1 Ran');
+    if (toggleTwo)
+      console.log('toggleTwo slice of state is true so this code runs');
+  }, [toggleTwo]);
+
 ```
 
 You will only see this second console log in the console when the `toggleTwo`
@@ -246,11 +274,13 @@ In the body of the callback function, add a `setInterval` function that looks
 like the one below:
 
 ```js
-useEffect(() => {
-  setInterval(() => {
-    console.log(`UseEffect3 with interval number ${count} is running`);
-  }, 1000);
-}, [count]);
+
+  useEffect(() => {
+    setInterval(() => {
+      console.log(`UseEffect3 with interval number ${count} is running`);
+    }, 1000);
+  }, [count]);
+
 ```
 
 Open your Console again in the Browser Dev Tools. Click on the increment button
@@ -266,12 +296,14 @@ the setInterval function to a variable called `myInterval`.
 Then below the `myInterval` variable, use the cleanup function as written below:
 
 ```js
-return () => {
-  console.log(
-    `UseEffect3 cleanup ran.\nsetInterval number ${count} is being cleaned out`
-  );
-  clearInterval(interval);
-};
+
+  return () => {
+    console.log(
+      `UseEffect3 cleanup ran.\nsetInterval number ${count} is being cleaned out`
+    );
+    clearInterval(interval);
+  };
+
 ```
 
 Test in your Browser. Now you should notice that only one setInterval will run

@@ -3,7 +3,7 @@ import { NavLink, useRouteMatch, Switch, Route } from 'react-router-dom';
 import MovieDetails from '../MovieDetails';
 
 function Movies(props) {
-  const { path, url } = useRouteMatch();
+ 
 
   return (
     <div className='comp orange'>
@@ -11,12 +11,12 @@ function Movies(props) {
       <nav>
         {props.movies.map((movie) => (
           <span key={movie.id}>
-            <NavLink to={`${url}/${movie.id}`}>{movie.title}</NavLink> |
+            <NavLink to={`/movies/${movie.id}`}>{movie.title}</NavLink> |
           </span>
         ))}
       </nav>
       <Switch>
-        <Route path={`${path}/:movieId`}>
+        <Route path={`/movies/:movieId`}>
           <MovieDetails movies={props.movies} />
         </Route>
       </Switch>

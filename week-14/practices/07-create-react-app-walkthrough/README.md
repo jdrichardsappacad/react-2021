@@ -78,8 +78,10 @@ start it so that you can see the error messages that will show up.
 Next, open up `src/App.js` and remove the following lines.
 
 ```js
-import logo from './logo.svg';
-import './App.css';
+
+  import logo from './logo.svg';
+  import './App.css';
+
 ```
 
 Then, delete everything between the parentheses of the `return` statement and
@@ -87,10 +89,12 @@ replace it with some JSX that shows an `h1` element with the message "Hello from
 App". Your edits should result in a file that has this content.
 
 ```js
-// ./src/App.js
-function App() {
-  return <h1>Hello from App</h1>;
-}
+
+  // ./src/App.js
+  function App() {
+    return <h1>Hello from App</h1>;
+  }
+
 ```
 
 When you save that file, it will try to build your project again, and this time,
@@ -98,11 +102,13 @@ complain about the missing `reportWebVitals` file. Open up `src/index.js` and
 remove the lines:
 
 ```js
-import reportWebVitals from './reportWebVitals';
 
-// Some code ...
+  import reportWebVitals from './reportWebVitals';
 
-reportWebVitals();
+  // Some code ...
+
+  reportWebVitals();
+
 ```
 
 You can delete the big comment at the bottom of the file, too, because it will
@@ -110,18 +116,20 @@ no longer be relevant. When you complete those edits, you should now see "Hello
 from App" in the browser. The `src/index.js` file should look like this.
 
 ```js
-// ./src/index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  // ./src/index.js
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import './index.css';
+  import App from './App';
+
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+
 ```
 
 At this point, the application will build, but you will still see an error in
@@ -133,14 +141,14 @@ error in your browser will go away. The updated manifest file should look like
 this.
 
 ```json
-{
-  "short_name": "React Template",
-  "name": "Create React App Template",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
+  {
+    "short_name": "React Template",
+    "name": "Create React App Template",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }
 ```
 
 The title of the web page still reads "React App". To change that, open up the
@@ -152,7 +160,7 @@ style rules should be defined. Remove all the default styling in the
 `src/index.css` file and add this comment:
 
 ```css
-/* TODO Add site wide styles */
+  /* TODO Add site wide styles */
 ```
 
 **Add and commit your files.** This is the baseline application. From here on
