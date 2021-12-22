@@ -39,12 +39,11 @@ that you will be sending in the url. In this case it will be the id of the movie
 that the user clicks on.
 
 Next, create a `nav` element underneath the `h1` tag. Inside the `nav`, map
-through the `movies` prop and create a `NavLink` for each movie with a url that
-starts with `/movies` and chains the actusl `id` of the movie. Use the `id` that
-you receive from each mapped movie object as the `movieId`. The clickable text
-for the link should be the title of the movie.
-
-e.g. `/movies/${movie.id}`
+through the `movies` prop. Return a `NavLink` for each movie. The url for the
+`NavLink` should start with `/movies` followed by a `/` and the actual `id` of
+the single movie. Use the `id` that you receive from each mapped movie object as
+the `movieId`. The clickable text that the user sees for the `NavLink` should
+dynamically be the title of the movie.
 
 \*\* Hint, hint - Did you remember your imports?
 
@@ -52,29 +51,6 @@ Each time you click a link you should now see the MovieDetails Component with
 the `h1` text `MovieDetails Component` in the Browser beneath the NavBar. You
 should also see the movie id change in the url address bar.
 
-## Dynamic Route
-
-Instead of hard coding the mapped movie title route and path in your
-`/Movies/index.js` component, you should now make it dynamic. Import the
-[`useRouteMatch`][use-route-match] hook from `react-router-dom`.
-
-At the top of the Movies function, destructure the available url and path from
-an invoked useRouteMatch function .
-
-```js
-const { path, url } = useRouteMatch();
-```
-
-Be sure to `console.log` the path and url variables to see their values.
-
-Now in your NavLink, replace `/movies` with `${url}`. This will dynamically grab
-the current url in the address bar. ( That is the portion that comes after your
-localhost:3000 )
-
-In your Route, change the `/movies` portion in your path to `${path}`.
-
-When you click the links in the browser you should have the same behavior as
-before, however you are now dynamically using your nested route.
 
 ## Rendering Your Movie Details
 
@@ -88,10 +64,12 @@ Now you will use the [useParams][use-params] hook. This hook will allow you to
 capture the movie id from the url.
 
 Inside the `MovieDetails` function create a destructured `movieId` variable and
-assign it to an invoked useParams (`useParams()`). 
+assign it to an invoked useParams hook. 
 
 ```js
+
 const { movieId } = useParams();
+
 ```
 
 Now `console.log` the `movieId` variable and take a look in your browser console
@@ -120,4 +98,4 @@ of the techniques you used:
 
 [starter]: ./starter 
 [use-params]: https://reactrouter.com/web/api/Hooks/useparams 
-[use-route-match]: https://reactrouter.com/web/api/Hooks/useroutematch
+
