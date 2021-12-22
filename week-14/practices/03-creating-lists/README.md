@@ -29,7 +29,7 @@ name to import the variable. Import the moves array from `data.js`
 You are going to list out all of the potential moves of this particular Pokemon.
 
 Create an unordered list beneath the `h1` tag.
-Inside the unordered list, you will map through the `moves` array that you
+Inside the unordered list, you will `map` through the `moves` array that you
 imported.
 
 Each item that you map should return a list item with the id number and the
@@ -92,12 +92,13 @@ by using the spread operator and the item variable name.
 This says, send all of the values in this item as props to the
 Pokemove component.
 
-Next, in your `PokeMoveCard` component, destructure the props into your
-component. Now, go to your React DevTools and click on each PokeMoveCard
-component to see the props available to each rendered component.
+Next, in your `PokeMoveCard` component, destructure the `id`, `type` `move` and
+`level` props in your component argument. Go to your React DevTools and click on
+each PokeMoveCard component to see the props available to each rendered
+component.
 
-Add the values, like below, to the PokeMove component. Remember to give
-the li a class of `poke-move-card`.
+Add the destructured props, like below, to the PokeMove component. Remember to
+give the li a class of `poke-move-card`.
 
 ```js
 return (
@@ -118,4 +119,4 @@ Congratulations! In this practice you have learned:
 4. Returning a component instead of an li element in your `.map` function
 
 [lists-starter]: ./starter
-[keys-and-lists]: https://reactjs.org/docs/lists-and-keys.html
+[keys-and-lists]: https://beta.reactjs.org/learn/rendering-lists#keeping-list-items-in-order-with-key
