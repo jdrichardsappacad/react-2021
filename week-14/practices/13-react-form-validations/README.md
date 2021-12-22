@@ -18,74 +18,6 @@ empty. If they are empty, add an appropriate validation error message to a
 `validationErrors` array and return the array from the function:
 
 ```js
-const validate = () => {
-  const validationErrors = [];
-
-  if (!name) validationErrors.push('Please provide a Name');
-
-  if (!email) validationErrors.push('Please provide an Email');
-
-  return validationErrors;
-};
-```
-
-Create a state variable for `validationErrors` initialized to an empty array.
-
-Within the `onSubmit` event handler method, call the `validate` method and check
-the length of the returned array to see if there are any validation errors. If
-there are validation errors, then call the `setValidationErrors` function to
-update the component errors state variable, otherwise process the form
-submission and reset the `validationErrors` array to an empty array:
-
-```js
-// Get validation errors.
-const errors = validate();
-
-// If we have validation errors...
-if (errors.length > 0) {
-  // Update the state to display the validation errors.
-  setValidationErrors(errors);
-} else {
-  // Process the form submission...
-  // Reset the validation errors
-  setValidationErrors([]);
-}
-```
-
-In the return of the function component, use an inline conditional expression
-with a logical `&&` operator to conditionally render an unordered list of
-validation messages if the `validationErrors` array has a `length` greater than
-`0`:
-
-```js
-{
-  validationErrors.length > 0 && (
-    <div>
-      The following errors were found:
-      <ul>
-        {validationErrors.map(error => (
-          <li key={error}>{error}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-```
-
-Putting all of that together, here's what the updated `ContactUs` function
-component should look like now:
-
-```js
-// ./src/components/ContactUs/index.js
-import { useState } from 'react';
-
-function ContactUs(props) {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [comments, setComments] = useState('');
-  const [phoneType, setPhoneType] = useState('');
-  const [validationErrors, setValidationErrors] = useState([]);
 
   const validate = () => {
     const validationErrors = [];
@@ -97,94 +29,170 @@ function ContactUs(props) {
     return validationErrors;
   };
 
-  const onSubmit = e => {
-    e.preventDefault();
-    const errors = validate();
+```
 
-    if (errors.length > 0) return setValidationErrors(errors);
+Create a state variable for `validationErrors` initialized to an empty array.
 
-    const contactUsInformation = {
-      name,
-      email,
-      phone,
-      comments,
-      submittedOn: new Date(),
-    };
+Within the `onSubmit` event handler method, call the `validate` method and check
+the length of the returned array to see if there are any validation errors. If
+there are validation errors, then call the `setValidationErrors` function to
+update the component errors state variable, otherwise process the form
+submission and reset the `validationErrors` array to an empty array:
 
-    console.log(contactUsInformation);
-    setName('');
-    setEmail('');
-    setPhone('');
-    setComments('');
+```js
+
+  // Get validation errors.
+  const errors = validate();
+
+  // If we have validation errors...
+  if (errors.length > 0) {
+    // Update the state to display the validation errors.
+    setValidationErrors(errors);
+  } else {
+    // Process the form submission...
+    // Reset the validation errors
     setValidationErrors([]);
-  };
+  }
 
-  return (
-    <div>
-      <h2>Contact Us</h2>
-      {validationErrors.length > 0 && (
-        <div>
-          The following errors were found:
-          <ul>
-            {validationErrors.map(error => (
-              <li key={error}>{error}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-      <form onSubmit={onSubmit}>
-        <div>
-          <label htmlFor='name'>Name:</label>
-          <input
-            id='name'
-            type='text'
-            onChange={e => setName(e.target.value)}
-            value={name}
-          />
-        </div>
-        <div>
-          <label htmlFor='email'>Email:</label>
-          <input
-            id='email'
-            type='text'
-            onChange={e => setEmail(e.target.value)}
-            value={email}
-          />
-        </div>
-        <div>
-          <label htmlFor='phone'>Phone:</label>
-          <input
-            id='phone'
-            type='text'
-            onChange={e => setPhone(e.target.value)}
-            value={phone}
-          />
-          <select
-            name='phoneType'
-            onChange={e => setPhoneType(e.target.value)}
-            value={phoneType}
-          >
-            <option value='' disabled>
-              Select a phone type...
-            </option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor='comments'>Comments:</label>
-          <textarea
-            id='comments'
-            name='comments'
-            onChange={e => setComments(e.target.value)}
-            value={comments}
-          />
-        </div>
-        <button>Submit</button>
-      </form>
-    </div>
-  );
-}
+```
 
-export default ContactUs;
+In the return of the function component, use an inline conditional expression
+with a logical `&&` operator to conditionally render an unordered list of
+validation messages if the `validationErrors` array has a `length` greater than
+`0`:
+
+```js
+
+  {
+    validationErrors.length > 0 && (
+      <div>
+        The following errors were found:
+        <ul>
+          {validationErrors.map(error => (
+            <li key={error}>{error}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  ```
+
+  Putting all of that together, here's what the updated `ContactUs` function
+  component should look like now:
+
+  ```js
+  
+    // ./src/components/ContactUs/index.js
+    import { useState } from 'react';
+
+    function ContactUs(props) {
+      const [name, setName] = useState('');
+      const [email, setEmail] = useState('');
+      const [phone, setPhone] = useState('');
+      const [comments, setComments] = useState('');
+      const [phoneType, setPhoneType] = useState('');
+      const [validationErrors, setValidationErrors] = useState([]);
+
+      const validate = () => {
+        const validationErrors = [];
+
+        if (!name) validationErrors.push('Please provide a Name');
+
+        if (!email) validationErrors.push('Please provide an Email');
+
+        return validationErrors;
+      };
+
+      const onSubmit = e => {
+        e.preventDefault();
+        const errors = validate();
+
+        if (errors.length > 0) return setValidationErrors(errors);
+
+        const contactUsInformation = {
+          name,
+          email,
+          phone,
+          comments,
+          submittedOn: new Date(),
+        };
+
+        console.log(contactUsInformation);
+        setName('');
+        setEmail('');
+        setPhone('');
+        setComments('');
+        setValidationErrors([]);
+      };
+
+      return (
+        <div>
+          <h2>Contact Us</h2>
+          {validationErrors.length > 0 && (
+            <div>
+              The following errors were found:
+              <ul>
+                {validationErrors.map(error => (
+                  <li key={error}>{error}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <form onSubmit={onSubmit}>
+            <div>
+              <label htmlFor='name'>Name:</label>
+              <input
+                id='name'
+                type='text'
+                onChange={e => setName(e.target.value)}
+                value={name}
+              />
+            </div>
+            <div>
+              <label htmlFor='email'>Email:</label>
+              <input
+                id='email'
+                type='text'
+                onChange={e => setEmail(e.target.value)}
+                value={email}
+              />
+            </div>
+            <div>
+              <label htmlFor='phone'>Phone:</label>
+              <input
+                id='phone'
+                type='text'
+                onChange={e => setPhone(e.target.value)}
+                value={phone}
+              />
+              <select
+                name='phoneType'
+                onChange={e => setPhoneType(e.target.value)}
+                value={phoneType}
+              >
+                <option value='' disabled>
+                  Select a phone type...
+                </option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor='comments'>Comments:</label>
+              <textarea
+                id='comments'
+                name='comments'
+                onChange={e => setComments(e.target.value)}
+                value={comments}
+              />
+            </div>
+            <button>Submit</button>
+          </form>
+        </div>
+      );
+    }
+
+  export default ContactUs;
+
 ```
 
 If you run your application again, view the form in the browser, and attempt to
@@ -223,19 +231,21 @@ have the necessary variables for the `validate` function.
 Here's what the `useEffect` should look like now:
 
 ```js
-useEffect(() => {
-  const validate = () => {
-    const validationErrors = [];
 
-    if (!name) validationErrors.push('Please provide a Name');
-    if (!email) validationErrors.push('Please provide an Email');
-    return validationErrors;
-  };
+  useEffect(() => {
+    const validate = () => {
+      const validationErrors = [];
 
-  const errors = validate();
+      if (!name) validationErrors.push('Please provide a Name');
+      if (!email) validationErrors.push('Please provide an Email');
+      return validationErrors;
+    };
 
-  if (errors.length > 0) setValidationErrors(errors);
-}, [name, email]);
+    const errors = validate();
+
+    if (errors.length > 0) setValidationErrors(errors);
+  }, [name, email]);
+
 ```
 
 ### Client-side vs server-side validation
