@@ -1,4 +1,6 @@
+//!!START SILENT
 import { useState, useEffect } from 'react';
+//!!ADD
 
 function ContactUs() {
   const [name, setName] = useState('');
@@ -12,31 +14,35 @@ function ContactUs() {
     // Prevent the default form behavior
     // so the page doesn't reload.
     e.preventDefault();
-    // if (validationErrors.length > 0) {
-    //   return alert(
-    //     `Cannot submit: ${validationErrors.map((error) => {
-    //       return `\n${error}`;
-    //     })}`
-    //   );
-    // } else {
-    // Create a new object for the contact us information.
-    const contactUsInformation = {
-      name,
-      email,
-      phone,
-      phoneType,
-      comments,
-      submittedOn: new Date(),
-    };
+    //!!START SILENT
+    if (validationErrors.length > 0) {
+      return alert(
+        `Cannot submit: ${validationErrors.map(error => {
+          return `\n${error}`;
+        })}`
+      );
+    } else 
+    //!!END
+      // Create a new object for the contact us information.
+      const contactUsInformation = {
+        name,
+        email,
+        phone,
+        phoneType,
+        comments,
+        submittedOn: new Date(),
+      };
 
-    console.log(contactUsInformation);
-    setName('');
-    setEmail('');
-    setPhone('');
-    setValidationErrors([]);
-    // }
+      console.log(contactUsInformation);
+      setName('');
+      setEmail('');
+      setPhone('');
+      setValidationErrors([]);
+    //!!START SILENT
+    }
+    //!!END
   };
-
+  //!!START SILENT
   useEffect(() => {
     const validate = () => {
       const validationErrors = [];
@@ -50,10 +56,11 @@ function ContactUs() {
 
     if (errors.length > 0) setValidationErrors(errors);
   }, [name, email]);
-
+  //!!END
   return (
     <div>
       <h2>Contact Us</h2>
+      {/*START SILENT */}
       {validationErrors.length > 0 && (
         <div>
           The following errors were found:
@@ -64,6 +71,7 @@ function ContactUs() {
           </ul>
         </div>
       )}
+      {/*!!END */}
       <form onSubmit={onSubmit}>
         <div>
           <label htmlFor='name'>Name:</label>
