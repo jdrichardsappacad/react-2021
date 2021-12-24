@@ -35,6 +35,7 @@ function ContactUs() {
       setName('');
       setEmail('');
       setPhone('');
+      setComments('')
       setValidationErrors([]);
     //!!START SILENT
     }
