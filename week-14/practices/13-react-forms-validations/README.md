@@ -54,6 +54,8 @@ validation messages if the `validationErrors` array has a `length` greater than
 
   ```
 
+  Also, add a conditional to the `onSubmit` function that returns an `alert` that says 'Cannot Submit' if the `validationErrors` state has a length greater than 0, otherwise, it submits the form and clears all the state variabls.
+
   Putting all of that together, here's what the updated `ContactUs` function
   component should look like now:
 
@@ -70,6 +72,8 @@ validation messages if the `validationErrors` array has a `length` greater than
       const [phoneType, setPhoneType] = useState('');
       const [validationErrors, setValidationErrors] = useState([]);
 
+
+
       useEffect(()=>{
         const errors = [];
 
@@ -80,21 +84,26 @@ validation messages if the `validationErrors` array has a `length` greater than
       },[name, email])
 
       const onSubmit = e => {
-        
-        const contactUsInformation = {
-          name,
-          email,
-          phone,
-          comments,
-          submittedOn: new Date(),
-        };
+        if (validationErrors.length > 0) {
+          return alert(
+            `Cannot submit`
+          );
+        } else {
+          const contactUsInformation = {
+            name,
+            email,
+            phone,
+            comments,
+            submittedOn: new Date(),
+          };
 
-        console.log(contactUsInformation);
-        setName('');
-        setEmail('');
-        setPhone('');
-        setComments('');
-        setValidationErrors([]);
+        // console.log(contactUsInformation);
+          setName('');
+          setEmail('');
+          setPhone('');
+          setComments('');
+          setValidationErrors([]);
+        }
       };
 
       return (

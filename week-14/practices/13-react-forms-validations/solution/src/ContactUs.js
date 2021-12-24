@@ -17,9 +17,7 @@ function ContactUs() {
     //!!START SILENT
     if (validationErrors.length > 0) {
       return alert(
-        `Cannot submit: ${validationErrors.map(error => {
-          return `\n${error}`;
-        })}`
+        `Cannot submit`
       );
     } else {
     //!!END
