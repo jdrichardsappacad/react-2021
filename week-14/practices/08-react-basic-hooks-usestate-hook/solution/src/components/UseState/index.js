@@ -1,8 +1,6 @@
 //!!START SILENT
-//!!END 
 import { useState } from 'react';
 import './UseState.css';
-
 
 const UseState = () => {
   const [theme, setTheme] = useState('light');
@@ -15,25 +13,24 @@ const UseState = () => {
       <button onClick={() => setTheme('light')}>Light</button>
       <button onClick={() => setTheme('dark')}>Dark</button>
       <h1>{count}</h1>
-      <button onClick={() => setCount((prevCount) => prevCount + 1)}>
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>
         Increment
       </button>
-      <button onClick={() => setCount((prevCount) => prevCount - 1)}>
+      <button onClick={() => setCount(prevCount => prevCount - 1)}>
         Decrement
       </button>
     </div>
   );
 };
 
-//!!END 
+//!!END
 //!!ADD
 //const UseState = () => {
-  //return (
-    //<div>
-      //<h1>UseState Component</h1>
-    //</div>
-  //);
+//return (
+//<div>
+//<h1>UseState Component</h1>
+//</div>
+//);
 //};
 //!!END_ADD
 export default UseState;
-
