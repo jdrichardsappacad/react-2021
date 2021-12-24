@@ -21,7 +21,7 @@ function ContactUs() {
           return `\n${error}`;
         })}`
       );
-    } else 
+    } else {
     //!!END
       // Create a new object for the contact us information.
       const contactUsInformation = {
