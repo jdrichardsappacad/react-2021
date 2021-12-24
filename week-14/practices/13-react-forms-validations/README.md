@@ -78,7 +78,7 @@ validation messages if the `validationErrors` array has a `length` greater than
         const errors = [];
 
         if(!name.length) errors.push('Please enter your name')
-        if(!email.includes) errors.push('Please provide a valid email')
+        if(!email.includes('@')) errors.push('Please provide a valid email')
 
         setValidationErrors(errors);
       },[name, email])
