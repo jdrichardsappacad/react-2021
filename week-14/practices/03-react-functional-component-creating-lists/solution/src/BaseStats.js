@@ -1,7 +1,9 @@
+//!!START SILENT
 import PokeMoves from './Pokemoves';
+//!!END
 import './BaseStats.css';
 
-const BaseStats = (props) => {
+const BaseStats = ({ clicker, stats: { hp, attack, defense, speed } }) => {
   return (
     <div>
       <h1>BaseStats</h1>
@@ -11,27 +13,31 @@ const BaseStats = (props) => {
           <tbody>
             <tr>
               <td>Hit Points</td>
-              <td>{props.stats.hp}</td>
+              <td>{hp}</td>
             </tr>
             <tr>
               <td>Attack</td>
-              <td>{props.stats.attack}</td>
+              <td>{attack}</td>
             </tr>
             <tr>
               <td>Defense</td>
-              <td>{props.stats.defense}</td>
+              <td>{defense}</td>
             </tr>
             <tr>
               <td>Speed</td>
-              <td>{props.stats.speed}</td>
+              <td>{speed}</td>
             </tr>
           </tbody>
         </table>
-        <button className='sp-stats' >
+        {/*!!!START SILENT */}
+        <button onClick={clicker} className='sp-stats'>
           Check Special Stats
         </button>
+        {/*!!END */}
       </div>
+      {/*!!!START SILENT */}
       <PokeMoves />
+      {/*!!END */}
     </div>
   );
 };

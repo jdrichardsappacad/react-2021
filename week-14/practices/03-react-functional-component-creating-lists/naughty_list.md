@@ -1,3 +1,2 @@
-
-/src/PokeMoveCard.js
-/src/PokeMoves.js
+/solution/src/PokeMoveCard.js
+/solution/src/PokeMoves.js
