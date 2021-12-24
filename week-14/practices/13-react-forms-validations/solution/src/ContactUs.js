@@ -41,19 +41,14 @@ function ContactUs() {
     //!!END
   };
   //!!START SILENT
-  useEffect(() => {
-    const validate = () => {
-      const validationErrors = [];
+  useEffect(()=>{
+    const errors = [];
 
-      if (!name) validationErrors.push('Please provide a Name');
-      if (!email) validationErrors.push('Please provide an Email');
-      return validationErrors;
-    };
+    if(!name.length) errors.push('Please enter your name')
+    if(!email.includes) errors.push('Please provide a valid email')
 
-    const errors = validate();
-
-    if (errors.length > 0) setValidationErrors(errors);
-  }, [name, email]);
+    setValidationErrors(errors);
+  },[name, email])
   //!!END
   return (
     <div>
