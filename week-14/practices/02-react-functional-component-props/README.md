@@ -5,11 +5,30 @@ parent component to a child component.
 
 ## Set up
 
-Download the [starter][props-starter] file for this practice.
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
 
-Open the starter in VSCode and run `npm install` in the terminal.
+Navigate to the [starter][starter] repo for this short practice.
 
-Run `npm start` to make sure your project is set up correctly.
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
+#### Option 2:
+
+- Copy the url for the starter
+- Go to [codesandbox.io][code-sandbox] and navigate to the Dashboard
+- In the left sidebar, choose `Repositories`
+- Click `Import Repository`
+- Place the address you copied from the starter repo in the input box
+- Click `Import and Fork`
+- You will be taken to a sandbox with your loaded app
 
 ## Create a Functional Component
 
@@ -46,44 +65,46 @@ object.
 
 ## Use props object in the child component
 
-Now you are ready to use your props object. 
+Now you are ready to use your props object.
 
-Create a table beneath your `h1` tag. It should have four table rows, each with 
+Create a table beneath your `h1` tag. It should have four table rows, each with
 two table data tags. The first table data tag of each table row should contain
-the header for each stat (Hit Points, Attack, Defense, and Speed). 
+the header for each stat (Hit Points, Attack, Defense, and Speed).
 
-The second table data tag of each table row should contain the cooresponding 
+The second table data tag of each table row should contain the cooresponding
 variable you destructured from props. Your code should look something like:
 
 ```js
-<table>
-  <tbody>
-    <tr>
-      <td>Hit Points</td>
-      <td>{props.stats.hp}</td>
-    </tr>
-    <tr>
-      <td>Attack</td>
-      <td>{props.stats.attack}</td>
-    </tr>
-    <tr>
-      <td>Defense</td>
-      <td>{props.stats.defense}</td>
-    </tr>
-    <tr>
-      <td>Speed</td>
-      <td>{props.stats.speed}</td>
-    </tr>
-  </tbody>
-</table>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>Hit Points</td>
+        <td>{props.stats.hp}</td>
+      </tr>
+      <tr>
+        <td>Attack</td>
+        <td>{props.stats.attack}</td>
+      </tr>
+      <tr>
+        <td>Defense</td>
+        <td>{props.stats.defense}</td>
+      </tr>
+      <tr>
+        <td>Speed</td>
+        <td>{props.stats.speed}</td>
+      </tr>
+    </tbody>
+  </table>
+
 ```
 
 Next goal is to make your code more concise and practice the DRY principal. In
 the argument for the `BaseStats` functional component, destructure the variables
 from the props object. Refactor your JSX to reflect these variables. You should
-only call the variables hp, attack, defense, and speed in your JSX. 
+only call the variables hp, attack, defense, and speed in your JSX.
 
-** Remember, you can destructure a nested object.
+\*\* Remember, you can destructure a nested object.
 
 ### Pass a Function as a Prop
 
@@ -97,9 +118,11 @@ In your `App.js`, beneath your `baseStats` object, create a function called
 Place this code inside the function:
 
 ```js
-alert(
-  `Special Stats:\nSpecialAttack: ${baseStats.spAttack}\nSpecialDefense:${baseStats.spDef}`
-);
+
+  alert(
+    `Special Stats:\nSpecialAttack: ${baseStats.spAttack}\nSpecialDefense:${baseStats.spDef}`
+  );
+
 ```
 
 Now, pass the `handleClick` function as a prop called `clicker` to the
@@ -112,7 +135,8 @@ Next, above your table, create a button with the text `Check Special Stats`.
 Give it a class of `sp-stats`. Pass an `onClick` event listener to the `button`
 element and assign it the clicker function prop.
 
-Remember, an event listener in React is camel cased (_`onClick` instead of `onclick`_) and it takes a function as it's assignment.
+Remember, an event listener in React is camel cased (_`onClick` instead of
+`onclick`_) and it takes a function as it's assignment.
 
 Notice that when the button is clicked, it triggers the `handleClick` function
 in the parent component.
@@ -127,5 +151,6 @@ In this practice you have learned:
 5. Passing a function as a prop
 6. One way of using the onClick EventHandler
 
-[props-starter]: ./starter
+[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [react-devtools-props]: ./images/react-devtools-props.png
+[code-sandbox]: https://codesanbox.io

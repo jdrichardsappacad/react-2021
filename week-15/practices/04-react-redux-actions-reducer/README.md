@@ -7,6 +7,24 @@ the `action type`, the reducer will update the `global state`. You will connect
 the reducer to the store and you test your `action creator` using the `window`
 object in the Browser dev tools.
 
+## Set up
+
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
+
+Navigate to the [starter][starter] repo for this short practice.
+
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
+
 ## Action Creator
 
 You will start by working in the `store/articleReducer.js` file.
@@ -113,3 +131,4 @@ both on the `window` of the browser using `redux-logger`.
 [reducer]:
 https://redux.js.org/usage/structuring-reducers/basic-reducer-structure
 [redux-logger]: ./aws-assets/redux-logger.png
+[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all

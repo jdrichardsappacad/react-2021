@@ -7,11 +7,20 @@ components.
 
 ## Set up
 
-Download the [starter][lists-starter] file for this practice.
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
 
-Open the practice in VSCode and run `npm install` in the terminal.
+Navigate to the [starter][starter] repo for this short practice.
 
-Run `npm start` to make sure your project is set up correctly.
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
 ## Create Pokemoves component
 
@@ -118,5 +127,5 @@ Congratulations! In this practice you have learned:
 3. Passing props using the spread operator
 4. Returning a component instead of an li element in your `.map` function
 
-[lists-starter]: ./starter
+[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [keys-and-lists]: https://beta.reactjs.org/learn/rendering-lists#keeping-list-items-in-order-with-key

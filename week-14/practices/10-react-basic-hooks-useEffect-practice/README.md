@@ -10,15 +10,25 @@ In this practice you will:
   code][status-codes] does not exist or when the user does not enter a code into
   the input box.
 
-## Setup
+## Set up
 
-Download the starter for this practice from the bottom of the page.
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
 
-Open the starter in VSCode and run `npm install` in the terminal.
+Navigate to the [starter][starter] repo for this short practice.
 
-Run `npm start` and see if your project loads correctly. You should see a home
-page. If you click on the home button you will be directed to the `/cats` route
-where an image and input box will appear.
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
+You should see a home page. If you click on the home button you will be directed
+to the `/cats` route where an image and input box will appear.
 
 For this project we will use a small external api called [HTTP Cats][http-cats].
 Take a look at the api and see what it does
@@ -168,6 +178,7 @@ In this short practice, you have used `useEffect` to handle these side effects:
 2. store and retrieve trivial data in `local storage`
 3. `alert` the user when information input is incorrect
 
+[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [http-cats]: https://http.cat/
 [status-codes]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 [set-interval]: https://developer.mozilla.org/en-US/docs/Web/API/setInterval

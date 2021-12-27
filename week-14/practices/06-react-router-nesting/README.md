@@ -5,15 +5,24 @@ In this practice you will -
 - Dynamically create nested routes
 - Use React Router params to access path variables
 
-## Setup
+## Set up
 
-Download the [starter][starter], `cd` into the folder and run the `npm install`
-command in your terminal.
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
 
-Next run `npm start` and check your browser to see if your code is running
-properly.
+Navigate to the [starter][starter] repo for this short practice.
 
-In your browser you should see an h1 with text, App Component. You should also
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
+In your browser you should see an `h1` with text, App Component. You should also
 see a Navbar with four links. When you click on the links they should render the
 component below them.
 
@@ -96,6 +105,6 @@ of the techniques you used:
 3. Used `useParams` hook in your `MovieDetails` component to grab the `movieId`,
    so you could render the according movie details found in your `movies` array.
 
-[starter]: ./starter 
+[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [use-params]: https://reactrouter.com/web/api/Hooks/useparams 
 

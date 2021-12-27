@@ -5,7 +5,7 @@ creators you wrote in the previous practice.
 
 ## Set Up
 
-Download the starter at the bottom of this page.
+Download the [starter][starter] at the bottom of this page.
 
 If your database is already set up from the previous practice, you'll only need
 to  run `npm install` and then run `npm start`. Otherwise, follow these
@@ -46,3 +46,6 @@ thunk action creator when the user submits the form to create a new article.
 
 You just learned how to `dispatch` thunk actions from within your React
 components.
+
+
+[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all

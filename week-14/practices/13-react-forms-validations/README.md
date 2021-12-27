@@ -6,9 +6,29 @@ providing a single bit of data. To implement form validation, you'll use vanilla
 JS to validate that the "Name" and "Email" form fields have values before
 allowing the form to be submitted.
 
-## Setup
+## Set up
 
-- codesandbox or clone
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
+
+Navigate to the [starter][starter] repo for this short practice.
+
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
+You should see an `h1` tag saying `No Data To Display`
+
+Before moving forward, take a look at the [fortnite][fortnite] documentation. If
+you navigate to the [Endpoints][endpoints] section, you will find and use the
+`https://fortnite-api.com/v2/news` endpoint. Read the documentation to
+understand what the outcome of this endpoint should be.
 
 ## Setup Validation State
 
@@ -22,13 +42,19 @@ and empty array.
 
 ```
 
-You will validate the `name` and `email` inputs. Create a `useEffect` that listens for the `name` and `email`. Inside the `useEffect` add an `errors` variable and assign it an empty array. This will be your mutable array.
+You will validate the `name` and `email` inputs. Create a `useEffect` that
+listens for the `name` and `email`. Inside the `useEffect` add an `errors`
+variable and assign it an empty array. This will be your mutable array.
 
 Create two conditionals:
-- The first should check name to see if it's length is greater than 0. If it isn't, push the message, 'Please enter your name', to the `errors` array.
-- The second conditional should check to see if the email input has an `@` in it. If it doesn't, push the message, 'Please provide a valid email' to the `errors` array.
+- The first should check name to see if it's length is greater than 0. If it
+  isn't, push the message, 'Please enter your name', to the `errors` array.
+- The second conditional should check to see if the email input has an `@` in
+  it. If it doesn't, push the message, 'Please provide a valid email' to the
+  `errors` array.
 
-Finally, inside the `useEffect`, set the `validationErrors` state to the `errors` array.
+Finally, inside the `useEffect`, set the `validationErrors` state to the
+`errors` array.
 
 ## Render Validation Errors
 
@@ -54,7 +80,9 @@ validation messages if the `validationErrors` array has a `length` greater than
 
   ```
 
-  Also, add a conditional to the `onSubmit` function that returns an `alert` that says 'Cannot Submit' if the `validationErrors` state has a length greater than 0, otherwise, it submits the form and clears all the state variabls.
+  Also, add a conditional to the `onSubmit` function that returns an `alert`
+  that says 'Cannot Submit' if the `validationErrors` state has a length greater
+  than 0, otherwise, it submits the form and clears all the state variabls.
 
   Putting all of that together, here's what the updated `ContactUs` function
   component should look like now:
@@ -186,25 +214,31 @@ The following errors were found:
   * Please provide a valid Email
 ```
 
-Overall, this approach to validating the form is relatively simple. But there are other ways to validate including the use of packages that focus specifically on forms.
+Overall, this approach to validating the form is relatively simple. But there
+are other ways to validate including the use of packages that focus specifically
+on forms.
 
 
 ### Client-side vs server-side validation
 
-As a reminder, client-side validation like the validations in the `ContactUs` function component,
-are optional to implement; **server-side validation is not optional**.
-This is because client-side validations can be disabled or manipulated by savvy users.
-Sometimes the "best" approach is to skip implementing validations on the client-side and rely completely
-on the server-side validation. Using this approach, you'd simply call the API when the form is submitted and
-if the request returns a `400 BAD REQUEST` response,
-you'd display the validation error messages returned from the server.
-If you do decide to implement client-side validations, do it with the end goal of improving your application's
-overall user experience, not as your only means of validating user-provided data.
+As a reminder, client-side validation like the validations in the `ContactUs`
+function component, are optional to implement; **server-side validation is not
+optional**. This is because client-side validations can be disabled or
+manipulated by savvy users. Sometimes the "best" approach is to skip
+implementing validations on the client-side and rely completely on the
+server-side validation. Using this approach, you'd simply call the API when the
+form is submitted and if the request returns a `400 BAD REQUEST` response, you'd
+display the validation error messages returned from the server. If you do decide
+to implement client-side validations, do it with the end goal of improving your
+application's overall user experience, not as your only means of validating
+user-provided data.
 
 ## What you learned
 
 In this article you learned how to implement form validations and the difference
 between validating your inputs on the client vs. the server.
 
-[onchange event handler]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
+[onchange event handler]:
+https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
 [validator]: https://github.com/validatorjs/validator.js
+[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all

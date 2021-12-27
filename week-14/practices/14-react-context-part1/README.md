@@ -5,13 +5,23 @@ provide values to any component that needs it without `prop drilling` or `prop`
 `threading`. You will also set up `Consumer` using the `useContext` hook to
 acquire and use any values received from the `Provider`.
  
-## Setup
+## Set up
 
-Download the [starter][context-starter] file for this practice.
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
 
-Open the starter in VSCode and run `npm install` in the terminal.
+Navigate to the [starter][starter] repo for this short practice.
 
-Run `npm start` to make sure your project has not run into any errors.
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
 
 ## Create Context
 
@@ -88,6 +98,7 @@ You have done the following:
 2. Used your `Context.Provider` and wrapped your entire application with it.
 3. Consumed the context in your `Detail` component.
 
-[context-starter]: ./starter
+[starter]: ./starter
 [create-context]: https://reactjs.org/docs/context.html#reactcreatecontext
 [react-devtools]: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all

@@ -7,12 +7,24 @@ display data in a visually pleasing and/or readable format.
 In this short practice you will use `useEffect` to make an `api` call using the
 [fortnite api][fortnite], and display the information that you retrieve.
 
-## Setup
+## Set up
 
-- Run `npm install` to install dependencies
-- Run `npm start` to start the server
-- Navigate to `http://localhost:3000` in your browser.
-  You should see an `h1` tag saying `No Data To Display`
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
+
+Navigate to the [starter][starter] repo for this short practice.
+
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
+You should see an `h1` tag saying `No Data To Display`
 
 Before moving forward, take a look at the [fortnite][fortnite] documentation. If
 you navigate to the [Endpoints][endpoints] section, you will find and use the
@@ -120,7 +132,7 @@ of your code may look like the code below:
   );
 
 ```
-
+[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
 [fortnite]: https://fortnite-api.com
 [endpoints]: https://dash.fortnite-api.com/endpoints/news
 [formatter]: https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en
