@@ -1,4 +1,4 @@
-export const colours = ['red', 'purple', 'green', 'orange', 'blue'];
+export const colors = ['red', 'purple', 'green', 'orange', 'blue'];
 export const codes = [
   100,
   101,

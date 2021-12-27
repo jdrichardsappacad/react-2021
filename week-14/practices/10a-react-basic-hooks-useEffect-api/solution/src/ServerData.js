@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 
 const ServerData = () => {
+  //!!ADD
+  return <h1>No Data To Display</h1>;
+  //!!END_ADD
+  //!!START SILENT
   const [serverData, setServerData] = useState();
 
   useEffect(() => {
@@ -27,5 +31,6 @@ const ServerData = () => {
       ))}
     </div>
   );
+  //!!END
 };
 export default ServerData;

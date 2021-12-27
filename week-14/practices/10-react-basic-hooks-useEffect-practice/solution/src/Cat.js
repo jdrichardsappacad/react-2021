@@ -1,18 +1,31 @@
+//!!START SILENT
 import { useState, useEffect } from 'react';
+//!!END
+//!!ADD
+import { useState } from 'react';
+//!!END_ADD
+
 import { useHistory } from 'react-router-dom';
-import { colours, codes } from './data';
+import { colors, codes } from './data';
 
 const Cat = () => {
   const history = useHistory();
-  const [colourNum, setColourNum] = useState(0);
+  const [colorNum, setColorNum] = useState(0);
+  //!!START SILENT
   const [statusChange, setStatusChange] = useState(
     localStorage.getItem('catStatus') || '418'
   );
+  //!!END
+
+  //!!ADD
+  const [statusChange, setStatusChange] = useState('418');
+  //!!END_ADD
   const [status, setStatus] = useState('');
 
+  //START SILENT
   useEffect(() => {
     const colorInterval = setInterval(() => {
-      setColourNum(prevNum => (prevNum === 4 ? 0 : prevNum + 1));
+      setColorNum(prevNum => (prevNum === 4 ? 0 : prevNum + 1));
     }, 5000);
 
     return () => clearInterval(colorInterval);
@@ -29,7 +42,7 @@ const Cat = () => {
       );
     }
   }, [statusChange]);
-
+  //END
   const handleSubmit = e => {
     e.preventDefault();
     setStatusChange(status);
@@ -40,7 +53,7 @@ const Cat = () => {
     <div
       className='cat-container'
       style={{
-        backgroundColor: colours[colourNum],
+        backgroundColor: colors[colorNum],
         transition: 'background-color 4s',
       }}
     >

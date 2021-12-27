@@ -10,51 +10,27 @@ allowing the form to be submitted.
 
 - codesandbox or clone
 
-## Setup Validate Function
+## Setup Validation State
 
-To setup salidation, add a function to your component named `validate`. Use
-conditional statements to check if the `name` and `email` state variables are
-empty. If they are empty, add an appropriate validation error message to a
-`validationErrors` array and return the array from the function:
-
-```js
-
-  const validate = () => {
-    const validationErrors = [];
-
-    if (!name) validationErrors.push('Please provide a Name');
-
-    if (!email) validationErrors.push('Please provide an Email');
-
-    return validationErrors;
-  };
-
-```
-
-Create a state variable for `validationErrors` initialized to an empty array.
-
-Within the `onSubmit` event handler method, call the `validate` method and check
-the length of the returned array to see if there are any validation errors. If
-there are validation errors, then call the `setValidationErrors` function to
-update the component errors state variable, otherwise process the form
-submission and reset the `validationErrors` array to an empty array:
+To setup validation, you will first add a slice of state with two indexes,
+`validationErrors` and `setValidationErrors`. It will have an `initial state` of
+and empty array.
 
 ```js
 
-  // Get validation errors.
-  const errors = validate();
-
-  // If we have validation errors...
-  if (errors.length > 0) {
-    // Update the state to display the validation errors.
-    setValidationErrors(errors);
-  } else {
-    // Process the form submission...
-    // Reset the validation errors
-    setValidationErrors([]);
-  }
+  const [validationErrors, setValidationErrors] = useState([])
 
 ```
+
+You will validate the `name` and `email` inputs. Create a `useEffect` that listens for the `name` and `email`. Inside the `useEffect` add an `errors` variable and assign it an empty array. This will be your mutable array.
+
+Create two conditionals:
+- The first should check name to see if it's length is greater than 0. If it isn't, push the message, 'Please enter your name', to the `errors` array.
+- The second conditional should check to see if the email input has an `@` in it. If it doesn't, push the message, 'Please provide a valid email' to the `errors` array.
+
+Finally, inside the `useEffect`, set the `validationErrors` state to the `errors` array.
+
+## Render Validation Errors
 
 In the return of the function component, use an inline conditional expression
 with a logical `&&` operator to conditionally render an unordered list of
@@ -78,6 +54,8 @@ validation messages if the `validationErrors` array has a `length` greater than
 
   ```
 
+  Also, add a conditional to the `onSubmit` function that returns an `alert` that says 'Cannot Submit' if the `validationErrors` state has a length greater than 0, otherwise, it submits the form and clears all the state variabls.
+
   Putting all of that together, here's what the updated `ContactUs` function
   component should look like now:
 
@@ -94,36 +72,38 @@ validation messages if the `validationErrors` array has a `length` greater than
       const [phoneType, setPhoneType] = useState('');
       const [validationErrors, setValidationErrors] = useState([]);
 
-      const validate = () => {
-        const validationErrors = [];
 
-        if (!name) validationErrors.push('Please provide a Name');
 
-        if (!email) validationErrors.push('Please provide an Email');
+      useEffect(()=>{
+        const errors = [];
 
-        return validationErrors;
-      };
+        if(!name.length) errors.push('Please enter your name')
+        if(!email.includes('@')) errors.push('Please provide a valid email')
+
+        setValidationErrors(errors);
+      },[name, email])
 
       const onSubmit = e => {
-        e.preventDefault();
-        const errors = validate();
+        if (validationErrors.length > 0) {
+          return alert(
+            `Cannot submit`
+          );
+        } else {
+          const contactUsInformation = {
+            name,
+            email,
+            phone,
+            comments,
+            submittedOn: new Date(),
+          };
 
-        if (errors.length > 0) return setValidationErrors(errors);
-
-        const contactUsInformation = {
-          name,
-          email,
-          phone,
-          comments,
-          submittedOn: new Date(),
-        };
-
-        console.log(contactUsInformation);
-        setName('');
-        setEmail('');
-        setPhone('');
-        setComments('');
-        setValidationErrors([]);
+        // console.log(contactUsInformation);
+          setName('');
+          setEmail('');
+          setPhone('');
+          setComments('');
+          setValidationErrors([]);
+        }
       };
 
       return (
@@ -202,51 +182,12 @@ validation error messages:
 ```plaintext
 The following errors were found:
 
-  * Please provide a Name
-  * Please provide an Email
+  * Please enter your Name
+  * Please provide a valid Email
 ```
 
-Overall, this approach to validating the form is relatively simple. You _could_
-validate the data as it changes so that the user would receive feedback sooner
-(i.e. not having to wait to submit the form to see the validation error
-messages). Sometimes it's helpful to receive feedback in real-time, but
-sometimes it can be annoying to users. Consider each situation and use an
-approach that feels appropriate for your users.
+Overall, this approach to validating the form is relatively simple. But there are other ways to validate including the use of packages that focus specifically on forms.
 
-## Dynamic Validation
-
-In some cases, you may want to update your error messages and validate the
-user's input as the changes occur instead of just doing the validation when the
-user is ready to submit. Since you're looking to set state based on the value of
-another state variable, you'll use a `useEffect` to watch for those changes and
-set the `validationErrors` variable as you need to.
-
-At the top of the file, `import` the `useEffect` hook from the `react` package.
-Add a `useEffect` with an empty dependency array below the definition of the
-`onSubmit` function, and move the `validate` function inside of the
-`useEffect`'s callback function. Then, move the lines in the `onSubmit` that do
-the validation into the `useEffect`. Go ahead and update the dependency array to
-have the necessary variables for the `validate` function.
-
-Here's what the `useEffect` should look like now:
-
-```js
-
-  useEffect(() => {
-    const validate = () => {
-      const validationErrors = [];
-
-      if (!name) validationErrors.push('Please provide a Name');
-      if (!email) validationErrors.push('Please provide an Email');
-      return validationErrors;
-    };
-
-    const errors = validate();
-
-    if (errors.length > 0) setValidationErrors(errors);
-  }, [name, email]);
-
-```
 
 ### Client-side vs server-side validation
 
@@ -262,12 +203,8 @@ overall user experience, not as your only means of validating user-provided data
 
 ## What you learned
 
-In this article, you learned how to create a React function component containing
-a simple form. You also learned how to create a controlled component which means
-forms with controlled inputs using component state. You also learned how to
-use multiple form inputs in React. Lastly, you learned how to implement form
-validations and the difference between validating your inputs on the client vs.
-the server.
+In this article you learned how to implement form validations and the difference
+between validating your inputs on the client vs. the server.
 
 [onchange event handler]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
 [validator]: https://github.com/validatorjs/validator.js

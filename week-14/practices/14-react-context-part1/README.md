@@ -1,10 +1,10 @@
 # Practice: Context Provider and Consumer Practice
 
-In this practice, you will:
-
-- Set up a React Context `Provider` and `Consumer` to set the `value` of a
-  context and read it in a component.
-
+In this series of practices, you will set up a React Context `Provider` to
+provide values to any component that needs it without `prop drilling` or `prop`
+`threading`. You will also set up `Consumer` using the `useContext` hook to
+acquire and use any values received from the `Provider`.
+ 
 ## Setup
 
 Download the [starter][context-starter] file for this practice.
