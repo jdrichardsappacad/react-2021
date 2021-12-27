@@ -29,20 +29,24 @@ Because a thunk action creator is just a function that returns a thunk (also a
 function) that takes in `dispatch` and `getState` as parameters, most of the 
 time, you'll see it structured like this:
 
-```javascript
-const thunkActionCreator = () => dispatch => {
-  // Thunk logic here
-};
+```js
+
+  const thunkActionCreator = () => dispatch => {
+    // Thunk logic here
+  };
+
 ```
 
 This translates to function declaration syntax like so:
 
-```javascript
-function thunkActionCreator() {
-  return function thunk(dispatch) {
-    // Thunk logic here
-  };
-}
+```js
+
+  function thunkActionCreator() {
+    return function thunk(dispatch) {
+      // Thunk logic here
+    };
+  }
+
 ```
 
 In the **frontend/src/store/articleReducer.js** file, write a `fetchArticles`
@@ -55,12 +59,14 @@ back from the `fetch` call. Go ahead and `export` the function.
 
 Your thunk action creator might look like this:
 
-```javascript
-export const fetchArticles = () => async dispatch => {
-  const response = await fetch('/api/articles');
-  const articles = await response.json();
-  dispatch(getArticles(articles));
-};
+```js
+
+  export const fetchArticles = () => async dispatch => {
+    const response = await fetch('/api/articles');
+    const articles = await response.json();
+    dispatch(getArticles(articles));
+  };
+  
 ```
 
 Remember to update the definition of the `getArticles` function.
@@ -78,3 +84,4 @@ You just learned how to write thunk action creators. In the next practice, you
 will learn how to `dispatch` these thunk action creators.
 
 [fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all

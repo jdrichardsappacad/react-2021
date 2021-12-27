@@ -3,13 +3,23 @@
 In this short practice you will convert a `functional` component into  a `class`
 component.
 
-## Setup
+## Set up
 
-- Run `npm install` to install dependencies
-- Run `npm start` to start the server
-- Navigate to `http://localhost:3000` in your browser
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
 
-Take a look and discover the classic functionality of the app.
+Navigate to the [starter][starter] repo for this short practice.
+
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
 
 ## Create A Class Component
 

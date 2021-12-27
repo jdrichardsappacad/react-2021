@@ -4,9 +4,23 @@ In this short practice, your are going to list the titles of articles by loading
 the `Redux store` with data, and `subscribing` to or listening for changes to
 that data in a component.
 
-## Setup
+## Set up
 
-codesanbox or repo
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
+
+Navigate to the [starter][starter] repo for this short practice.
+
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
 
 ## useDispatch
 
@@ -127,3 +141,4 @@ Congratulations! You have now learned to:
 
 [react-redux]: https://react-redux.js.org/introduction/getting-started
 [react-redux-hooks]: https://react-redux.js.org/api/hooks
+[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all

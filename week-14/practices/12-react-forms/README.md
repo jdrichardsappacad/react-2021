@@ -10,14 +10,22 @@ When you finish this article, you should be able to:
 - Create a React functional component containing a simple form
 - Define controlled inputs with the `useState` hook for different form inputs
 
-## Setup
+## Set up
 
-If you want to follow along, create a React application using `create-react-app`
-with the `@appacademy/reareate-react-app contact-us-form --tempct-v17` template:
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
 
-```bash
-npx clate @appacademy/react-v17 --use-npm
-```
+Navigate to the [starter][starter] repo for this short practice.
+
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
 ## Creating a simple form
 
@@ -420,3 +428,4 @@ completely natural and you won't notice the difference!
 
 [onchange event handler]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
 [validator]: https://github.com/validatorjs/validator.js
+[starter]:https://github.com/jdrichardsappacad/basic-cra-starter

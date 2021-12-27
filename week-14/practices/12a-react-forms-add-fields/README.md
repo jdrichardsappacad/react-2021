@@ -10,7 +10,23 @@ When you finish this article, you should be able to:
 - Create a React functional component containing a simple form
 - Define controlled inputs with the `useState` hook for different form inputs
 
-## Setup
+## Set up
+
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
+
+Navigate to the [starter][starter] repo for this short practice.
+
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
 
 ## Adding a text area
 
@@ -261,4 +277,6 @@ Congratulations! You have now learned how to create the `textarea` and `select`
 fields. To learn how to add other fields, look up the functionality on MDN, then
 apply the same concepts you have now learned.
 
-[onchange event handler]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
+[onchange event handler]:
+https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
+[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all

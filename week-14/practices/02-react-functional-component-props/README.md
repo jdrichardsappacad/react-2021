@@ -7,7 +7,7 @@ parent component to a child component.
 
 Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
 
-Navigate to the [starter][props-starter] repo for this short practice.
+Navigate to the [starter][starter] repo for this short practice.
 
 ### 2 Options:
 
@@ -151,6 +151,6 @@ In this practice you have learned:
 5. Passing a function as a prop
 6. One way of using the onClick EventHandler
 
-[props-starter]: ./starter
+[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [react-devtools-props]: ./images/react-devtools-props.png
 [code-sandbox]: https://codesanbox.io
