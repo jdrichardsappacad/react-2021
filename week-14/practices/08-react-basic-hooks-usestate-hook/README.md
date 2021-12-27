@@ -5,11 +5,22 @@ In this practice you will learn to use one of the most basic hooks, the
 a background theme from light to dark, as well as to increment and decrement
 a number.
 
-## Setup
+## Set up
 
-Clone the [starter][starter] repo and in your terminal `npm install` and `npm
-start` your project. You should see `UseState Component` in the browser if all
-is working properly.
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
+
+Navigate to the [starter][starter] repo for this short practice.
+
+### 2 Options:
+
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
 ## Background Theme
 
@@ -138,6 +149,6 @@ Add the container class from `UseState.css` to your wrapping div along with the
    state based on previous state.
 
 [use-state]: https://beta.reactjs.org/reference/usestate 
-[starter]: ./starter
+[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [event-handler]:
 https://beta.reactjs.org/learn/responding-to-events#adding-event-handlers

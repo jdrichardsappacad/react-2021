@@ -23,12 +23,6 @@ Navigate to the [starter][starter] repo for this short practice.
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
-You should see an `h1` tag saying `No Data To Display`
-
-Before moving forward, take a look at the [fortnite][fortnite] documentation. If
-you navigate to the [Endpoints][endpoints] section, you will find and use the
-`https://fortnite-api.com/v2/news` endpoint. Read the documentation to
-understand what the outcome of this endpoint should be.
 
 ## Setup Validation State
 

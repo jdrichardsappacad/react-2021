@@ -39,8 +39,9 @@ You should see a list of components for:
 2. Stocks
 3. Movies
 
-Note, in your `package.json` that we are using the `react-router-dom` package.
-This package that will give us access to all of the components in React Router.
+Note, in your `package.json` that we are using the `react-router-dom` version 5
+package. This package that will give us access to all of the components in React
+Router.
 
 Take a look at the code that has already been created in the application. You
 will notice there is a `movieData.js` file with a named export variable assigned
