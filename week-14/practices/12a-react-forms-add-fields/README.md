@@ -27,6 +27,11 @@ Navigate to the [starter][starter] repo for this short practice.
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
+#### Option 2:
+
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and 
+ click `Import and Fork`.
 
 ## Adding a text area
 
@@ -279,4 +284,4 @@ apply the same concepts you have now learned.
 
 [onchange event handler]:
 https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
+[starter]:https://github.com/jdrichardsappacad/react-2021/tree/main/week-14/practices/12a-react-forms-add-fields/starter
