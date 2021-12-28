@@ -27,6 +27,12 @@ Navigate to the [starter][starter] repo for this short practice.
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
+#### Option 2:
+
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and 
+ click `Import and Fork`.
+
 ## Creating a simple form
 
 To learn how to create an HTML form in React, you'll create a `ContactUs`
@@ -92,10 +98,11 @@ If you're following along, be sure to update your React application's `App.js` t
 
 ```
 
-At this point, you can run your application (`npm start`) and view the form in
-the browser. You can even fill out the form, but currently the component doesn't
-know what the form input values are. To keep track of each of the input values,
-you will need to initialize and maintain component state.
+At this point, you may need to refresh your browser in codesandbox (not your
+actual browser) to view the form in the browser. You can even fill out the form,
+but currently the component doesn't know what the form input values are. To
+keep track of each of the input values, you will need to intialize and
+maintain component state.
 
 ## Adding state to the component
 
@@ -140,12 +147,12 @@ Then use them to set the `value` attributes on the corresponding form field
 
 ```
 
-If you try navigating to the browser and refreshing now, then you will get a
+If you refresh the codesandbox browser now, then you will get a
 warning in your browser's dev tools console saying, "You provided a `value` prop
-to a form field without an `onChange` handler. This will render a read-only
-field." Also, if you try typing in any of the fields, they don't update anymore.
-This is because the `value` attribute for each input will always be an empty
-string.
+to a form field without an `onChange` handler. (located at the bottom of the browser)
+This will render a read-only field." Also, if you try typing in any of the fields,
+they don't update anymore. This is because the `value` attribute for each input
+will always be an empty string.
 
 For example, the name field will always be an empty string because the `value`
 attribute on that field is set to the `name` state variable. The `name` state
@@ -231,7 +238,8 @@ Use the same approach to add an `onChange` event handler to the "Email" and
 
 If you view the form again in the browser and open the React Developer Tools,
 you can see the component's state update as you type within each of the form
-fields (i.e the `<input>` elements).
+fields (i.e the `<input>` elements). You can `console.log(name)` above
+your return to see this change in real time in the console.
 
 ![onchange event handler]
 
