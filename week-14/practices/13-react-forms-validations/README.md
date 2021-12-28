@@ -23,6 +23,11 @@ Navigate to the [starter][starter] repo for this short practice.
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
+#### Option 2:
+
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and 
+ click `Import and Fork`.
 
 ## Setup Validation State
 
@@ -41,6 +46,7 @@ listens for the `name` and `email`. Inside the `useEffect` add an `errors`
 variable and assign it an empty array. This will be your mutable array.
 
 Create two conditionals:
+
 - The first should check name to see if it's length is greater than 0. If it
   isn't, push the message, 'Please enter your name', to the `errors` array.
 - The second conditional should check to see if the email input has an `@` in
@@ -52,7 +58,8 @@ Finally, inside the `useEffect`, set the `validationErrors` state to the
 
 ## Render Validation Errors
 
-In the return of the function component, use an inline conditional expression
+In the return of the function component (above your first input inside of your
+form element), use an inline conditional expression
 with a logical `&&` operator to conditionally render an unordered list of
 validation messages if the `validationErrors` array has a `length` greater than
 `0`:
@@ -69,7 +76,7 @@ validation messages if the `validationErrors` array has a `length` greater than
           ))}
         </ul>
       </div>
-    );
+    )
   }
 
   ```
@@ -84,7 +91,7 @@ validation messages if the `validationErrors` array has a `length` greater than
   ```js
   
     // ./src/components/ContactUs/index.js
-    import { useState } from 'react';
+    import { useEffect, useState } from 'react';
 
     function ContactUs(props) {
       const [name, setName] = useState('');
@@ -106,6 +113,8 @@ validation messages if the `validationErrors` array has a `length` greater than
       },[name, email])
 
       const onSubmit = e => {
+        e.preventDefault();
+
         if (validationErrors.length > 0) {
           return alert(
             `Cannot submit`
@@ -211,7 +220,6 @@ The following errors were found:
 Overall, this approach to validating the form is relatively simple. But there
 are other ways to validate including the use of packages that focus specifically
 on forms.
-
 
 ### Client-side vs server-side validation
 

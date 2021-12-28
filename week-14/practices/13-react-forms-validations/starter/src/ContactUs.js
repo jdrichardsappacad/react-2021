@@ -29,6 +29,8 @@ function ContactUs() {
     setName('');
     setEmail('');
     setPhone('');
+    setPhoneType('');
+    setComments('');
   };
 
   return (
