@@ -49,7 +49,7 @@ To start, add a function component named `ContactUs` and render the HTML form:
 
 ```js
 
-  // ./src/components/ContactUs.js
+  // ./src/ContactUs.js
   function ContactUs() {
     return (
       <div>
@@ -86,18 +86,13 @@ If you're following along, be sure to update your React application's `App.js` t
 ```js
 
   // ./src/App.js
-  import React from "react";
-  import Header from "../containers/Header";
-  import MainSection from "../containers/MainSection";
-  import ContactUs from "./ContactUs";
+  import ContactUs from './ContactUs'
 
-  const App = () => (
-    <div>
-      <Header />
-      <MainSection />
+  function App() {
+    return (
       <ContactUs />
-    </div>
-  );
+    );
+  }
 
   export default App;
 
@@ -105,7 +100,7 @@ If you're following along, be sure to update your React application's `App.js` t
 
 At this point, you may need to refresh your browser in codesandbox (not your
 actual browser) to view the form in the browser. You can even fill out the form,
-but currently the component doesn't know what the form input values are. To 
+but currently the component doesn't know what the form input values are. To
 keep track of each of the input values, you will need to intialize and
 maintain component state.
 
