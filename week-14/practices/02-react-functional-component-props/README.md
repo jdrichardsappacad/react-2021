@@ -4,31 +4,28 @@ In this practice you will create a functional component and pass props from a
 parent component to a child component.
 
 ## Set up
-
+ 
 Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
-
+ 
 Navigate to the [starter][starter] repo for this short practice.
-
+ 
 ### 2 Options:
-
+ 
 #### Option 1: (this simplest option)
-
+ 
 - In the url of the starter repo, append `box` to the word `github` and hit
   `Enter` or `return` depending on your computer. You should be taken to
   [codesandbox.io][code-sandbox] and the app should be loaded for you.
 - Example: If the repo was
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
-
+ 
 #### Option 2:
+ 
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and
+ click `Import and Fork`.
 
-- Copy the url for the starter
-- Go to [codesandbox.io][code-sandbox] and navigate to the Dashboard
-- In the left sidebar, choose `Repositories`
-- Click `Import Repository`
-- Place the address you copied from the starter repo in the input box
-- Click `Import and Fork`
-- You will be taken to a sandbox with your loaded app
 
 ## Create a Functional Component
 
@@ -39,7 +36,7 @@ Import the `BaseStates.css` file into your component.
 Add the `BaseStats` component to your `App.js` component. It should be
 placed below the `Showcase` component. Test it in the Browser.
 
-Create an object inside your `App.js` called `baseStats`.
+Create an object literal inside your `App.js` called `baseStats`.
 It should look like this:
 
 ```js
@@ -57,7 +54,7 @@ Pass this object to the `BaseStats` component using `stats` as the prop name.
 In your `BaseStats` component, bring in `props` as the argument to the
 functional component.
 
-Go to your browser, go to the Browser DevTools and open your React DevTools.
+Go to your codesandbox browser, go to the Browser DevTools and open your React DevTools.
 Click on the BaseStats component. Under `props` you should see your stats props
 object.
 
@@ -67,7 +64,7 @@ object.
 
 Now you are ready to use your props object.
 
-Create a table beneath your `h1` tag. It should have four table rows, each with
+In `BaseStats.js`, create a table beneath your `h1` tag. It should have four table rows, each with
 two table data tags. The first table data tag of each table row should contain
 the header for each stat (Hit Points, Attack, Defense, and Speed).
 
