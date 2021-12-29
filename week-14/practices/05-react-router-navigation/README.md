@@ -20,6 +20,12 @@ Navigate to the [starter][starter] repo for this short practice.
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
+#### Option 2:
+
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and
+ click `Import and Fork`.
+
 You should see an `h1` saying App Component as well as the Home
 Component.
 
@@ -79,7 +85,7 @@ Now you are going to change the class that is called on the active link using
 the [`activeClassName`][active-classname] attribute. Take a look in the
 `index.css` and notice that there is a purple class. In your App.js, add
 `activeClassName='purple'` to each `NavLink`. In the browser, your active link
-should now, also, have a border around it.
+should now have a purple border around it.
 
 Next, inside your NavLinks you are going to use the [`activeStyle`][activestyle]
 attribute. It will work in the way that inline styling works for css. Add
