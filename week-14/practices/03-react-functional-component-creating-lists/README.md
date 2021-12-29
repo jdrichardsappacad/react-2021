@@ -22,6 +22,12 @@ Navigate to the [starter][starter] repo for this short practice.
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
+#### Option 2:
+
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and
+ click `Import and Fork`.
+
 ## Create Pokemoves component
 
 Create a component and `.js` file called `Pokemoves`. It should return a
@@ -33,7 +39,8 @@ We are going to import that data and use it to create a list for our
 application.
 
 With named exports we must always use curly braces and the correct variable
-name to import the variable. Import the moves array from `data.js`
+name to import the variable. In `Pokemoves.js` import the moves array from
+`data.js`
 
 You are going to list out all of the potential moves of this particular Pokemon.
 
