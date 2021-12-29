@@ -22,15 +22,21 @@ Navigate to the [starter][starter] repo for this short practice.
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
+#### Option 2:
+
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and
+ click `Import and Fork`.
+
 ## Background Theme
 
 Take a look at the `UseState.css` file in the `UseState` directory. Notice that
 there is a class for light and for dark. You will use these classes to change
 your background based on a button click.
 
-Open your `index.js` file in your `UseState` directory.
+Open your `UseState/index.js` file.
 
-Import the `UseState.css` file into your `index.js` file using a relative path.
+Import the `UseState.css` file into your `UseState/index.js` file using a relative path.
 
 ```js
 
@@ -52,7 +58,7 @@ In your browser DevTools, look at the console. Notice, the two values that are
 returned. The first value is your current state, and the second value is the
 updater function used to update the state. Now remove the `console.log`.
 
-Next, inside your functional component, declare state by destructuring the two
+Next, inside your functional component, declare a theme state by destructuring the two
 returned values,from the invoked `useState` function. Give this useState
 function an initial state of `'light'`.
 
@@ -102,7 +108,7 @@ You now need a slice of state for a count. Create that slice using `count` and
 number, `0`.
 
 Check your React DevTools to see that you now have a slice of state with the
-initial value of `light`, and a slice of state with the initial value of `0.`
+initial value of `light`, and a slice of state with the initial value of `0`.
 
 You should also see a 0 as the count in your browser.
 
