@@ -22,6 +22,12 @@ Navigate to the [starter][starter] repo for this short practice.
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
+#### Option 2:
+
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and
+ click `Import and Fork`.
+
 In your browser you should see an `h1` with text, App Component. You should also
 see a Navbar with four links. When you click on the links they should render the
 component below them.
@@ -91,9 +97,9 @@ Create a variable called `movieChoice` and use the `.find` method to compare the
 two id's. This will select the one movie object you are looking for. (_Hint_:
 Make sure you use `===` and check that both id's are the same datatype.)
 
-Next, in your JSX, create an `h1` element with the `title` of the movie, and a
-`p` element with the description of the movie. Check your data for the proper
-key/value choices.
+Next, in your JSX, replace the text in your `h1` element with the `title` of
+the movie, and a `p` element with the description of the movie. Check your
+data for the proper key/value choices.
 
 ## Congratulations!
 
