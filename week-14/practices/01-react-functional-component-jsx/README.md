@@ -4,13 +4,26 @@ In this practice you will create a Functional Component and add JSX.
 
 ## Set up
 
-Download the [starter][jsx-starter] file for this practice.
+Make sure you are logged in to your [codesandbox.io][code-sandbox] account.
 
-Open the practice in VSCode and run `npm install` in the terminal.
+Navigate to the [starter][starter] repo for this short practice.
 
-Run `npm start` to make sure your project is set up correctly.
+### 2 Options:
 
-You should see `App Component` in your browser if it is running correctly.
+#### Option 1: (this simplest option)
+
+- In the url of the starter repo, append `box` to the word `github` and hit
+  `Enter` or `return` depending on your computer. You should be taken to
+  [codesandbox.io][code-sandbox] and the app should be loaded for you.
+- Example: If the repo was
+  `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
+  become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+
+#### Option 2:
+
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and 
+ click `Import and Fork`.
 
 ## Create a Functional Component
 
@@ -19,6 +32,8 @@ will create a functional component `Showcase` with contents similar to the code
 below:
 
 ```js
+// src/showcase.js
+
 function Showcase() {
   return (
     <div>
@@ -37,7 +52,8 @@ Inside your `App.js` import the `Showcase` component using
 [ES6 imports][es6-imports]. Replace the `h1` with the `Showcase` component as a 
 child.
 
-Check your browser. It should now read `Showcase Component`
+Check your codesandbox browser. It should now read `Showcase Component`.
+(you may need to refresh the codesandbox browser, not your main browser.)
 
 ## Add JavaScript to Your JSX
 
@@ -100,7 +116,7 @@ normally kebab-case should be converted into camelCase. (e.g `padding-right`
 should be `paddingRight`). Also, each value in your key/value pairs should be
 represented in quotes as a string.
 
-Inside your `h1` tag, wrap a `span` tag around the two separate 
+Inside your `h2` tag, wrap a `span` tag around the two separate 
 pokeCharacteristics. Inside the first span make the background color green and 
 the text white. Inside the second span make the background color white and the 
 text green using hex colors.
@@ -113,6 +129,8 @@ with the name `background`. Remember, in this file we use regular CSS. In your
 background selector add these values
 
 ```css
+/* src/app.css */
+
 .background {
   background: url(./images/background.jpg);
   background-repeat: no-repeat;
