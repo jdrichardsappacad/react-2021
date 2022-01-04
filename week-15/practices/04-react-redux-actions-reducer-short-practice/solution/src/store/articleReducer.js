@@ -1,5 +1,4 @@
 //!!START
-
 import articles from '../data/data.json';
 
 const LOAD_ARTICLES = 'article/loadArticles';
