@@ -18,11 +18,11 @@ ReactDOM.render(
   <React.StrictMode>
     {/*!!START */}
     <Provider store={store}>
-      {/*!!END */}
+    {/*!!END */}
       <BrowserRouter>
         <App />
       </BrowserRouter>
-      {/*!!START */}
+    {/*!!START */}
     </Provider>
     {/*!!END */}
   </React.StrictMode>,
