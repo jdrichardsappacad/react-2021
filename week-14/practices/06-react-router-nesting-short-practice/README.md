@@ -68,7 +68,6 @@ Each time you click a link you should now see the MovieDetails Component with
 the `h1` text `MovieDetails Component` in the Browser beneath the NavBar. You
 should also see the movie id change in the url address bar.
 
-
 ## Rendering Your Movie Details
 
 It's now time to add the movie details for each component.
@@ -81,7 +80,7 @@ Now you will use the [useParams][use-params] hook. This hook will allow you to
 capture the movie id from the url.
 
 Inside the `MovieDetails` function create a destructured `movieId` variable and
-assign it to an invoked useParams hook. 
+assign it to an invoked useParams hook.
 
 ```js
 
@@ -99,9 +98,9 @@ Create a variable called `movieChoice` and use the `.find` method to compare the
 two id's. This will select the one movie object you are looking for. (_Hint_:
 Make sure you use `===` and check that both id's are the same datatype.)
 
-Next, in your JSX, create an `h1` element with the `title` of the movie, and a
-`p` element with the description of the movie. Check your data for the proper
-key/value choices.
+Next, in your JSX, replace the text in your `h1` element with the `title` of
+the movie, and a `p` element with the description of the movie. Check your
+data for the proper key/value choices.
 
 ## Congratulations!
 
