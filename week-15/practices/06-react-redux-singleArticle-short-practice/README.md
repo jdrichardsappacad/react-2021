@@ -37,8 +37,8 @@ Using the parameter given in the `url`, choose the correct article from the
 `articles` array, and display the information for that article inside the `JSX`
 
 
-Congratulations! You have re-used the knowledge that you have for displaying
-information based on a parameter.   
+Congratulations! You have re-used the knowledge that you have for parsing data
+and displaying information using JSX based on a parameter.   
 
 
 [starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
