@@ -20,7 +20,6 @@ const ArticleList = () => {
   useEffect(() => {
     dispatch(loadArticles())
   }, [dispatch])
-
   //!!END
   return (
     <div>
