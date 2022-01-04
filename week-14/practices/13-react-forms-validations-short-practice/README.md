@@ -243,4 +243,4 @@ between validating your inputs on the client vs. the server.
 [onchange event handler]:
 https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
 [validator]: https://github.com/validatorjs/validator.js
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
+[code-sandbox]:http://www.codesandbox.io

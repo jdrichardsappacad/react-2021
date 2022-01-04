@@ -284,4 +284,4 @@ apply the same concepts you have now learned.
 
 [onchange event handler]:
 https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
-[starter]:https://github.com/jdrichardsappacad/react-2021/tree/main/week-14/practices/12a-react-forms-add-fields/starter
+[code-sandbox]:http://www.codesandbox.io

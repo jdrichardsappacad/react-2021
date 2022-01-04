@@ -180,4 +180,4 @@ What we have done is:
    information in our `Detail` component as well.
 
 [react-devtools]: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
+[code-sandbox]:http://www.codesandbox.io

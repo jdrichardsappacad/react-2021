@@ -43,10 +43,5 @@ In the `articleReducer.js` file:
 - Create the new article to submit to the store
 - Dispatch that object using the `action creator` you created.
 
-[combine-reducers]: https://redux.js.org/api/combinereducers
-[compose]: https://redux.js.org/api/compose
-[applymiddleware]: https://redux.js.org/api/applymiddleware
-[provider]:https://react-redux.js.org/api/provider
-[redux-store]:./aws-images/redux-devtools.png
-[store]:https://redux.js.org/api/store
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
+
+[code-sandbox]:http://www.codesandbox.io

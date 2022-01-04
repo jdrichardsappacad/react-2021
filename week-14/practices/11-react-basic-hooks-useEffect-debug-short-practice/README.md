@@ -47,5 +47,5 @@ when the app runs but also warnings in the console.
 
 Good Luck!
 
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
 [randomuser-api]: https://randomuser.me/
+[code-sandbox]:http://www.codesandbox.io

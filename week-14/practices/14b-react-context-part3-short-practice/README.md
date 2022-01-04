@@ -141,5 +141,6 @@ to see the following:
 4. The re-render caused by the change in context does not reset local state,
    which was shown in the `Match` component.
 
-[context-starter]: ./starter
+
 [react-devtools]: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+[code-sandbox]:http://www.codesandbox.io

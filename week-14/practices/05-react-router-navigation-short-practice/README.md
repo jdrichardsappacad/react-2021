@@ -187,3 +187,4 @@ is a list of the techniques you used:
 [activestyle]:https://v5.reactrouter.com/web/api/NavLink/activestyle-object
 [redirect]:https://v5.reactrouter.com/web/api/Redirect
 [usehistory]:https://v5.reactrouter.com/web/api/Hooks/usehistory
+[code-sandbox]:http://www.codesandbox.io
