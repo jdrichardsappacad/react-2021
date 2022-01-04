@@ -23,6 +23,11 @@ Navigate to the [starter][starter] repo for this short practice.
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
+#### Option 2:
+
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and
+ click `Import and Fork`.
 
 Take a look at the code. Review the differences between the equivalent
 `functional` and `class` components. You are going to add lifecycle methods to

@@ -22,6 +22,14 @@ Navigate to the [starter][starter] repo for this short practice.
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc` it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
 
+#### Option 2:
+
+- Navigate to codesandbox.io and sign in. Click `Create Sandbox` then choose
+ `Import Project` from the sidebar. Paste the link to the starter repo and
+ click `Import and Fork`.
+
+### Preparation
+
 In your browser you should see an `h1` with text, App Component. You should also
 see a Navbar with four links. When you click on the links they should render the
 component below them.
@@ -60,7 +68,6 @@ Each time you click a link you should now see the MovieDetails Component with
 the `h1` text `MovieDetails Component` in the Browser beneath the NavBar. You
 should also see the movie id change in the url address bar.
 
-
 ## Rendering Your Movie Details
 
 It's now time to add the movie details for each component.
@@ -73,7 +80,7 @@ Now you will use the [useParams][use-params] hook. This hook will allow you to
 capture the movie id from the url.
 
 Inside the `MovieDetails` function create a destructured `movieId` variable and
-assign it to an invoked useParams hook. 
+assign it to an invoked useParams hook.
 
 ```js
 
@@ -81,7 +88,7 @@ const { movieId } = useParams();
 
 ```
 
-Now `console.log` the `movieId` variable and take a look in your browser console
+Now `console.log` the `movieId` variable and take a look in the codesandbox browser console
 to see if that number changes when you click on a different movie.
 
 You currently have the id of the movie you want and you have the list of movies
@@ -91,9 +98,9 @@ Create a variable called `movieChoice` and use the `.find` method to compare the
 two id's. This will select the one movie object you are looking for. (_Hint_:
 Make sure you use `===` and check that both id's are the same datatype.)
 
-Next, in your JSX, create an `h1` element with the `title` of the movie, and a
-`p` element with the description of the movie. Check your data for the proper
-key/value choices.
+Next, in your JSX, replace the text in your `h1` element with the `title` of
+the movie, and a `p` element with the description of the movie. Check your
+data for the proper key/value choices.
 
 ## Congratulations!
 
