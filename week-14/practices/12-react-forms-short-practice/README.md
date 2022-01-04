@@ -436,4 +436,4 @@ completely natural and you won't notice the difference!
 
 [onchange event handler]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
 [validator]: https://github.com/validatorjs/validator.js
-[starter]:https://github.com/jdrichardsappacad/basic-cra-starter
+[code-sandbox]:http://www.codesandbox.io

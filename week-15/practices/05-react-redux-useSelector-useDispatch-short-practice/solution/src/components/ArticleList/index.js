@@ -12,7 +12,7 @@ import {loadArticles} from '../../store/articleReducer'
 
 const ArticleList = () => {
 
-//!!START
+  //!!START
   const dispatch = useDispatch()
   const articles = useSelector(state=>state.articleState.entries)
 
@@ -21,7 +21,7 @@ const ArticleList = () => {
     dispatch(loadArticles())
   }, [dispatch])
 
-//!!END
+  //!!END
   return (
     <div>
       <h1>ArticleList</h1>
@@ -29,16 +29,18 @@ const ArticleList = () => {
 
       {/** add hiding syntax for the {articles.map*/}
       <ol>
-         {/**Show <li>s in the beginning
-        <li>Gilligans Island. Is it true?</li>
+        {/*!!ADD  */}
+        {/* <li>Gilligans Island. Is it true?</li>
         <li>A Baseball Moment</li>
         <li>Poke Moment</li>
         <li>Cool Cats</li>
-        <li>Why Am I At Home</li>
-       */}
+        <li>Why Am I At Home</li> */}
+        {/*!!END_ADD */}
+        {/*!!START_SILENT  */}
         {articles.map(({title, id}) => (
           <li key={id}><NavLink to={`/article/${id}`}>{title}</NavLink></li>
         ))}
+        {/*!!END  */}
       </ol>
 
       <Switch>

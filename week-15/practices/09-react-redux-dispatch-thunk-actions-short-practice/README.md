@@ -48,4 +48,4 @@ You just learned how to `dispatch` thunk actions from within your React
 components.
 
 
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
+[code-sandbox]:http://www.codesandbox.io

@@ -134,5 +134,5 @@ Congratulations! In this practice you have learned:
 3. Passing props using the spread operator
 4. Returning a component instead of an li element in your `.map` function
 
-[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [keys-and-lists]: https://beta.reactjs.org/learn/rendering-lists#keeping-list-items-in-order-with-key
+[code-sandbox]:http://www.codesandbox.io

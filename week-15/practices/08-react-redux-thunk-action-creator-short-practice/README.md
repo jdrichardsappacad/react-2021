@@ -84,4 +84,4 @@ You just learned how to write thunk action creators. In the next practice, you
 will learn how to `dispatch` these thunk action creators.
 
 [fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
+[code-sandbox]:http://www.codesandbox.io

@@ -146,4 +146,4 @@ Congratulations! You have now learned to:
 
 [react-redux]: https://react-redux.js.org/introduction/getting-started
 [react-redux-hooks]: https://react-redux.js.org/api/hooks
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
+[code-sandbox]:http://www.codesandbox.io

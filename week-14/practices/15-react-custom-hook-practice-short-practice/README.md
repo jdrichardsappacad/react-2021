@@ -106,5 +106,4 @@ In this exercise, you learned how to
 - Move logic away from a component and into a custom hook
 - Use other hooks in a custom hook
 
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
-
+[code-sandbox]:http://www.codesandbox.io
