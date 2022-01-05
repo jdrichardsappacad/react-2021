@@ -184,7 +184,6 @@ In this short practice, you have used `useEffect` to handle these side effects:
 2. store and retrieve trivial data in `local storage`
 3. `alert` the user when information input is incorrect
 
-[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [http-cats]: https://http.cat/
 [status-codes]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 [set-interval]: https://developer.mozilla.org/en-US/docs/Web/API/setInterval

@@ -103,7 +103,6 @@ You have done the following:
 2. Used your `Context.Provider` and wrapped your entire application with it.
 3. Consumed the context in your `Detail` component.
 
-[starter]: ./starter
 [create-context]: https://reactjs.org/docs/context.html#reactcreatecontext
 [react-devtools]: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
 [code-sandbox]:http://www.codesandbox.io

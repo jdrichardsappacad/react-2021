@@ -155,7 +155,6 @@ Add the container class from `UseState.css` to your wrapping div along with the
    state based on previous state.
 
 [use-state]: https://beta.reactjs.org/reference/usestate 
-[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [event-handler]:
 https://beta.reactjs.org/learn/responding-to-events#adding-event-handlers
 [code-sandbox]:http://www.codesandbox.io

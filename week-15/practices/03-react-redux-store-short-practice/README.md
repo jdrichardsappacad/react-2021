@@ -129,5 +129,4 @@ Congratulations! You have successfully:
 [provider]:https://react-redux.js.org/api/provider
 [redux-store]:./aws-images/redux-devtools.png
 [store]:https://redux.js.org/api/store
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
 [code-sandbox]:http://www.codesandbox.io

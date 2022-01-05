@@ -162,7 +162,6 @@ In this practice you have learned the following:
 5. Wrapping the `Route` components in a `Switch` component so that React will
    stop at the first matching choice it finds.
 
-[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [router-v5]:https://v5.reactrouter.com/web/guides/quick-start
 [router-v5-browserouter]:https://v5.reactrouter.com/web/api/BrowserRouter
 [router-v5-route]:https://v5.reactrouter.com/web/api/Route

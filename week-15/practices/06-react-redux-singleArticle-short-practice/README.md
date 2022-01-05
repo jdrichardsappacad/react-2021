@@ -40,6 +40,4 @@ Using the parameter given in the `url`, choose the correct article from the
 Congratulations! You have re-used the knowledge that you have for parsing data
 and displaying information using JSX based on a parameter.   
 
-
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
 [code-sandbox]:http://www.codesandbox.io
