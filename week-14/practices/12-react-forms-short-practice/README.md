@@ -434,6 +434,13 @@ process happens very quickly. You can test this yourself by playing around with
 the `ContactUs` component. Typing within each of the form fields feels
 completely natural and you won't notice the difference!
 
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
+
+- Creating a React functional component containing a simple form
+- Defining controlled inputs with the `useState` hook for different form inputs
+
 [onchange event handler]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png
 [validator]: https://github.com/validatorjs/validator.js
 [code-sandbox]:http://www.codesandbox.io

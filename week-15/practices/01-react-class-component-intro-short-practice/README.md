@@ -201,7 +201,9 @@ Those code blocks should now look something like this:
 Now that you have your class component setup, let's export it and import it in 
 your `App.js`. Replace `FunctionalComponentOne` with your new class component. 
 
-Congratulations! In this short practice you have learned to:
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
 
 - Create a Class Component
 - Convert a Function Component to a Class Component

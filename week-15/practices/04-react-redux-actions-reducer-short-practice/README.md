@@ -129,8 +129,15 @@ the `action`, and the next state with five articles in the `articles` array.
 
 ![redux-logger][redux-logger]
 
-Congratulations! You have created an `action creator`, a `reducer` and tested
-both on the `window` of the browser using `redux-logger`.
+
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
+
+- creating an `action creator`, 
+- creating a `reducer` 
+- testing an `action creator` on the `window` of the browser using
+  `redux-logger`.
 
 [action-creator]: https://redux.js.org/usage/reducing-boilerplate
 [reducer]:

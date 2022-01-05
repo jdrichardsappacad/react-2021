@@ -42,10 +42,11 @@ Now it's your turn! Update the `ArticleInput` component found in the
 **frontend/src/component/ArticleInput/index.js** file to use the `writeArticle`
 thunk action creator when the user submits the form to create a new article.
 
-## What you've learned
+## What you have learned
 
-You just learned how to `dispatch` thunk actions from within your React
-components.
+**Congratulations!** In this practice you have learned:
+
+- how to `dispatch` thunk actions from within your React components.
 
 
 [code-sandbox]:http://www.codesandbox.io

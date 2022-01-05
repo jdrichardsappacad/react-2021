@@ -126,11 +126,13 @@ the change in context only causes a re-render, which doesn't affect local state.
 If it reset back to false, that means the `Match` component was unmounted from
 the tree and added back into the tree.
 
-# Congratulations!
+## What you have learned
 
-We have dynamically set the value of our context within a component using the
-`setCurrentSign` method provided in our context. With this method, it allowed us
-to see the following:
+**Congratulations!** In this practice you have learned:
+
+You have dynamically set the value of the context within a component using the
+`setCurrentSign` method provided in the context. With this method, it allowed
+you to see the following:
 
 1. Our context value change with each onClick of the sign's span in the `Navbar`
    component.

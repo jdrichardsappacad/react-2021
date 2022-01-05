@@ -88,10 +88,12 @@ This `componentDidUpdate` lifecycle method won't run after initial render. But,
 it will run after every re-render. However, the functionality will only execute
 when the conditional, `if` criteria is met.
 
-Congratulations! In this short practice you have used 3 basic React
-`Lifecycle Methods` with Class Components:
+## What you have learned
 
-1. `componentDidMount`
-2. `componentDidUpdate`
-3. `componentWillUnmount`
+**Congratulations!** In this practice you have learned:
+
+- using the 3 basic React `Lifecycle Methods` with Class Components:
+  1. `componentDidMount`
+  2. `componentDidUpdate`
+  3. `componentWillUnmount`
 

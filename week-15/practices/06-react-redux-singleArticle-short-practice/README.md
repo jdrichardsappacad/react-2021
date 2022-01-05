@@ -37,7 +37,11 @@ Using the parameter given in the `url`, choose the correct article from the
 `articles` array, and display the information for that article inside the `JSX`
 
 
-Congratulations! You have re-used the knowledge that you have for parsing data
+## What you have learned
+
+**Congratulations!** In this practice you have learned: 
+
+- re-use the knowledge that you have for parsing data
 and displaying information using JSX based on a parameter.   
 
 [code-sandbox]:http://www.codesandbox.io

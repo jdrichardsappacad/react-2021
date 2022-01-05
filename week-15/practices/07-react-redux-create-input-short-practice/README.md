@@ -43,5 +43,11 @@ In the `articleReducer.js` file:
 - Create the new article to submit to the store
 - Dispatch that object using the `action creator` you created.
 
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
+
+- recall methods that you've learned from other practices to create a full Redux
+  flow
 
 [code-sandbox]:http://www.codesandbox.io

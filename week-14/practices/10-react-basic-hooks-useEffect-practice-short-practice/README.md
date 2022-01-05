@@ -169,7 +169,10 @@ If you have succeeded, your code may look like the code below:
 
 ```
 
-**Congratulations!**
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
+
 In this short practice, you have used `useEffect` to handle these side effects:
 
 1. apply `setInterval` function to change the background color

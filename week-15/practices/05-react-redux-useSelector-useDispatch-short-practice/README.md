@@ -137,7 +137,9 @@ If you are successful, your code should look similar to this:
 
 ```
 
-Congratulations! You have now learned to:
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
 
 - use the `useDispatch` hook to dispatch an `action creator` and update the
   `store`.

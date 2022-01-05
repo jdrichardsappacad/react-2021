@@ -99,9 +99,9 @@ the `setValue` setter function that comes directly from the `useState` call, you
 could return an event handler version to further encapsulate the logic within
 the hook.
 
-## Wrapping Up
+## What you have learned
 
-In this exercise, you learned how to
+**Congratulations!** In this practice you have learned:
 
 - Move logic away from a component and into a custom hook
 - Use other hooks in a custom hook

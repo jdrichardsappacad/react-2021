@@ -278,9 +278,13 @@ when adding the "Comments" form field:
 
 ```
 
-Congratulations! You have now learned how to create the `textarea` and `select`
-fields. To learn how to add other fields, look up the functionality on MDN, then
-apply the same concepts you have now learned.
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
+
+- `textarea` and `select`field creation 
+- adding other fields, 
+- looking up the functionality on MDN and applying the same concepts
 
 [onchange event handler]:
 https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png

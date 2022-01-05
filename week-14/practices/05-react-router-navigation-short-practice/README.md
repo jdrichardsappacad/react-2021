@@ -162,8 +162,9 @@ on the `history` object to navigate the user to the `Home` component.
 
 Test in the browser.
 
-Congratulations! You have completed the Navigation portion of the practice. Here
-is a list of the techniques you used:
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
 
 1. Navigating to another address with the [`Link`][link] component
 2. Using the [`NavLink`][navlink] component's added capability to set the
