@@ -136,5 +136,4 @@ both on the `window` of the browser using `redux-logger`.
 [reducer]:
 https://redux.js.org/usage/structuring-reducers/basic-reducer-structure
 [redux-logger]: ./aws-assets/redux-logger.png
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all
 [code-sandbox]:http://www.codesandbox.io

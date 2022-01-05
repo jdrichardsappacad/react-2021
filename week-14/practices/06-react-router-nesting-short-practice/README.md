@@ -112,6 +112,5 @@ of the techniques you used:
 3. Used `useParams` hook in your `MovieDetails` component to grab the `movieId`,
    so you could render the according movie details found in your `movies` array.
 
-[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [use-params]: https://reactrouter.com/web/api/Hooks/useparams 
 [code-sandbox]:http://www.codesandbox.io

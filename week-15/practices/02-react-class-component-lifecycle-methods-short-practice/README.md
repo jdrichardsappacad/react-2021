@@ -95,5 +95,3 @@ Congratulations! In this short practice you have used 3 basic React
 2. `componentDidUpdate`
 3. `componentWillUnmount`
 
-
-[starter]:https://github.com/orgs/appacademy-starters/repositories?type=all

@@ -180,7 +180,6 @@ is a list of the techniques you used:
 5. Using the History API and the [`useHistory`][usehistory] hook to navigate the
    user to another location after they have handled some other functionality.
 
-[starter]: https://github.com/orgs/appacademy-starters/repositories?type=all
 [link]:https://v5.reactrouter.com/web/api/Link
 [navlink]:https://v5.reactrouter.com/web/api/NavLink
 [active-classname]:https://v5.reactrouter.com/web/api/NavLink/activeclassname-string
