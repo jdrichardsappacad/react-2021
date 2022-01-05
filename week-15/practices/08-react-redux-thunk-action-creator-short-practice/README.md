@@ -78,10 +78,14 @@ a `POST` request to `/api/articles`, and calls `dispatch` on the return value of
 
 **Hint: Remember to use `.json()` to parse your data before dispatching. 
 
-## What you've learned
+In the next practice, you will learn how to `dispatch` these thunk action
+creators.
 
-You just learned how to write thunk action creators. In the next practice, you
-will learn how to `dispatch` these thunk action creators.
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
+
+- write thunk action creators. 
 
 [fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 [code-sandbox]:http://www.codesandbox.io

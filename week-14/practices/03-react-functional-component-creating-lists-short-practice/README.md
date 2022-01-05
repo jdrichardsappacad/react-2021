@@ -127,7 +127,9 @@ return (
 );
 ```
 
-Congratulations! In this practice you have learned:
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
 
 1. Creating an unordered list in React using `.map`
 2. Adding a key prop to the returned item in your list

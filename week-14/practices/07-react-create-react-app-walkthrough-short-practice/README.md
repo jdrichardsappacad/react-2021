@@ -176,11 +176,12 @@ npx create-react-app <project-folder-name> --template @appacademy/react-v17
 Replace `<project-folder-name>` with the name of the project folder you want to
 create with the template.
 
-## What you've learned
+## What you have learned
 
-Congratulations! You have successfully bootstrapped a React app with the
-`create-react-app` CLI tool and removed some extra files to make the template
-easier to use.
+**Congratulations!** In this practice you have learned:
+
+- Bootstrapping a React app with the `create-react-app` CLI tool
+- Removing extra files to make the template easier to use
 
 [robots.txt]: https://en.wikipedia.org/wiki/Robots_exclusion_standard
 [app academy's create react app template]: https://www.npmjs.com/package/@appacademy/cra-template-react-v17

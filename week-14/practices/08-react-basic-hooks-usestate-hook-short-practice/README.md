@@ -147,6 +147,8 @@ Add the container class from `UseState.css` to your wrapping div along with the
 
 ## What you have learned
 
+**Congratulations!** In this practice you have learned:
+
 1. Creating `state` using the `useState` hook
 2. Updating `state` using the returned updater function
 3. Creating a separate slice of state for each concern.

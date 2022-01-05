@@ -235,10 +235,12 @@ to implement client-side validations, do it with the end goal of improving your
 application's overall user experience, not as your only means of validating
 user-provided data.
 
-## What you learned
+## What you have learned
 
-In this article you learned how to implement form validations and the difference
-between validating your inputs on the client vs. the server.
+**Congratulations!** In this practice you have learned:
+
+- form validations implement
+- the difference between validating your inputs on the client vs. the server.
 
 [onchange event handler]:
 https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Modular-Curriculum/content/react-redux/topics/react-class-components/assets/react-forms-onchange-event-handler.png

@@ -102,10 +102,9 @@ Next, in your JSX, replace the text in your `h1` element with the `title` of
 the movie, and a `p` element with the description of the movie. Check your
 data for the proper key/value choices.
 
-## Congratulations!
+## What you have learned
 
-You have completed the Dynamic Routing portion of the practice. Here is a list
-of the techniques you used:
+**Congratulations!** In this practice you have learned:
 
 1. Created nested routes inside the `Movies` component
 2. Dynamically created routes using `path` and `url` from `useRouteMatch` hook.

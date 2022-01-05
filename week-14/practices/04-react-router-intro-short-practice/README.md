@@ -151,7 +151,9 @@ Test again in the browser. Notice that 'Page Not Found' does not show.
 Now to test the `Page Not Found` Route. Try `http://localhost:3000/potato`
 Notice that the Page Not Found text is now rendered.
 
-In this practice you have learned the following:
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
 
 1. Using `BrowserRouter` to enable React Router in the entire application
 2. Using the `Route` component to setup paths for components to be mounted.

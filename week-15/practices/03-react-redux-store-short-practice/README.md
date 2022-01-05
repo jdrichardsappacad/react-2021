@@ -118,7 +118,9 @@ similar to the one below.
 
 ![redux-store][redux-store]
 
-Congratulations! You have successfully:
+## What you have learned
+
+**Congratulations!** In this practice you have learned:
 
 - created a `rootReducer` to pass to the `configureStore` method
 - connected `React` to `Redux`
