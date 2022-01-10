@@ -83,7 +83,7 @@ validation messages if the `validationErrors` array has a `length` greater than
 
   Also, add a conditional to the `onSubmit` function that returns an `alert`
   that says 'Cannot Submit' if the `validationErrors` state has a length greater
-  than 0, otherwise, it submits the form and clears all the state variabls.
+  than 0, otherwise, it submits the form and clears all the state variables.
 
   Putting all of that together, here's what the updated `ContactUs` function
   component should look like now:

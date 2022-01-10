@@ -32,13 +32,13 @@ Navigate to the [starter][starter] repo for this short practice.
 
 ## Action Creator
 
-You will start by working in the `store/articleReducer.js` file.
+You will start by working in the __store/articleReducer.js__ file.
 
 Since there is no database, import the data that is stored in
-`scr/data/data.json` assigning it to the variable name `articles`. This data
+__src/data/data.json__ assigning it to the variable name `articles`. This data
 will be used as the `payload` for the `action creator` you are about to create.
-Define and export an `action creator` called `loadArticles`. It should have a `type` key
-with a `constant variable` value, `LOAD_ARTICLES`. Make sure your
+Define and export an `action creator` called `loadArticles`. It should have a
+`type` key with a `constant variable` value, `LOAD_ARTICLES`. Make sure your
 `LOAD_ARTICLES` `constant` variable definition is assigned a string
 `article/loadArticles`. The `loadArticles` `action creator` should also have a
 payload of the articles that were imported.
@@ -96,13 +96,14 @@ If you are successful with this your added could should be similar to this:
 
 ## Connect the Reducer to Redux
 
-In the root `index.js` file of your `store` directory, import the articleReducer
-using the variable name, `articleReducer`. Now, add this reducer to the
-`combineReducers` function giving it a key of `articleState` and a value of `articleReducer`
+In the root __index.js__ file of your `store` directory, import the
+articleReducer using the variable name, `articleReducer`. Now, add this reducer
+to the `combineReducers` function giving it a key of `articleState` and a value
+of `articleReducer`
 
 ## Test on the Window
 
-To test if your reducer is working, go to your root `index.js` and:
+To test if your reducer is working, go to your root __index.js__ and:
 
 1. Import the `loadActions` `action creator` from the `articleReducer`
     - *remember that named exports need to be wrapped in { } when importing.*

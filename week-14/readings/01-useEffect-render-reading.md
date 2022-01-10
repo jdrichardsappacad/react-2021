@@ -21,13 +21,13 @@ and fork this template to your sandbox account.
 You could also create a `create-react-app` application as you did in the
 previous practice.
 
-## Create a Main.js Component
+## Create a Main Component
 
-In your `src` folder, create a file called `Main.js`. Create a functional
+In your `src` folder, create a file called __Main.js__. Create a functional
 component called Main with an `h1` with text Main Component and give it a
 default export.
 
-**Main.js**
+__Main.js__
 
 ```js
 
@@ -42,10 +42,10 @@ default export.
 
 ```
 
-Add the `Main` component to your `App.js` by importing it and replacing
+Add the `Main` component to your __App.js__ by importing it and replacing
 the `h1` tag with the `Main` component.
 
-**App.js**
+__App.js__
 
 ```js
 

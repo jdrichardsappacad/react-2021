@@ -27,19 +27,22 @@ load the practice into codesandbox.
 
 
 ## Article Reducer Steps
-In the `articleReducer.js` file:
+
+In the __articleReducer.js__ file:
+
 - create a constant called `ADD_ARTICLE` with a string value of
   `article/addArticle`
 - use thet constant in an action creator called `addArticle` which returns an
   object with a type of the constand and a payload of `article`. This action
   creator will also take a parameter of `article` to accept the new incoming
   article
-- add the `ADD_ARTICLE` case to the reducer. 
+- add the `ADD_ARTICLE` case to the reducer.
 - Update the state by adding the `article` payload to the `entries` array.
   Remember not to mutate state. Instead, update state by creating a new
   reference in memory for all objects, including nested objects.
 
 ## ArticleInput Component Steps
+
 - Create the new article to submit to the store
 - Dispatch that object using the `action creator` you created.
 

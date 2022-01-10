@@ -92,7 +92,7 @@ state)`. Now take a look in the browser devtools' Console. The log should
 show the entire state of the `store`. However, you only need the `entries` key
 from the `articleReducer`. Notice in the console that, in order to key into the
 article state, you must first key into the reducer function. This function was
-named `articleState` in the `store/index.js` file in the `combineReducers`
+named `articleState` in the __store/index.js__ file in the `combineReducers`
 function. In the `useSelector` console, key into the state by adding
 `articleState`. Now when you check the devtools Console, you should only see
 the `articleReducer` state. Key into the `entries`

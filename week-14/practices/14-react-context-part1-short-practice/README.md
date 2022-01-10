@@ -31,7 +31,7 @@ load the practice into codesandbox.
 ## Create Context
 
 To start, in your `src` directory, create a new directory called `context`. In
-this `context` directory, create a file called `HoroscopeContext.js`. This is
+this `context` directory, create a file called __HoroscopeContext.js__. This is
 where all your horoscope context will be placed.
 
 At the top of this file, import `createContext` from `react` and create your
@@ -42,7 +42,7 @@ Awesome! We have created our context, now let's use our `Provider` component.
 
 ## Create Context Provider
 
-In your `src/index.js` file, import `HoroscopeContext` from our `context`
+In your __src/index.js__ file, import `HoroscopeContext` from our `context`
 directory.
 
 Inside your `Root` functional component, wrap `<App/>` with the
@@ -77,7 +77,7 @@ If you refresh your browser, the warning message should disappear now.
 
 Now it is time to consume the context. Navigate to your `Detail` component. At
 the top, import `useContext` from react. Next, import `HoroscopeContext` from
-`context/HoroscopeContext.js`. Inside your `Detail` component, create a
+__context/HoroscopeContext.js__. Inside your `Detail` component, create a
 variable, `HoroscopeObj` and have it equal to `useContext` invoked with
 `HoroscopeContext` passed in as your argument.
 

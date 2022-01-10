@@ -49,7 +49,7 @@ To start, navigate to your `SideCard` component (`src/components/Sidebar.js`)
 and add a `console.log` with whatever message inside the component. This is so we
 can track if the component re-renders when it's not consuming the context.
 
-In your `Navbar` component (`src/components/Navbar.js`), import `useContext` and
+In your `Navbar` component (__src/components/Navbar.js__), import `useContext` and
 `HoroscopeContext`. Now, inside your `Navbar` component, destructure your
 `setCurrentSign`, which comes from invoking `useContext` and passing in your
 `HoroscopeContext` as an argument.
@@ -84,12 +84,12 @@ the context and also had its own local state(useState)? It will definitely
 re-render when the context changes - but does that also reset the local state?
 We are going to create another component to solve this question.
 
-If you look at your horoscope data (`src/data/horoscopes.js`), we also have a
+If you look at your horoscope data (__src/data/horoscopes.js__), we also have a
 `match` property that hasn't been utilized. Let's amp up what we know and create
 a new component called `Match`. In this component, we will create a button that
 will reveal the horoscope's match with each click.
 
-To start, create a file called `Match.js` in your `components` directory. In
+To start, create a file called __Match.js__ in your `components` directory. In
 this file, create a component called `Match` and export it. At the top of the
 file, import `useState` and `useContext` from React, `HoroscopeContext` from
 your context directory, and `horoscopeObj` from the data directory.

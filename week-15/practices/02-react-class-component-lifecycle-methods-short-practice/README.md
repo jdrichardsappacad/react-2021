@@ -69,8 +69,9 @@ If you are successful, your code should resemble the code below:
 
 ```
 
-Now that you have your class component setup, let's export them and import them in 
-your `App.js`. Replace the functional components with your new class components. 
+Now that you have your class component setup, let's export them and import them
+in your __App.js__. Replace the functional components with your new class
+components.
 
 
 ## componentDidUpdate
