@@ -45,8 +45,8 @@ Awesome! We have created our context, now let's use our `Provider` component.
 In your `src/index.js` file, import `HoroscopeContext` from our `context`
 directory.
 
-Inside your `Root` functional component, wrap `<App/>` with the
-`HoroscopeContext.Provider` component. This is how you will give horoscope
+Inside your __Root__ functional component, wrap `<App/>` with the
+__HoroscopeContext.Provider__ component. This is how you will give horoscope
 context to your entire application.
 
 Let's make sure things are going smoothly.
@@ -63,7 +63,7 @@ As you have seen in your DevTools, React is warning us that we need to have a
 our global state. Our goal is to pass a value in the `value` prop object and
 later consume that context value.
 
-In the `HoroscopeContext.Provider` component, include your `value` prop and set
+In the __HoroscopeContext.Provider__ component, include your `value` prop and set
 it to an object with the key of `sign` and value of `Leo`. (Feel free to use any
 other sign.) The object should look like below:
 
@@ -75,9 +75,9 @@ other sign.) The object should look like below:
 
 If you refresh your browser, the warning message should disappear now.
 
-Now it is time to consume the context. Navigate to your `Detail` component. At
+Now it is time to consume the context. Navigate to your __Detail__ component. At
 the top, import `useContext` from react. Next, import `HoroscopeContext` from
-`context/HoroscopeContext.js`. Inside your `Detail` component, create a
+`context/HoroscopeContext.js`. Inside your __Detail__ component, create a
 variable, `HoroscopeObj` and have it equal to `useContext` invoked with
 `HoroscopeContext` passed in as your argument.
 
@@ -92,7 +92,7 @@ If you click on your `Context.Provider`, you should see your `value` under the
 `prop` section. That is what your global state looks like.
 
 If you click on your `Detail` component, you should see a `hooks` section, where
-your context is located. This is where your `Detail` component is _consuming_
+your context is located. This is where your __Detail__ component is _consuming_
 the context.
 
 **Congratulations!**
@@ -101,7 +101,7 @@ You have done the following:
 
 1. Created context with `createContext`
 2. Used your `Context.Provider` and wrapped your entire application with it.
-3. Consumed the context in your `Detail` component.
+3. Consumed the context in your __Detail__ component.
 
 [create-context]: https://reactjs.org/docs/context.html#reactcreatecontext
 [react-devtools]: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
