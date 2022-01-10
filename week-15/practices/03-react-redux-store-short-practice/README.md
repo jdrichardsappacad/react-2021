@@ -38,11 +38,11 @@ The [`store`][store] is going to house the `state` tree in your application.
 
 In order to create a store in Redux, you are required to use the `createStore` method and pass it a required `rootReducer` as an argument.
 
-Before you begin, take a look at the `fruitReducer.js` that has been created for you. It is a trivial reducer that you ultimately will have no need for in this project. However, this is going to allow you to configure the `store` and connect it to `React`.
+Before you begin, take a look at the __fruitReducer.js__ that has been created for you. It is a trivial reducer that you ultimately will have no need for in this project. However, this is going to allow you to configure the `store` and connect it to `React`.
 
-Open the `index.js` file in the `store` directory. Read through all of the comments that exist to get a handle on the code.
+Open the __index.js__ file in the `store` directory. Read through all of the comments that exist to get a handle on the code.
 
-Import `fruitReducer` from the `fruitReducer.js` file using a relative path.
+Import `fruitReducer` from the __fruitReducer.js__ file using a relative path.
 
 Below the imports, create a variable called `rootReducer`. This should be
 assigned to an invoked [`combineReducers`][combine-reducers] method. The
@@ -70,12 +70,12 @@ If you are successful, your `rootReducer` should look like this:
 
 ## Connect Redux to React
 
-In the root of your `src` directory, open your `index.js` file. Below your
+In the root of your `src` directory, open your __index.js__ file. Below your
 import for `ReactDOM`, import the `Provider` component from `react-redux`. Below
 the import for the `App` component, import `configureStore` from the
-`store/index.js` file. Remember, it is a `default export`. Beneath the import
+__store/index.js__ file. Remember, it is a `default export`. Beneath the import
 for the `css`, create a variable called `store` and invoke the `configureStore`
-function that you defined in your `store/index.js`.
+function that you defined in your __store/index.js__.
 
 Similar to when you connected `React context` by wrapping it around your `App`
 component using a `Provider` component, you are going to do the same with your
