@@ -49,7 +49,7 @@ This translates to function declaration syntax like so:
 
 ```
 
-In the **frontend/src/store/articleReducer.js** file, write a `fetchArticles`
+In the __/frontend/src/store/articleReducer.js__ file, write a `fetchArticles`
 thunk action creator that uses the [`Fetch` API][fetch] to request articles at
 the relative path `/api/articles`, and `dispatch` the returned action from the
 `getArticles` action creator. You will want to rewrite the definition of the
@@ -72,20 +72,22 @@ Your thunk action creator might look like this:
 Remember to update the definition of the `getArticles` function.
 
 Now it's your turn! Write a `writeArticle` thunk action creator in the
-**frontend/src/store/articleReducer.js** file that takes in a `payload`, makes
+__/frontend/src/store/articleReducer.js__ file that takes in a `payload`, makes
 a `POST` request to `/api/articles`, and calls `dispatch` on the return value of
 `addArticle` passing in the new article from the response.
 
-**Hint: Remember to use `.json()` to parse your data before dispatching. 
+**Hint: Remember to use `.json()` to parse your data before dispatching.
 
 In the next practice, you will learn how to `dispatch` these thunk action
 creators.
 
 ## What you have learned
 
-**Congratulations!** In this practice you have learned:
+**Congratulations!**
 
-- write thunk action creators. 
+In this practice you have learned:
+
+- write thunk action creators.
 
 [fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 [code-sandbox]:http://www.codesandbox.io

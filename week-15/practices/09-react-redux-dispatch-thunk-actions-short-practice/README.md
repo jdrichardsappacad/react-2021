@@ -26,7 +26,7 @@ In the previous practice, you wrote thunk action creators, functions that
 returned a thunk action, and in this practice you will `dispatch` those thunk
 actions.
 
-In the **frontend/src/components/ArticleList/index.js** file, you will update
+In the __frontend/src/components/ArticleList/index.js__ file, you will update
 the component from `dispatch`-ing the action returned by the regular action
 creator to `dispatch`-ing the thunk action returned from the thunk action
 creator. Change the `import` statement near the top of the file to import the
@@ -39,7 +39,7 @@ available in your application through the `useDispatch` hook the same way you
 `dispatch`-ed the actions returned from your action creators.
 
 Now it's your turn! Update the `ArticleInput` component found in the
-**frontend/src/component/ArticleInput/index.js** file to use the `writeArticle`
+__frontend/src/component/ArticleInput/index.js__ file to use the `writeArticle`
 thunk action creator when the user submits the form to create a new article.
 
 ## What you have learned
