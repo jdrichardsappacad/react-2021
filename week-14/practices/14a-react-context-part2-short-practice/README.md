@@ -172,7 +172,7 @@ consumed that context to display your `currentSign`'s information.
 **Congratulations!** In this practice you have learned:
 
 1. Created a `HoroscopeProvider` that holds our `Context.Provider` and
-   refactored our `src/index.js` file to wrap our entire `App` with the
+   refactored our __src/index.js__ file to wrap our entire `App` with the
    `HoroscopeProvider`.
 2. Created a state of the `currentSign` with `useState` so we can dynamically
    change our default value and passed it into our `HoroscopeContext.Provider`
