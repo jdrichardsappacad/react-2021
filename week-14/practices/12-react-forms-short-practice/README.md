@@ -81,7 +81,7 @@ So far, there's nothing particularly interesting about this form. The only thing
 that looks different from regular HTML is that the `<label>` element's `for`
 attribute is `htmlFor` in React.
 
-If you're following along, be sure to update your React application's `App.js` to render the `ContactUs` component:
+If you're following along, be sure to update your React application's `App.js` to render the __ContactUs__ component:
 
 ```js
 
@@ -106,7 +106,7 @@ maintain component state.
 
 ## Adding state to the component
 
-To add state to the `ContactUs` component, import `useState` from React.
+To add state to the __ContactUs__ component, import `useState` from React.
 Initialize three state variables, `name`, `email`, and `phone` as empty strings.
 Then use them to set the `value` attributes on the corresponding form field
 `<input>` elements:
@@ -245,7 +245,7 @@ your return to see this change in real time in the console.
 
 ### Handling form submissions
 
-Now that the `ContactUs` component is initializing and updating state when form
+Now that the __ContactUs__ component is initializing and updating state when form
 field values are changed, it's time to handle form submissions! To start, create
 an `onSubmit` function and attach it to the `onSubmit` event listener for the
 form. Within the `onSubmit` event handler prevent the default behavior so that
@@ -431,7 +431,7 @@ To help understand how this works, here's an overview of the flow:
 
 While all of the above steps might _feel_ like a lot, in reality, the entire
 process happens very quickly. You can test this yourself by playing around with
-the `ContactUs` component. Typing within each of the form fields feels
+the __ContactUs__ component. Typing within each of the form fields feels
 completely natural and you won't notice the difference!
 
 ## What you have learned
