@@ -73,7 +73,6 @@ Now that you have your class component setup, let's export them and import them
 in your __App.js__. Replace the functional components with your new class
 components.
 
-
 ## componentDidUpdate
 
 Now navigate to the `ClassKuiper` component. Look at the `FunctionKuiper`
