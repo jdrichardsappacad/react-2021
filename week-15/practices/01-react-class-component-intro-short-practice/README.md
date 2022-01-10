@@ -61,15 +61,15 @@ Change the `h1` text from `Functional Component One` to `Class Component One`
 Remove each `onClick` and `onChange` method from your `JSX`. You will recreate
 them shortly.
 
-Also, remember to import the `FunctionalComponentTwo.js` component that will now
-be the child of this component.
+Also, remember to import the __FunctionalComponentTwo.js__ component that will
+now be the child of this component.
 
 ## Setting State
 
-Look in the `FunctionalComponentOne` file and notice the two slices of state.
-State in class components is represented by one single object. Each key inside
-the object represents a `slice of state` and the `initial value` is the value
-for the key.
+Look in the __FunctionalComponentOne.js__ file and notice the two slices of
+state. State in class components is represented by one single object. Each key
+inside the object represents a `slice of state` and the `initial value` is the
+value for the key.
 
 The classic approach to creating state in class components is to use a
 constructor function.
@@ -198,8 +198,8 @@ Those code blocks should now look something like this:
 
 ```
 
-Now that you have your class component setup, let's export it and import it in 
-your `App.js`. Replace `FunctionalComponentOne` with your new class component. 
+Now that you have your class component setup, let's export it and import it in
+your __App.js__. Replace `FunctionalComponentOne` with your new class component.
 
 ## What you have learned
 

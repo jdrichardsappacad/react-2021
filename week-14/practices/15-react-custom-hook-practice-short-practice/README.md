@@ -30,17 +30,17 @@ load the practice into codesandbox.
 Hooks are just functions in React that start with "use" and can only be used in
 Functional Components. In the starter, notice that in the `src` directory,
 there's a `hooks` directory and a `utils` directory. In the `utils` directory,
-you will find a `validations.js` file that exports on validator. In the `hooks`
-directory, you'll find the `textInput.js` file which is exporting a
+you will find a __validations.js__ file that exports on validator. In the
+`hooks` directory, you'll find the __textInput.js__ file which is exporting a
 `useTextInput` custom hook. That's what we'll be writing in this exercise.
 
 ## Update Form Component
 
 First, you will update the `Form` component to use the custom hook that is being
-exported from `src/hooks/textInput.js`. In `src/components/Form.js`, you will
-find the `Form` component. In this component, you will replace the logic that is
-happening with the `useState` hook and the array methods above the `return`
-statement with the custom hook, which means that all this logic will be
+exported from __src/hooks/textInput.js__. In __src/components/Form.js__, you
+will find the `Form` component. In this component, you will replace the logic
+that is happening with the `useState` hook and the array methods above the
+`return` statement with the custom hook, which means that all this logic will be
 moved to the custom hook.
 
 Comment out or remove the lines with the `useState` and array methods that are
@@ -64,7 +64,7 @@ the top of the file.
 
 Because this custom hook will encapsulate some of the properties of a `useState`
 hook, import the `useState` hook from the `react` package at the top of the
-`src/hooks/textInput.js` file. In the `useTextInput` function, pass in a
+__src/hooks/textInput.js__ file. In the `useTextInput` function, pass in a
 parameter of an object literal with keys of `validations` and `defaultValue` and
 set them equal to an empty array literal and an empty string literal,
 respectively.
