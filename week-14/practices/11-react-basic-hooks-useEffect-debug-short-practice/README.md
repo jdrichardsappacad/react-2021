@@ -18,6 +18,8 @@ load the practice into codesandbox.
 - Example: If the repo was
   `https://github.com/reduxjs/redux/tree/master/examples/todomvc`, it would
   become `https://githubbox.com/reduxjs/redux/tree/master/examples/todomvc`
+- If you end up somewhere that doesn't look right, check to make sure everything
+is spelled correctly (**githubbox** and not githubox)
 
 ### Option 2
 
@@ -44,6 +46,16 @@ that was showing.
 
 There are 7 errors to correct. Errors are not just
 when the app runs but also warnings in the console.
+
+Some things to keep in mind as you work:
+* Errors will frequently point to what line is causing you trouble, make sure
+to read your error carefully while debugging
+* Some errors will not show until you try to interact with the app, don't be
+afraid of diving in and testing!
+* If an error feels vague, read the code and think about what its goal is.
+* Code Sandbox will try to be helpful and change the icon next to the file that
+generated the error
+* Be sure to check your console for clues
 
 Good Luck!
 
