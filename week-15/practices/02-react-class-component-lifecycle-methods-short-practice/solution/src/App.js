@@ -35,7 +35,7 @@ const App = () => {
           <ClassKuiper />
           {/*!!END*/}
           {/*!!ADD */}
-          <FunctionKuiper />
+          {/* <FunctionKuiper /> */}
           {/*!!END_ADD */}
         </Route>
       </Switch>

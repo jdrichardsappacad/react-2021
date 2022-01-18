@@ -87,11 +87,14 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .kuiper-image {
+  height:350px;
+  width:350px;
   border-radius: 50%;
-  border: 1px inset gray;
+  border: 1px inset gray
 }
 
 .kuiper-check {
