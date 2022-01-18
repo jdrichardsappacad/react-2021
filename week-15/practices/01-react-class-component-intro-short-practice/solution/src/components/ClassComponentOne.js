@@ -1,3 +1,5 @@
+//!!START SILENT
+
 import { Component } from 'react';
 import FunctionalComponentTwo from './FunctionalComponentTwo';
 
@@ -61,3 +63,4 @@ class ClassComponentOne extends Component {
 }
 
 export default ClassComponentOne;
+//!!END

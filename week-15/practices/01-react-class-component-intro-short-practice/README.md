@@ -32,6 +32,13 @@ To create a class component you must first import the
 [`Component`][react-component] subclass from the `react` package. This will
 allow you the needed functionality for the component.
 
+
+```js
+
+  import { Component } from 'react'
+
+```
+
 Create a `class` component called `ClassComponentOne` that extends the imported
 Component sub-class.
 
@@ -46,11 +53,13 @@ Component sub-class.
 
 ```js
 
-  render(){}
+  render(){
+
+  }
 
 ```
 
-Inside the render method, you will `return` the JSX, just as you did in
+Inside the `render` method, you will `return` the JSX, just as you did in
 functional components.
 
 Copy the whole `return` from the `FunctionalComponentOne` file. Paste it
