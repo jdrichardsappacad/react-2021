@@ -8,7 +8,7 @@ import ClassTitan from './components/classComponents/ClassTitan.js';
 import FunctionTitan from './components/functionalComponents/FunctionTitan.js';
 //!!END_ADD
 //!!START SILENT
-// import ClassKuiper from './components/classComponents/ClassKuiper.js';
+import ClassKuiper from './components/classComponents/ClassKuiper.js';
 //!!END
 //!!ADD
 import FunctionKuiper from './components/functionalComponents/FunctionKuiper.js';

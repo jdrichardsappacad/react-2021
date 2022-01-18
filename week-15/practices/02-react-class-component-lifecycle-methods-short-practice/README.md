@@ -88,15 +88,32 @@ the transition works.
 Now navigate to the `ClassKuiper` component. Look at the `FunctionKuiper`
 component. Notice the `useEffect` that listens for the `guessCount` to change.
 
-Create a `componentDidUpdate` method in the `ClassKuiper` component. When the
-`guessCount` state is greater than 4, the `myStateSetters` function should be invoked
-passing `0` for the `count` state and a `kuiperSleep` variable for the `kuiper`
-state. Also, an `alert` method should be invoked with a message that says:
-`Sorry you have used your 5 guesses! You lose! Start again!`
+Create a `componentDidUpdate` method in the `ClassKuiper` component. The
+arguments for the component are `prevProps` which represent the previous props
+and `prevState` which represent the previous state. They are built in arguments
+that come with this lifecycle method. When the `guessCount` state is greater
+than 4, the `myStateSetters` function should be invoked passing `0` for the
+`count` state and a `kuiperSleep` variable for the `kuiper` state. Also, an
+`alert` method should be invoked with a message that says: 'Sorry you have used
+your 5 guesses! You lose! Start again!'. Use the `prevState` variable to make
+the calculation.
 
 This `componentDidUpdate` lifecycle method won't run after initial render. But,
 it will run after every re-render. However, the functionality will only execute
 when the conditional, `if` criteria is met.
+
+If you are successful your code should look similar to this:
+
+```js
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.guessCount + 1 > 4) {
+      this.myStateSetters(0, kuiperSleep);
+      alert(`Sorry you have used your 5 guesses! You lose! Start again!`);
+    }
+  }
+
+```
 
 ## What you have learned
 
