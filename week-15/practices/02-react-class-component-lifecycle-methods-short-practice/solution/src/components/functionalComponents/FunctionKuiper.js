@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import kuiperSleep from '../../assets/kuiper_sleep.jpg';
 import kuiperHappy from '../../assets/kuiper_happy.jpg';
 
-const FunctionalKuiper = () => {
+const FunctionKuiper = () => {
   const [guess, setGuess] = useState('');
   const [guessCount, setGuessCount] = useState(0);
   const [kuiper, setKuiper] = useState(kuiperSleep);
@@ -15,14 +15,14 @@ const FunctionalKuiper = () => {
     }
   }, [guessCount]);
 
+  const myStateSetters = (count, kuiper) => {
+    setGuess('');
+    setGuessCount(count);
+    setKuiper(kuiper);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    const myStateSetters = (count, kuiper) => {
-      setGuess('');
-      setGuessCount(count);
-      setKuiper(kuiper);
-    };
 
     if (guess === 'sleeping') {
       myStateSetters(0, kuiperHappy);
@@ -86,4 +86,4 @@ const FunctionalKuiper = () => {
   );
 };
 
-export default FunctionalKuiper;
+export default FunctionKuiper;

@@ -2,9 +2,9 @@ import { Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar.js';
 import ClassTitan from './components/classComponents/ClassTitan.js';
-// import FunctionTitan from './components/functionalComponents/FunctionTitan.js';
-import ClassKuiper from './components/classComponents/ClassKuiper.js';
-// import FunctionalKuiper from './components/functionalComponents/FunctionKuiper.js';
+import FunctionTitan from './components/functionalComponents/FunctionTitan.js';
+// import ClassKuiper from './components/classComponents/ClassKuiper.js';
+import FunctionKuiper from './components/functionalComponents/FunctionKuiper.js';
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
           <ClassTitan />
         </Route>
         <Route path='/kuiper'>
-          <ClassKuiper />
+          <FunctionKuiper />
         </Route>
       </Switch>
     </div>

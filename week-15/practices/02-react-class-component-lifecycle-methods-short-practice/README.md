@@ -35,6 +35,10 @@ Take a look at the code. Review the differences between the equivalent
 
 ## componentDidMount and componentWillUnmount
 
+Take a look at what the code is doing in the `FunctionTiton` component and how
+it had been transferred to a `class component` in `ClassTitan`. Understand how
+the transition works.
+
 In the `ClassTitan` component, there is a `useEffect` that has a setTimeout that
 will end in 7 seconds. Also notice that there is a cleanup function. When the
 user clicks one of the buttons in the `Navbar` and `unmounts` this component,
@@ -73,7 +77,13 @@ Now that you have your class component setup, let's export them and import them
 in your __App.js__. Replace the functional components with your new class
 components.
 
+
+
 ## componentDidUpdate
+
+Take a look at what the code is doing in the `FunctionKuiper` component and how
+it had been transferred to a `class component` in `ClassKuiper`. Understand how
+the transition works.
 
 Now navigate to the `ClassKuiper` component. Look at the `FunctionKuiper`
 component. Notice the `useEffect` that listens for the `guessCount` to change.
@@ -92,7 +102,7 @@ when the conditional, `if` criteria is met.
 
 **Congratulations!** In this practice you have learned:
 
-- using the 3 basic React `Lifecycle Methods` with Class Components:
+Using the 3 basic React `Lifecycle Methods` with Class Components:
   1. `componentDidMount`
   2. `componentDidUpdate`
   3. `componentWillUnmount`
