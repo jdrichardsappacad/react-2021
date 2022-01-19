@@ -47,17 +47,29 @@ that was showing.
 There are 7 errors to correct. Errors are not just
 when the app runs but also warnings in the console.
 
-Some things to keep in mind as you work:
-* Errors will frequently point to what line is causing you trouble, make sure
-to read your error carefully while debugging
-* Some errors will not show until you try to interact with the app, don't be
-afraid of diving in and testing!
-* If an error feels vague, read the code and think about what its goal is.
-* Code Sandbox will try to be helpful and change the icon next to the file that
-generated the error
-* Be sure to check your console for clues
+You will encounter an error as soon as you load the repo with code sandbox. Read
+the error output and adjust the code to solve the issue. 
+ - HINT: fetch functions are always asynchronous and will need to be treated as 
+ such. 
 
-Good Luck!
+After encountering the next issue, look through the component to understand why
+that specific message was given.
+
+You'll next get an error that might feel a bit confusing at first. Look at the
+code and think about what that line is trying to do. 
+ - HINT: useState is looking to take an argument that will be the initial value
+ for our slice of state.
+
+You should be able to log in and click the submit button. However, nothing
+happens on submit. Take a look at the `Problems` tab next to the `Console` and
+see if you can fix the two issues it's reporting on.
+- HINT: think about the purpose of the dependency array in a useEffect
+
+With those five issues down there shouldn only be two left. See if you can
+identify and resolve the last two without any additional guidance. Be sure to 
+keep an eye on the `Problems` and `Console` for clues.
+
+Good luck!
 
 [randomuser-api]: https://randomuser.me/
 [code-sandbox]:http://www.codesandbox.io
