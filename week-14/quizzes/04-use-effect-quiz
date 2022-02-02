@@ -1,48 +1,56 @@
-# React useEffect Quiz
+# React `useEffect` Quiz
 
 This quiz tests your understanding of the `useEffect` hook.
 
 ## The questions
 
 <quiz>
-  <question>
-  <p>A good use case for a useEffect with an empty array is to:</p>
-    <answer correct>make a fetch call to a third party api</answer>
-    <answer>declare state variables</answer>
-    <answer>render a component</answer>
-    <explanation>Making a fetch call to a third party api, then setting the
-    state with that data is one of many use cases for a `useEffect` with an
-    empty dependency array.</explanation>
-</quiz>
-<quiz>
-  <question>
-  <p>When does useEffect run>?</p>
-    <answer correct>after the component's first render and every subsequent render</answer>
-    <answer>before the component renders for the first time</answer>
-    <answer>synchronously with the painting of the DOM</answer>
-    <answer>impossible to gauge</answer>
-    <explanation>The `useEffect` hook runs after the first render of a component
-    and if it has no dependency array, it will run after every subsequent render.</explanation>
+  <question multiple>
+  <p>Select all that apply: A good use case for a `useEffect` with an empty dependency array is</p>
+    <answer correct>To make a fetch call to a third-party API</answer>
+    <answer>To declare state variables</answer>
+    <answer>To change an image in the component as a state variable changes</answer>
+    <answer>To render a component</answer>
+    <answer>To toggle a data display on and off in response to a button click</answer>
+    <explanation>A `useEffect` with an empty dependency array will run only once, after the first render. Making a fetch call to a third-party API and then setting the state with the fetched data is a common use for such a `useEffect`.</explanation>
   </question>
 </quiz>
 <quiz>
   <question>
-    <p>The `dependency array` in the `useEffect` hook is used to:</p>
-    <answer correct>listen for changes in `state` and `props`</answer>
-    <answer>store `state` values</answer>
-    <answer>store `prop` values</answer>
-    <explanation>The `dependency array` is an optional argument in the
-    `useEffect` hook that listens for changes in `state` and/or `props`</explanation>
+  <p>When does a `useEffect` run?</p>
+    <answer correct>After the component's first render and every subsequent render</answer>
+    <answer>Before the component renders for the first time</answer>
+    <answer>Synchronously with the painting of the DOM</answer>
+    <answer>Impossible to gauge</answer>
+    <explanation>By default, a `useEffect` hook runs after the first render of a component and after every subsequent render. (If a dependency array is supplied, then the `useEffect` will run after the first render and after any subsequent render when a dependency in the array has changed.)</explanation>
   </question>
 </quiz>
 <quiz>
   <question>
-    <p>The one required argument for a `useEffect` hook is:</p>
-    <answer correct>an anonymous function</answer>
-    <answer>an async function</answer>
-    <answer>an object</answer>
-    <answer>a `dependency array`</answer>
-    <explanation>The only required argument for the `useEffect` hook is an
-    anonymous function.</explanation>
+    <p>The dependency array in a `useEffect` hook</p>
+    <answer correct>Listens for changes in state and props</answer>
+    <answer>Stores state values</answer>
+    <answer>Stores prop values</answer>
+    <explanation>A dependency array is an optional argument for a `useEffect` hook that listens for changes in state and/or props. A `useEffect` with a dependency array will run only after renders in which such changes have been detected (including--always--the first render).</explanation>
+  </question>
+</quiz>
+<quiz>
+  <question>
+    <p>The one required argument for a `useEffect` hook is</p>
+    <answer correct>An anonymous function</answer>
+    <answer>An async function</answer>
+    <answer>An object</answer>
+    <answer>A dependency array</answer>
+    <explanation>The only required argument for a `useEffect` hook is an anonymous function.</explanation>
+  </question>
+</quiz>
+<quiz>
+  <question>
+    <p>What should a `useEffect` hook return?</p>
+    <answer correct>A cleanup function, if needed</answer>
+    <answer>A dependency array</answer>
+    <answer>An object contaning the new values of any state variables the `useEffect` has changed</answer>
+    <answer>A boolean signifying whether or not the `useEffect` ran successfully</answer>
+    <explanation>A `useEffect` may return a cleanup function that will be run before the `useEffect` runs again and after the component unmounts.</explanation>
   </question>
 </quiz>
