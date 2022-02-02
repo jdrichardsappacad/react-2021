@@ -1,0 +1,48 @@
+# React useEffect Quiz
+
+This quiz tests your understanding of the `useEffect` hook.
+
+## The questions
+
+<quiz>
+  <question>
+  <p>A good use case for a useEffect with an empty array is to:</p>
+    <answer correct>make a fetch call to a third party api</answer>
+    <answer>declare state variables</answer>
+    <answer>render a component</answer>
+    <explanation>Making a fetch call to a third party api, then setting the
+    state with that data is one of many use cases for a `useEffect` with an
+    empty dependency array.</explanation>
+</quiz>
+<quiz>
+  <question>
+  <p>When does useEffect run>?</p>
+    <answer correct>after the component's first render and every subsequent render</answer>
+    <answer>before the component renders for the first time</answer>
+    <answer>synchronously with the painting of the DOM</answer>
+    <answer>impossible to gauge</answer>
+    <explanation>The `useEffect` hook runs after the first render of a component
+    and if it has no dependency array, it will run after every subsequent render.</explanation>
+  </question>
+</quiz>
+<quiz>
+  <question>
+    <p>The `dependency array` in the `useEffect` hook is used to:</p>
+    <answer correct>listen for changes in `state` and `props`</answer>
+    <answer>store `state` values</answer>
+    <answer>store `prop` values</answer>
+    <explanation>The `dependency array` is an optional argument in the
+    `useEffect` hook that listens for changes in `state` and/or `props`</explanation>
+  </question>
+</quiz>
+<quiz>
+  <question>
+    <p>The one required argument for a `useEffect` hook is:</p>
+    <answer correct>an anonymous function</answer>
+    <answer>an async function</answer>
+    <answer>an object</answer>
+    <answer>a `dependency array`</answer>
+    <explanation>The only required argument for the `useEffect` hook is an
+    anonymous function.</explanation>
+  </question>
+</quiz>
