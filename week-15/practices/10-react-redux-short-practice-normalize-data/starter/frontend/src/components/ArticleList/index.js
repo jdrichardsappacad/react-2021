@@ -6,7 +6,12 @@ import { fetchArticles } from '../../store/articleReducer';
 
 const ArticleList = () => {
   const dispatch = useDispatch();
-  const articles = useSelector(state=>state.articleState.entries);
+  //!!START_SILENT
+  const articles = useSelector(state=>Object.values(state.articleState.entries));
+  //!!END
+  //!!ADD
+  // const articles = useSelector(state=>state.articleState.entries);
+  //!!END_ADD
 
   useEffect(() => {
     dispatch(fetchArticles());
