@@ -3,7 +3,7 @@ const ADD_ARTICLE = 'articles/addArticle';
 
 export const addArticle = (newArticle) => ({
   type: ADD_ARTICLE,
-  newArticle,
+  newArticle
 });
 
 export const getArticles = (articles) => {
@@ -20,7 +20,7 @@ export const writeArticle = (payload) => async (dispatch) => {
   const response = await fetch('/api/articles', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(payload)
   });
 
   if (response.ok) {
@@ -29,7 +29,6 @@ export const writeArticle = (payload) => async (dispatch) => {
     return article;
   }
 };
-
 
 //!!START_SILENT
 const initialState = { entries: {}, isLoading: true };
@@ -40,24 +39,28 @@ const initialState = { entries: {}, isLoading: true };
 
 const articleReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_ARTICLES:
-    //!!START_SILENT
+    case GET_ARTICLES: //!!START_SILENT
     {
-        const newArticles = {...state}
-        action.articles.forEach(article=> newArticles.entries[article.id] = article)
-        return newArticles
+      const newState = { ...state };
+      action.articles.forEach(
+        (article) => (newArticles.entries[article.id] = article)
+      );
+      return newState;
     }
     //!!END
-      //!!ADD
-      //return { ...state, entries: [...action.articles] };
-      //!!END_ADD
+    //!!ADD
+    //return { ...state, entries: [...action.articles] };
+    //!!END_ADD
     case ADD_ARTICLE:
-        //!!START_SILENT
-        return {...state, entries:{...state.entries, [action.newArticle.id]:action.newArticle}}
-        //!!END
-        //!!ADD 
-        // return { ...state, entries: [...state.entries, action.newArticle] };
-        //!!END_ADD
+      //!!START_SILENT
+      return {
+        ...state,
+        entries: { ...state.entries, [action.newArticle.id]: action.newArticle }
+      };
+    //!!END
+    //!!ADD
+    // return { ...state, entries: [...state.entries, action.newArticle] };
+    //!!END_ADD
     default:
       return state;
   }
